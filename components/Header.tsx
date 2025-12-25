@@ -6,7 +6,7 @@ import { AuthButton } from "./AuthButton";
 
 export function Header() {
     return (
-        <header className="bg-brand-red border-b-4 border-brand-black py-8 md:py-12 px-4 mb-8 md:mb-12 relative overflow-hidden w-full">
+        <header className="bg-brand-cyan border-b-4 border-brand-black py-8 md:py-12 px-4 mb-8 md:mb-12 relative overflow-hidden w-full">
             {/* Top Bar */}
             <div className="container mx-auto flex justify-between items-center relative z-20 mb-8 md:mb-12">
                 <Link href="/" className="bg-white border-2 border-brand-black px-4 py-2 shadow-neo font-black text-xl tracking-tighter hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all rounded-none uppercase flex items-center gap-2">

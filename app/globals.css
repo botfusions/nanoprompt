@@ -3,21 +3,44 @@
 @theme {
   --color-brand-yellow: #FFE66D;
   --color-brand-red: #FF6B6B;
+  --color-brand-cyan: #26C6FF;
+  --color-brand-purple: #A78BFA;
   --color-brand-black: #000000;
   --color-bg-gray: #F0F0F0;
-  
-  --shadow-neo: 3px 3px 0px 0px rgba(0,0,0,1);
-  --shadow-neo-hover: 2px 2px 0px 0px rgba(0,0,0,1);
-  --shadow-neo-strong: 4px 4px 0px 0px rgba(0,0,0,1);
+
+  --shadow-neo: 3px 3px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-neo-hover: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-neo-strong: 4px 4px 0px 0px rgba(0, 0, 0, 1);
 }
 
 :root {
   --background: #F0F0F0;
   --foreground: #171717;
+  --color-brand-cyan: #26C6FF;
+  --color-brand-purple: #A78BFA;
+  --color-brand-yellow: #FFE66D;
+  --color-brand-red: #FF6B6B;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Fallback utility classes for brand colors */
+.bg-brand-cyan {
+  background-color: #26C6FF !important;
+}
+
+.bg-brand-purple {
+  background-color: #A78BFA !important;
+}
+
+.bg-brand-yellow {
+  background-color: #FFE66D !important;
+}
+
+.bg-brand-red {
+  background-color: #FF6B6B !important;
 }

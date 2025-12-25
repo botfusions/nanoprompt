@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { AddPromptSection } from "@/components/AddPromptSection";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { PromptGrid } from "@/components/PromptGrid";
@@ -62,7 +63,7 @@ export default function HomeClient({ initialPrompts }: HomeClientProps) {
     });
 
     return (
-        <div className="min-h-screen font-sans pb-10 flex flex-col bg-[#F0F0F0]">
+        <div className="min-h-screen font-sans flex flex-col bg-[#F0F0F0]">
             <Header />
 
             <CategoryFilter
@@ -89,6 +90,8 @@ export default function HomeClient({ initialPrompts }: HomeClientProps) {
                     onToggleFavorite={toggleFavorite}
                 />
             </main>
+
+            <Footer />
         </div>
     );
 }

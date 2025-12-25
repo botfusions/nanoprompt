@@ -99,6 +99,32 @@ $env:SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
 npx tsx scripts/migrate_prompts.ts
 ```
 
+## 📋 Son Değişiklikler (25 Aralık 2024)
+
+### 🎨 UI/UX Güncellemeleri
+- **Hero Bölümü:** Pembe arka plan → Gök Mavisi (#26C6FF) olarak değiştirildi
+- **Footer Bölümü:** YouMind tarzı FAQ accordion ve CTA bölümü eklendi
+  - Mor arka planlı SSS (Sıkça Sorulan Sorular) bölümü
+  - Cyan arka planlı "HAZIR MISINIZ" CTA bölümü
+  - Siyah copyright footer
+
+### 📊 Veri Güncellemeleri
+- **CSV Export:** `scripts/export_prompts_to_csv.js` scripti eklendi
+  - 989 resimli prompt CSV formatında export edilebilir
+  - Excel ve Google Sheets uyumlu UTF-8 BOM desteği
+- **#02196 Kartı:** Eksik görsel eklendi
+
+### 🔧 Teknik Düzeltmeler
+- CSS renk değişkenleri düzeltildi (`@theme` + `:root` + utility sınıfları)
+- `brand-cyan` ve `brand-purple` renkleri eklendi
+- Footer bileşeni (`components/Footer.tsx`) oluşturuldu
+
+### 📁 Yeni Dosyalar
+- `components/Footer.tsx` - FAQ ve CTA footer bileşeni
+- `scripts/export_prompts_to_csv.js` - CSV export scripti
+- `exports/prompts_with_images.csv` - Resimli promptların CSV dosyası
+- `public/images/prompt_02196.jpg` - Eksik kart görseli
+
 ## 📝 Lisans
 
 MIT License - Bu proje eğitim amaçlıdır.
