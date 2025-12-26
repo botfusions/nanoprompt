@@ -76,6 +76,12 @@ export async function getAllPrompts(): Promise<Prompt[]> {
     return [];
   }
 
+  // HOTFIX: Manually correct the image for prompt #02207 (zerolu_64) since DB update is restricted
+  const promptToFix = data.find(p => p.id === 'zerolu_64');
+  if (promptToFix) {
+    promptToFix.images = ['/images/botnano_extract_2207.png'];
+  }
+
   // Filter out prompts with Korean or Chinese characters in prompt content
   const koreanChineseRegex = /[\u3131-\uD79D\u4e00-\u9fff]/;
   const englishOnlyPrompts = (data as Prompt[]).filter(prompt => {
