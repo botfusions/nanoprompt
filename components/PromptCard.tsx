@@ -101,7 +101,7 @@ export function PromptCard({ prompt, isFavorite, onToggleFavorite }: PromptCardP
                         <img
                             src={prompt.images?.[0] || "/placeholder.jpg"}
                             alt={prompt.title || "Prompt Image"}
-                            className="object-cover w-full h-full transition-all duration-300"
+                            className="object-cover w-full h-full transition-all duration-500 opacity-100 saturate-[1.15] contrast-[1.1] group-hover/image:scale-105 group-hover/image:brightness-110 group-hover/image:saturate-125 group-hover/image:contrast-115"
                             loading="lazy"
                             onError={(e) => {
                                 const target = e.target as HTMLImageElement;
