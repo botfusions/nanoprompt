@@ -61,6 +61,21 @@ export default function LoginPage() {
             const newAttempts = failedAttempts + 1;
             setFailedAttempts(newAttempts);
 
+            // Report failed login to security API
+            try {
+                await fetch('/api/security', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        type: 'LOGIN_FAIL',
+                        message: `Failed login attempt for ${email}`,
+                        details: { email, attempts: newAttempts }
+                    })
+                });
+            } catch {
+                // Silently ignore if security API fails
+            }
+
             if (newAttempts >= MAX_ATTEMPTS) {
                 setLockoutTimer(LOCKOUT_DURATION);
                 setError(`Çok fazla başarısız deneme. ${LOCKOUT_DURATION} saniye beklemeniz gerekiyor.`);
