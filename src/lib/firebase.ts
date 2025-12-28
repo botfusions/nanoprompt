@@ -1,4 +1,4 @@
-import { initializeApp, getApps } from "firebase/app";
+import { initializeApp, getApps, FirebaseApp } from "firebase/app";
 import {
     getAuth,
     GoogleAuthProvider,
@@ -7,7 +7,8 @@ import {
     createUserWithEmailAndPassword,
     signOut as firebaseSignOut,
     onAuthStateChanged,
-    User as FirebaseUser
+    User as FirebaseUser,
+    Auth
 } from "firebase/auth";
 
 // Firebase configuration
@@ -21,13 +22,43 @@ const firebaseConfig = {
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || ""
 };
 
-// Initialize Firebase (prevent multiple initializations)
-const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
-const auth = getAuth(app);
-const googleProvider = new GoogleAuthProvider();
+// Lazy initialization to prevent build errors when env vars are missing
+let app: FirebaseApp | null = null;
+let auth: Auth | null = null;
+let googleProvider: GoogleAuthProvider | null = null;
 
-export { auth, googleProvider, onAuthStateChanged };
+function getFirebaseApp(): FirebaseApp | null {
+    if (typeof window === 'undefined') return null; // Skip during SSR/build
+    if (!firebaseConfig.apiKey) return null; // Skip if no API key
+
+    if (!app) {
+        app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+    }
+    return app;
+}
+
+function getFirebaseAuth(): Auth | null {
+    const firebaseApp = getFirebaseApp();
+    if (!firebaseApp) return null;
+
+    if (!auth) {
+        auth = getAuth(firebaseApp);
+    }
+    return auth;
+}
+
+function getGoogleProvider(): GoogleAuthProvider | null {
+    if (!getFirebaseApp()) return null;
+
+    if (!googleProvider) {
+        googleProvider = new GoogleAuthProvider();
+    }
+    return googleProvider;
+}
+
+export { getFirebaseAuth as auth, getGoogleProvider as googleProvider, onAuthStateChanged };
 export type { FirebaseUser };
+
 
 // ==================== Auth Functions ====================
 
@@ -35,7 +66,12 @@ export type { FirebaseUser };
  * Sign in with Google
  */
 export async function signInWithGoogle() {
-    const result = await signInWithPopup(auth, googleProvider);
+    const authInstance = getFirebaseAuth();
+    const provider = getGoogleProvider();
+    if (!authInstance || !provider) {
+        throw new Error("Firebase is not configured. Please add Firebase environment variables.");
+    }
+    const result = await signInWithPopup(authInstance, provider);
     return result.user;
 }
 
@@ -43,7 +79,11 @@ export async function signInWithGoogle() {
  * Sign in with email and password
  */
 export async function signInWithEmail(email: string, password: string) {
-    const result = await signInWithEmailAndPassword(auth, email, password);
+    const authInstance = getFirebaseAuth();
+    if (!authInstance) {
+        throw new Error("Firebase is not configured. Please add Firebase environment variables.");
+    }
+    const result = await signInWithEmailAndPassword(authInstance, email, password);
     return result.user;
 }
 
@@ -51,7 +91,11 @@ export async function signInWithEmail(email: string, password: string) {
  * Sign up with email and password
  */
 export async function signUp(email: string, password: string) {
-    const result = await createUserWithEmailAndPassword(auth, email, password);
+    const authInstance = getFirebaseAuth();
+    if (!authInstance) {
+        throw new Error("Firebase is not configured. Please add Firebase environment variables.");
+    }
+    const result = await createUserWithEmailAndPassword(authInstance, email, password);
     return result.user;
 }
 
@@ -59,12 +103,16 @@ export async function signUp(email: string, password: string) {
  * Sign out
  */
 export async function signOut() {
-    await firebaseSignOut(auth);
+    const authInstance = getFirebaseAuth();
+    if (!authInstance) return;
+    await firebaseSignOut(authInstance);
 }
 
 /**
  * Get current user
  */
 export function getCurrentUser(): FirebaseUser | null {
-    return auth.currentUser;
+    const authInstance = getFirebaseAuth();
+    return authInstance?.currentUser ?? null;
 }
+
