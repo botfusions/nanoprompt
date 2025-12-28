@@ -1,10 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { signInWithEmail, signInWithGoogle } from "@/src/lib/firebase";
-import { Mail, Lock, Loader2 } from "lucide-react";
+import { Mail, Lock, Loader2, AlertTriangle } from "lucide-react";
+
+// Brute force protection constants
+const MAX_ATTEMPTS = 5;
+const LOCKOUT_DURATION = 60; // seconds
 
 export default function LoginPage() {
     const router = useRouter();
@@ -13,16 +17,56 @@ export default function LoginPage() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
+    // Brute force protection state
+    const [failedAttempts, setFailedAttempts] = useState(0);
+    const [lockoutTimer, setLockoutTimer] = useState(0);
+    const [isLocked, setIsLocked] = useState(false);
+
+    // Lockout timer effect
+    useEffect(() => {
+        let interval: NodeJS.Timeout;
+        if (lockoutTimer > 0) {
+            setIsLocked(true);
+            interval = setInterval(() => {
+                setLockoutTimer((prev) => {
+                    if (prev <= 1) {
+                        setIsLocked(false);
+                        setFailedAttempts(0);
+                        return 0;
+                    }
+                    return prev - 1;
+                });
+            }, 1000);
+        }
+        return () => clearInterval(interval);
+    }, [lockoutTimer]);
+
     const handleEmailLogin = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Check if account is locked
+        if (isLocked) {
+            setError(`Çok fazla deneme. ${lockoutTimer} saniye bekleyin.`);
+            return;
+        }
+
         setLoading(true);
         setError(null);
 
         try {
             await signInWithEmail(email, password);
+            setFailedAttempts(0); // Reset on success
             router.push("/");
         } catch (err) {
-            setError(err instanceof Error ? err.message : "Giriş başarısız");
+            const newAttempts = failedAttempts + 1;
+            setFailedAttempts(newAttempts);
+
+            if (newAttempts >= MAX_ATTEMPTS) {
+                setLockoutTimer(LOCKOUT_DURATION);
+                setError(`Çok fazla başarısız deneme. ${LOCKOUT_DURATION} saniye beklemeniz gerekiyor.`);
+            } else {
+                setError(err instanceof Error ? err.message : "Giriş başarısız");
+            }
         } finally {
             setLoading(false);
         }
@@ -56,8 +100,26 @@ export default function LoginPage() {
 
                 {/* Card */}
                 <div className="bg-white border-4 border-brand-black shadow-neo p-8">
+                    {/* Lockout Warning */}
+                    {isLocked && (
+                        <div className="mb-6 p-4 bg-orange-100 border-2 border-orange-500 text-orange-700 flex items-center gap-3">
+                            <AlertTriangle className="w-5 h-5 flex-shrink-0" />
+                            <div>
+                                <p className="font-bold">Hesap Geçici Olarak Kilitlendi</p>
+                                <p className="text-sm">Tekrar denemek için: <span className="font-mono font-bold">{lockoutTimer}</span> saniye</p>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Failed Attempts Warning */}
+                    {failedAttempts > 0 && failedAttempts < MAX_ATTEMPTS && !isLocked && (
+                        <div className="mb-4 p-2 bg-yellow-100 border border-yellow-500 text-yellow-700 text-xs">
+                            Kalan deneme hakkı: <span className="font-bold">{MAX_ATTEMPTS - failedAttempts}</span>
+                        </div>
+                    )}
+
                     {/* Error Message */}
-                    {error && (
+                    {error && !isLocked && (
                         <div className="mb-6 p-3 bg-red-100 border-2 border-red-500 text-red-700 text-sm font-medium">
                             {error}
                         </div>

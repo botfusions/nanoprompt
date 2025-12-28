@@ -1,11 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { signUp, signInWithGoogle } from "@/src/lib/firebase";
 import { supabase } from "@/src/lib/supabase";
-import { Mail, Lock, User, Loader2 } from "lucide-react";
+import { Mail, Lock, User, Loader2, Check, X } from "lucide-react";
+
+// Password strength validation rules
+const PASSWORD_RULES = {
+    minLength: 8,
+    hasUppercase: /[A-Z]/,
+    hasLowercase: /[a-z]/,
+    hasNumber: /[0-9]/,
+    hasSpecial: /[!@#$%^&*(),.?":{}|<>]/,
+};
 
 export default function RegisterPage() {
     const router = useRouter();
@@ -15,6 +24,29 @@ export default function RegisterPage() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [usernameError, setUsernameError] = useState<string | null>(null);
+    const [passwordError, setPasswordError] = useState<string | null>(null);
+
+    // Password strength calculation
+    const passwordStrength = useMemo(() => {
+        const checks = {
+            length: password.length >= PASSWORD_RULES.minLength,
+            uppercase: PASSWORD_RULES.hasUppercase.test(password),
+            lowercase: PASSWORD_RULES.hasLowercase.test(password),
+            number: PASSWORD_RULES.hasNumber.test(password),
+            special: PASSWORD_RULES.hasSpecial.test(password),
+        };
+        const score = Object.values(checks).filter(Boolean).length;
+        return { checks, score, isValid: score >= 4 }; // At least 4 rules must pass
+    }, [password]);
+
+    const validatePassword = (): boolean => {
+        if (!passwordStrength.isValid) {
+            setPasswordError("Şifre güvenlik gereksinimlerini karşılamıyor");
+            return false;
+        }
+        setPasswordError(null);
+        return true;
+    };
 
     const isUsernameAvailable = async (value: string): Promise<boolean> => {
         const { data } = await supabase
@@ -37,7 +69,8 @@ export default function RegisterPage() {
 
         const available = await isUsernameAvailable(value);
         if (!available) {
-            setUsernameError("Bu kullanıcı adı zaten alınmış");
+            // Generic error message to prevent username enumeration
+            setUsernameError("Bu bilgilerle kayıt yapılamıyor");
             return false;
         }
 
@@ -49,6 +82,12 @@ export default function RegisterPage() {
         e.preventDefault();
         setLoading(true);
         setError(null);
+
+        // Validate password strength
+        if (!validatePassword()) {
+            setLoading(false);
+            return;
+        }
 
         const isValid = await validateUsername(username);
         if (!isValid) {
@@ -183,12 +222,56 @@ export default function RegisterPage() {
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required
-                                    minLength={6}
-                                    className="w-full pl-11 pr-4 py-3 border-2 border-brand-black focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                                    minLength={8}
+                                    className={`w-full pl-11 pr-4 py-3 border-2 ${passwordError ? "border-red-500" : "border-brand-black"} focus:outline-none focus:ring-2 focus:ring-brand-yellow`}
                                     placeholder="••••••••"
                                 />
                             </div>
-                            <p className="mt-1 text-xs text-gray-500">En az 6 karakter</p>
+                            {/* Password Strength Indicator */}
+                            {password && (
+                                <div className="mt-2 space-y-1">
+                                    <div className="flex gap-1">
+                                        {[1, 2, 3, 4, 5].map((level) => (
+                                            <div
+                                                key={level}
+                                                className={`h-1 flex-1 rounded ${level <= passwordStrength.score
+                                                        ? passwordStrength.score <= 2
+                                                            ? "bg-red-500"
+                                                            : passwordStrength.score <= 3
+                                                                ? "bg-yellow-500"
+                                                                : "bg-green-500"
+                                                        : "bg-gray-200"
+                                                    }`}
+                                            />
+                                        ))}
+                                    </div>
+                                    <div className="text-xs space-y-0.5">
+                                        <div className={`flex items-center gap-1 ${passwordStrength.checks.length ? "text-green-600" : "text-gray-500"}`}>
+                                            {passwordStrength.checks.length ? <Check className="w-3 h-3" /> : <X className="w-3 h-3" />}
+                                            En az 8 karakter
+                                        </div>
+                                        <div className={`flex items-center gap-1 ${passwordStrength.checks.uppercase ? "text-green-600" : "text-gray-500"}`}>
+                                            {passwordStrength.checks.uppercase ? <Check className="w-3 h-3" /> : <X className="w-3 h-3" />}
+                                            Büyük harf (A-Z)
+                                        </div>
+                                        <div className={`flex items-center gap-1 ${passwordStrength.checks.lowercase ? "text-green-600" : "text-gray-500"}`}>
+                                            {passwordStrength.checks.lowercase ? <Check className="w-3 h-3" /> : <X className="w-3 h-3" />}
+                                            Küçük harf (a-z)
+                                        </div>
+                                        <div className={`flex items-center gap-1 ${passwordStrength.checks.number ? "text-green-600" : "text-gray-500"}`}>
+                                            {passwordStrength.checks.number ? <Check className="w-3 h-3" /> : <X className="w-3 h-3" />}
+                                            Rakam (0-9)
+                                        </div>
+                                        <div className={`flex items-center gap-1 ${passwordStrength.checks.special ? "text-green-600" : "text-gray-500"}`}>
+                                            {passwordStrength.checks.special ? <Check className="w-3 h-3" /> : <X className="w-3 h-3" />}
+                                            Özel karakter (!@#$%...)
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                            {passwordError && (
+                                <p className="mt-1 text-xs text-red-500">{passwordError}</p>
+                            )}
                         </div>
 
                         <button

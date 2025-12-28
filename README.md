@@ -62,11 +62,16 @@ http://localhost:3000
 
 | Koruma | Durum |
 |--------|-------|
+| ✅ **Şifre Güvenliği** | 8+ karakter, büyük/küçük harf, rakam, özel karakter |
+| ✅ **Brute Force Koruması** | 5 başarısız denemede 60sn kilitlenme |
+| ✅ **HSTS** | Strict Transport Security (1 yıl + preload) |
+| ✅ **CSP** | Content Security Policy (unsafe-eval yok) |
 | ✅ **SSRF Koruması** | Image proxy URL whitelist |
 | ✅ **Open Redirect** | Redirect path validation |
-| ✅ **Security Headers** | X-Frame-Options, CSP, HSTS |
+| ✅ **Security Headers** | X-Frame-Options, X-Content-Type-Options |
 | ✅ **Rate Limiting** | API istekleri için limit |
 | ✅ **Route Protection** | Middleware ile auth kontrolü |
+| ✅ **API Proxy** | Webhook URL'leri server-side |
 
 ## 📊 Mevcut Durum
 
@@ -82,6 +87,7 @@ http://localhost:3000
 
 ```
 ├── app/                    # Next.js App Router
+│   ├── api/chat/          # Chat API proxy
 │   ├── api/image-proxy/   # Güvenli görsel proxy
 │   ├── auth/callback/     # OAuth callback
 │   └── login/             # Giriş sayfası
@@ -95,25 +101,20 @@ http://localhost:3000
 └── scripts/               # Yardımcı scriptler
 ```
 
-## 📋 Son Güncelleme (26 Aralık 2025)
+## 📋 Son Güncelleme (28 Aralık 2025)
 
-### 🎨 Görsel İyileştirmeler
+### 🛡️ Güvenlik İyileştirmeleri
+- **Password Strength**: 8+ karakter, büyük/küçük harf, rakam, özel karakter zorunluluğu
+- **Brute Force Koruması**: 5 başarısız denemede 60sn lockout + timer UI
+- **HSTS Header**: Strict Transport Security eklendi
+- **CSP İyileştirme**: unsafe-eval kaldırıldı
+- **Chat API Proxy**: Webhook URL'si server-side'a taşındı
+- **Username Enumeration**: Genel hata mesajları ile koruma
+
+### 🎨 Görsel İyileştirmeler (26 Aralık)
 - **Multi-Image Grid**: 1-4 görsel desteği (Grid düzeni)
 - **Image Polish**: Artırılmış kontrast ve doygunluk + Hover efektleri
 - **Auto-Sync Sistem**: Yerel görsellerin otomatik DB eşitlenmesi
-- **Eksik Görsel Düzeltmeleri**: Hatalı görsel URL'lerinin otomatik onarımı
-
-### 🛠️ Teknik Düzeltmeler
-- **Auth Fix**: CSP ayarları güncellendi (Google Auth & Supabase)
-- **Auto-Deduplicate**: Çift görsel kayıtlarının otomatik temizlenmesi
-- **Local Overrides**: DB hatası olsa bile yerel görsellerin önceliklendirilmesi
-
-### 🛡️ Güvenlik (25 Aralık)
-- SSRF koruması (URL whitelist)
-- Open Redirect koruması
-- Security headers (CSP, X-Frame-Options)
-- Rate limiting (100 istek/dakika)
-- Middleware ile route protection
 
 ### 🧹 Temizlik
 - ~9MB gereksiz dosya silindi

@@ -34,7 +34,8 @@ export function ChatWidget() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(process.env.NEXT_PUBLIC_N8N_CHAT_WEBHOOK_URL || "", {
+      // Use server-side API proxy instead of direct webhook
+      const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
