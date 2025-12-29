@@ -1,0 +1,13 @@
+=== SUPABASE ANALİZ ===
+
+Toplam Supabase prompt: 2957
+
+--- #02953 Supabase ---
+Title: Athletic Runner - Sports Editorial Poster
+Images: ["https://pbs.twimg.com/media/G853Mz4bEAANDNB?format=jpg&name=small","https://pbs.twimg.com/media/G853MzvagAECxtt?format=jpg&name=small"]
+Source: BotsNANO
+Prompt length: 831
+
+--- Supabase'de Son 10 Numerik ID (0XXXX) ---
+#02953 | Athletic Runner - Sports Editorial Poste | BotsNANO
+#01db68cd-9ff1-487e-8885-2eaa49ff03e3 |  Nano Banana Pro | migration

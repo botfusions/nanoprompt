@@ -129,3 +129,9 @@ export const LOCAL_IMAGE_OVERRIDES: Record<string, string[]> = {
 export const LOCAL_PROMPT_OVERRIDES: Record<string, string> = {
   "02953": `A side-profile shot of an athletic Black male runner mid-stride against a pale peach background. The runner wears a vivid orange athletic top and matching orange running shorts with neon lime green scribbles outlined around his form to emphasize motion and energy. The composition has a retro sports zine feel, with overlaid text elements in bold sans-serif fonts — "SPORTS" at the top in white with shadow, and layered grainy textures. Include torn paper edges, stamp-like marks, and hand-drawn arrows. Modern sports zine aesthetic.`
 };
+
+// Title overrides - başlık değişikliği gerektiğinde
+export const LOCAL_TITLE_OVERRIDES: Record<string, string> = {};
+
+// Display number overrides - numara düzeltmeleri
+export const LOCAL_DISPLAY_NUMBER_OVERRIDES: Record<string, number> = {};

@@ -90,6 +90,27 @@ export async function getAllPrompts(): Promise<Prompt[]> {
         p.prompt = LOCAL_PROMPT_OVERRIDES[p.id];
       }
 
+      // "Test Kuşlar" başlıklı promptu düzelt
+      if (p.title === 'Test Kuşlar') {
+        p.title = 'Nano Banana Pro prompt';
+        p.prompt = `Do this for a random famous Asian painting <instruction>
+
+Input A is a Famous Painting (e.g., The Mona Lisa, The Scream). Analyze: The brushstroke technique, the 3D depth implied, and the hidden symbols. 
+Goal: A "Paint Tube Squeeze." A giant, realistic oil paint tube sitting on a palette. 
+Rules:
+
+Action: The tube is being squeezed, and the paint coming out is not just a blob, but it forms the 3D landscape of the painting. The Mona Lisa's face is emerging in 3D relief from the 2D smear of paint. 
+
+Texture: Viscous, thick oil paint texture (impasto).
+
+Props: Paintbrushes, a dirty rag, a palette knife, plus culture appropriate tools and environment. 
+ 
+Lighting: North-light studio lighting, true color representation. Output:
+ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
+        p.displayNumber = 2954;
+        p.date = '2025-12-29';
+      }
+
       // Automatic Deduplication (Sanitize images)
       if (p.images && Array.isArray(p.images)) {
         p.images = [...new Set(p.images)];

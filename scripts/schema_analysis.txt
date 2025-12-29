@@ -1,0 +1,21 @@
+=== banana_prompts Tablo Yapısı ===
+
+Mevcut Sütunlar:
+  id: string (örnek: "songguoxs_619")
+  title: string (örnek: "90年代电影质感的逼真香港复古肖像照")
+  prompt: string (örnek: "Photorealistic Hong Kong retro portrait with auth)
+  summary: string (örnek: "")
+  categories: object (örnek: ["interior","paper-craft","photography","portrait")
+  author: string (örnek: "@ShreyaYadav___")
+  date: string (örnek: "2025-12-24T23:47:48.569Z")
+  images: object (örnek: ["https://raw.githubusercontent.com/songguoxs/gpt4)
+  featured: boolean (örnek: false)
+  prompt_cn: string (örnek: "具有90年代电影质感的逼真香港复古肖像照。\n以图[0]为面部参考。半身像。人物倚靠在贴满报纸的墙)
+  model: string (örnek: "Nano banana pro")
+  created_at: string (örnek: "2025-12-24T13:38:16.541816+03:00")
+  source: string (örnek: "migration")
+  user_id: object (örnek: null)
+
+=== İlk 5 Kayıt (oluşturulma sırasına göre) ===
+
+=== Son 5 Kayıt (en yeni) ===

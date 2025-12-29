@@ -6,8 +6,8 @@
 
 **Gemini Nano Banana Pro için en iyi prompt koleksiyonu**
 
-[![Prompts](https://img.shields.io/badge/Prompts-2801+-brightgreen?style=flat-square)](/)
-[![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=flat-square)](https://nextjs.org)
+[![Prompts](https://img.shields.io/badge/Prompts-2957+-brightgreen?style=flat-square)](/)
+[![Next.js](https://img.shields.io/badge/Next.js-16+-black?style=flat-square)](https://nextjs.org)
 [![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=flat-square)](https://tailwindcss.com)
 [![Supabase](https://img.shields.io/badge/Supabase-Database-3ecf8e?style=flat-square)](https://supabase.com)
 
@@ -103,11 +103,16 @@ http://localhost:3000
 
 ## 📋 Son Güncelleme (29 Aralık 2025)
 
+### 🔢 Kalıcı Kayıt Numaraları
+- **display_number Sütunu**: Supabase'de kalıcı kayıt numarası sistemi
+- **Otomatik Numara Atama**: Yeni promptlar otomatik sıradaki numarayı alıyor
+- **2957 Prompt**: Tüm mevcut promptlara sıralı numara atandı (#00001 → #02957)
+
 ### 🔧 Veri Kalitesi İyileştirmeleri
 - **Duplicate Filtreleme**: Aynı görsellere sahip duplicate kartlar otomatik filtreleniyor
 - **Prompt Override Sistemi**: Veritabanında eksik prompt içerikleri için local override desteği
 - **Görsel Kontrolü**: Bozuk/görselsiz kartlar otomatik tespit ve sıralama
-- **Kart Numaraları**: Tüm kartlarda #XXXXX formatında numara görünümü
+- **Kart Numaraları**: Tüm kartlarda #XXXXX formatında kalıcı numara görünümü
 
 ### 🛡️ Güvenlik İyileştirmeleri (28 Aralık)
 - **Password Strength**: 8+ karakter, büyük/küçük harf, rakam, özel karakter zorunluluğu

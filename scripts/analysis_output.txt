@@ -1,0 +1,33 @@
+=== LOCAL all_prompts.json Analizi ===
+
+Toplam prompt sayısı: 3131
+
+--- Son 20 Prompt ---
+#youmind_v2_2153 | @Johnn | 0 img | YouMind (Extract v2)
+#youmind_v2_2157 | @fox hsiao | 0 img | YouMind (Extract v2)
+#youmind_v2_2158 | @Heisenberg | 0 img | YouMind (Extract v2)
+#youmind_v2_2160 | @AZIZ | AI 🇸🇦 | 0 img | YouMind (Extract v2)
+#youmind_v2_2161 | @石川陽太 Yota Ishikawa | 0 img | YouMind (Extract v2)
+#youmind_v2_2163 | @fox hsiao | 0 img | YouMind (Extract v2)
+#youmind_v2_2164 | @Heisenberg | 0 img | YouMind (Extract v2)
+#youmind_v2_2165 | @fox hsiao | 0 img | YouMind (Extract v2)
+#youmind_v2_2167 | @松果先森 | 0 img | YouMind (Extract v2)
+#youmind_v2_2170 | @松果先森 | 0 img | YouMind (Extract v2)
+#youmind_v2_2172 | @Shreya Yadav | 0 img | YouMind (Extract v2)
+#youmind_v2_2178 | @Cell 细胞 | 0 img | YouMind (Extract v2)
+#youmind_v2_2182 | @K | 0 img | YouMind (Extract v2)
+#youmind_v2_2184 | @Johnn | 0 img | YouMind (Extract v2)
+#youmind_v2_2186 | @离谱 | 0 img | YouMind (Extract v2)
+#youmind_v2_2187 | @离谱 | 0 img | YouMind (Extract v2)
+#youmind_v2_2188 | @离谱 | 0 img | YouMind (Extract v2)
+#youmind_v2_2189 | @离谱 | 0 img | YouMind (Extract v2)
+#youmind_v2_2190 | @-Zho- | 0 img | YouMind (Extract v2)
+#02953 | Athletic Runner - Sports Editorial Poster | 2 img | BotsNANO
+
+En yüksek numerik ID: 02953
+
+--- #02953 Detay ---
+Title: Athletic Runner - Sports Editorial Poster
+Images: ["https://pbs.twimg.com/media/G853Mz4bEAANDNB?format=jpg&name=small","https://pbs.twimg.com/media/G853MzvagAECxtt?format=jpg&name=small"]
+Source: BotsNANO
+Prompt length: 831

@@ -38,14 +38,37 @@ export function AddPromptSection() {
                 }
             }
 
+            // Virgülle ayrılmış URL'leri parse et ve temizle
+            const parseImageUrls = (input: string): string[] => {
+                if (!input.trim()) return [];
+                return input
+                    .split(',')
+                    .map(url => url.trim())
+                    .filter(url => url.startsWith('http'));
+            };
+
+            // En yüksek displayNumber'ı bul ve +1 ekle
+            const { data: maxNumberData } = await supabase
+                .from("banana_prompts")
+                .select('display_number')
+                .order('display_number', { ascending: false })
+                .limit(1)
+                .single();
+
+            const nextDisplayNumber = (maxNumberData?.display_number || 2953) + 1;
+
+            // Tarih formatı: YYYY-MM-DD (saniye yok)
+            const formattedDate = new Date().toISOString().split('T')[0];
+
             const insertData = {
                 id: crypto.randomUUID(),
                 title,
                 prompt,
-                images: imageUrl ? [imageUrl] : [],
+                images: parseImageUrls(imageUrl),
                 categories: [],
                 author: authorName,
-                date: new Date().toISOString(),
+                date: formattedDate,
+                display_number: nextDisplayNumber,
                 model: 'Nano banana pro',
                 featured: false,
             };
@@ -196,15 +219,16 @@ export function AddPromptSection() {
                             <div>
                                 <label className="block text-sm font-bold uppercase mb-2">
                                     <Image className="w-4 h-4 inline mr-1" />
-                                    Görsel URL (Opsiyonel)
+                                    Görsel URL&apos;leri (Opsiyonel - virgülle ayırın)
                                 </label>
-                                <input
-                                    type="url"
+                                <textarea
                                     value={imageUrl}
                                     onChange={(e) => setImageUrl(e.target.value)}
-                                    className="w-full px-4 py-3 border-2 border-brand-black focus:outline-none focus:ring-2 focus:ring-brand-yellow"
-                                    placeholder="https://example.com/image.jpg"
+                                    rows={2}
+                                    className="w-full px-4 py-3 border-2 border-brand-black focus:outline-none focus:ring-2 focus:ring-brand-yellow resize-none text-sm"
+                                    placeholder="https://pbs.twimg.com/media/xxx?format=jpg, https://pbs.twimg.com/media/yyy?format=jpg"
                                 />
+                                <p className="text-xs text-gray-500 mt-1">Birden fazla görsel için URL&apos;leri virgülle ayırın</p>
                             </div>
 
                             <div>
@@ -273,20 +297,28 @@ export function AddPromptSection() {
                                     {title || "Prompt Başlığı"}
                                 </h4>
 
-                                {/* Image */}
-                                {imageUrl && (
-                                    <div className="aspect-video bg-gray-200 border-2 border-brand-black mb-3 overflow-hidden">
-                                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <img
-                                            src={imageUrl}
-                                            alt="Preview"
-                                            className="w-full h-full object-cover"
-                                            onError={(e) => {
-                                                (e.target as HTMLImageElement).style.display = "none";
-                                            }}
-                                        />
-                                    </div>
-                                )}
+                                {/* Image Preview - Multi Image Support */}
+                                {imageUrl && (() => {
+                                    const urls = imageUrl.split(',').map(u => u.trim()).filter(u => u.startsWith('http'));
+                                    if (urls.length === 0) return null;
+                                    return (
+                                        <div className={`mb-3 grid gap-1 ${urls.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+                                            {urls.slice(0, 4).map((url, idx) => (
+                                                <div key={idx} className="aspect-square bg-gray-200 border-2 border-brand-black overflow-hidden">
+                                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                                    <img
+                                                        src={url}
+                                                        alt={`Preview ${idx + 1}`}
+                                                        className="w-full h-full object-cover"
+                                                        onError={(e) => {
+                                                            (e.target as HTMLImageElement).style.display = "none";
+                                                        }}
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    );
+                                })()}
 
                                 {/* Prompt Preview */}
                                 <div className="bg-gray-50 border-2 border-gray-200 p-3 text-sm text-gray-600 line-clamp-4">

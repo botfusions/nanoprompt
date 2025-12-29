@@ -1,0 +1,13 @@
+=== İlk 5 Numerik ID'li Prompt ===
+
+#00001: BULUNAMADI
+
+#00002: BULUNAMADI
+
+#00003: BULUNAMADI
+
+#00004: BULUNAMADI
+
+#00005: BULUNAMADI
+
+=== #02953 ===

@@ -1,0 +1,28 @@
+=== Numerik ID'li Promptlar (00XXX formatı) ===
+
+Toplam numerik ID sayısı: 1
+
+İlk 10 numerik ID:
+  #02953 - Athletic Runner - Sports Editorial Poste
+
+=== UUID Formatındaki İlk 5 Prompt ===
+  ID: songguoxs_630...
+  Title: 疯狂动物城的大型毛绒角色帽子
+
+  ID: songguoxs_629...
+  Title: 一张图片生成9个不同景别的镜头
+
+  ID: songguoxs_628...
+  Title: 第一人称视角牵手照片
+
+  ID: songguoxs_627...
+  Title: MacBook Pro 笔记本电脑拆解
+
+  ID: songguoxs_626...
+  Title: 黑白水墨画风格-孤舟蓑笠翁
+
+
+=== 'Prompt for Gemini Nano Banana' başlıklı kart ===
+  ID: picotrex_24
+  Title: 电影分镜（by @GeminiApp
+  Author: undefined

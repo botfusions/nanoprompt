@@ -1,0 +1,20 @@
+=== Display Number Doğrulama ===
+
+İlk 5 kayıt (en eski):
+  #00001 - 极繁主义波普艺术图层
+  #00002 - 相机拆解
+  #00003 - 一个 男人被相框套娃了
+  #00004 - 对作品进行评价
+  #00005 - 复古动漫幻想
+
+Son 5 kayıt (en yeni):
+  #02957 - Test Kuşlar
+  #02956 - Nano Banana Pro prompt
+  #02955 - Prompt for Gemini nano banana
+  #02954 - Athletic Runner - Sports Editorial Poste
+  #02953 -  Nano Banana Pro
+
+#02953 ID'li kayıt:
+  ID: 02953
+  Title: Athletic Runner - Sports Editorial Poster
+  Display Number: 2954
