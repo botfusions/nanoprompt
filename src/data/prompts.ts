@@ -20,6 +20,7 @@ export interface Prompt {
 
 export const CATEGORIES = [
   "Tümü",
+  "🎄 Yılbaşı Kartları",
   "Fotoğrafçılık",
   "Doğa",
   "Portre",
@@ -43,6 +44,7 @@ export const CATEGORIES = [
 // Mapping Turkish to English tags for filtering
 export const CATEGORY_MAP: Record<string, string> = {
   "Tümü": "",
+  "🎄 Yılbaşı Kartları": "christmas",
   "Fotoğrafçılık": "photography",
   "Doğa": "nature",
   "Portre": "portrait",
@@ -61,6 +63,12 @@ export const CATEGORY_MAP: Record<string, string> = {
   "3D": "3d",
   "Retro": "retro",
   "Yaratıcı": "creative"
+};
+
+// Yılbaşı Kartları display_number aralığı (import edilenler)
+export const CHRISTMAS_CARDS_RANGE = {
+  start: 2973,
+  end: 3112
 };
 
 // Fallback for types if needed, but mainly we use the fetcher now

@@ -1,0 +1,36 @@
+﻿[dotenv@17.2.3] injecting env (10) from .env.local -- tip: ­şöÉ prevent building .env in docker: https://dotenvx.com/prebuild
+­şôè Resim ─░statistikleri Analizi
+
+==================================================
+
+­şôĞ TOPLAM PROMPT: 2972
+
+­şû╝´©Å RES─░M DURUMU:
+   Ô£à Resimli prompt:     880 (29.6%)
+   ÔØî Resimsiz prompt:    2092 (70.4%)
+
+­şôè RES─░M SAYISINA G├ûRE DA─ŞILIM:
+   1 resim:  642
+   2 resim:  205
+   3 resim:  14
+   4+ resim: 19
+
+­şÅÀ´©Å KAYNAK DA─ŞILIMI:
+   BotsNANO: 50
+   YouMind:  0
+   Di─şer:    2922
+
+­şôï RES─░MS─░Z PROMPT ├ûRNEKLER─░ (Son 10):
+   #02930 - @µØ¥µŞ£Õàêµú«...
+   #02929 - @fox hsiao...
+   #02928 - @fox hsiao...
+   #02927 - @ş│ÕÀØÚÖ¢Õñ¬ Yota Ishikawa...
+   #02926 - @Heisenberg...
+   #02925 - @fox hsiao...
+   #02924 - @Iqra Saifi...
+   #02923 - @Johnn...
+   #02922 - @K...
+   #02921 - @Johnn...
+
+==================================================
+Ô£à Analiz tamamland─▒

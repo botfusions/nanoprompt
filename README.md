@@ -6,7 +6,7 @@
 
 **Gemini Nano Banana Pro için en iyi prompt koleksiyonu**
 
-[![Prompts](https://img.shields.io/badge/Prompts-2971+-brightgreen?style=flat-square)](/)
+[![Prompts](https://img.shields.io/badge/Prompts-3112+-brightgreen?style=flat-square)](/)
 [![Next.js](https://img.shields.io/badge/Next.js-16+-black?style=flat-square)](https://nextjs.org)
 [![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=flat-square)](https://tailwindcss.com)
 [![Supabase](https://img.shields.io/badge/Supabase-Database-3ecf8e?style=flat-square)](https://supabase.com)
@@ -75,8 +75,8 @@ http://localhost:3000
 
 ## 📊 Mevcut Durum
 
-- ✅ **2801+ prompt** (Filtrelenmiş ve gösterime hazır)
-- ✅ **700+ aktif görselli prompt**
+- ✅ **3100+ prompt** (Filtrelenmiş ve gösterime hazır)
+- ✅ **1030+ aktif görselli prompt**
 - ✅ Neo-Brutalist UI replikasyonu
 - ✅ Arama, filtreleme ve favoriler tam fonksiyonel
 - ✅ Google OAuth entegrasyonu
@@ -102,6 +102,11 @@ http://localhost:3000
 ```
 
 ## 📋 Son Güncelleme (31 Aralık 2025)
+
+### 🎄 Yılbaşı Kartları Kategorisi
+- **140 Christmas Card Prompt**: YouMind'dan import edildi
+- **Özel Kategori Butonu**: "🎄 Yılbaşı Kartları" filtresi
+- **Akıllı Sıralama**: Christmas kartları kategori altında düzgün gösteriliyor
 
 ### 🖼️ Çoklu Resim Layout İyileştirmesi
 - **3 Resim Kuralı**: 1 büyük sol (tam yükseklik) + 2 küçük sağ (üst üste)

@@ -7,7 +7,7 @@ import { AddPromptSection } from "@/components/AddPromptSection";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { PromptGrid } from "@/components/PromptGrid";
 import { SearchBar } from "@/components/SearchBar";
-import { Prompt, CATEGORIES, CATEGORY_MAP } from "@/src/data/prompts";
+import { Prompt, CATEGORIES, CATEGORY_MAP, CHRISTMAS_CARDS_RANGE } from "@/src/data/prompts";
 
 interface HomeClientProps {
     initialPrompts: Prompt[];
@@ -57,7 +57,18 @@ export default function HomeClient({ initialPrompts }: HomeClientProps) {
             cardNum === searchNum
         );
 
-        const matchesCategory = activeCategory === "Tümü" || p.categories?.some(cat => cat.toLowerCase() === englishTag.toLowerCase());
+        // Yılbaşı Kartları için özel filtreleme (display_number aralığına göre)
+        let matchesCategory = false;
+        if (activeCategory === "Tümü") {
+            matchesCategory = true;
+        } else if (englishTag === "christmas") {
+            // Christmas cards filter - display_number aralığına göre
+            const displayNum = p.displayNumber || 0;
+            matchesCategory = displayNum >= CHRISTMAS_CARDS_RANGE.start && displayNum <= CHRISTMAS_CARDS_RANGE.end;
+        } else {
+            matchesCategory = p.categories?.some(cat => cat.toLowerCase() === englishTag.toLowerCase()) || false;
+        }
+
         const matchesSearch = !searchQuery ||
             matchesCardNumber ||
             p.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||

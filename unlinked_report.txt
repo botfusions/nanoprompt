@@ -1,0 +1,45 @@
+﻿[dotenv@17.2.3] injecting env (10) from .env.local -- tip: ­şöæ add access controls to secrets: https://dotenvx.com/ops
+­şöı E┼şle┼şmemi┼ş Resim Analizi
+
+============================================================
+
+­şôü LOCAL RES─░MLER: 60 adet
+­şôè SUPABASE BotsNANO KAYITLARI: 50 adet
+­şöù SUPABASE'DE BA─ŞLI RES─░M: 49 adet
+
+ÔØî BA─ŞLANMAMI┼Ş RES─░MLER: 11 adet
+
+Ba─şlanmam─▒┼ş resimler:
+   - botnano_extract_100.png
+   - botnano_extract_103.png
+   - botnano_extract_107.png
+   - botnano_extract_115.png
+   - botnano_extract_116.png
+   - botnano_extract_2207.png
+   - botnano_extract_94.png
+   - botnano_extract_96.png
+   - botnano_extract_97.png
+   - botnano_extract_98.png
+   - botnano_extract_99.png
+
+­şôï RES─░MS─░Z PROMPT ├ûRNEKLER─░ (ilk 10):
+   #00701 - @µØ¥µŞ£Õàêµú«
+   #00702 - @VoxcatAI
+   #00704 - @Õ«ØÄë
+   #00720 - @Florian Gallwitz
+   #00793 - @Nicolechan
+   #00794 - @Òé╗ÒâşÒâèÒâ╝×¼øÕ©½Õ░éÚûÇAIÒé│Òâ│ÒéÀÒéğÒâ½Òé©ÒâÑ´¢£ÕÀÑ×ùñ µÖÂ
+   #00795 - @Òü▓ÒüğÒééÒéô | AIÚûïÖ║@ÒâïÒâÑÒâ╝Òé╣Ö║õ┐í
+   #00796 - @KAWAI
+   #00797 - @Johnn
+   #00802 - @õ©Çµè╣Òü«Fun
+
+============================================================
+
+­şôè ├ûZET:
+   Local resim dosyas─▒:     60
+   Supabase BotsNANO kay─▒t: 50
+   Ba─şl─▒ resimler:          49
+   Ba─şlanmam─▒┼ş resimler:    11
+
+ÔÜá´©Å  BU RES─░MLER S─░L─░NEB─░L─░R VEYA PROMPT'LARA ATANAB─░L─░R
