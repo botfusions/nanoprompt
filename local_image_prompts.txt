@@ -1,0 +1,129 @@
+﻿[dotenv@17.2.3] injecting env (10) from .env.local -- tip: ­şæÑ sync secrets across teammates & machines: https://dotenvx.com/ops
+­şôï Local Resim Kullanan Promptlar
+
+======================================================================
+
+­şôè TOPLAM: 60 prompt local resim kullan─▒yor
+
+#00701 - @µØ¥µŞ£Õàêµú«
+         ÔööÔöÇ /images/botnano_extract_94.png
+#00702 - @VoxcatAI
+         ÔööÔöÇ /images/botnano_extract_96.png
+#00704 - @Õ«ØÄë
+         ÔööÔöÇ /images/botnano_extract_97.png
+#00720 - @Florian Gallwitz
+         ÔööÔöÇ /images/botnano_extract_98.png
+#00793 - @Nicolechan
+         ÔööÔöÇ /images/botnano_extract_99.png
+#00794 - @Òé╗ÒâşÒâèÒâ╝×¼øÕ©½Õ░éÚûÇAIÒé│Òâ│ÒéÀÒéğÒâ½Òé©ÒâÑ´¢£ÕÀÑ×ùñ µÖÂ
+         ÔööÔöÇ /images/botnano_extract_100.png
+#00795 - @Òü▓ÒüğÒééÒéô | AIÚûïÖ║@ÒâïÒâÑÒâ╝Òé╣Ö║õ┐í
+         ÔööÔöÇ /images/botnano_extract_103.png
+#00796 - @KAWAI
+         ÔööÔöÇ /images/botnano_extract_107.png
+#00797 - @Johnn
+         ÔööÔöÇ /images/botnano_extract_115.png
+#00798 - @K
+         ÔööÔöÇ /images/botnano_extract_11.png
+#00799 - @Marky @ Easy-Peasy.AI
+         ÔööÔöÇ /images/botnano_extract_12.png
+#00801 - @AIvy
+         ÔööÔöÇ /images/botnano_extract_61.png
+#00802 - @õ©Çµè╣Òü«Fun
+         ÔööÔöÇ /images/botnano_extract_116.png
+#00803 - @Anissa
+         ÔööÔöÇ /images/botnano_extract_2207.png
+#00804 - @ttmouse - ×▒åê©
+         ÔööÔöÇ /images/botnano_extract_13.png
+#00805 - @ÒüæÒüôÒü¡Òüô
+         ÔööÔöÇ /images/botnano_extract_24.png
+#00806 - @Sycomore
+         ÔööÔöÇ /images/botnano_extract_31.png
+#00807 - @Maki@Sunwood AI Labs.
+         ÔööÔöÇ /images/botnano_extract_42.png
+#00808 - @Keskin
+         ÔööÔöÇ /images/botnano_extract_49.png
+#00809 - @iX | AI Video Creator
+         ÔööÔöÇ /images/botnano_extract_76.png
+#00810 - @Dr.D
+         ÔööÔöÇ /images/botnano_extract_82.png
+#00815 - @Aleena Amir
+         ÔööÔöÇ /images/botnano_extract_77.png
+#00817 - @Adamõ╣şÕÅ½ÕÉë▒│
+         ÔööÔöÇ /images/botnano_extract_18.png
+#00818 - @Lore
+         ÔööÔöÇ /images/botnano_extract_19.png
+#00819 - @MelisaÔÖí
+         ÔööÔöÇ /images/botnano_extract_20.png
+#00820 - @Sienna
+         ÔööÔöÇ /images/botnano_extract_25.png
+#00821 - @KeorUnreal
+         ÔööÔöÇ /images/botnano_extract_26.png
+#00822 - @Òé╗Òâ¼Òâè
+         ÔööÔöÇ /images/botnano_extract_27.png
+#00823 - @ÒüĞÒéôÒü¡Òéô
+         ÔööÔöÇ /images/botnano_extract_28.png
+#00824 - @ANKIT PATEL ­şç«­şç│ | AI
+         ÔööÔöÇ /images/botnano_extract_29.png
+#00825 - @Dominus the Prompter
+         ÔööÔöÇ /images/botnano_extract_33.png
+#00826 - @Ditherly - Creative AI Hub
+         ÔööÔöÇ /images/botnano_extract_34.png
+#00827 - @MelisÔ£¿
+         ÔööÔöÇ /images/botnano_extract_35.png
+#00828 - @├ûzge D├Âner
+         ÔööÔöÇ /images/botnano_extract_37.png
+#00829 - @MaryFllr.base.eth
+         ÔööÔöÇ /images/botnano_extract_43.png
+#00830 - @Key Alves
+         ÔööÔöÇ /images/botnano_extract_47.png
+#00831 - @Ray Zhai
+         ÔööÔöÇ /images/botnano_extract_48.png
+#00832 - @Mert
+         ÔööÔöÇ /images/botnano_extract_50.png
+#00833 - @Sharon Riley
+         ÔööÔöÇ /images/botnano_extract_51.png
+#00834 - @Hoor
+         ÔööÔöÇ /images/botnano_extract_52.png
+#00835 - @Synthorigen
+         ÔööÔöÇ /images/botnano_extract_53.png
+#00836 - @Òü¡ÒéïÒü┤­şÆø­şÉ¥Òé╣ÒâŞÒâøÒüğAIÕïòö╗
+         ÔööÔöÇ /images/botnano_extract_55.png
+#00837 - @Johnny Wang
+         ÔööÔöÇ /images/botnano_extract_59.png
+#00839 - @simeon-sanai
+         ÔööÔöÇ /images/botnano_extract_65.png
+#00840 - @Gadgetify
+         ÔööÔöÇ /images/botnano_extract_67.png
+#00841 - @Heisenberg
+         ÔööÔöÇ /images/botnano_extract_69.png
+#00842 - @TeeJay
+         ÔööÔöÇ /images/botnano_extract_73.png
+#00843 - @Nid All | AI art and more ­şñû
+         ÔööÔöÇ /images/botnano_extract_75.png
+#00844 - @Kaan
+         ÔööÔöÇ /images/botnano_extract_78.png
+#00845 - @Michael Rabone
+         ÔööÔöÇ /images/botnano_extract_79.png
+#00846 - @õ┐║Òü«Õ¿İÒüşÒüí / AIÒé¿Òâ│Òé©ÒâïÒéó
+         ÔööÔöÇ /images/botnano_extract_80.png
+#00847 - @Gagan Singh
+         ÔööÔöÇ /images/botnano_extract_81.png
+#00848 - @yusra.
+         ÔööÔöÇ /images/botnano_extract_87.png
+#00849 - @Zara
+         ÔööÔöÇ /images/botnano_extract_91.png
+#00890 - @Abbay
+         ÔööÔöÇ /images/botnano_extract_41.png
+#00897 - @Indie Maker | AI
+         ÔööÔöÇ /images/botnano_extract_16.png
+#00899 - @Lex
+         ÔööÔöÇ /images/botnano_extract_17.png
+#00900 - @Òü»Òéı | AIµ┤╗ö¿Òü¿HALOÕ╝ÅÒé╣Òâ®ÒéñÒâë
+         ÔööÔöÇ /images/botnano_extract_23.png
+#00911 - @CALLISTUS ­şÑÀ­şÅû´©Å
+         ÔööÔöÇ /images/botnano_extract_278.png
+#00912 - @Daria_Surkova
+         ÔööÔöÇ /images/botnano_extract_280.png
+
+======================================================================

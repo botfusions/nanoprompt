@@ -1,0 +1,1262 @@
+[
+  {
+    "id": "youmind_extract_11",
+    "title": "@K",
+    "prompt": "Prompt{\n  \"Use the attached image of the person as reference. Hyper-realistic black and white studio portrait of the young man in side profile, natural hair gently falling around his face. Strong rim light accentuating his jawline and nose, dark minimalist background. Expression thoughtful and serene, cinematic lighting creating dramatic contrast and fine photographic detail.\",\n  \"size\": \"1024x1024\",\n  \"n\":1}",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_11.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 798
+  },
+  {
+    "id": "youmind_extract_13",
+    "title": "@ttmouse - 豆爸",
+    "prompt": "Prompt for generating giant surreal monuments from everyday objects, such as pencils, creating surreal city sculpture scenes.\nPrompt for a high-end functional beverage concept from a non-beverage brand, sharing detailed cosmic high-aesthetics prompts.\nPrompt for rubber hose 3D style cartoon characters, generating a series of cute dynamic poses.\nUniversal 3x3 grid advertising prompt perfectly achieving product consistency in Nano Banana Pro.\nDreamy prompt for augmented reality Spotify play cards surrounding a person, generating sci-fi dynamic effects.\nPrompt for generating personalized sticker packs from uploaded photos, featuring cute designs in various clothing styles.\nCreative prompt for dystopian novel-themed miniature worlds inside open books, presented in a diptych format.\nPrompt for polymer clay style celebrity miniature dolls, generating cute, handcrafted-looking portraits.\nPrompt for generating Bollywood star social brand studio portraits from uploaded photos.\nPrompt for realistic 3D rendering scenes of fictional Arrow Dynamics equipment, visualizing high-end product concepts.\nPrompt for frozen tundra themed human scenes, generating a blend of cold-toned, magnificent nature.\nPrompt for giant cosmic hourglass mysterious scenes, directly outputting surreal cinematic works.\nPrompt for ancient Egyptian Eye of Horus stone wall with mysterious golden light, directly outputting classic mystical style.\nSimple prompt for generating a horror video effect where facial skin opens to reveal internal machinery.\nPrompt for Bollywood poster style Indian actress in a blue sari, creating elegant and dreamy compositions.\nPrompt for Knolling flat lay photography of popular items from one's birth year.",
+    "summary": "",
+    "categories": [
+      "infographic / edu visual"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_13.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 804
+  },
+  {
+    "id": "youmind_extract_18",
+    "title": "@Adam也叫吉米",
+    "prompt": "PromptUse the face without any  change.A high-quality 2x2 creative photo collage of a young woman with long wavy black hair , posing inside cardboard boxes for a Christmas-themed challenge. She wears a cream, red, and green Fair Isle knit sweater.\nLayout & Interaction (Crucial):The right side features a continuous action across two panels. Red wine is poured from the top-right panel and flows vertically down into the bottom-right panel.\nPanel Details:\n\nTop Left: She blows artificial snow from her palms towards the camera.\nBottom Left: She holds glowing fairy lights and a red bauble, smiling warmly.\nTop Right: She leans on the box edge, holding a wine bottle, pouring red wine downwards so the liquid stream exits the bottom of this frame.\nBottom Right: She is positioned below, holding a wine glass that catches the stream of wine pouring down from the panel above. She is looking up, watching the wine flow into her glass.\n\nStyle: Creative box challenge photography, seamless cross-panel interaction, festive mood, soft studio lighting, ultra-realistic textures.",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_18.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 817
+  },
+  {
+    "id": "youmind_extract_19",
+    "title": "@Lore",
+    "prompt": "Prompt{\n   \n\"image_generation_prompt\": {     \"subject\": {       \"demographics\": \"Young woman, fair skin, slim build\",       \"hair\": {         \"color\": \"{argument name=\\\"hair color\\\" default=\\\"Silver grey\\\"}\",         \"style\": \"High pigtails, straight texture\",         \"details\": \"Bangs framing the forehead and sides of the face\"       },       \"face_and_makeup\": {         \"eyes\": \"Green/hazel eyes, heavy winged eyeliner, long lashes\",         \"expression\": \"Sultry gaze, slightly parted lips\",         \"action\": \"Right index finger touching lower lip or corner of mouth\"       }     },     \"attire\": {       \"clothing\": \"Sleeveless corset-style top with deep scoop neckline and visible hook-and-eye closures, partially visible skirt or shorts\",       \"accessories\": \"Silver cross pendant necklace on a thin chain\"     },     \"pose\": {       \"type\": \"High-angle selfie\",       \"body_position\": \"Arm extended toward camera, body angled slightly\"     },     \"setting\": {       \"location\": \"Bedroom interior\",       \"background_elements\": [         \"Large white textured pillows (tufted or knit)\",         \"White sheets\",         \"Dark wall\"       ],       \"ambient_lighting\": \"Purple LED strip light running horizontally behind the headboard\",       \"atmosphere\": \"Dimly lit room with colored accent lighting\"       },     \"style_and_technical\": {       \"aesthetic\": [         \"E-girl\",         \"Y2K grunge\",         \"2000s digital aesthetic\"       ],       \"lighting_technique\": \"Direct on-camera flash, harsh high-contrast lighting on subject against darker background\",       \"camera_settings\": {         \"angle\": \"High-angle wide selfie\",         \"distortion\": \"Slight wide-angle distortion\",         \"color_profile\": \"Full color, natural color rendering with vibrant neon purple accent\"       },       \"aspect_ratio\": \"3:4\"     \n}   \n}",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_19.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 818
+  },
+  {
+    "id": "youmind_extract_25",
+    "title": "@Sienna",
+    "prompt": "Prompt{\n  \"image_generation_request\": {\n    \"parameters\": { \"aspect_ratio\": \"9:16\", \"model_version\": \"v6.0\", \"stylize\": 250, \"quality\": \"high\" },\n    \"reference_settings\": { \"use_reference_image\": true, \"consistency_weight\": 1.0, \"instruction\": \"Strict adherence to uploaded reference image. Maintain exact facial features and body proportions with 0% deviation.\" },\n    \"prompt_structure\": {\n      \"subject\": {\n        \"demographics\": { \"gender\": \"Female\", \"physique\": \"Fit, toned\", \"hair_style\": \"Long straight black hair\" },\n        \"apparel\": {\n          \"upper_body\": { \"item\": \"Tank top\", \"color\": \"Pink\", \"fit\": \"Athletic/Tight\" },\n          \"lower_body\": { \"item\": \"Athletic shorts\", \"color\": \"Gray\", \"texture\": \"Soft fabric\", \"fit\": \"Form-fitting/Highlighting physique\" }\n        },\n        \"pose_and_expression\": { \"body_orientation\": \"Looking back over shoulder\", \"facial_expression\": \"Slight smile\", \"action\": \"Standing/Posing\" }\n      },\n      \"environment\": {\n        \"setting_type\": \"Indoor Gym\",\n        \"architectural_details\": { \"wall_color\": \"White\", \"accents\": \"Blue\", \"flooring\": \"Standard gym flooring\" },\n        \"props_and_equipment\": [ \"Various exercise machines\", \"Gym equipment in background\" ],\n        \"lighting\": { \"source\": \"Overhead\", \"quality\": \"Artificial, bright\" }\n      },\n      \"composition\": { \"camera_angle\": \"Eye level\", \"framing\": \"Medium-full shot\", \"focus\": \"Sharp focus on subject\" }\n    }\n  }\n}",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_25.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 820
+  },
+  {
+    "id": "youmind_extract_29",
+    "title": "@ANKIT PATEL 🇮🇳 | AI",
+    "prompt": "PromptHyper-realistic 3D architectural visualization of a [STYLE: e.g., minimalist/futuristic] two-story exhibition booth forTesla, set against a solid dark grey studio background. The structure features [FORM: e.g., sweeping angular geometry with clean lines] design constructed from [MATERIAL: e.g., matte anodized aluminum and tempered glass] with [COLOR: e.g., Tesla signature red (#E82127) accents and charcoal black]. The ground floor centers around [GROUND-FEATURE: e.g., an interactive EV display platform with integrated LED floor lighting], reflecting Tesla’s focus on innovation and sustainability. A [STAIRS-TYPE: e.g., cantilevered floating staircase with glass balustrades] leads to the upper mezzanine level, designed as [UPPER-FEATURE: e.g., a collaborative lounge and consultation area with panoramic brand graphics and natural light simulation]. The lighting is [LIGHTING: e.g., soft natural daylight balanced with focused architectural accent lights], creating high-quality shadows and depth. The perspective is a wide-angle elevated view, capturing a [VIBE: e.g., cutting-edge tech minimalism with energetic brand presence] aesthetic, rendered with photorealistic textures.",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_29.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 824
+  },
+  {
+    "id": "youmind_extract_35",
+    "title": "@Melis✨",
+    "prompt": "Prompt{\n  \"subject\": {\n    \"person\": \"Young woman, early 20s, Caucasian\",\n    \"hair\": \"Long, voluminous, tousled wavy with lighter highlights, framing the face\",\n    \"pose\": \"Sitting comfortably on a black cushioned ledge, body angled slightly left, looking thoughtfully off-camera right\",\n    \"expression\": \"Gentle, calm, slight Mona Lisa smile\"\n  },\n  \"outfit\": {\n    \"top\": \"White structured corset-style top with thin spaghetti straps and boning details\",\n    \"bottoms\": \"High-waisted beige utility cargo pants with large side pockets\",\n    \"accessories\": \"Small patterned Dior Saddle bag under right arm, dainty necklace, rings on left hand, painted white nails\"\n  },\n  \"action\": {\n    \"hands\": \"Left hand holds a stemmed glass of rosé by the stem; right hand rests flat on the ledge behind her hip\"\n  },\n  \"location\": {\n    \"setting\": \"Rooftop terrace overlooking the Fairmont Hairpin turn of the Monaco Grand Prix in Monte Carlo\",\n    \"background\": \"Dense hillside with multi-story buildings, hotels, a prominent beige skyscraper, construction cranes, green trees, and distant mountains under a cloudy sky. Racetrack with red/white kerbing and vehicles below.\"\n  },\n  \"typography\": {\n    \"text\": \"aramco, UBS, Heineken 0.0, MONTE-CARLO, CAFE DE PARIS on racetrack advertising barriers\"\n  },\n  \"lighting\": {\n    \"type\": \"Natural daylight, overcast afternoon\",\n    \"quality\": \"Soft, diffused, flat, shadowless, slightly hazy\"\n  },\n  \"composition\": {\n    \"style\": \"Candid lifestyle photograph, slightly low angle, medium shot, deep depth of field, asymmetrical balance, 4:5 portrait ratio\",\n    \"color_palette\": \"Muted, earthy, overcast tones; low-medium contrast; moderately desaturated\"\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_35.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 827
+  },
+  {
+    "id": "youmind_extract_43",
+    "title": "@MaryFllr.base.eth",
+    "prompt": "Prompt{\n  \"meta\": {\n    \"image_quality\": \"High\",\n    \"image_type\": \"Monochromatic Digital Illustration / Hyper-realistic Pencil Drawing\",\n    \"resolution_estimation\": \"736 x 914\"\n  },\n  \"global_context\": {\n    \"scene_description\": \"reference image\",\n    \"time_of_day\": \"Indeterminate / Studio setting\",\n    \"weather_atmosphere\": \"Serene / Intimate\",\n    \"lighting\": {\n      \"source\": \"Artificial / Studio Lighting\",\n      \"direction\": \"Frontal / Slightly Butterfly\",\n      \"quality\": \"Soft / Diffused\",\n      \"color_temp\": \"Neutral (Greyscale)\"\n    }\n  },\n  \"color_palette\": {\n    \"dominant_hex_estimates\": [\n      \"#1A1A1A\",\n      \"#808080\",\n      \"#E6E6E6\",\n      \"#BDBDBD\"\n    ],\n    \"accent_colors\": [\n      \"Charcoal\",\n      \"Slate Grey\",\n      \"Silver\",\n      \"Deep Black\"\n    ],\n    \"contrast_level\": \"Medium\"\n  },\n  \"composition\": {\n    \"camera_angle\": \"Eye-level\",\n    \"framing\": \"Close-up / Headshot\",\n    \"depth_of_field\": \"Shallow (soft focus on hair extremities and background)\",\n    \"focal_point\": \"The subject's eyes and the bridge of the nose\"\n  },\n  \"objects\": [\n    {\n      \"id\": \"obj_001\",\n      \"label\": \"Female Subject\",\n      \"category\": \"Person\",\n      \"location\": \"Center\",\n      \"prominence\": \"Foreground\",\n      \"visual_attributes\": {\n        \"color\": \"Range of greyscale tones\",\n        \"texture\": \"Smooth skin, fine hair strands, soft lip texture\",\n        \"material\": \"Skin / Hair\",\n        \"state\": \"Posed\",\n        \"dimensions_relative\": \"Occupies roughly 80% of the frame\"\n      },\n      \"micro_details\": [\n        \"Individual wisps of hair catching light on the left and right\",\n        \"Subtle catchlights in the pupils of both eyes\",\n        \"Fine rendering of eyelashes and eyebrow hairs\",\n        \"Soft philtrum indentation above the upper lip\",\n        \"Subtle shading on the neck suggesting collarbones\",\n        \"Smooth gradient transition on the forehead and cheeks\"\n      ],\n      \"pose_or_orientation\": \"Facing forward, direct eye contact\",\n      \"text_content\": \"null\"\n    },\n    {\n      \"id\": \"obj_002\",\n      \"label\": \"Background\",\n      \"category\": \"Environment\",\n      \"location\": \"Full frame\",\n      \"prominence\": \"Background\",\n      \"visual_attributes\": {\n        \"color\": \"Dark grey to mid-grey gradient\",\n        \"texture\": \"Grainy / Stippled\",\n        \"material\": \"null\",\n        \"state\": \"Static\",\n        \"dimensions_relative\": \"Full frame coverage behind subject\"\n      },\n      \"micro_details\": [\n        \"Noise/grain texture throughout the gradient\",\n        \"Darker vignetting in the four corners\",\n        \"Lighter halo effect immediately surrounding the head\"\n      ],\n      \"pose_or_orientation\": \"null\",\n      \"text_content\": \"null\"\n    }\n  ],\n  \"text_ocr\": {\n    \"present\": true,\n    \"content\": [\n      {\n        \"text\": \"https://t.co/UDC60YoONE\",\n        \"location\": \"Bottom right corner\",\n        \"font_style\": \"Cursive / Handwritten signature\",\n        \"legibility\": \"P\"\n      }\n    ]\n  }\n}",
+    "summary": "",
+    "categories": [
+      "profile / avatar"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_43.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 829
+  },
+  {
+    "id": "youmind_extract_47",
+    "title": "@Key Alves",
+    "prompt": "Prompt{\n  \"metadata\": {\n    \"type\": \"AI Image Generation Prompt\",\n    \"style\": \"Athleisure Lifestyle / Coffee Shop Aesthetic\",\n    \"vibe\": \"Relaxed, cool, minimalist, 'clean girl' aesthetic, cozy\"\n  },\n  \"subject\": {\n    \"demographics\": {\n      \"age\": \"young adult woman, approx 20-25 years old\",\n      \"body_type\": \"slim, elegant\",\n      \"skin\": \"fair, smooth\"\n    },\n    \"face\": {\n      \"expression\": \"neutral or slightly thoughtful, looking at camera\",\n      \"action\": \"sipping drink through a straw\",\n      \"features\": \"delicate, dark almond eyes, minimal makeup, glossy lips\"\n    },\n    \"hair\": {\n      \"color\": \"black\",\n      \"style\": \"long, straight, loose falling over shoulders\"\n    }\n  },\n  \"clothing_and_accessories\": {\n    \"style\": \"Athleisure / Comfy Chic\",\n    \"headwear\": \"beige baseball cap with black text 'TALA ACTIVE'\",\n    \"outfit\": {\n      \"jacket\": \"oversized beige padded bomber jacket\",\n      \"top\": \"basic white t-shirt\",\n      \"bottom\": \"white loose sweatpants / joggers\",\n      \"shoes\": \"white sneakers with black stripes (Adidas Samba style)\"\n    },\n    \"accessories\": [\n      \"silver rings\",\n      \"white tote bag with text 'TALA' on table\",\n      \"holding clear plastic cup with creamy drink (milkshake/iced coffee)\"\n    ]\n  },\n  \"pose_and_composition\": {\n    \"shot_type\": \"vertical full body shot\",\n    \"angle\": \"slightly high angle\",\n    \"posture\": \"sitting on wooden chair, legs crossed and extended to the side\",\n    \"framing\": \"subject centered, cafe depth in background\",\n    \"focus\": \"sharp focus on subject, depth of field (bokeh) on background\"\n  },\n  \"environment\": {\n    \"setting\": \"Modern hipster cafe interior\",\n    \"decor\": \"light wood furniture, grey flooring, industrial ceiling with exposed pipes\",\n    \"background_elements\": [\n      \"coffee counter with machines and shelves\",\n      \"blurred barista (red hair) in distance\",\n      \"yellow flowers in vase on nearby table\",\n      \"warm indoor lighting\"\n    ]\n  },\n  \"lighting_and_atmosphere\": {\n    \"type\": \"Mix of soft natural window light and warm artificial light\",\n    \"color_palette\": \"neutral tones (beiges, whites, creams, light wood)\",\n    \"mood\": \"calm, daily routine, casual luxury\",\n    \"image_quality\": \"high definition, clean edit, vibrant but soft\"\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_47.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 830
+  },
+  {
+    "id": "youmind_extract_94",
+    "title": "@Anissa",
+    "prompt": "PromptCreate an ultra-realistic cinematic photograph in a film-still aesthetic, based strictly on the face from the provided reference photo, preserving 100% facial likeness with absolutely no changes to facial structure or hair.\nThe image is captured as a low-angle selfie, with the camera slightly tilted upward, creating a dynamic perspective that emphasizes the grandeur of a wooden mountain chalet in the background, its roof heavily covered in snow. The upper lines of the building recede into perspective, enhancing the dramatic low-angle composition.\nThe woman is framed in a tight close-up. Her face is subtly tilted forward toward the camera, making her facial features appear more expressive: full lips, a clearly defined jawline, and balanced proportions. Her expression is calm and confident, with a soft, sensual half-smile.\nShe is wearing a voluminous, natural fluffy fur coat that fills the lower part of the frame due to the shooting angle. In her hand—raised slightly higher than usual because of the selfie perspective—she holds a large glass of red wine close to the camera, creating an almost three-dimensional effect. The wine has a deep ruby tone with cinematic softness, and gold rings are visible on her fingers.\nHer straight hair is lightly dusted with snowflakes. Above her head, the sky and the chalet roof are visible, both densely covered in snow. Large snowflakes drift slowly through the air, appearing in both the foreground and background, adding depth and atmosphere.\nFilm look characteristics:\nsoft film grain;\npastel, slightly muted color palette;\ngentle highlights on the glass and hair;\nwarm skin tones contrasting with cool bluish-gray hues of the snow and sky;\nsubtle vignette around the corners;\n35mm film effect: smooth light transitions, natural shadows, no digital sharpness;\nfine dust and microscopic film imperfections (optional).\nThe overall atmosphere is aesthetic, luxurious, relaxed, and wintry, evoking the feeling of a living cinematic moment and true presence in the scene.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_2207.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 803
+  },
+  {
+    "id": "youmind_extract_52",
+    "title": "@Hoor",
+    "prompt": "Prompt{\n  \"render_goal\": \"Hyper-realistic cinematic portrait of a female in urban adventure setting\",\n  \"subject\": {\n    \"gender\": \"female\",\n    \"age_range\": \"mid-20s\",\n    \"appearance\": {\n      \"hair\": \"short bob, slightly tousled\",\n      \"facial_features\": \"strong angular features\",\n      \"expression\": \"confident, daring\"\n    },\n    \"skin_detail\": \"natural with subtle highlights\"\n  },\n  \"wardrobe\": {\n    \"outerwear\": \"black leather jacket with silver zippers\",\n    \"details\": \"urban style, slightly worn\"\n  },\n  \"environment\": {\n    \"location\": \"city rooftop at sunset\",\n    \"background\": {\n      \"buildings\": \"skyscrapers fading into distance\",\n      \"sky\": \"orange-pink sunset with soft clouds\",\n      \"atmosphere\": \"light mist, cinematic feel\"\n    }\n  },\n  \"lighting_and_color\": {\n    \"lighting_style\": \"golden hour cinematic\",\n    \"light_source\": \"warm sunlight\",\n    \"color_palette\": \"warm oranges, muted blues\"\n  },\n  \"camera_settings\": {\n    \"lens\": \"50mm\",\n    \"aperture\": \"f/1.8\",\n    \"depth_of_field\": \"shallow\"\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_52.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 834
+  },
+  {
+    "id": "youmind_extract_6",
+    "title": "@VoxcatAI",
+    "prompt": "Using my uploaded reference image as the base, generate a minimalist, high-quality commercial still life photograph with the aesthetic of a luxury brand advertisement.\n\nPreserve the general shape, proportions, and main color scheme of the core product in the reference so that it is instantly recognizable as the same product, but upgrade the overall texture and atmosphere of the image, making it look like an ad for a top-tier international fragrance, skincare item, or high-end electronic product.\n\nUse a vertical 4:5 composition. The background should be a large area of clean, neutral negative space, such as soft off-white, cool gray, or light beige, creating a quiet, restrained, and expensive studio environment. Apart from the core product and a minimal number of necessary supports, do not add any extra decorations. No clutter, no elaborate scene setup—only keep very simple geometric supports (such as a plain white cube, a cylinder, or a thin transparent panel). The supports must be simple and low-profile, existing only to hold and accentuate the product.\n\nStrongly emphasize the material details of the product, and let the lighting fully serve those materials:\nShow frosted glass with a fine, soft matte texture, ceramics with a matte or slightly glazed feel, and polished metal with clean, sharp specular highlights. Liquids should have clearly visible viscosity and volume. Avoid any cheap plastic feel, complex patterns, or gaudy stickers; the overall material quality must feel cool, restrained, and luxurious.\n\nUse professional studio lighting: mainly soft, diffused light from softboxes, plus precise rim light outlining the product’s shape. The contours should be crisp and layered, and the shadows should be soft and clean, with no noise or dirty shadow patches. You may use a near-macro viewpoint, moving in closer to the product to highlight materials and details, while preserving ample negative space around the frame so the product can \"speak for itself\" in the emptiness.\n\nKeep the overall color scheme neutral and calm. The product’s own color can be slightly more saturated, making it the single visual focal point in the scene. Do not use exaggerated gradient backgrounds, flashy colored lighting, or e-commerce promo aesthetics. No large-price text, labels, or cartoon graphics.\n\nThe final result must be a high-resolution commercial key visual that looks ready for a magazine back cover or a high-end brand announcement poster: minimalist, quiet, high-end, with the core product confidently centered, surrounded by clean negative space and precisely controlled lighting.",
+    "summary": "",
+    "categories": [
+      "poster / flyer"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_96.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 702
+  },
+  {
+    "id": "youmind_extract_9",
+    "title": "@宝玉",
+    "prompt": "### Scene\nMirror selfie in an otaku-style computer corner, blue color tone.\n\n### Subject\n* Gender expression: female\n* Age: around 25\n* Ethnicity: East Asian\n* Body type: slim, with a defined waist; natural body proportions\n* Skin tone: light neutral tone\n* Hairstyle:\n    * Length: waist-length hair\n    * Style: straight with slightly curled ends\n    * Color: medium brown\n* Pose:\n    * Stance: standing in a slight contrapposto pose\n    * Right hand: holding a smartphone in front of her face (identity hidden)\n    * Left arm: naturally hanging down alongside the torso\n    * Torso: body leaning slightly back; waist and abdomen exposed\n* Clothing:\n    * Top: light blue cropped knit cardigan, top two buttons fastened; a blue French-style bra faintly visible\n    * Bottom: denim ultra-short shorts, with a blue satin ribbon bow on each side of the hips\n    * Socks: blue and white horizontal striped over-the-knee socks\n    * Accessory: a blue cute mascot phone case\n\n### Environment\n* Description: bedroom computer corner seen through a wall-mounted mirror\n* Furnishings:\n    * White desk\n    * Single monitor showing a soft blue wallpaper (no readable text)\n    * Mechanical keyboard with white keycaps on a blue desk mat\n    * Mouse on a small blue mouse pad\n    * PC tower on the right side with blue case lighting\n    * Three anime figures on or near the PC tower\n    * A poster of a pagoda on the wall\n    * Cat-shaped desk lamp with blue accents\n    * A transparent glass of water\n    * A tall green leafy plant by the window (on the left side of the frame)\n* Color replacement: replace all originally pink elements (clothes and room decor) with blue tones (baby blue to sky blue/periwinkle blue).\n\n### Lighting\n* Light source: daylight coming from a large window on the left side of the camera, through sheer curtains\n* Light quality: soft, diffused light\n* White balance (K): 5200\n\n### Camera\n* Mode: smartphone rear camera shooting via the mirror (no portrait/bokeh mode)\n* Equivalent focal length (mm): 26\n* Distances (m):\n    * Subject to mirror: 0.6\n    * Camera to mirror: 0.5\n* Exposure:\n    * Aperture (f): 1.8\n    * ISO: 100\n    * Shutter speed (s): 0.01\n    * Exposure compensation (EV): -0.3\n* Focus: focus on the torso and shorts in the mirror image\n* Depth of field: natural smartphone deep depth of field; background clearly visible with no artificial blur\n* Composition:\n    * Aspect ratio: 1:1\n    * Crop: from the top of the head to mid-thigh; include the desk, monitor, PC tower, and plant in the frame\n    * Angle: slightly high angle from the mirror’s point of view\n    * Composition note: keep the subject centered; to avoid wide-angle edge distortion, have her stand a bit further away and crop to a square later.\n\n### Negative prompts\n* Any appearance of pink/magenta anywhere\n* Beauty filters/over-smoothed skin; poreless skin look\n* Exaggerated or distorted anatomy\n* NSFW, see-through fabrics, wardrobe malfunctions\n* Logos, brand names, or readable user interface text\n* Fake portrait-mode blur, CGI/illustration feel",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_97.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 704
+  },
+  {
+    "id": "youmind_extract_24",
+    "title": "@けこねこ",
+    "prompt": "A slightly early star present for you from yesterday's angel girl~.｡.:*☆",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_24.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 805
+  },
+  {
+    "id": "youmind_extract_31",
+    "title": "@Sycomore",
+    "prompt": "Prompt[Subject], stylized 3D rubberhose character, smooth 3D render,  SolidColorcolor background, dynamic pose, soft ground shadow, bright soft lighting, modern playful design",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_31.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 806
+  },
+  {
+    "id": "youmind_extract_65",
+    "title": "@simeon-sanai",
+    "prompt": "Prompt{\n  \"type\": \"image_generation_prompt\",\n  \"style\": \"hyper-realistic, cinematic, urban rebel aesthetic\",\n  \"resolution\": \"8K\",\n  \"identity_preservation\": {\n    \"use_reference_image\": true,\n    \"strict_identity_lock\": true,\n    \"alter_face\": false,\n    \"notes\": \"Maintain the woman’s precise facial features, hairstyle, skin tone, body proportions, age, and expression with 100% accuracy based on the uploaded reference image.\"\n  },\n  \"composition\": {\n    \"camera_angle\": \"eye-level to slightly low-angle\",\n    \"framing\": \"medium-to-full body\",\n    \"focus\": \"sharp focus on subject with cinematic depth\"\n  },\n  \"subject\": {\n    \"gender\": \"female\",\n    \"pose\": {\n      \"position\": \"sitting on the chrome grille of a purple classic lowrider car\",\n      \"hands\": {\n        \"right_hand\": \"resting down naturally on her thigh or near her side\",\n        \"gesture\": \"relaxed, non-aggressive\"\n      },\n      \"posture\": \"confident, relaxed, rebellious calm\",\n      \"expression\": \"tough, self-assured, intense\"\n    },\n    \"appearance\": {\n      \"hair\": {\n        \"color\": \"brown\",\n        \"style\": \"messy bun\",\n        \"accessory\": \"light blue hairband\"\n      }\n    }\n  },\n  \"wardrobe\": {\n    \"top_layers\": [\n      \"open blue plaid flannel shirt\",\n      \"white turtleneck hoodie\"\n    ],\n    \"bottoms\": \"full-length trousers (dark or neutral tone, relaxed or baggy)\",\n    \"footwear\": \"white Nike sneakers\"\n  },\n  \"accessories\": {\n    \"handheld_item\": {\n      \"hand\": \"left\",\n      \"item\": \"coffee\",\n      \"handling\": \"casually held\"\n    }\n  },\n  \"environment\": {\n    \"location\": \"dark garage\",\n    \"vehicle\": {\n      \"type\": \"classic lowrider\",\n      \"color\": \"purple\",\n      \"details\": \"chrome grille with reflective metallic finish\"\n    },\n    \"atmosphere\": {\n      \"effects\": [\n        \"light smoke or fog in the background\",\n        \"subtle reflections on chrome surfaces\"\n      ]\n    }\n  },\n  \"lighting\": {\n    \"style\": \"cinematic\",\n    \"tone\": \"cool-toned lighting\",\n    \"effects\": [\n      \"moody highlights\",\n      \"deep shadows\",\n      \"enhanced texture and depth\"\n    ]\n  },\n  \"mood\": {\n    \"atmosphere\": \"rebellious, intense, confident\",\n    \"tone\": \"urban, gritty, cinematic\"\n  },\n  \"quality\": {\n    \"realism\": \"ultra-photorealistic\",\n    \"detail_level\": \"high detail in skin, fabric textures, chrome reflections, and smoke\",\n    \"rendering\": \"cinematic DSLR-quality finish\"\n  },\n  \"output_goal\": \"Create a hyper-realistic, cinematic portrait of a tough woman sitting on a purple classic lowrider in a dark garage, with a relaxed hand-down pose and full-length trousers, preserving her exact identity while conveying a rebellious and intense mood.\"\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_65.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 839
+  },
+  {
+    "id": "youmind_extract_67",
+    "title": "@Gadgetify",
+    "prompt": "Prompta 2 x 1 grid, a hand-carved alpine chalet mechanism (cuckoo-clock adjacent but not strictly a clock) built into a classic book base with shutters, pendulums, and tiny moving figures. Panel A (Don Quixote): carved windmill roofline with rotating sails and a spring-lunge knight. Panel B (1984): carved brutalist watchtower façade with a blinking iris shutter and sweeping searchlight arm. Style: Photoreal hand-carved woodcraft, visible chisel marks and oiled walnut grain, cozy warm hearthlight + cool moon rim, soft volumetric haze, shallow depth of field, centered on rustic plinths, 65mm perspective, background in deep forest green seamless.",
+    "summary": "",
+    "categories": [
+      "comic / storyboard"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_67.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 840
+  },
+  {
+    "id": "youmind_extract_77",
+    "title": "@Aleena Amir",
+    "prompt": "PromptTheSUBJECTslowly emerges from swirling ink suspended in milky water. Rich blacks blend with cloudy whites, soft diffusion, fluid motion, abstract yet recognizable form. Dreamlike atmosphere, poetic minimalism, macro photography style, high detail.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_77.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 815
+  },
+  {
+    "id": "youmind_extract_4",
+    "title": "@ひでもん | AI開発@ニュース発信",
+    "prompt": "Using the following content, summarize the news in a chalkboard-style, hand‑written look, and break it down with diagrams and easy‑to‑understand expressions as if a teacher had written it.\n—-\nSearch results from Grok",
+    "summary": "",
+    "categories": [
+      "infographic / edu visual"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_103.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 795
+  },
+  {
+    "id": "youmind_extract_1",
+    "title": "@Nicolechan",
+    "prompt": "A wide quote card featuring a famous person, with a brown background and a light-gold serif font for the quote: “Stay Hungry, Stay Foolish” and smaller text: “—Steve Jobs.” There is a large, subtle quotation mark before the text. The portrait of the person is on the left, the text on the right. The text occupies two-thirds of the image and the portrait one-third, with a slight gradient transition effect on the portrait.",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_99.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 793
+  },
+  {
+    "id": "youmind_extract_2",
+    "title": "@セミナー講師専門AIコンシェルジュ｜工藤 晶",
+    "prompt": "Completely recreate the uploaded person.\nMake it a header image for a note article where that person introduces “Nano Banana Pro”.\nAspect ratio: horizontal 16:9.\nStyle and colors: simple, hand-drawn style, italic, with a blue and green gradient.\nTitle text: “In-depth explanation of Google’s new AI ‘Nano Banana Pro’”.",
+    "summary": "",
+    "categories": [
+      "infographic / edu visual"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_100.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 794
+  },
+  {
+    "id": "youmind_extract_12",
+    "title": "@Marky @ Easy-Peasy.AI",
+    "prompt": "PromptA low-resolution digital photo taken on a 2005 Sony CyberShot. A group of teenagers hanging out in a mall food court. Harsh on-camera flash, slightly blown-out highlights, digital noise in the shadows. The skin texture looks slightly waxy due to early digital processing. Orange date stamp in the bottom right corner reading \"04/12/2005\". Candid, awkward angles, Myspace photo aesthetic.",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_12.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 799
+  },
+  {
+    "id": "youmind_extract_8",
+    "title": "@松果先森",
+    "prompt": "Dream diary. A pink Kirby lying asleep on a star, blowing rainbow-colored bubbles from its mouth. Soft macaron color palette, cloud and candy stickers, glittery crayon-like details, dreamy and sweet.",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_94.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 701
+  },
+  {
+    "id": "youmind_extract_7",
+    "title": "@Johnn",
+    "prompt": "PromptCreate a photorealistic image of a young woman sitting at a relaxed outdoor restaurant inLondonon a cool Wednesday morning in March2025. The sky is clear, the spring air is crisp, and the city feels calm as it wakes up. She is the focal point of the shot—wearing a light scarf, gently stirring her tea while gazing off to the side with a thoughtful expression. Everything behind her, from the waiter moving about to the soft morning traffic, should fall into a smooth blur, giving the picture the effortless, candid atmosphere of a moment casually snapped on a phone.",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_115.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 797
+  },
+  {
+    "id": "youmind_extract_26",
+    "title": "@KeorUnreal",
+    "prompt": "Prompt{\n  \"shot\": \"A tight close-up mirror selfie\",\n  \"subject\": {\n    \"appearance\": \"a stunning woman\",\n    \"hair\": \"short hair\",\n    \"pose\": \"sitting casually sideways on a white bathroom vanity counter\",\n    \"gaze\": \"looking at the mirror\"\n  },\n  \"outfit\": {\n    \"bodysuit\": \"form-fitting gold symbiote-inspired superhero bodysuit with subtle dark web texturing\",\n    \"emblem\": \"prominent white spider emblem on the chest\"\n  },\n  \"phone\": {\n    \"device\": \"red smartphone\",\n    \"case\": \"white spider logo case\",\n    \"action\": \"holding it up to capture the reflection\"\n  },\n  \"environment\": {\n    \"location\": \"luxury bathroom\",\n    \"lighting\": \"dimly lit with warm, soft indoor lighting\",\n    \"atmosphere\": \"intimate atmosphere with soft shadows\",\n    \"visible_elements\": \"only a partial section of the white sink basin and counter surface visible at the bottom of the frame\",\n    \"mirror\": \"mirror edges are cropped out of view\"\n  },\n  \"aesthetic\": \"high quality, photorealistic, lo-fi social media aesthetic\",\n  \"makeup\": {\n    \"blush\": \"prominent soft pink blush on her cheeks\",\n    \"finish\": \"glowy makeup\",\n    \"highlighter\": \"on the tip of her nose\",\n    \"lips\": \"slightly parted soft warm pink lips\"\n  },\n  \"skin\": \"highly detailed skin texture\"\n\"lighting_detail\": \"even, invisible front illumination that softly brightens the face with neutral white light, no visible light source, no shadows, no reflections, no hotspots\",\n  \"quality\": \"no blur\"\n}",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_26.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 821
+  },
+  {
+    "id": "youmind_extract_27",
+    "title": "@セレナ",
+    "prompt": "PromptDisplay the subject from the attached image on a flip phone (garakei) LCD screen from early 2000s Japan. The phone is open, with glossy pink or white shell, physical buttons, and simple beaded straps with pastel colored beads. The screen shows the image with pixelated edges and warm color saturation typical of 2000s mobile displays. Surrounded by nostalgic items like photo stickers, gel pens, and mini notebooks. Nostalgic, kawaii, emotional, soft lighting.",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_27.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 822
+  },
+  {
+    "id": "youmind_extract_33",
+    "title": "@Dominus the Prompter",
+    "prompt": "PromptA hyper-realistic, 8k photorealistic shot capturing the first-person POV (cockpit view) from the seat of a modernKawasakimotorcycle speeding through a wet metropolis at night. The focus is razor-sharp on the illuminated digital dashboard, speedometer, and handlebars, showing intricate carbon fiber and metallic textures. The background is a dramatic blur of vibrant neon streetlights and building reflections (extreme depth of field, high bokeh). Rain streaks across the windshield or visor. Cinematic lighting, volumetric fog, wide-angle lens, highly detailed, dramatic atmosphere.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_33.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 825
+  },
+  {
+    "id": "youmind_extract_37",
+    "title": "@Özge Döner",
+    "prompt": "PromptCreate a dynamic grid image showing the same character represented across major eras of Turkish history. The image is divided into 4 vertical panels arranged in a clean, graphic grid.  Panel 1 (Ancient Era): A Göktürk warrior on the Central Asian steppes, wearing leather armor with wolf fur details, holding a traditional recurve bow.  Panel 2 (Imperial Era): An Ottoman figure in the classical era, wearing an intricate Kaftan and a turban or janissary crest, with Istanbul's silhouette in the background.  Panel 3 (Independence Era): A 1923 Republic era officer or hero, wearing a traditional \"Kalpak\" hat and a vintage military wool uniform, representing the War of Independence.  Panel 4 (Modern Era): A confident modern-day character or futuristic pilot (Kızıl Elma style), representing the future of Türkiye.  Each panel shows the exact same character identity (same face structure and eyes) but adapted to the specific historical era, interacting subtly through poses and gazes looking at each other. Cinematic lighting, hyper-realistic, live action, 8k resolution, highly detailed textures. --ar 16:9",
+    "summary": "",
+    "categories": [
+      "infographic / edu visual"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_37.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 828
+  },
+  {
+    "id": "youmind_extract_34",
+    "title": "@Ditherly - Creative AI Hub",
+    "prompt": "PromptA wide-angle shot of the [reference woman] sitting on a checkered picnic blanket in a lush green meadow, holding a strawberry up to her mouth. She is wearing a floral sundress and a straw hat. The image is decorated with colorful, hand-drawn 2D illustrations of daisies and ladybugs crawling over the \"real\" grass around her. Bright, airy lighting, vibrant colors, \"National Geographic\" level of detail on the clover and fabric. 9:16 portrait mode",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_34.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 826
+  },
+  {
+    "id": "youmind_extract_50",
+    "title": "@Mert",
+    "prompt": "Prompt{\n  \"prompt\": \"Sexy adult woman standing in a neon-lit city at night, confident pose, glossy lips, stylish short dress, cinematic cyberpunk atmosphere, realistic skin, shallow depth of field, high detail, fashion street photography\",\n  \"style\": \"cinematic realism\",\n  \"quality\": \"ultra\",\n  \"lighting\": \"neon lights\",\n  \"camera\": \"35mm lens\",\n  \"mood\": \"mysterious, modern, alluring\",\n  \"negative_prompt\": \"explicit sexual acts, nudity, bad anatomy, blurry image, oversaturated\"\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_50.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 832
+  },
+  {
+    "id": "youmind_extract_51",
+    "title": "@Sharon Riley",
+    "prompt": "Prompt{\n  \"subject\": {\n    \"description\": \"Young woman with a cool, edgy aesthetic\",\n    \"features\": {\n      \"hair\": \"Messy, shoulder-length dark brunette bob with soft waves and wispy bangs\",\n      \"makeup\": \"Dewy skin, glossy peach-toned lips, subtle winged eyeliner, and defined brows\",\n      \"notable_details\": \"Silver eyebrow piercing on her right brow, long manicured nails with a mix of nude and dark brown polish\"\n    },\n    \"pose\": \"Sitting in a car, looking directly at the camera with a confident expression, one hand raised with a finger touching her bottom lip\"\n  },\n  \"fashion\": {\n    \"clothing\": \"Black oversized t-shirt with bold blue and pink graphic lettering\",\n    \"accessories\": \"Small, rectangular 90s-style black sunglasses with gold metal frames, worn slightly down the bridge of the nose\"\n  },\n  \"environment\": {\n    \"setting\": \"Inside a car at night\",\n    \"background\": \"Car interior with leather seats, blurry city lights and a green traffic light visible through the window\",\n    \"lighting\": \"Low-light indoor car setting, soft cool-toned overhead cabin light, subtle flash effect creating soft shadows\"\n  },\n  \"technical_specs\": {\n    \"camera_style\": \"High-quality mobile phone selfie, slight film grain\",\n    \"composition\": \"Medium shot, portrait orientation\",\n    \"color_palette\": [\"Deep black\", \"Electric blue\", \"Warm brunette\", \"Soft peach\", \"Muted gold\"]\n  }\n}",
+    "summary": "",
+    "categories": [
+      "profile / avatar"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_51.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 833
+  },
+  {
+    "id": "youmind_extract_55",
+    "title": "@ねるぴ💛🐾スマホでAI動画",
+    "prompt": "Please add the text 'We are best friends forever'. Also, please add handwritten graffiti typical of Heisei-era Purikura. Also, please add arrows and the girls' names. The girl on the right isYuka, and the girl on the left isChieri.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_55.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 836
+  },
+  {
+    "id": "youmind_extract_59",
+    "title": "@Johnny Wang",
+    "prompt": "PromptIn a 3x3 grid, show this dancer in different angles, keep the scene same, Random poses.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_59.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 837
+  },
+  {
+    "id": "youmind_extract_69",
+    "title": "@Heisenberg",
+    "prompt": "Prompt{\n\"image_type\": \"portrait_photography\",\n\"composition\": {\n\"framing\": \"medium close-up\",\n\"orientation\": \"vertical\",\n\"subject_position\": \"subject centered slightly right, body turned away with head rotated back toward camera\",\n\"crop\": \"cropped at mid-back, full head visible\",\n\"perspective\": \"eye-level\",\n\"pose\": \"three-quarter back view with over-the-shoulder gaze\",\n\"negative_space\": \"soft, minimal negative space on right edge with light-toned background\"\n},\n\"subject\": {\n\"gender_presentation\": \"female\",\n\"age_range\": \"young adult\",\n\"skin_tone\": \"light, neutral-warm\",\n\"facial_expression\": \"neutral, calm, introspective\",\n\"gaze_direction\": \"looking slightly past the camera\",\n\"hair\": {\n\"style\": \"short layered bob\",\n\"length\": \"jaw to neck length\",\n\"texture\": \"naturally tousled, slightly wavy\",\n\"volume\": \"medium with airy lift\",\n\"parting\": \"asymmetrical side-swept fringe\",\n\"color\": \"medium brown with subtle warm highlights\"\n},\n\"facial_features\": {\n\"eyebrows\": \"natural, medium thickness\",\n\"eyes\": \"soft almond shape\",\n\"makeup\": \"minimal, natural finish\",\n\"skin_finish\": \"matte with subtle natural texture\"\n}\n},\n\"wardrobe\": {\n\"garment_type\": \"coat or structured jacket\",\n\"fit\": \"relaxed, slightly oversized\",\n\"fabric\": \"textured woven wool or wool-blend\",\n\"color\": \"light beige / cream\",\n\"style\": \"minimalist, modern, understated\"\n},\n\"lighting\": {\n\"type\": \"natural light\",\n\"direction\": \"soft side light from left\",\n\"quality\": \"diffused, low contrast\",\n\"shadow_characteristics\": \"gentle shadows with smooth falloff\",\n\"highlight_behavior\": \"subtle highlights on cheekbone and hair strands\"\n},\n\"color_palette\": {\n\"dominant_colors\": [\"beige\", \"warm brown\", \"soft white\"],\n\"accent_colors\": [\"muted taupe\", \"light skin tones\"],\n\"saturation\": \"low to moderate\",\n\"overall_tone\": \"warm-neutral, earthy\"\n},\n\"background\": {\n\"environment\": \"studio or interior setting\",\n\"elements\": \"blurred rectangular artwork or panel behind subject\",\n\"depth_of_field\": \"shallow, background softly out of focus\",\n\"color\": \"muted brown and off-white\",\n\"texture\": \"smooth with subtle painterly blur\"\n},\n\"technical_details\": {\n\"camera_type\": \"DSLR or mirrorless\",\n\"lens_estimate\": \"50mm–85mm portrait lens\",\n\"aperture_estimate\": \"wide aperture (approximately f/2–f/2.8)\",\n\"sharpness\": \"sharp focus on face and hair\",\n\"noise\": \"minimal\",\n\"white_balance\": \"warm, natural\"\n},\n\"artistic_style\": {\n\"genre\": \"fashion editorial portrait\",\n\"mood\": \"soft, intimate, understated\",\n\"aesthetic\": \"modern minimalist, effortless elegance\",\n\"stylistic_influences\": [\"editorial fashion photography\", \"natural light portraiture\"],\n\"retouching_level\": \"light, natural retouching preserving skin texture\"\n},\n\"typography\": {\n\"presence\": \"none\"\n},\n\"overall_impression\": {\n\"visual_focus\": \"hair texture and facial profile\",\n\"emotion\": \"quiet confidence and calm introspection\",\n\"use_c\nase\": [\"fashion editorial\", \"hair styling reference\", \"portrait inspiration\"]\n}\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_69.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 841
+  },
+  {
+    "id": "youmind_extract_74",
+    "title": "@Nid All | AI art and more 🤖",
+    "prompt": "Prompt“Analyze the uploaded reference image to understand the mechanical structure and geometry of the object. Generate a comprehensive, industrial-level blueprint of this specific product. Present the design as a professional orthographic projection, featuring clear plan, elevation, and section views to detail the internal and external construction. Deconstruct the assembly into its primary components and apply legible, technical text labels (denominations) for each part using a standardized sans-serif engineering font. Render the visual in a classic blueprint aesthetic with precise white vector-style lines on a deep blue grid background, ensuring high contrast and professional accuracy suitable for manufacturing documentation.”",
+    "summary": "",
+    "categories": [
+      "infographic / edu visual"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_75.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 843
+  },
+  {
+    "id": "youmind_extract_81",
+    "title": "@Gagan Singh",
+    "prompt": "Prompt{\n  \"reference_image\": \"UPLOAD_USER_IMAGE_HERE\",\n  \"subject\": {\n    \"gender\": \"male\",\n    \"visibility\": \"full_body\"\n  },\n  \"style\": {\n    \"art\": \"minimal_black_ink_full_body_illustration\",\n    \"medium\": \"black_pen_on_notebook\",\n    \"linework\": \"bold_heavy_strokes\",\n    \"mood\": \"moody_artistic\"\n  },\n  \"background\": {\n    \"surface\": \"plain_notebook_paper\"\n  },\n  \"render_settings\": {\n    \"resolution\": \"4K\"\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_81.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 847
+  },
+  {
+    "id": "youmind_extract_73",
+    "title": "@TeeJay",
+    "prompt": "Prompt{\n  \"prompt\": \"4K hyper ultra realistic full-body fashion portrait of a young woman standing indoors in a luxury cocktail bar at night. The woman has a slim elegant build, fair skin tone, symmetrical facial structure, softly contoured cheeks, straight nose, full natural lips, and almond-shaped brown eyes. Her expression is calm, confident, and poised, with direct eye contact toward the camera. She has long, straight medium-brown hair, smooth texture, parted slightly off-center, falling naturally over her shoulders. Makeup is natural and refined: matte skin finish, subtle contouring, softly defined eyebrows, neutral eyeshadow, light eyeliner, and nude rose lips. She is wearing a fitted black sleeveless evening dress with a high straight neckline, minimalist modern design, waist cutouts on both sides, and thin black ribbon ties at the waist. The dress is floor-length with smooth matte fabric and realistic folds. She carries a small black clutch under her arm and wears a delicate bracelet on her wrist. The setting is an upscale, sophisticated bar interior with a circular illuminated bar behind her, warm golden ambient lighting, brass and marble details, backlit shelves filled with liquor bottles, woven bar stools with gold bases, small table lamps, and textured stone tile flooring in a herringbone pattern. Background patrons and bartenders are softly blurred, creating depth. Lighting is warm, cinematic, and soft, producing natural skin highlights and realistic shadows. Shot with a professional full-frame camera, ultra-sharp focus on subject, shallow depth of field, high dynamic range, realistic skin texture, accurate fabric physics, true-to-life proportions, photorealistic color grading.\",\n  \"negative_prompt\": \"low resolution, blurry, soft focus, overexposed, underexposed, harsh lighting, flat lighting, cartoon, anime, illustration, CGI, 3D render, plastic skin, waxy face, over-smoothed skin, distorted face, asymmetrical features, bad anatomy, extra limbs, missing limbs, deformed hands, text, watermark, logo, noise, grain\",\n  \"resolution\": \"4096x4096\",\n  \"format\": \"png\",\n  \"style\": \"hyper ultra realistic\",\n  \"lighting\": \"warm cinematic ambient lighting\",\n  \"camera\": {\n    \"type\": \"full-frame professional camera\",\n    \"lens\": \"85mm portrait lens\",\n    \"aperture\": \"f/1.8\",\n    \"iso\": \"low ISO\",\n    \"depth_of_field\": \"shallow\"\n  },\n  \"quality\": \"maximum\",\n  \"rendering\": \"photorealistic\",\n  \"detail_level\": \"extreme\"\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_73.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 842
+  },
+  {
+    "id": "youmind_extract_79",
+    "title": "@Michael Rabone",
+    "prompt": "PromptTransform this cartoon to a Funko Pop vinyl figure. Place the Funko Pop box beside the vinyl figure (side by side) with the name 'Rainbow Cheese' on box. Place vinyl figure and box on a pink surface and pink background with studio lighting.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_79.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 845
+  },
+  {
+    "id": "youmind_extract_278",
+    "title": "@CALLISTUS 🥷🏖️",
+    "prompt": "Prompt{\n  \"subject\": {\n    \"identity\": \"Young woman with a slim build and sun-kissed complexion\",\n    \"pose\": \"Two-panel collage; left side showing a profile view looking away, right side showing a playful frontal view with tongue slightly out\",\n    \"expression\": \"Left: Serene and poised; Right: Playful, energetic, and expressive\"\n  },\n  \"face_and_makeup\": {\n    \"features\": \"Doe-shaped brown eyes, well-defined dark eyebrows, slender nose, and full lips\",\n    \"makeup\": \"Soft 'clean girl' aesthetic: shimmering bronze eyeshadow, winged eyeliner, peach-toned blush, and a lined glossy mauve lip\",\n    \"details\": \"Subtle nose stud on the nostril\"\n  },\n  \"hair\": {\n    \"style\": \"Curly high bun (updo) with a textured, wet-look finish\",\n    \"details\": \"Two distinct face-framing curly tendrils hanging down the forehead and sides\",\n    \"color\": \"Dark espresso / black\"\n  },\n  \"clothing\": {\n    \"top\": \"Deconstructedwhitehalter-neck top with an asymmetrical, ruffled hemline\",\n    \"fabric\": \"Textured gauze or lightweight linen with crochet/knit detailing on the bust\",\n    \"fit\": \"Cropped, exposing the midriff with thin string ties\"\n  },\n  \"accessories\": {\n    \"necklace\": \"Large silver statement pendant shaped like a detailed bird wing\",\n    \"rings\": \"Ornate silver rings, including a matching wing-shaped wrap ring and a chunky band\",\n    \"jewelry_other\": \"Small silver hoop earrings and a dark-jeweled navel piercing\"\n  },\n  \"environment\": {\n    \"location\": \"Outdoor balcony overlooking a coastal Mediterranean-style city\",\n    \"background_elements\": [\n      \"Deep blue ocean with luxury yachts and cruise ships\",\n      \"Palm trees and lush greenery\",\n      \"White multi-story resort or apartment buildings\",\n      \"Bright, diffused natural daylight\"\n    ]\n  },\n  \"style_and_composition\": {\n    \"aesthetic\": \"Summer luxury, Y2K-influenced coastal chic\",\n    \"lighting\": \"Bright, warm golden hour sunlight with soft shadows\",\n    \"color_palette\": \"Dominant whites and blues contrasted with warm skin tones and silver accents\",\n    \"image_type\": \"High-resolution digital photography, portrait orientation\"\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_278.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:18.070176+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 911
+  },
+  {
+    "id": "youmind_extract_80",
+    "title": "@俺の娘たち / AIエンジニア",
+    "prompt": "Read the motif depicted in the attached image, generate multi-angle shots, and create four scenes divided into a 2x2 grid.\n\n[Action 1] The senior colleague (senpai) is looking at books on a shelf. The photographer presses a button on a remote control in their hand, and a distinctive electronic sound/chime rings. [Dialogue 1] The senpai is surprised, immediately turns to the camera, and playfully says, \"Stop it.\" [Action 2] The photographer rings the electronic sound again. [Action 3] The senpai looks down shyly, squats momentarily, then stands up, laughing and covering their face with their hands. [Text Overlay] \"Tried pressing the senpai's switch while they were shopping at the bookstore\" \"#This feeling is too cute www\" \"#Definitely inviting me www\"",
+    "summary": "",
+    "categories": [
+      "comic / storyboard"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_80.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 846
+  },
+  {
+    "id": "youmind_extract_87",
+    "title": "@yusra.",
+    "prompt": "Prompt{\n  \"image_prompt\": {\n    \"subject\": {\n      \"description\": \"Young woman with fair skin and a glamorous appearance.\",\n      \"hair\": \"Voluminous, shoulder-length blonde hair styled in soft layers and waves.\",\n      \"face\": \"Blue eyes, defined eyebrows, soft natural glam makeup with nude glossy lips.\",\n      \"pose\": \"Sitting in the driver's seat, looking directly at the camera, hands gently lifting hair near the head.\"\n    },\n    \"companion\": {\n      \"animal\": \"Small puppy, likely a Goldendoodle or Cockapoo.\",\n      \"appearance\": \"Fluffy, golden-cream curly fur.\",\n      \"position\": \"Sitting calmly on the woman's lap, facing forward.\"\n    },\n    \"attire\": {\n      \"clothing\": \"White, sleeveless bodycon mini dress with waist cutouts.\",\n      \"accessories\": \"Beige quilted leather handbag with a gold chain strap resting on the lap.\"\n    },\n    \"environment\": {\n      \"setting\": \"Interior of a luxury sports car, specifically a Porsche.\",\n      \"details\": [\n        \"Deep red (burgundy) leather seats and interior trim\",\n        \"Black leather steering wheel with visible Porsche logo\",\n        \"Modern center console with digital touchscreen interface\",\n        \"Stainless steel travel tumbler in the center cup holder\",\n        \"Sunroof and car window visible in background\"\n      ]\n    },\n    \"technical_details\": {\n      \"lighting\": \"Bright, soft natural daylight entering through car windows.\",\n      \"style\": \"High-end lifestyle photography, influencer aesthetic, sharp focus, photorealistic.\",\n      \"framing\": \"Medium shot, eye-level perspective.\"\n    }\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_87.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 848
+  },
+  {
+    "id": "youmind_extract_91",
+    "title": "@Zara",
+    "prompt": "Prompt{\n  \"image_prompt\": {\n    \"reference\": {\n      \"face_identity\": \"uploaded reference image\",\n      \"identity_lock\": true,\n      \"face_preservation\": \"100% identical facial structure, proportions, eye shape, lips, nose, brows, skin texture, moles, and expression\"\n    },\n\n    \"subject\": {\n      \"type\": \"young woman\",\n      \"expression\": \"focused, elegant, softly glamorous\",\n      \"gaze\": \"looking slightly downward at a handheld mirror\",\n      \"pose\": {\n        \"position\": \"lying comfortably on her stomach on a bed\",\n        \"arms\": \"bent at the elbows, one hand holding a compact mirror, the other applying lipstick\",\n        \"posture\": \"relaxed, intimate, cinematic\"\n      }\n    },\n\n    \"hair\": {\n      \"style\": \"hair fully wrapped in a white towel turban\",\n      \"visibility\": \"no loose hair visible\"\n    },\n\n    \"makeup\": {\n      \"style\": \"classic glam\",\n      \"details\": [\n        \"defined brows\",\n        \"soft contour\",\n        \"subtle eyeliner\",\n        \"long lashes\",\n        \"bold red lipstick being applied\"\n      ]\n    },\n\n    \"outfit\": {\n      \"clothing\": \"luxurious patterned robe with animal-print design\",\n      \"fabric\": \"silky, soft, flowing texture\"\n    },\n\n    \"environment\": {\n      \"location\": \"elegant bedroom\",\n      \"background_elements\": [\n        \"soft neutral bedding\",\n        \"warm bedside lamp\",\n        \"glass of wine on side table\",\n        \"fashion magazines on the bed\"\n      ],\n      \"ambience\": \"intimate, cinematic, vintage glamour\"\n    },\n\n    \"lighting\": {\n      \"type\": \"warm cinematic indoor lighting\",\n      \"characteristics\": [\n        \"golden highlights on skin\",\n        \"soft shadows\",\n        \"moody evening tones\",\n        \"luxurious hotel-style atmosphere\"\n      ]\n    },\n\n    \"photography_style\": {\n      \"style\": \"editorial lifestyle portrait\",\n      \"camera_look\": \"DSLR cinematic photography\",\n      \"depth_of_field\": \"shallow depth of field with soft background blur\",\n      \"mood\": \"sensual, elegant, contemplative\"\n    },\n\n    \"render_quality\": {\n      \"realism\": \"highly photorealistic\",\n      \"detail_level\": \"ultra high\",\n      \"skin_texture\": \"natural and realistic\",\n      \"resolution\": \"8K\",\n      \"color_grading\": \"warm, cinematic tones\"\n    },\n\n    \"constraints\": {\n      \"text_in_image\": \"none\",\n      \"background_text\": \"removed\",\n      \"style_integrity\": \"maintain realism, no cartoon or illustration effects\"\n    }\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_91.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 849
+  },
+  {
+    "id": "youmind_extract_280",
+    "title": "@Daria_Surkova",
+    "prompt": "Promptmake a close-up of the reference image, so we can see the all the details of the design and the illustration, add high-relief  varnish on the pattern and on the text.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_280.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:18.070176+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 912
+  },
+  {
+    "id": "youmind_extract_5",
+    "title": "@KAWAI",
+    "prompt": "Please generate an advertisement image.\n\n==== Ad specifications ===\n- Aspect ratio: 16:9 (horizontal)\n- Product to advertise: the book in the first attached image\n- Main eye-catcher: place the book from the first attached image in a three-dimensional way\n- Language: Japanese\n- Taste: advertisement for a business book\n\n# Text to include:\n- Pre-head copy: 【New print run decided about one week after release】\n\nBook “Designing from Zero with AI” now on sale and doing well.\n\nAmazon Best Seller Ranking\nRanked No.1 in commercial design sales (as of 10/15)\nhttps://t.co/QxbYpfFVj6",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_107.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 796
+  },
+  {
+    "id": "youmind_extract_20",
+    "title": "@Melisa♡",
+    "prompt": "Prompt{\n  \"image_composition\": {\n    \"type\": \"Collage\",\n    \"layout\": \"3x3 Grid\",\n    \"total_panels\": 9\n  },\n  \"subject_details\": {\n    \"appearance\": \"Young woman with fair skin\",\n    \"hair\": {\n      \"color\": \"Vibrant red\",\n      \"style\": \"Loose waves, shoulder-length, side-parted\",\n      \"texture\": \"Silky and voluminous\"\n    },\n    \"eyes\": \"Blue/Green\",\n    \"expression\": \"Varied (serious, smiling, laughing, focused)\"\n  },\n  \"fashion_and_style\": {\n    \"outfit\": {\n      \"garment\": \"Strapless corset-style dress or top\",\n      \"color\": \"Deep maroon / Berry\",\n      \"fabric\": \"Satin or Silk\",\n      \"details\": \"Ruched bodice, structural boning visible\"\n    },\n    \"makeup\": {\n      \"style\": \"Natural glam\",\n      \"features\": \"Glowing skin, soft blush, defined lashes, nude/pink glossy lips\"\n    }\n  },\n  \"jewelry_focus\": {\n    \"item_type\": \"Dangle Earrings\",\n    \"metal\": \"Gold\",\n    \"design_elements\": [\n      \"Huggie hoop base\",\n      \"Large sunburst/starburst main charm\",\n      \"Pave set crystals\",\n      \"Delicate hanging chains\",\n      \"Small star charms at ends of chains\"\n    ]\n  },\n  \"setting_and_environment\": {\n    \"location\": \"Luxury interior (likely a hotel suite or upscale bathroom)\",\n    \"key_features\": [\n      \"Large rectangular mirror with integrated LED lighting border\",\n      \"White marble countertops\",\n      \"Wood paneling on walls\",\n      \"Large floor-to-ceiling windows\",\n      \"Beige curtains\"\n    ],\n    \"lighting\": \"Mix of natural daylight and warm artificial vanity lighting\"\n  },\n  \"props_and_objects\": {\n    \"cosmetics\": [\n      \"Lip gloss tube\",\n      \"Mascara/Eyeliner tube\",\n      \"Glass perfume bottle with gold cap\",\n      \"Round compact powder\"\n    ],\n    \"tech\": \"Black smartphone\",\n    \"background_props\": \"Beige silk/satin fabric cloth (in flat lay)\"\n  },\n  \"panel_breakdown\": {\n    \"top_row\": [\n      \"Reflection in lit mirror applying makeup\",\n      \"Flat lay of jewelry and cosmetics on marble\",\n      \"Close-up putting on earring near window\"\n    ],\n    \"middle_row\": [\n      \"Extreme close-up of earring on ear\",\n      \"Side profile focusing on hair texture and shoulder\",\n      \"Waist-up portrait facing forward near window\"\n    ],\n    \"bottom_row\": [\n      \"Portrait touching hair looking away\",\n      \"Reflection in mirror laughing/smiling\",\n      \"Flat lay of earrings on folded beige silk cloth\"\n    ]\n  }\n}",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_20.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 819
+  },
+  {
+    "id": "youmind_extract_28",
+    "title": "@てんねん",
+    "prompt": "# ===== USER CONTROLS =====\ntitle_text: \"<<YOUR_TEXT>>\"\ntitle_style_preset: \"cool\"  # cool, cute, cool_cute, luxury, pop, cyber, minimal, retro, kawaii\nface_zoom: \"off\"            # off, on\n\nsubject: >\n  Create a 3:1 wide banner using the provided reference image content.\n  The primary face must be centered inside an invisible safe zone (not drawn),\n  and a title logo (derived from title_text + title_style_preset) must be placed inside the same safe zone.\n\ncomposition: >\n  Aspect ratio 3:1.\n  Invisible safe zone (DO NOT draw it):\n  - Left margin: 15% of width\n  - Right margin: 15% of width\n  - Top margin: 16% of height\n  - Bottom margin: 16% of height\n  Keep the entire face AND the entire title logo fully inside this safe zone.\n  Background may extend to the edges.\n\naction: >\n  Place the reference image content with maximum fidelity.\n  Auto-crop/scale/reposition to fit a 3:1 banner with no stretching.\n  Detect the primary face (if multiple faces, pick the largest/most prominent).\n  Center the primary face within the safe zone both horizontally and vertically.\n  Never crop off the face/eyes; keep the full face comfortably inside the safe zone (not near edges).\n\n  Face zoom behavior:\n  - If face_zoom is OFF: keep the original framing as much as possible while still centering the face in the safe zone.\n  - If face_zoom is ON: zoom/crop to a bust-up portrait centered on the face\n    (head and shoulders visible; include upper chest; do not crop the top of the head or chin; keep facial features prominent).\n\n  Create negative space inside the safe zone for the title logo by adjusting crop/reposition/out",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_28.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 823
+  },
+  {
+    "id": "youmind_extract_61",
+    "title": "@AIvy",
+    "prompt": "Prompt{\n  \"subject\": {\n    \"description\": \"A young Asian woman running on a rugged mountain trail, surrounded by nature's beauty as she powers through the climb.\",\n    \"mirror_rules\": \"N/A\",\n    \"age\": \"20s\",\n    \"expression\": {\n      \"eyes\": {\n        \"look\": \"focused on the path ahead\",\n        \"energy\": \"determined\",\n        \"direction\": \"forward\"\n      },\n      \"mouth\": {\n        \"position\": \"slightly open, exerting breath\",\n        \"energy\": \"focused and intense\"\n      },\n      \"overall\": \"relentless determination to conquer the trail\"\n    },\n    \"face\": {\n      \"preserve_original\": true,\n      \"makeup\": \"natural with a bit of sweat for realism\"\n    },\n    \"hair\": {\n      \"color\": \"black\",\n      \"style\": \"messy ponytail\",\n      \"effect\": \"wind tousling hair as she runs\"\n    },\n    \"body\": {\n      \"frame\": \"lean and muscular\",\n      \"waist\": \"defined and toned\",\n      \"chest\": \"covered\",\n      \"legs\": \"well-toned, showing strength in every step\",\n      \"skin\": {\n        \"visible_areas\": \"legs, face, arms\",\n        \"tone\": \"deep tan\",\n        \"texture\": \"smooth with clear muscle definition\",\n        \"lighting_effect\": \"soft natural light highlighting toned muscles\"\n      }\n    },\n    \"pose\": {\n      \"position\": \"mid-run on rugged terrain\",\n      \"base\": \"ascending a rocky path\",\n      \"overall\": \"focused and strong running posture, head forward\"\n    },\n    \"clothing\": {\n      \"top\": {\n        \"type\": \"athletic tank top\",\n        \"color\": \"forest green\",\n        \"details\": \"breathable fabric with moisture-wicking tech\"\n      },\n      \"bottom\": {\n        \"type\": \"black athletic shorts\",\n        \"color\": \"black\",\n        \"details\": \"lightweight and functional\"\n      }\n    }\n  },\n  \"accessories\": {\n    \"headwear\": null,\n    \"jewelry\": null,\n    \"device\": null,\n    \"prop\": {\n      \"type\": \"footwear\",\n      \"details\": \"rugged trail running shoes with heavy grip soles\"\n    }\n  },\n  \"photography\": {\n    \"camera_style\": \"action sports photography\",\n    \"angle\": \"side view, low angle\",\n    \"shot_type\": \"full body profile\",\n    \"aspect_ratio\": \"3:4\",\n    \"texture\": \"sharp focus, natural colors\",\n    \"lighting\": \"soft natural daylight, overcast sky\",\n    \"depth_of_field\": \"deep, background showing rugged terrain\"\n  },\n  \"background\": {\n    \"setting\": \"mountain trail\",\n    \"wall_color\": \"rocky brown and green hues\",\n    \"elements\": [\n      \"rugged terrain\",\n      \"scenic mountain backdrop\",\n      \"greenery and trees\",\n      \"rocky trail beneath her feet\"\n    ],\n    \"typography\": {\n      \"text_content\": \"JUST DO IT\",\n      \"font_style\": \"Bold, Sans-Serif\",\n      \"color\": \"White\",\n      \"position\": \"centered\",\n      \"integration\": \"slightly transparent, placed behind the subject\",\n      \"visual_weight\": \"dominant\"\n    },\n    \"atmosphere\": \"natural, empowering, focused\",\n    \"lighting\": \"diffused sunlight over the trail\"\n  },\n  \"the_vibe\": {\n    \"energy\": \"perseverance\",\n    \"mood\": \"motivational, empowering\",\n    \"aesthetic\": \"nature, at\"\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_61.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 801
+  },
+  {
+    "id": "youmind_extract_48",
+    "title": "@Ray Zhai",
+    "prompt": "Please complete the following task regarding the year1985. You are a professional product photographer specializing in soft flat lay photography. I will provide a year or an inventor.\n\nStep 1: Selection. Identify 3 to 5 inventions from that year, and 5 to 7 related small accessories (e.g., if the invention is a camera, include film; if it's a car part, include a wrench).\n \nStep 2: Layout. Arrange all items on a flat, solid-color matte background (choose a color that contrasts sharply with the items).  \nGridding Method: Align all objects at perfect 90-degree angles. Arrange by size and shape.  Atmosphere: Deconstructed, orderly, satisfying, geometric.  \nLighting: Soft, flat top-down studio lighting (no shadows). \n\n Output: A 4:5 aspect ratio image. The year (e.g., \"1955\") should be placed in the center of the grid using a physical print object (such as metal letters or paper cutouts).  Style: Wes Anderson-style symmetry, high-end commercial advertising style, vibrant.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_48.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 831
+  },
+  {
+    "id": "youmind_extract_53",
+    "title": "@Synthorigen",
+    "prompt": "PromptUltra photorealistic nighttime urban fashion photograph. A young woman is sitting sideways in the open window frame of a glossy black luxury sedan driving slowly through a neon-lit city street at night. She wears a sheer black lace dress with intricate floral patterns, long sleeves, and a delicate, elegant silhouette. Her posture is relaxed and confident, one leg inside the car, body leaning slightly outward. She tilts her head back gently, gazing upward with a dreamy, contemplative expression. Her skin appears smooth with natural glow, subtle highlighter on cheekbones, soft natural makeup, glossy lips. Her hair is long, light brown, voluminous, and wavy, flowing freely with motion from the night breeze. The background features tall modern skyscrapers with illuminated windows, colorful neon signs, LED billboards, and blurred city lights creating bokeh effects. Reflections of neon lights are visible on the car’s glossy surface. Cinematic night lighting with mixed neon and street light tones, realistic shadows, high dynamic range. Shot with a professional DSLR camera, 50mm lens, shallow depth of field, fashion editorial style, cinematic realism, ultra-detailed lace fabric, realistic hair strands, natural skin texture, no distortion.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_53.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 835
+  },
+  {
+    "id": "youmind_extract_78",
+    "title": "@Kaan",
+    "prompt": "Prompt{\n  \"image_prompt\": {\n    \"subject\": {\n      \"description\": \"Young man with fair to light-olive skin, strong masculine presence and confident demeanor.\",\n      \"hair\": \"Dark brown or black hair, clean modern cut, neatly styled.\",\n      \"face\": \"Sharp jawline, subtle stubble or clean-shaven, thick defined brows, calm dominant expression.\",\n      \"pose\": \"Sitting in the driver's seat, looking directly at the camera with composed confidence, one hand resting on the steering wheel, the other relaxed on his lap.\"\n    },\n    \"companion\": {\n      \"animal\": \"Doberman\",\n      \"appearance\": \"Sleek, muscular Doberman with black and tan coat, cropped ears, alert but calm.\",\n      \"position\": \"Sitting confidently beside the man, partially on his lap or on the passenger seat, facing forward.\"\n    },\n    \"attire\": {\n      \"clothing\": \"Tailored black or charcoal suit with sharp shoulders, slim fit trousers, crisp white dress shirt.\",\n      \"accessories\": \"Luxury wristwatch, minimal metal bracelet, no tie or a very subtle black tie for a modern executive look.\"\n    },\n    \"environment\": {\n      \"setting\": \"Interior of a luxury sports car, Porsche.\",\n      \"details\": [\n        \"Deep burgundy leather seats and trim\",\n        \"Black leather steering wheel with visible Porsche logo\",\n        \"Modern digital center console\",\n        \"Sunroof and side window visible\"\n      ]\n    },\n    \"technical_details\": {\n      \"lighting\": \"Soft natural daylight with subtle contrast, emphasizing facial structure and suit texture.\",\n      \"style\": \"High-end luxury editorial photography, masculine, cinematic, photorealistic.\",\n      \"framing\": \"Medium shot, eye-level perspective.\"\n    }\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_78.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 844
+  },
+  {
+    "id": "youmind_extract_3",
+    "title": "@Florian Gallwitz",
+    "prompt": "Generate a map of Germany in watercolor style, on which all federal states are labeled in ballpoint pen.",
+    "summary": "",
+    "categories": [
+      "infographic / edu visual"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_98.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.857147+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 720
+  },
+  {
+    "id": "youmind_extract_16",
+    "title": "@Indie Maker | AI",
+    "prompt": "xxxxx, please generate an infographic, using the style 【xxxx】.",
+    "summary": "",
+    "categories": [
+      "infographic / edu visual"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_16.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 897
+  },
+  {
+    "id": "youmind_extract_17",
+    "title": "@Lex",
+    "prompt": "Prompt{\n  \"prompt_structure\": {\n    \"subject\": {\n      \"description\": \"Young woman with light skin tone\",\n      \"hair\": \"Long, voluminous dark brunette hair, styled in loose waves, center part, reaching past shoulders\",\n      \"face\": \"Oval face shape, light-colored eyes (appearing green or grey), soft makeup with defined eyeliner and neutral glossy lips\",\n      \"expression\": \"Neutral, alluring gaze, direct eye contact with the camera\"\n    },\n    \"clothing\": {\n      \"type\": \"Slip dress / Chemise\",\n      \"color\": \"Vibrant red\",\n      \"material\": \"Satin or silk finish with a glossy sheen\",\n      \"details\": \"Spaghetti straps, V-neckline with scalloped lace trim, lace detailing near the hem, mini length\",\n      \"accessories\": \"Small silver pendant necklace, ring on ring finger of left hand\"\n    },\n    \"pose\": {\n      \"stance\": \"Leaning backward against a bathroom vanity counter\",\n      \"arms\": \"Arms extended downward, hands gripping or resting on the edge of the marble countertop\",\n      \"orientation\": \"Front-facing\"\n    },\n    \"environment\": {\n      \"setting\": \"Modern luxury bathroom\",\n      \"elements\": [\n        \"White marble countertop\",\n        \"Dark wood vanity cabinetry\",\n        \"Large wall mirror behind subject\",\n        \"Circular magnifying mirror on a gold/brass stand\",\n        \"Glass shower door/enclosure in background\"\n      ],\n      \"reflections\": \"Subject's back and hair visible in the large mirror behind her\"\n    },\n    \"lighting_and_style\": {\n      \"lighting\": \"Direct flash photography, bright front illumination with slight shadows behind the subject\",\n      \"aesthetic\": \"Influencer lifestyle, candid snapshot, high-fidelity, 'night out' preparation vibe\",\n      \"color_palette\": \"Red, warm skin tones, cool whites and dark browns in background\"\n    }\n  }\n}",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_17.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 899
+  },
+  {
+    "id": "youmind_extract_23",
+    "title": "@はろ | AI活用とHALO式スライド",
+    "prompt": "Please generate an image of Umaibo drawn with a ballpoint pen.",
+    "summary": "",
+    "categories": [
+      "social media post"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_23.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 900
+  },
+  {
+    "id": "youmind_extract_41",
+    "title": "@Abbay",
+    "prompt": "Prompt{\n  \"subject\": {\n    \"person\": \"Young woman, early 20s, Caucasian\",\n    \"hair\": \"Soft ash-blonde hair, loose waves with natural movement, slightly wind-blown\",\n    \"pose\": \"Standing near glass railing, torso angled slightly right, gaze off-camera left\",\n    \"expression\": \"Composed, calm, subtle elegant smile\"\n  },\n  \"outfit\": {\n    \"top\": \"Ivory off-shoulder fitted knit top with clean neckline\",\n    \"bottoms\": \"High-waisted beige tailored trousers\"\n  }\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_41.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 890
+  },
+  {
+    "id": "youmind_extract_42",
+    "title": "@Maki@Sunwood AI Labs.",
+    "prompt": "GENERAL STYLE & MOOD:\n“Epic Figurative Art.” The prompt requires multi-layered analysis of the user’s provided home screen (articles, headings, used apps, notifications, colors) to condense all “elements” of the year into a single still image. It should be a fusion of philosophical, profound realism and surreal design.\n\nTASK & ANALYSIS:\n1. Comprehensively scan the text information within the provided home screen to extract frequently used vocabulary, interests, emotional fluctuations, and fragments of daily life.\n2. Integrate these “total elements of the year” and select one ultimate “single Kanji character” that symbolizes the user’s journey.\n3. Construct the “strokes” of that Kanji character as a three-dimensional collection of concrete events analyzed (e.g., work tools, hobby fragments, motifs from read articles).\n\nSUBJECT:\nThe “single Kanji character” embodying the user’s year, centrally positioned.\n- This character is a “collection of micro-stories.” Upon closer inspection, the parts of the character should be formed by specific objects that colored the user’s year (e.g., designs symbolizing specific news articles, daily tools, fragments of memory).\n- Maintain perfect readability of the Kanji and ensure it has a strong skeletal structure.\n\nENVIRONMENT & BACKGROUND (The Total Year Narrative):\nThe background should also be depicted not merely as scenery, but as an epic panorama covering “all elements of the year.”\n- Background composition: Behind the character, the analyzed events of the year should spread out as scenery, either chronologically or thematically (e.g., symbols of challenged projects, the atmosphere of visited places, images of engrossing news).\n- Consistency: The central Kanji should be the core of the “world” of that year, with all background elements converging towards the character or overflowing from it.\n\nLIGHTING & TEXTURE:\n- Profound texture that conveys “layers of memory.” Metal, organic matter, light particles, and digital data should mix, possessing physically correct reflections and shadows.\n- Background light sources (dramatic backlighting or sidelight) should illuminate the character, highlighting the multilayered elements of the year through shadow.\n\nCONSTRAINTS:\n- Accurately depict the Kanji shape (hooks, sweeps, stroke count) so it is correctly legible in Japanese.\n- Arrange “elements of the year” in both the background and the character, ensuring the overall screen is not cluttered and maintains harmony as a single work of art.\n- 4K high resolution. Completely exclude meaningless symbols, garbled text, or broken forms.\n\nInput Information\n[[URL of your home screen/article here]]",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_42.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 807
+  },
+  {
+    "id": "youmind_extract_49",
+    "title": "@Keskin",
+    "prompt": "Prompt{\n  \"prompt\": \"An attractive blonde woman in her 20s is sitting casually on a bed with Pokémon-themed bedsheets, wearing light, comfortable summer pajamas. She is holding and showcasing a Nintendo Switch console with a natural, confident smile. The scene is illuminated by soft, ambient indoor light from a window, creating a warm, relaxed, and intimate atmosphere. Realistic photo style with shallow depth of field, natural skin tones, subtle shadows, and gentle highlights. Composition focuses on authenticity, natural pose, and genuine expression, captured with a handheld camera look.\",\n  \"negative_prompt\": \"overexposed lighting, harsh shadows, unrealistic body proportions, exaggerated features, artificial skin texture, low resolution, cluttered background, studio lighting, cartoon style, distorted anatomy, fisheye lens\",\n  \"style\": \"natural lifestyle photography, soft ambient light, realistic detail, warm color balance\",\n  \"camera_settings\": {\n    \"lens\": \"50mm prime\",\n    \"aperture\": \"f/1.8\",\n    \"iso\": \"400\",\n    \"shutter_speed\": \"1/125\",\n    \"focus\": \"on subject’s face and Nintendo Switch\"\n  },\n  \"lighting\": \"soft indoor daylight, natural shadows, no artificial studio light\",\n  \"color_palette\": \"warm neutrals, soft pastel tones, gentle contrast\",\n  \"mood\": \"casual, intimate, relaxed, authentic\",\n  \"quality\": \"high resolution, sharp focus, realistic textures\",\n  \"aspect_ratio\": \"3:4\"\n}",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_49.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 808
+  },
+  {
+    "id": "youmind_extract_76",
+    "title": "@iX | AI Video Creator",
+    "prompt": "PromptUsing the uploaded reference image, generate a four-panel composition (upper-left, upper-right, lower-left, lower-right).\n\nKeep the person’s face, hairstyle, and clothing exactly the same as in the uploaded image for all panels.\nMaintain a realistic photo style, consistent identity, and natural lighting.\n\nUpper-left (Joy / 喜び):\nA close-up of her face from a slightly high angle. She is smiling brightly with sparkling eyes, expressing pure joy and happiness. Her expression feels open, warm, and genuinely delighted.\n\nUpper-right (Anger / 怒り):\nA medium shot of her upper body. She is visibly angry, with furrowed brows and a sharp, intense expression. Her posture is tense, and she slightly clenches her fists or crosses her arms, clearly showing irritation or frustration.\n\nLower-left (Sadness / 哀しみ):\nAn over-the-shoulder or slightly downward-angled shot. Her body language is subdued and closed off. She looks down with a sorrowful, quiet expression, conveying loneliness or emotional pain, with a soft, muted mood.\n\nLower-right (Fun / 楽しい):\nA casual selfie-style shot. She looks playful and energetic, laughing or making a cheerful, fun expression. The mood is lighthearted and carefree, showing her enjoying the moment.",
+    "summary": "",
+    "categories": [
+      "comic / storyboard"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_76.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 809
+  },
+  {
+    "id": "youmind_extract_82",
+    "title": "@Dr.D",
+    "prompt": "A city rendering digital art poster for 【city name】, with the Winter Solstice solar term as the overall background atmosphere.\nThe core subject of the image is a floating miniature island, shaped like the selected city and occupying most of the frame. The outline of the island is similar to the city's map shape, seamlessly integrating the city's unique iconic landmarks, natural landscapes, and cultural elements.\nThe miniature island is entirely carried or enveloped by the most representative traditional food imagery of the city during the Winter Solstice. Only one specific type of food should be chosen, determined by the city and regional culture (e.g., dumplings, tangyuan). Do not show a specific plate, but translate the form, texture, and structure of this oversized food into the island's shell, terrain, or supporting structure, making the city appear to grow upon this large Winter Solstice food item.\nThe island is placed within a realistic yet restrained Winter Solstice cooking scene based on the traditional food mentioned above, such as a stove, boiling pot/steamer, or soup pot in a daily kitchen environment. However, background elements are presented with blurring and soft focus, only hinting at the atmosphere of life and cooking. Steam and heat slowly rise, combining with warm winter lighting to create a quiet, warm, and human-touch solar term atmosphere.\nCinematic lighting, vibrant but restrained colors, aerial perspective, and winter light reflection effects. The number of buildings should not be too many or too dense.\nThe interior of the island showcases a seamless blend of history and modernity: one part presents the city's most representative ancient historical buildings; the other part naturally transitions into the city's landmark buildings and skyline view, all reflecting the current weather conditions (must confirm real weather conditions).\n3D text of the city's Chinese name, formed by the steam from the pot, floats above the miniature island. The text acts like a miniature ecological device coexisting with the Winter Solstice, food, and city culture.\nAround the frame and the main subject, add an information layout layer with a Winter Solstice festive atmosphere and local life feel, with the overall style conforming to traditional Chinese culture.\nAutomatically retrieve basic city information and Winter Solstice solar term information related to 【city name】, providing a simple introduction. Text layout uses an asymmetrical, naturally distributed arrangement, scattered around the edges and negative space of the frame, avoiding strict grids and centered composition.\nIn the corners or edges of the frame, present the city's geographical coordinates, alias, or founding year, and the weather and solar term reminder for the Winter Solstice day, in the style of a local festival poster or old calendar, as decorative information elements. The overall layout maintains significant negative space, but the atmosphere leans towards warmth, domesticity, and festivity.\nThe copywriting should be concise and refined.\nStyle requirements:\nOctane Render, C4D, Isometric City, Micro World, Living Ecosystem, 8k Resolution, DreamWorks style, 3D modeling, delicate, soft light projection\nSize: Vertical 9:16",
+    "summary": "",
+    "categories": [
+      "poster / flyer"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_82.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 810
+  },
+  {
+    "id": "youmind_extract_154",
+    "title": "@一抹のFun",
+    "prompt": "Create an image of this girl visiting the Charles M. Schulz (creator of Snoopy) Museum in America.",
+    "summary": "",
+    "categories": [
+      "all"
+    ],
+    "author": "Unknown",
+    "date": "2025-12-24T23:47:48.571Z",
+    "images": [
+      "/images/botnano_extract_116.png"
+    ],
+    "featured": false,
+    "prompt_cn": "",
+    "model": "Nano banana pro",
+    "created_at": "2025-12-24T13:38:17.952807+03:00",
+    "source": "BotsNANO",
+    "user_id": null,
+    "display_number": 802
+  }
+]
