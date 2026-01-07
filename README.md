@@ -6,7 +6,7 @@
 
 **Gemini Nano Banana Pro için en iyi prompt koleksiyonu**
 
-[![Prompts](https://img.shields.io/badge/Prompts-3145+-brightgreen?style=flat-square)](/)
+[![Prompts](https://img.shields.io/badge/Prompts-3129+-brightgreen?style=flat-square)](/)
 [![Next.js](https://img.shields.io/badge/Next.js-16+-black?style=flat-square)](https://nextjs.org)
 [![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=flat-square)](https://tailwindcss.com)
 [![Supabase](https://img.shields.io/badge/Supabase-Database-3ecf8e?style=flat-square)](https://supabase.com)
@@ -115,8 +115,8 @@ http://localhost:3000
 - **Footer.tsx**: Escape edilmemiş karakter düzeltmesi
 
 ### 📊 Prompt Sayısı Güncellemesi
-- **Toplam Prompt**: 3145+ (16 yeni Twitter prompt eklendi)
-- **Display Number Aralığı**: #00001 - #03145
+- **Toplam Prompt**: 3129 (16 Twitter prompt eklendi, duplicate temizlendi)
+- **Display Number Aralığı**: #00001 - #03129
 
 ## 📋 Önceki Güncelleme (31 Aralık 2025)
 
