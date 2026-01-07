@@ -81,7 +81,7 @@ export function Footer() {
 
                     <div className="bg-white border-2 border-brand-black shadow-neo inline-block px-6 py-4">
                         <p className="font-medium text-brand-black">
-                            Nano Banana Pro'nun güçlü yeteneklerini
+                            Nano Banana Pro&apos;nun güçlü yeteneklerini
                             <br />
                             deneyimleyin
                         </p>

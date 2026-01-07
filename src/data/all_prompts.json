@@ -21048,12 +21048,14 @@
   },
   {
     "id": "youmind_extract_136",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@テツメモ｜AI図解×検証｜Newsletter",
     "category": "App / Web Design",
     "prompt": "# Directive (Instruction)\n**Immediately generate** a clean, modern mockup image of the highest quality representing the provided X (formerly Twitter) profile.\n\n# Prohibitions (Prohibitions)\n- **Absolutely no text response, explanation, or prompt confirmation.**\n- Upon receiving user input (image and text), execute image generation only, without comment.\n\n# Input Interpretation & Visualization Process (Input Interpretation and Drawing Process)\nThe AI should interpret the provided input information and reflect it in the image elements according to the following steps.\n\n1. **Logo Identification and Depiction**:\n   - Analyze the visual characteristics (color, shape, atmosphere) of the provided **profile image** and recognize it as the main brand logo.\n   - Clearly depict this logo on framed portraits and merchandise within the scene.\n\n2. **Occupation Identification and Activity Scene Depiction**:\n   - Identify the person's \"occupation/activity genre\" from the provided **URL/Bio**.\n   - On the social media grid screen, depict specific, sophisticated items or work scenes symbolizing the identified occupation (e.g.,code screens and gadgets for an engineer,ingredients and cooking utensils for a chef, etc.).\n\n# Image Details & Structure (Image Composition Elements)\nDepict the overall scene according to the following structure.\n\n**Scene & Background**:\nA soft, neutral background setting with minimalist brand kits arranged. Express soft natural light, a high-quality lifestyle photography style, balanced composition, Scandinavian design, and a luxurious, editorial atmosphere.\n\n**Key Elements**:\n1.  **Main Focus (Brand Identity)**:\n    - The logo based on the provided profile image is clearly displayed as a framed portrait with elegant typography.\n2.  **Merchandise**:\n    - Brand merchandise such as white T-shirts, tote bags, and ceramic mugs printed with the same logo are arranged.\n3.  **Social Media Grid**:\n    - A grid layout displayed on a tablet or smartphone screen.\n    - The content consists of \"photos of activity scenes and items related to the occupation\" identified in the previous process, behind-the-scenes content, quotes, and solid color brand tiles in warm beige, cream, and muted terracotta tones.\n\n# User Input Placeholder\nhttps://t.co/XcPInQDrVZ\n――――",
     "prompt_original": "# Directive (Instruction)\n**Immediately generate** a clean, modern mockup image of the highest quality representing the provided X (formerly Twitter) profile.\n\n# Prohibitions (Prohibitions)\n- **Absolutely no text response, explanation, or prompt confirmation.**\n- Upon receiving user input (image and text), execute image generation only, without comment.\n\n# Input Interpretation & Visualization Process (Input Interpretation and Drawing Process)\nThe AI should interpret the provided input information and reflect it in the image elements according to the following steps.\n\n1. **Logo Identification and Depiction**:\n   - Analyze the visual characteristics (color, shape, atmosphere) of the provided **profile image** and recognize it as the main brand logo.\n   - Clearly depict this logo on framed portraits and merchandise within the scene.\n\n2. **Occupation Identification and Activity Scene Depiction**:\n   - Identify the person's \"occupation/activity genre\" from the provided **URL/Bio**.\n   - On the social media grid screen, depict specific, sophisticated items or work scenes symbolizing the identified occupation (e.g.,code screens and gadgets for an engineer,ingredients and cooking utensils for a chef, etc.).\n\n# Image Details & Structure (Image Composition Elements)\nDepict the overall scene according to the following structure.\n\n**Scene & Background**:\nA soft, neutral background setting with minimalist brand kits arranged. Express soft natural light, a high-quality lifestyle photography style, balanced composition, Scandinavian design, and a luxurious, editorial atmosphere.\n\n**Key Elements**:\n1.  **Main Focus (Brand Identity)**:\n    - The logo based on the provided profile image is clearly displayed as a framed portrait with elegant typography.\n2.  **Merchandise**:\n    - Brand merchandise such as white T-shirts, tote bags, and ceramic mugs printed with the same logo are arranged.\n3.  **Social Media Grid**:\n    - A grid layout displayed on a tablet or smartphone screen.\n    - The content consists of \"photos of activity scenes and items related to the occupation\" identified in the previous process, behind-the-scenes content, quotes, and solid color brand tiles in warm beige, cream, and muted terracotta tones.\n\n# User Input Placeholder\nhttps://t.co/XcPInQDrVZ\n――――",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_136.png"
+    ],
     "tags": [
       "app / web design"
     ],
@@ -21066,12 +21068,14 @@
   },
   {
     "id": "youmind_extract_137",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@a to z prompts",
     "category": "Profile / Avatar",
     "prompt": "Prompt{\n  \"scene_type\": \"Instagram Story – Night Out\",\n  \"aspect_ratio\": \"9:16\",\n  \"description\": \"An elegant Instagram story ofEllietaking a mirror selfie during a special night out, styled for a premium social media look with subtle UI overlays.\",\n  \"scene\": {\n    \"setting\": \"modern_restaurant_bathroom_night\",\n    \"lighting\": {\n      \"style\": \"soft_warm_overhead_and_side_lighting\",\n      \"effects\": [\n        \"subtle_glow_on_skin\",\n        \"mirror_reflections\",\n        \"ambient_bathroom_light\"\n      ],\n      \"mood\": \"night_out_elegance\"\n    },\n    \"background\": {\n      \"elements\": [\n        \"large_mirror\",\n        \"dark_tile_walls\",\n        \"soft_wall_sconces\",\n        \"minimalist_sink\"\n      ],\n      \"palette\": \"deep_neutrals_with_gold_accents\"\n    }\n  },\n  \"subject\": {\n    \"name\": \"ellie\",\n    \"description\": \"Extremely elegant and stylish brunette woman enjoying a special night out\",\n    \"pose\": \"mirror_selfie_with_phone_in_right_hand\",\n    \"expression\": \"soft_confident_night_out_look\",\n    \"appearance\": {\n      \"hair\": \"loose_natural_shiny_waves\",\n      \"makeup\": \"subtle_glam_evening_style_with_warm_highlights\",\n      \"skin\": \"warm_even_skin_tone_with_soft_glow\",\n      \"distinct_feature\": \"small visible mole on her upper chest\"\n    },\n    \"outfit\": {\n      \"type\": \"black_evening_dress\",\n      \"style\": \"sleek_minimalist_elegant\",\n      \"details\": \"deep neckline with tasteful cleavage, clean silhouette, high-end fabric\",\n      \"accessories\": [\n        \"gold_hoop_earrings\",\n        \"thin_gold_necklace\",\n        \"subtle_rings\"\n      ]\n    }\n  },\n  \"camera\": {\n    \"perspective\": \"mirror_selfie_portrait\",\n    \"framing\": \"medium_close_up_showing_upper_body_and_outfit\",\n    \"phone\": {\n      \"model\": \"modern_smartphone\",\n      \"finish\": \"gold\",\n      \"reflections\": \"visible_in_glass\"\n    },\n    \"focus\": \"sharp_on_subject_face_soft_background\",\n    \"lens\": \"standard_35mm_look\"\n  },\n  \"instagram_ui\": {\n    \"top_left_profile\": {\n      \"profile_image\": \"mini_circular_profile_photo\",\n      \"username\": \"ellie\"\n    },\n    \"story_text\": {\n      \"content\": \"A Special night <3\",\n      \"placement\": \"middle_top_left\",\n      \"style\": \"clean_instagram_story_font_white\"\n    }\n  },\n  \"visual_style\": {\n    \"render\": \"ultra_realistic_evening_photography\",\n    \"color_grade\": \"rich_warm_tones_with_subtle_contrast\",\n    \"detail_level\": \"high_skin_texture_hair_strands_fabric_detail\",\n    \"vibe\": \"luxury_night_out_elegance\",\n    \"quality\": \"high-end Instagram story, polished and viral-ready\"\n  }\n}",
     "prompt_original": "Prompt{\n  \"scene_type\": \"Instagram Story – Night Out\",\n  \"aspect_ratio\": \"9:16\",\n  \"description\": \"An elegant Instagram story ofEllietaking a mirror selfie during a special night out, styled for a premium social media look with subtle UI overlays.\",\n  \"scene\": {\n    \"setting\": \"modern_restaurant_bathroom_night\",\n    \"lighting\": {\n      \"style\": \"soft_warm_overhead_and_side_lighting\",\n      \"effects\": [\n        \"subtle_glow_on_skin\",\n        \"mirror_reflections\",\n        \"ambient_bathroom_light\"\n      ],\n      \"mood\": \"night_out_elegance\"\n    },\n    \"background\": {\n      \"elements\": [\n        \"large_mirror\",\n        \"dark_tile_walls\",\n        \"soft_wall_sconces\",\n        \"minimalist_sink\"\n      ],\n      \"palette\": \"deep_neutrals_with_gold_accents\"\n    }\n  },\n  \"subject\": {\n    \"name\": \"ellie\",\n    \"description\": \"Extremely elegant and stylish brunette woman enjoying a special night out\",\n    \"pose\": \"mirror_selfie_with_phone_in_right_hand\",\n    \"expression\": \"soft_confident_night_out_look\",\n    \"appearance\": {\n      \"hair\": \"loose_natural_shiny_waves\",\n      \"makeup\": \"subtle_glam_evening_style_with_warm_highlights\",\n      \"skin\": \"warm_even_skin_tone_with_soft_glow\",\n      \"distinct_feature\": \"small visible mole on her upper chest\"\n    },\n    \"outfit\": {\n      \"type\": \"black_evening_dress\",\n      \"style\": \"sleek_minimalist_elegant\",\n      \"details\": \"deep neckline with tasteful cleavage, clean silhouette, high-end fabric\",\n      \"accessories\": [\n        \"gold_hoop_earrings\",\n        \"thin_gold_necklace\",\n        \"subtle_rings\"\n      ]\n    }\n  },\n  \"camera\": {\n    \"perspective\": \"mirror_selfie_portrait\",\n    \"framing\": \"medium_close_up_showing_upper_body_and_outfit\",\n    \"phone\": {\n      \"model\": \"modern_smartphone\",\n      \"finish\": \"gold\",\n      \"reflections\": \"visible_in_glass\"\n    },\n    \"focus\": \"sharp_on_subject_face_soft_background\",\n    \"lens\": \"standard_35mm_look\"\n  },\n  \"instagram_ui\": {\n    \"top_left_profile\": {\n      \"profile_image\": \"mini_circular_profile_photo\",\n      \"username\": \"ellie\"\n    },\n    \"story_text\": {\n      \"content\": \"A Special night <3\",\n      \"placement\": \"middle_top_left\",\n      \"style\": \"clean_instagram_story_font_white\"\n    }\n  },\n  \"visual_style\": {\n    \"render\": \"ultra_realistic_evening_photography\",\n    \"color_grade\": \"rich_warm_tones_with_subtle_contrast\",\n    \"detail_level\": \"high_skin_texture_hair_strands_fabric_detail\",\n    \"vibe\": \"luxury_night_out_elegance\",\n    \"quality\": \"high-end Instagram story, polished and viral-ready\"\n  }\n}",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_137.png"
+    ],
     "tags": [
       "profile / avatar"
     ],
@@ -21084,12 +21088,14 @@
   },
   {
     "id": "youmind_extract_150",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@Vaibhav Bhatnagar",
     "category": "All",
     "prompt": "PromptA minimalist cinematic studio portrait of a young man seated on a simple wooden stool, wearing a softbeigeknit sweater and neutral-toned pants. He has short, naturally curly dark hair and a calm, confident expression, looking directly at the camera. The background is a warm cream wall featuring a large layered paper-cut style illustration of the same man’s profile, creating a conceptual dual-identity effect. Soft diffused studio lighting, gentle shadows, muted monochrome palette, elegant editorial mood, shallow depth of field, ultra-clean composition, high realism, modern art meets fashion aesthetic, 1:1 aspect ratio, 4K detail.",
     "prompt_original": "PromptA minimalist cinematic studio portrait of a young man seated on a simple wooden stool, wearing a softbeigeknit sweater and neutral-toned pants. He has short, naturally curly dark hair and a calm, confident expression, looking directly at the camera. The background is a warm cream wall featuring a large layered paper-cut style illustration of the same man’s profile, creating a conceptual dual-identity effect. Soft diffused studio lighting, gentle shadows, muted monochrome palette, elegant editorial mood, shallow depth of field, ultra-clean composition, high realism, modern art meets fashion aesthetic, 1:1 aspect ratio, 4K detail.",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_150.png"
+    ],
     "tags": [
       "all"
     ],
@@ -21102,12 +21108,14 @@
   },
   {
     "id": "youmind_extract_151",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@Lara Yuce",
     "category": "All",
     "prompt": "Prompt{\n  \"prompt\": \"A young woman in her early twenties sits on a soft white rug in front of a glowing, gold-decorated Christmas tree. She is dressed in a cozy yet elegant holiday outfit: a luxuriousemerald greensilk pajama set with classic white piping. Instead of slippers, she wears thick fluffy white wool socks. Her hair is styled in a cute, messy bun with loose strands framing her face. She wears delicate pearl stud earrings.\",\n  \"environment\": {\n    \"setting\": \"Cozy living room\",\n    \"props\": [\n      \"Christmas tree with golden ornaments and warm lights\",\n      \"Dark wooden staircase wrapped in fairy lights\",\n      \"a ceramic mug of hot chocolate held in her hands with visible steam\",\n      \"a grey-and-white British Shorthair cat playing with a ribbon on the rug\",\n      \"several wrapped gift boxes with red bows scattered on the floor\"\n    ],\n    \"lighting\": \"Soft morning sunlight mixed with warm holiday string lights\",\n    \"scene_position\": \"Tree on the left, staircase behind\"\n  },\n  \"composition\": {\n    \"shot_type\": \"Medium shot\",\n    \"angle\": \"Eye-level\",\n    \"focus\": \"Sharp focus on the woman's face and the steaming mug\",\n    \"pose\": \"Seated with knees pulled up to chest, holding the mug close to her face, blowing gently on the steam, looking down\"\n  },\n  \"wardrobe_update\": {\n    \"replace_outfit_with\": [\n      \"emerald green silk button-down pajama top (relaxed fit, festive)\",\n      \"matching emerald green silk pajama pants\"\n    ],\n    \"add_accessory\": \"simple gold pendant necklace\",\n    \"keep\": [\n      \"fluffy white wool socks\",\n      \"pearl stud earrings\",\n      \"natural glowing makeup\"\n    ]\n  },\n  \"vibe\": \"Relaxed, intimate, peaceful Christmas morning atmosphere\",\n  \"negative_prompt\": [\n    \"text\",\n    \"watermark\",\n    \"UI overlay\",\n    \"extra people\",\n    \"distorted hands\",\n    \"plastic skin\",\n    \"over-sharpening\",\n    \"shoes on rug\",\n    \"makeup too heavy\"\n  ]\n}",
     "prompt_original": "Prompt{\n  \"prompt\": \"A young woman in her early twenties sits on a soft white rug in front of a glowing, gold-decorated Christmas tree. She is dressed in a cozy yet elegant holiday outfit: a luxuriousemerald greensilk pajama set with classic white piping. Instead of slippers, she wears thick fluffy white wool socks. Her hair is styled in a cute, messy bun with loose strands framing her face. She wears delicate pearl stud earrings.\",\n  \"environment\": {\n    \"setting\": \"Cozy living room\",\n    \"props\": [\n      \"Christmas tree with golden ornaments and warm lights\",\n      \"Dark wooden staircase wrapped in fairy lights\",\n      \"a ceramic mug of hot chocolate held in her hands with visible steam\",\n      \"a grey-and-white British Shorthair cat playing with a ribbon on the rug\",\n      \"several wrapped gift boxes with red bows scattered on the floor\"\n    ],\n    \"lighting\": \"Soft morning sunlight mixed with warm holiday string lights\",\n    \"scene_position\": \"Tree on the left, staircase behind\"\n  },\n  \"composition\": {\n    \"shot_type\": \"Medium shot\",\n    \"angle\": \"Eye-level\",\n    \"focus\": \"Sharp focus on the woman's face and the steaming mug\",\n    \"pose\": \"Seated with knees pulled up to chest, holding the mug close to her face, blowing gently on the steam, looking down\"\n  },\n  \"wardrobe_update\": {\n    \"replace_outfit_with\": [\n      \"emerald green silk button-down pajama top (relaxed fit, festive)\",\n      \"matching emerald green silk pajama pants\"\n    ],\n    \"add_accessory\": \"simple gold pendant necklace\",\n    \"keep\": [\n      \"fluffy white wool socks\",\n      \"pearl stud earrings\",\n      \"natural glowing makeup\"\n    ]\n  },\n  \"vibe\": \"Relaxed, intimate, peaceful Christmas morning atmosphere\",\n  \"negative_prompt\": [\n    \"text\",\n    \"watermark\",\n    \"UI overlay\",\n    \"extra people\",\n    \"distorted hands\",\n    \"plastic skin\",\n    \"over-sharpening\",\n    \"shoes on rug\",\n    \"makeup too heavy\"\n  ]\n}",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_151.png"
+    ],
     "tags": [
       "all"
     ],
@@ -21138,12 +21146,14 @@
   },
   {
     "id": "youmind_extract_157",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@MurtArt",
     "category": "All",
     "prompt": "Prompt{\n  \"image_prompt_data\": {\n    \"full_prompt\": \"A hyper-realistic low-light night shot of a stunning young woman with dark wavy hair and warm brown eyes, sitting cross-legged on a wooden floor leaning against a plain wall. The room is bathed in a dim, moody atmosphere with faint blue moonlight filtering through a window and a very soft warm orange glow from an unseen lamp hitting her side. Shot on Sony A7R V with a 35mm f/1.4 lens for extreme low-light performance. Ultra-detailed skin with realistic slight digital noise/grain, visible pores, messy hair, deep shadows. Cinematic atmosphere, 8k resolution, photorealistic, intimate and quiet mood. --ar 9:16 --style raw --v 6.1 --stylize 300\",\n    \"breakdown\": {\n      \"subject\": {\n        \"description\": \"Stunning young woman\",\n        \"features\": [\n          \"Dark wavy hair\",\n          \"Warm brown eyes\",\n          \"Detailed skin texture\",\n          \"Deep shadows on face\"\n        ],\n        \"clothing\": [\n          \"Casual white tank top\",\n          \"Comfortable lounge pants\"\n        ],\n        \"pose\": \"Sitting cross-legged on the floor, leaning back against the wall\"\n      },\n      \"composition\": {\n        \"perspective\": \"Eye-level cinematic framing\",\n        \"environment\": \"Darkened room, night time setting\"\n      },\n      \"lighting\": {\n        \"type\": \"Low-key, dual-tone lighting\",\n        \"effect\": \"Faint blue moonlight mixed with a soft warm side-glow, high contrast between light and shadow\"\n      },\n      \"technical_specs\": {\n        \"camera\": \"Sony A7R V\",\n        \"lens\": \"35mm f/1.4 (low light prime)\",\n        \"iso_effect\": \"Authentic slight grain/noise for night photography\",\n        \"resolution\": \"8k\",\n        \"quality\": \"Hyper-realistic\"\n      },\n      \"style_and_mood\": {\n        \"style\": \"Realism / Cinematic Low-light\",\n        \"mood\": \"Intimate, mysterious, peaceful, nocturnal\",\n        \"keywords\": [\"Soft shadows\", \"Night aesthetic\", \"Photorealistic\"]\n      }\n    },\n    \"midjourney_parameters\": {\n      \"aspect_ratio\": \"9:16\",\n      \"style\": \"raw\",\n      \"version\": \"6.1\",\n      \"stylize\": 300\n    }\n  }\n}",
     "prompt_original": "Prompt{\n  \"image_prompt_data\": {\n    \"full_prompt\": \"A hyper-realistic low-light night shot of a stunning young woman with dark wavy hair and warm brown eyes, sitting cross-legged on a wooden floor leaning against a plain wall. The room is bathed in a dim, moody atmosphere with faint blue moonlight filtering through a window and a very soft warm orange glow from an unseen lamp hitting her side. Shot on Sony A7R V with a 35mm f/1.4 lens for extreme low-light performance. Ultra-detailed skin with realistic slight digital noise/grain, visible pores, messy hair, deep shadows. Cinematic atmosphere, 8k resolution, photorealistic, intimate and quiet mood. --ar 9:16 --style raw --v 6.1 --stylize 300\",\n    \"breakdown\": {\n      \"subject\": {\n        \"description\": \"Stunning young woman\",\n        \"features\": [\n          \"Dark wavy hair\",\n          \"Warm brown eyes\",\n          \"Detailed skin texture\",\n          \"Deep shadows on face\"\n        ],\n        \"clothing\": [\n          \"Casual white tank top\",\n          \"Comfortable lounge pants\"\n        ],\n        \"pose\": \"Sitting cross-legged on the floor, leaning back against the wall\"\n      },\n      \"composition\": {\n        \"perspective\": \"Eye-level cinematic framing\",\n        \"environment\": \"Darkened room, night time setting\"\n      },\n      \"lighting\": {\n        \"type\": \"Low-key, dual-tone lighting\",\n        \"effect\": \"Faint blue moonlight mixed with a soft warm side-glow, high contrast between light and shadow\"\n      },\n      \"technical_specs\": {\n        \"camera\": \"Sony A7R V\",\n        \"lens\": \"35mm f/1.4 (low light prime)\",\n        \"iso_effect\": \"Authentic slight grain/noise for night photography\",\n        \"resolution\": \"8k\",\n        \"quality\": \"Hyper-realistic\"\n      },\n      \"style_and_mood\": {\n        \"style\": \"Realism / Cinematic Low-light\",\n        \"mood\": \"Intimate, mysterious, peaceful, nocturnal\",\n        \"keywords\": [\"Soft shadows\", \"Night aesthetic\", \"Photorealistic\"]\n      }\n    },\n    \"midjourney_parameters\": {\n      \"aspect_ratio\": \"9:16\",\n      \"style\": \"raw\",\n      \"version\": \"6.1\",\n      \"stylize\": 300\n    }\n  }\n}",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_157.png"
+    ],
     "tags": [
       "all"
     ],
@@ -21156,12 +21166,14 @@
   },
   {
     "id": "youmind_extract_159",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@Busra",
     "category": "All",
     "prompt": "PromptWoman;\nage:19body: slim, visible veins, thin waist, full chest\nskin tone: tanned, with bikini tan lines\nskin: natural and radiant\nlips: large and full, dark peach–toned lipstick, glossy\neyebrows: brushed with eyebrow gel\neyelashes: full and separated\nhair: natural blonde, wavy, long, loose\nface: dark peach blush, sweet small nose\nbracelet: gold\nhands: delicate, slender fingers, minimal tattoos, thin gold rings\narm: gold accessory worn on the upper arm\nnecklace: summer-themed details\ntop: Plain white strapless bikini\nBottom: extra mini white skirt with ruffle detail\nEnvironment: sea, sky, palm trees, beach\nsea: deep blue with soft highlights from the setting sun\nsky: light blue with navy and orange clouds appearing at sunset, soft highlights\nPose: standing on the beach slightly away from the sea, one hand in her hair, laughing, confident\nPhoto: ultra-realistic, wide-angle lens, 8K resolution, shot on iPhone 17 Pro Max, 9:16 aspect ratio, long shot, slightly low angle, flash on",
     "prompt_original": "PromptWoman;\nage:19body: slim, visible veins, thin waist, full chest\nskin tone: tanned, with bikini tan lines\nskin: natural and radiant\nlips: large and full, dark peach–toned lipstick, glossy\neyebrows: brushed with eyebrow gel\neyelashes: full and separated\nhair: natural blonde, wavy, long, loose\nface: dark peach blush, sweet small nose\nbracelet: gold\nhands: delicate, slender fingers, minimal tattoos, thin gold rings\narm: gold accessory worn on the upper arm\nnecklace: summer-themed details\ntop: Plain white strapless bikini\nBottom: extra mini white skirt with ruffle detail\nEnvironment: sea, sky, palm trees, beach\nsea: deep blue with soft highlights from the setting sun\nsky: light blue with navy and orange clouds appearing at sunset, soft highlights\nPose: standing on the beach slightly away from the sea, one hand in her hair, laughing, confident\nPhoto: ultra-realistic, wide-angle lens, 8K resolution, shot on iPhone 17 Pro Max, 9:16 aspect ratio, long shot, slightly low angle, flash on",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_159.png"
+    ],
     "tags": [
       "all"
     ],
@@ -21174,12 +21186,14 @@
   },
   {
     "id": "youmind_extract_161",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@Rupert Chesman",
     "category": "All",
     "prompt": "PromptMake a chart of the solar system for children with one interesting fact put on each planet, dwarf planet and belt.",
     "prompt_original": "PromptMake a chart of the solar system for children with one interesting fact put on each planet, dwarf planet and belt.",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_161.png"
+    ],
     "tags": [
       "all"
     ],
@@ -21192,12 +21206,14 @@
   },
   {
     "id": "youmind_extract_162",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@Dove 🕊️",
     "category": "All",
     "prompt": "Prompt{\n  \"subject\": {\n    \"description\": \"A young woman with long, wavy dark hair and a joyful expression, looking off-camera.\",\n    \"features\": [\"Bright smile\", \"Rosy cheeks\", \"Tattoo on right thigh\"],\n    \"pose\": \"Standing, one hand touching a fuzzy white hood, the other lightly holding a strand of hair.\"\n  },\n  \"attire\": {\n    \"bodysuit\": \"Emerald greenvelvet bodysuit with a deep V-neckline, white faux-fur trim along the bust, and a white lace panel in the center with ruffled lace trim at the hips.\",\n    \"outerwear\": \"Short, white, fuzzy sherpa-style hooded shrug with bear ears.\",\n    \"accessories\": [\"Delicate silver necklace\", \"Matching emerald green thigh-high stockings\"]\n  },\n  \"environment\": {\n    \"setting\": \"Cozy indoor holiday-themed room at night.\",\n    \"background_details\": [\n      \"Wooden door frames and glass windows\",\n      \"Red and white reindeer-patterned holiday pillow\",\n      \"Green potted plant to the right\",\n      \"Warm, glowing wall sconce light\"\n    ]\n  },\n  \"technical_style\": {\n    \"lighting\": \"Warm, directional indoor lighting creating soft shadows; festive ambiance.\",\n    \"camera_angle\": \"Medium shot, eye-level, slight depth of field blurring the background.\",\n    \"color_palette\": [\"Emerald green\", \"Cream white\", \"Warm wood tones\", \"Deep red accents\"]\n  },\n  \"keywords\": [\n    \"festive\",\n    \"cozy\",\n    \"holiday aesthetic\",\n    \"velvet and lace\",\n    \"winter fashion\",\n    \"high detail\",\n    \"soft cinematic lighting\"\n  ]\n}",
     "prompt_original": "Prompt{\n  \"subject\": {\n    \"description\": \"A young woman with long, wavy dark hair and a joyful expression, looking off-camera.\",\n    \"features\": [\"Bright smile\", \"Rosy cheeks\", \"Tattoo on right thigh\"],\n    \"pose\": \"Standing, one hand touching a fuzzy white hood, the other lightly holding a strand of hair.\"\n  },\n  \"attire\": {\n    \"bodysuit\": \"Emerald greenvelvet bodysuit with a deep V-neckline, white faux-fur trim along the bust, and a white lace panel in the center with ruffled lace trim at the hips.\",\n    \"outerwear\": \"Short, white, fuzzy sherpa-style hooded shrug with bear ears.\",\n    \"accessories\": [\"Delicate silver necklace\", \"Matching emerald green thigh-high stockings\"]\n  },\n  \"environment\": {\n    \"setting\": \"Cozy indoor holiday-themed room at night.\",\n    \"background_details\": [\n      \"Wooden door frames and glass windows\",\n      \"Red and white reindeer-patterned holiday pillow\",\n      \"Green potted plant to the right\",\n      \"Warm, glowing wall sconce light\"\n    ]\n  },\n  \"technical_style\": {\n    \"lighting\": \"Warm, directional indoor lighting creating soft shadows; festive ambiance.\",\n    \"camera_angle\": \"Medium shot, eye-level, slight depth of field blurring the background.\",\n    \"color_palette\": [\"Emerald green\", \"Cream white\", \"Warm wood tones\", \"Deep red accents\"]\n  },\n  \"keywords\": [\n    \"festive\",\n    \"cozy\",\n    \"holiday aesthetic\",\n    \"velvet and lace\",\n    \"winter fashion\",\n    \"high detail\",\n    \"soft cinematic lighting\"\n  ]\n}",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_162.png"
+    ],
     "tags": [
       "all"
     ],
@@ -21210,12 +21226,14 @@
   },
   {
     "id": "youmind_extract_163",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@Shunz",
     "category": "Poster / Flyer",
     "prompt": "A creative layout poster. The main subject of the image is a silhouette of a computer, composed entirely of dense Chinese words of different sizes (any words related to computers are acceptable). The background is clean beige. The text color shows a gradient from dark brown to light brown, simulating the texture of a computer. 9:16 aspect ratio, 4K ultra-high definition.",
     "prompt_original": "A creative layout poster. The main subject of the image is a silhouette of a computer, composed entirely of dense Chinese words of different sizes (any words related to computers are acceptable). The background is clean beige. The text color shows a gradient from dark brown to light brown, simulating the texture of a computer. 9:16 aspect ratio, 4K ultra-high definition.",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_163.png"
+    ],
     "tags": [
       "poster / flyer"
     ],
@@ -21228,12 +21246,14 @@
   },
   {
     "id": "youmind_extract_164",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@DDing",
     "category": "All",
     "prompt": "Add lots of Korean handwritten doodles, underlines, highlighters, and speech bubbles using a blue colored pencil. The doodles should primarily be compliments about the subject, and it's okay to add a few hand-drawn clip arts.",
     "prompt_original": "Add lots of Korean handwritten doodles, underlines, highlighters, and speech bubbles using a blue colored pencil. The doodles should primarily be compliments about the subject, and it's okay to add a few hand-drawn clip arts.",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_164.png"
+    ],
     "tags": [
       "all"
     ],
@@ -21246,12 +21266,14 @@
   },
   {
     "id": "youmind_extract_167",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@Javeriya ✨",
     "category": "All",
     "prompt": "Prompt[Identity_Preservation]\nBoneStructure = \"identical_symmetry_jawline_cheek_curves\"\nNose_Lips = \"exact_contour_fullness_unaltered\"\nEyes_Brows = \"specific_eyelid_shape_eyebrow_arch_match\"\nSkin_Texture = \"fair_tone_subtle_pores_youthful_glow_hyper_real\"\nStylization = \"none_zero_distortion_photorealistic_accuracy\"\n\n[Scene_Environment]\nBackdrop = \"deep_burgundy_velvet_golden_reflections\"\nDecorations = \"designer_tree_metallic_ornaments_crystals_ribbons\"\nProps = \"gold_accented_gift_boxes_elegant_scattering\"\nAtmosphere = \"floating_studio_snow_particles_glossy_floor_reflections\"\nMood = \"high-fashion_festive_drama_glamorous_editorial\"\n\n[Composition_Pose]\nShot_Type = \"full_body_editorial\"\nStance = \"dynamic_fashion_hip_pop_one_leg_forward_shoulders_back\"\nFraming = \"rule_of_thirds_couture_silhouette\"\nHead_Angle = \"dramatic_tilt_editorial\"\nEye_Contact = \"intense_direct_camera_engagement\"\n\n[Styling_Beauty]\nHair = \"voluminous_waves_chestnut_caramel_highlights_crystal_pins\"\nEyes = \"metallic_gold_crimson_shadow_glitter_lashes\"\nLips = \"couture_red_soft_gloss_slightly_parted\"\nFace_Accents = \"micro_face_jewels_brow_cheekbone_crystals\"\nNails = \"deep_red_gold_accents_snowflake_tips\"\n\n[Couture_Outfit]\nGown = \"structured_red_velvet_corset_voluminous_skirt_high_slit\"\nMaterials = \"satin_tulle_white_faux_fur_trim\"\nEmbellishments = \"swarovski_crystals_pearls_metallic_studs\"\nFootwear = \"metallic_red_stilettos_crystal_straps\"\n\n[Accessories]\nJewelry = \"layered_asymmetric_necklaces_stacked_cuffs_oversized_earrings\"\nHands = \"jeweled_glove_extensions_multi_joint_rings\"\nWaist = \"designer_belt_jeweled_buckle\"\n\n[Technical_Specs]\nCamera = \"Full_frame_DSLR_85mm_lens\"\nSettings = \"f/2.8_aperture_ISO100_1/160s\"\nLighting = \"studio_key_sculpting_rim_lighting_jewel_highlights\"\nResolution = \"HDR_Ultra_HD_crystal_clear_textures\"",
     "prompt_original": "Prompt[Identity_Preservation]\nBoneStructure = \"identical_symmetry_jawline_cheek_curves\"\nNose_Lips = \"exact_contour_fullness_unaltered\"\nEyes_Brows = \"specific_eyelid_shape_eyebrow_arch_match\"\nSkin_Texture = \"fair_tone_subtle_pores_youthful_glow_hyper_real\"\nStylization = \"none_zero_distortion_photorealistic_accuracy\"\n\n[Scene_Environment]\nBackdrop = \"deep_burgundy_velvet_golden_reflections\"\nDecorations = \"designer_tree_metallic_ornaments_crystals_ribbons\"\nProps = \"gold_accented_gift_boxes_elegant_scattering\"\nAtmosphere = \"floating_studio_snow_particles_glossy_floor_reflections\"\nMood = \"high-fashion_festive_drama_glamorous_editorial\"\n\n[Composition_Pose]\nShot_Type = \"full_body_editorial\"\nStance = \"dynamic_fashion_hip_pop_one_leg_forward_shoulders_back\"\nFraming = \"rule_of_thirds_couture_silhouette\"\nHead_Angle = \"dramatic_tilt_editorial\"\nEye_Contact = \"intense_direct_camera_engagement\"\n\n[Styling_Beauty]\nHair = \"voluminous_waves_chestnut_caramel_highlights_crystal_pins\"\nEyes = \"metallic_gold_crimson_shadow_glitter_lashes\"\nLips = \"couture_red_soft_gloss_slightly_parted\"\nFace_Accents = \"micro_face_jewels_brow_cheekbone_crystals\"\nNails = \"deep_red_gold_accents_snowflake_tips\"\n\n[Couture_Outfit]\nGown = \"structured_red_velvet_corset_voluminous_skirt_high_slit\"\nMaterials = \"satin_tulle_white_faux_fur_trim\"\nEmbellishments = \"swarovski_crystals_pearls_metallic_studs\"\nFootwear = \"metallic_red_stilettos_crystal_straps\"\n\n[Accessories]\nJewelry = \"layered_asymmetric_necklaces_stacked_cuffs_oversized_earrings\"\nHands = \"jeweled_glove_extensions_multi_joint_rings\"\nWaist = \"designer_belt_jeweled_buckle\"\n\n[Technical_Specs]\nCamera = \"Full_frame_DSLR_85mm_lens\"\nSettings = \"f/2.8_aperture_ISO100_1/160s\"\nLighting = \"studio_key_sculpting_rim_lighting_jewel_highlights\"\nResolution = \"HDR_Ultra_HD_crystal_clear_textures\"",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_167.png"
+    ],
     "tags": [
       "all"
     ],
@@ -21264,12 +21286,14 @@
   },
   {
     "id": "youmind_extract_169",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@Saul Goodman",
     "category": "Comic / Storyboard",
     "prompt": "PromptUse the uploaded image only to accurately reconstruct the subject’s face. Preserve exact facial identity, proportions, skin texture, pores, beard detail, eye shape, and realism. Do not reuse pose, lighting, or composition from the upload.\nCreate an ultra-realistic cinematic action moment frozen at the absolute peak of chaos.\nA powerful adult male fills the extreme foreground, lunging toward the camera with one arm fully extended, fingers reaching past the lens. His expression is pure survival panic — eyes wide, mouth open mid-scream. The face is razor-sharp, perfectly integrated, and emotionally intense.\nIn his other arm, he clutches a panicking tabby cat. The cat is fully alive and reactive: eyes wide and dilated, ears flattened back, mouth open in a silent hiss or scream, whiskers flared, body tense, claws fully extended, hind legs kicking slightly. Fur strands are hyper-detailed and bristled from fear. The cat’s panic mirrors the human’s, amplifying the chaos.\nBehind them, a massive stadium environment erupts. A violent explosion blossoms outward, throwing concrete, metal fragments, and dust into the air. A police vehicle is launched sideways mid-blast, twisted realistically, emergency lights flashing through smoke. Human silhouettes are flung backward, suspended mid-air in slow-motion realism.\nLighting is physical and cinematic: blazing orange firelight rim-lighting the subjects, cold blue emergency strobes slicing through smoke, volumetric haze, flying embers, realistic shadow falloff, extreme dynamic range.\nCamera is ultra-wide and close, natural perspective distortion, shallow depth of field, sharp subject separation, no fisheye, no artificial blur.\nPhotorealistic, hyper-detailed, cinematic color grading.\nNo cartoon look. No AI artifacts. No softness.\nMood: explosive, intense, absurdly unforgettable, viral blockbuster realism.",
     "prompt_original": "PromptUse the uploaded image only to accurately reconstruct the subject’s face. Preserve exact facial identity, proportions, skin texture, pores, beard detail, eye shape, and realism. Do not reuse pose, lighting, or composition from the upload.\nCreate an ultra-realistic cinematic action moment frozen at the absolute peak of chaos.\nA powerful adult male fills the extreme foreground, lunging toward the camera with one arm fully extended, fingers reaching past the lens. His expression is pure survival panic — eyes wide, mouth open mid-scream. The face is razor-sharp, perfectly integrated, and emotionally intense.\nIn his other arm, he clutches a panicking tabby cat. The cat is fully alive and reactive: eyes wide and dilated, ears flattened back, mouth open in a silent hiss or scream, whiskers flared, body tense, claws fully extended, hind legs kicking slightly. Fur strands are hyper-detailed and bristled from fear. The cat’s panic mirrors the human’s, amplifying the chaos.\nBehind them, a massive stadium environment erupts. A violent explosion blossoms outward, throwing concrete, metal fragments, and dust into the air. A police vehicle is launched sideways mid-blast, twisted realistically, emergency lights flashing through smoke. Human silhouettes are flung backward, suspended mid-air in slow-motion realism.\nLighting is physical and cinematic: blazing orange firelight rim-lighting the subjects, cold blue emergency strobes slicing through smoke, volumetric haze, flying embers, realistic shadow falloff, extreme dynamic range.\nCamera is ultra-wide and close, natural perspective distortion, shallow depth of field, sharp subject separation, no fisheye, no artificial blur.\nPhotorealistic, hyper-detailed, cinematic color grading.\nNo cartoon look. No AI artifacts. No softness.\nMood: explosive, intense, absurdly unforgettable, viral blockbuster realism.",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_169.png"
+    ],
     "tags": [
       "comic / storyboard"
     ],
@@ -21282,12 +21306,14 @@
   },
   {
     "id": "youmind_extract_173",
-    "source": "YouMind (Extract)",
+    "source": "BotsNANO",
     "title": "@Jade Truong",
     "category": "Profile / Avatar",
     "prompt": "Prompt{\n  \"scene\": {\n    \"type\": \"indoor_mirror_selfie\",\n    \"lighting\": \"soft_indoor_lighting, cool_tones\",\n    \"atmosphere\": \"minimalist, clean, private\"\n  },\n  \"subject\": {\n    \"pose\": {\n      \"position\": \"standing_profile_view\",\n      \"orientation\": \"facing_sideways_to_mirror\",\n      \"legs\": \"straight, neutral_stance\",\n      \"arms\": \"right_hand_holding_phone_obscuring_face, left_hand_resting_on_thigh\",\n      \"head\": \"turned_towards_mirror\"\n    },\n    \"appearance\": {\n      \"hair\": \"long, dark, wavy_hair_cascading_down_back\",\n      \"expression\": \"hidden_by_phone\",\n      \"complexion\": \"fair, smooth\",\n      \"notable_features\": \"colorful_floral_tattoo_on_right_shoulder\"\n    },\n    \"attire\": {\n      \"top\": {\n        \"item\": \"camisole_tank_top\",\n        \"color\": \"off-white_or_light_grey\",\n        \"texture\": \"ribbed_cotton\",\n        \"pattern\": \"small_red_cherry_print\",\n        \"style\": \"thin_spaghetti_straps\"\n      },\n      \"bottom\": {\n        \"item\": \"fitted_lounge_shorts\",\n        \"color\": \"matching_off-white\",\n        \"pattern\": \"matching_cherry_print\",\n        \"details\": \"high-waisted_fit\"\n      },\n      \"accessories\": {\n        \"phone_case\": \"clear_with_gold_accents\"\n      }\n    }\n  },\n  \"environment\": {\n    \"background_elements\": {\n      \"mirror\": {\n        \"style\": \"irregular_wavy_shape, frameless\",\n        \"placement\": \"resting_on_white_ledge\"\n      },\n      \"wall\": \"plain_white_minimalist_wall\",\n      \"decor\": {\n        \"visible_items\": [\n          \"scented_candle_with_dried_flowers_on_top\",\n          \"white_door_reflection_in_mirror\"\n        ]\n      }\n    }\n  },\n  \"composition\": {\n    \"angle\": \"eye_level_mirror_reflection\",\n    \"framing\": \"medium_shot_vertical\",\n    \"focus\": \"sharp_reflection, clean_white_space\"\n  }\n}",
     "prompt_original": "Prompt{\n  \"scene\": {\n    \"type\": \"indoor_mirror_selfie\",\n    \"lighting\": \"soft_indoor_lighting, cool_tones\",\n    \"atmosphere\": \"minimalist, clean, private\"\n  },\n  \"subject\": {\n    \"pose\": {\n      \"position\": \"standing_profile_view\",\n      \"orientation\": \"facing_sideways_to_mirror\",\n      \"legs\": \"straight, neutral_stance\",\n      \"arms\": \"right_hand_holding_phone_obscuring_face, left_hand_resting_on_thigh\",\n      \"head\": \"turned_towards_mirror\"\n    },\n    \"appearance\": {\n      \"hair\": \"long, dark, wavy_hair_cascading_down_back\",\n      \"expression\": \"hidden_by_phone\",\n      \"complexion\": \"fair, smooth\",\n      \"notable_features\": \"colorful_floral_tattoo_on_right_shoulder\"\n    },\n    \"attire\": {\n      \"top\": {\n        \"item\": \"camisole_tank_top\",\n        \"color\": \"off-white_or_light_grey\",\n        \"texture\": \"ribbed_cotton\",\n        \"pattern\": \"small_red_cherry_print\",\n        \"style\": \"thin_spaghetti_straps\"\n      },\n      \"bottom\": {\n        \"item\": \"fitted_lounge_shorts\",\n        \"color\": \"matching_off-white\",\n        \"pattern\": \"matching_cherry_print\",\n        \"details\": \"high-waisted_fit\"\n      },\n      \"accessories\": {\n        \"phone_case\": \"clear_with_gold_accents\"\n      }\n    }\n  },\n  \"environment\": {\n    \"background_elements\": {\n      \"mirror\": {\n        \"style\": \"irregular_wavy_shape, frameless\",\n        \"placement\": \"resting_on_white_ledge\"\n      },\n      \"wall\": \"plain_white_minimalist_wall\",\n      \"decor\": {\n        \"visible_items\": [\n          \"scented_candle_with_dried_flowers_on_top\",\n          \"white_door_reflection_in_mirror\"\n        ]\n      }\n    }\n  },\n  \"composition\": {\n    \"angle\": \"eye_level_mirror_reflection\",\n    \"framing\": \"medium_shot_vertical\",\n    \"focus\": \"sharp_reflection, clean_white_space\"\n  }\n}",
-    "images": [],
+    "images": [
+      "/images/botnano_extract_173.png"
+    ],
     "tags": [
       "profile / avatar"
     ],

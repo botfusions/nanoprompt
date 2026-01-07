@@ -16,19 +16,20 @@ interface HomeClientProps {
 export default function HomeClient({ initialPrompts }: HomeClientProps) {
     const [activeCategory, setActiveCategory] = useState("Tümü");
     const [searchQuery, setSearchQuery] = useState("");
-    const [favorites, setFavorites] = useState<string[]>([]);
-
-    // Load favorites from localStorage
-    useEffect(() => {
+    // Load favorites from localStorage with lazy initialization
+    const [favorites, setFavorites] = useState<string[]>(() => {
+        if (typeof window === 'undefined') return [];
         const saved = localStorage.getItem("favorites");
         if (saved) {
             try {
-                setFavorites(JSON.parse(saved));
+                return JSON.parse(saved);
             } catch (e) {
                 console.error("Error parsing favorites", e);
+                return [];
             }
         }
-    }, []);
+        return [];
+    });
 
     // Save favorites to localStorage
     useEffect(() => {

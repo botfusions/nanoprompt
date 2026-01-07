@@ -2,7 +2,7 @@
 
 import { X, Sparkles, UserPlus } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 interface GhostSignupModalProps {
@@ -11,15 +11,14 @@ interface GhostSignupModalProps {
 }
 
 export function GhostSignupModal({ isOpen, onClose }: GhostSignupModalProps) {
-    const [isVisible, setIsVisible] = useState(false);
+    // Derive visibility directly from isOpen prop
+    const isVisible = isOpen;
 
     useEffect(() => {
+        // Prevent scrolling when modal is open
         if (isOpen) {
-            setIsVisible(true);
-            // Prevent scrolling when modal is open
             document.body.style.overflow = "hidden";
         } else {
-            setIsVisible(false);
             document.body.style.overflow = "unset";
         }
         return () => {
