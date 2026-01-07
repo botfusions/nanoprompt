@@ -6,7 +6,7 @@
 
 **Gemini Nano Banana Pro için en iyi prompt koleksiyonu**
 
-[![Prompts](https://img.shields.io/badge/Prompts-3112+-brightgreen?style=flat-square)](/)
+[![Prompts](https://img.shields.io/badge/Prompts-3145+-brightgreen?style=flat-square)](/)
 [![Next.js](https://img.shields.io/badge/Next.js-16+-black?style=flat-square)](https://nextjs.org)
 [![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=flat-square)](https://tailwindcss.com)
 [![Supabase](https://img.shields.io/badge/Supabase-Database-3ecf8e?style=flat-square)](https://supabase.com)
@@ -101,7 +101,24 @@ http://localhost:3000
 └── scripts/               # Yardımcı scriptler
 ```
 
-## 📋 Son Güncelleme (31 Aralık 2025)
+## 📋 Son Güncelleme (7 Ocak 2026)
+
+### 🐦 Twitter Prompts Import Sistemi
+- **Otomatik Import Script**: `twitter_prompts` tablosundan `banana_prompts` tablosuna otomatik aktarım
+- **Akıllı Numaralandırma**: Yeni kayıtlara otomatik sıralı `display_number` atama
+- **Temizlik Mekanizması**: Import sonrası kaynak tablo otomatik temizleniyor
+- **Kullanım**: `node scripts/import_twitter_prompts.js`
+
+### 🔧 ESLint Düzeltmeleri
+- **HomeClient.tsx**: Effect içinde setState sorunu düzeltildi (lazy initialization)
+- **GhostSignupModal.tsx**: State türetme optimizasyonu
+- **Footer.tsx**: Escape edilmemiş karakter düzeltmesi
+
+### 📊 Prompt Sayısı Güncellemesi
+- **Toplam Prompt**: 3145+ (16 yeni Twitter prompt eklendi)
+- **Display Number Aralığı**: #00001 - #03145
+
+## 📋 Önceki Güncelleme (31 Aralık 2025)
 
 ### 🎄 Yılbaşı Kartları Kategorisi
 - **140 Christmas Card Prompt**: YouMind'dan import edildi
