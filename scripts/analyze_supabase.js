@@ -25,7 +25,7 @@ async function analyzePrompts() {
     // En son 10 prompt'u çek
     const { data: latest, error } = await supabase
         .from('banana_prompts')
-        .select('id, title, prompt, images, source, author, created_at')
+        .select('id, title, prompt, images, source, author, created_at, conversion_score, visual_style, use_case')
         .order('created_at', { ascending: false })
         .limit(10);
 
@@ -43,6 +43,9 @@ async function analyzePrompts() {
         console.log(`    Images: ${p.images?.length || 0} adet`);
         console.log(`    Source: ${p.source}`);
         console.log(`    Author: ${p.author}`);
+        console.log(`    Score: ${p.conversion_score || 'N/A'}`);
+        console.log(`    Style: ${p.visual_style || 'N/A'}`);
+        console.log(`    Use Case: ${p.use_case || 'N/A'}`);
         console.log('');
     });
 
