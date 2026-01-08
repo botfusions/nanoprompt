@@ -48,6 +48,9 @@ export default function EvaluatorPage() {
             // Continue if running
             if (!stopRef.current) {
                 setTimeout(processBatch, 1000); // 1s delay between batches
+            } else {
+                setIsRunning(false);
+                addLog('Process stopped by user.');
             }
         } catch (err: any) {
             addLog(`Error: ${err.message}`);

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-01-08T14:39:14.692Z",
+  "total_evaluations": 10,
+  "score_distribution": {
+    "score_5": 0,
+    "score_4": 0,
+    "score_3": 7,
+    "score_2": 0,
+    "score_1": 3
+  },
+  "top_tier_prompts": []
+}

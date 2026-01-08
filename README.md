@@ -121,10 +121,10 @@ http://localhost:3000
 ## 📋 Son Güncelleme (8 Ocak 2026)
 
 ### 🤖 Gemini AI Prompt Evaluator
-- **Otomatik Puanlama**: Gemini 1.5 Flash modeli ile prompt kalite analizi (1-5 puan)
+- **Otomatik Puanlama**: Gemini 2.5 Flash modeli ile prompt kalite analizi (1-5 puan)
 - **Detaylı Sınıflandırma**: Görsel Stil, Kullanım Alanı, Kamera Açısı ve Işıklandırma tespiti
 - **Admin Paneli**: `/admin/evaluator` üzerinden toplu analiz başlatabilme
-- **Top List Export**: 4+ puan alan viral potansiyelli promptların otomatik filtrelenmesi ve CSV çıktısı
+- **Top List Export**: 3+ puan alan (Good/Strong/Viral) promptların otomatik filtrelenmesi ve CSV çıktısı
 - **Akıllı Veri Yapısı**: Kaliteli veriler için `banana_top_prompts` ayrılmış tablosu
 
 ## 📋 Önceki Güncelleme (31 Aralık 2025)

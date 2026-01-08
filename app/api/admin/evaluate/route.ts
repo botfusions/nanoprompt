@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
         }
 
         const model = genAI.getGenerativeModel({
-            model: "gemini-1.5-flash",
+            model: "gemini-2.5-flash",
             generationConfig: {
                 responseMimeType: "application/json",
                 responseSchema: {
@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
         const promptList = prompts.map((p: any) => `ID: ${p.id}\nPrompt: ${p.prompt}`).join('\n\n');
         const systemInstruction = `
     You are an AI prompt evaluator. Evaluate each prompt based on:
-    - conversion_score: 1-5 (5=Viral/Excellent, 1=Weak). Be strict. Only ~15% should be 5.
+    - conversion_score: 1-5 (5=Viral/Excellent, 1=Weak). Be balanced. ~30% should be 4 or 5.
     - use_case: One of [Fashion, Product, UGC / Ads, Editorial, Social Viral, Stock]
     - visual_style: One of [Y2K, Luxury, Gritty, Minimal, Cyber, Editorial, Mixed]
     - camera_framing: One of [Ultra close-up, Close-up, Medium, Wide, Fisheye, Low-angle, Mixed]

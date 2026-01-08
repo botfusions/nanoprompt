@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
         const { data: prompts, error } = await supabase
             .from('banana_prompts')
             .select('id, title, prompt, use_case, visual_style, conversion_score, short_reason')
-            .gte('conversion_score', 4)
+            .not('conversion_score', 'is', null)
             .order('conversion_score', { ascending: false });
 
         if (error) throw error;

@@ -1,74 +1,80 @@
+const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
-const { createClient } = require('@supabase/supabase-js');
 
-// Load .env.local manually
+// Load .env.local
 const envPath = path.resolve(process.cwd(), '.env.local');
 const envContent = fs.readFileSync(envPath, 'utf8');
-
 const envConfig = {};
 envContent.split('\n').forEach(line => {
     const [key, ...value] = line.split('=');
-    if (key && value) {
-        envConfig[key.trim()] = value.join('=').trim();
-    }
+    if (key) envConfig[key.trim()] = value.join('=').trim();
 });
 
-const supabaseUrl = envConfig.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = envConfig.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabase = createClient(envConfig.NEXT_PUBLIC_SUPABASE_URL, envConfig.SUPABASE_SERVICE_ROLE_KEY || envConfig.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 
-const supabase = createClient(supabaseUrl, supabaseKey);
+async function generateAnalysisReport() {
+    console.log("=== Generating Analysis Report ===\n");
 
-async function analyzePrompts() {
-    console.log("=== Supabase Prompt Analizi ===\n");
-
-    // En son 10 prompt'u çek
-    const { data: latest, error } = await supabase
+    // 1. Fetch ALL scored prompts
+    const { data: prompts, error } = await supabase
         .from('banana_prompts')
-        .select('id, title, prompt, images, source, author, created_at, conversion_score, visual_style, use_case')
-        .order('created_at', { ascending: false })
-        .limit(10);
+        .select('id, prompt, title, use_case, visual_style, camera_framing, lighting_type, subject_type, conversion_score, short_reason')
+        .not('conversion_score', 'is', null)
+        .order('conversion_score', { ascending: false });
 
     if (error) {
-        console.error("Hata:", error);
+        console.error("Error fetching data:", error);
         return;
     }
 
-    console.log("Son 10 prompt:\n");
-    latest?.forEach((p, i) => {
-        const promptSnippet = p.prompt?.substring(0, 80) || '(boş)';
-        console.log(`[${i + 1}] ID: ${p.id}`);
-        console.log(`    Title: ${p.title}`);
-        console.log(`    Prompt: ${promptSnippet}...`);
-        console.log(`    Images: ${p.images?.length || 0} adet`);
-        console.log(`    Source: ${p.source}`);
-        console.log(`    Author: ${p.author}`);
-        console.log(`    Score: ${p.conversion_score || 'N/A'}`);
-        console.log(`    Style: ${p.visual_style || 'N/A'}`);
-        console.log(`    Use Case: ${p.use_case || 'N/A'}`);
-        console.log('');
+    // 2. Calculate Statistics
+    const total_prompts = prompts.length;
+    const score_counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+
+    prompts.forEach(p => {
+        if (score_counts[p.conversion_score] !== undefined) {
+            score_counts[p.conversion_score]++;
+        }
     });
 
-    // "Athletic" veya "runner" içeren prompt'ları ara
-    console.log("\n--- 'Athletic' veya 'runner' içeren promptlar ---\n");
+    // 3. Construct the detailed Report Object
+    const report = {
+        timestamp: new Date().toISOString(),
+        total_evaluations: total_prompts,
+        score_distribution: {
+            "score_5": score_counts[5],
+            "score_4": score_counts[4],
+            "score_3": score_counts[3],
+            "score_2": score_counts[2],
+            "score_1": score_counts[1]
+        },
+        top_tier_prompts: prompts
+            .filter(p => p.conversion_score >= 4)
+            .map(p => ({
+                prompt_id: p.id,
+                title: p.title,
+                prompt_text: p.prompt,
+                metadata: {
+                    use_case: p.use_case,
+                    visual_style: p.visual_style,
+                    camera_framing: p.camera_framing,
+                    lighting_type: p.lighting_type,
+                    subject_type: p.subject_type,
+                    conversion_score: p.conversion_score,
+                    short_reason: p.short_reason
+                }
+            }))
+    };
 
-    const { data: runnerPrompts, error: runnerError } = await supabase
-        .from('banana_prompts')
-        .select('id, title, prompt, images')
-        .or('prompt.ilike.%athletic%,prompt.ilike.%runner%,title.ilike.%runner%')
-        .limit(5);
+    // 4. Output Results
+    console.log(`✅ Analyzed ${total_prompts} prompts.`);
+    console.log(`📊 Distribution: 5★: ${score_counts[5]} | 4★: ${score_counts[4]} | 3★: ${score_counts[3]}`);
 
-    if (runnerError) {
-        console.error("Arama hatası:", runnerError);
-    } else {
-        runnerPrompts?.forEach(p => {
-            console.log(`ID: ${p.id}`);
-            console.log(`Title: ${p.title}`);
-            console.log(`Prompt snippet: ${p.prompt?.substring(0, 100)}...`);
-            console.log(`Images: ${JSON.stringify(p.images)}`);
-            console.log('');
-        });
-    }
+    // 5. Save to file
+    const outputPath = path.resolve(process.cwd(), 'analysis_report.json');
+    fs.writeFileSync(outputPath, JSON.stringify(report, null, 2));
+    console.log(`\n📄 Report saved to: ${outputPath}`);
 }
 
-analyzePrompts();
+generateAnalysisReport();
