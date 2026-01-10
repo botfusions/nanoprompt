@@ -23,7 +23,7 @@ export default function EvaluatorPage() {
             const res = await fetch('/api/admin/evaluate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ batchSize: 5 })
+                body: JSON.stringify({ batchSize: 20 })
             });
 
             const data = await res.json();

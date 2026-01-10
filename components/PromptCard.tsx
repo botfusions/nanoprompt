@@ -2,15 +2,17 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
     Twitter,
     ExternalLink,
     Copy,
     Zap,
+    Check,
+    Eye,
     Share2,
     Bookmark,
-    Eye,
-    Check
+    Heart
 } from "lucide-react";
 import { Prompt } from "@/src/data/prompts";
 import { cn } from "@/lib/utils";
@@ -263,7 +265,10 @@ export function PromptCard({ prompt, isFavorite, onToggleFavorite }: PromptCardP
                         )}
                     </button>
 
-                    <button className="w-12 flex items-center justify-center bg-white border-2 border-brand-black hover:bg-gray-100 transition-all shadow-none hover:shadow-neo active:translate-y-[1px] active:shadow-none rounded-none" title="Paylaş">
+                    <button
+                        className="w-12 flex items-center justify-center bg-white border-2 border-brand-black hover:bg-gray-100 transition-all shadow-none hover:shadow-neo active:translate-y-[1px] active:shadow-none rounded-none"
+                        title="Paylaş"
+                    >
                         <Share2 className="w-5 h-5" />
                     </button>
 

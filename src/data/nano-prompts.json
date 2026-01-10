@@ -1,0 +1,134 @@
+[
+    {
+        "id": "featured-1",
+        "title": "Wide quote card with customized portrait",
+        "description": "A prompt for generating a wide quote card featuring a famous person’s portrait, with a brown background and light-gold serif quote text.",
+        "prompt": "A wide quote card featuring a famous person, with a brown background and a light-gold serif font for the quote: “{argument name=\"famous_quote\" default=\"Stay Hungry, Stay Foolish\"}” and smaller text: “—{argument name=\"author\" default=\"Steve Jobs\"}.” There is a large, subtle quotation mark before the text. The portrait of the person is on the left, the text on the right. The text occupies two-thirds of the image and the portrait one-third, with a slight gradient transition effect on the portrait.",
+        "image": "https://cms-assets.youmind.com/media/1763886933714_5zqn1e_G6QBjQHbgAE3Yt_.jpg",
+        "tags": [
+            "Featured",
+            "Quote",
+            "Portrait"
+        ]
+    },
+    {
+        "id": "featured-2",
+        "title": "Hand-drawn style header image",
+        "description": "Create a hand-drawn style header image of a person introducing a product or topic.",
+        "prompt": "Completely recreate the uploaded person. Make it a header image for a note article where that person introduces “Nano Banana Pro”. Aspect ratio: horizontal 16:9. Style and colors: simple, hand-drawn style, italic, with a blue and green gradient. Title text: “In-depth explanation of Google’s new AI ‘Nano Banana Pro’”.",
+        "image": "https://cms-assets.youmind.com/media/1763885651870_4szbai_G6VZiROagAAqsIh.jpg",
+        "tags": [
+            "Featured",
+            "Hand-drawn",
+            "Header"
+        ]
+    },
+    {
+        "id": "featured-3",
+        "title": "Watercolor map of Germany",
+        "description": "A watercolor-style map where all federal states are labeled in ballpoint pen.",
+        "prompt": "Generate a map of Germany in watercolor style, on which all federal states are labeled in ballpoint pen.",
+        "image": "https://cms-assets.youmind.com/media/1763886061720_fzgqaq_G6RIeSZXgAA7cOf.jpg",
+        "tags": [
+            "Featured",
+            "Map",
+            "Watercolor"
+        ]
+    },
+    {
+        "id": "featured-4",
+        "title": "Chalkboard-style AI news summary",
+        "description": "Summarize content in a chalkboard-style, hand‑written look with diagrams.",
+        "prompt": "Using the following content, summarize the news in a chalkboard-style, hand‑written look, and break it down with diagrams and easy‑to‑understand expressions as if a teacher had written it.\n—- \nSearch results from Grok",
+        "image": "https://cms-assets.youmind.com/media/1763885620059_vzaj75_G6WfVvIbAAEgvYg.jpg",
+        "tags": [
+            "Featured",
+            "Chalkboard",
+            "Summary"
+        ]
+    },
+    {
+        "id": "featured-5",
+        "title": "Train-ad style book advertisement",
+        "description": "A business book advertisement image with specific copy and layout.",
+        "prompt": "Please generate an advertisement image.\n\n==== Ad specifications ===\n- Aspect ratio: 16:9 (horizontal)\n- Product to advertise: the book in the first attached image\n- Main eye-catcher: place the book from the first attached image in a three-dimensional way\n- Language: Japanese\n- Taste: advertisement for a business book\n\n# Text to include:\n- Pre-head copy: 【New print run decided about one week after release】\n\nBook “{argument name=\"book_title_en\" default=\"Designing from Zero with AI\"}” now on sale and doing well.\n\nAmazon Best Seller Ranking\nRanked No.1 in commercial design sales (as of 10/15)\nhttps://t.co/QxbYpfFVj6",
+        "image": "https://cms-assets.youmind.com/media/1763885539326_yao7in_G6WBYReawAAcp2x.jpg",
+        "tags": [
+            "Featured",
+            "Advertisement",
+            "Book"
+        ]
+    },
+    {
+        "id": "featured-6",
+        "title": "Luxury minimalist product photography",
+        "description": "High-end, minimalist commercial product photography based on a reference image.",
+        "prompt": "Using my uploaded reference image as the base, generate a minimalist, high-quality commercial still life photograph with the aesthetic of a luxury brand advertisement.\n\nPreserve the general shape, proportions, and main color scheme of the core product in the reference so that it is instantly recognizable as the same product, but upgrade the overall texture and atmosphere of the image, making it look like an ad for a top-tier international fragrance, skincare item, or high-end electronic product.\n\nUse a vertical 4:5 composition. The background should be a large area of clean, neutral negative space, such as soft off-white, cool gray, or light beige, creating a quiet, restrained, and expensive studio environment. Apart from the core product and a minimal number of necessary supports, do not add any extra decorations. No clutter, no elaborate scene setup—only keep very simple geometric supports (such as a plain white cube, a cylinder, or a thin transparent panel). The supports must be simple and low-profile, existing only to hold and accentuate the product.\n\nStrongly emphasize the material details of the product, and let the lighting fully serve those materials:\nShow frosted glass with a fine, soft matte texture, ceramics with a matte or slightly glazed feel, and polished metal with clean, sharp specular highlights. Liquids should have clearly visible viscosity and volume. Avoid any cheap plastic feel, complex patterns, or gaudy stickers; the overall material quality must feel cool, restrained, and luxurious.\n\nUse professional studio lighting: mainly soft, diffused light from softboxes, plus precise rim light outlining the product’s shape. The contours should be crisp and layered, and the shadows should be soft and clean, with no noise or dirty shadow patches. You may use a near-macro viewpoint, moving in closer to the product to highlight materials and details, while preserving ample negative space around the frame so the product can \"speak for itself\" in the emptiness.\n\nKeep the overall color scheme neutral and calm. The product’s own color can be slightly more saturated, making it the single visual focal point in the scene. Do not use exaggerated gradient backgrounds, flashy colored lighting, or e-commerce promo aesthetics. No large-price text, labels, or cartoon graphics.\n\nThe final result must be a high-resolution commercial key visual that looks ready for a magazine back cover or a high-end brand announcement poster: minimalist, quiet, high-end, with the core product confidently centered, surrounded by clean negative space and precisely controlled lighting.",
+        "image": "https://cms-assets.youmind.com/media/1764915823213_skhwpb_G7Qvxi5bIAAqpfX.jpg",
+        "tags": [
+            "Featured",
+            "Product",
+            "Luxury"
+        ]
+    },
+    {
+        "id": "featured-7",
+        "title": "London outdoor restaurant portrait",
+        "description": "Photorealistic portrait in a London outdoor setting.",
+        "prompt": "Create a photorealistic image of a young woman sitting at a relaxed outdoor restaurant in {argument name=\"city in english\" default=\"London\"} on a cool Wednesday morning in March {argument name=\"year in english\" default=\"2025\"}. The sky is clear, the spring air is crisp, and the city feels calm as it wakes up. She is the focal point of the shot—wearing a light scarf, gently stirring her tea while gazing off to the side with a thoughtful expression. Everything behind her, from the waiter moving about to the soft morning traffic, should fall into a smooth blur, giving the picture the effortless, candid atmosphere of a moment casually snapped on a phone.",
+        "image": "https://cms-assets.youmind.com/media/1764909307226_bcwb2i_G7QIraQaoAANflM.jpg",
+        "tags": [
+            "Featured",
+            "Portrait",
+            "Lifestyle"
+        ]
+    },
+    {
+        "id": "featured-8",
+        "title": "Dream diary with Kirby",
+        "description": "A cute, dreamy illustration of Kirby blowing bubbles.",
+        "prompt": "Dream diary. A pink Kirby lying asleep on a star, blowing rainbow-colored bubbles from its mouth. Soft macaron color palette, cloud and candy stickers, glittery crayon-like details, dreamy and sweet.",
+        "image": "https://cms-assets.youmind.com/media/1763886710060_ndpy3q_G6RHoGna4AArBDN.jpg",
+        "tags": [
+            "Featured",
+            "Illustration",
+            "Cute"
+        ]
+    },
+    {
+        "id": "featured-10",
+        "title": "Modern scene in Edo-period Ukiyo-e style",
+        "description": "Reimagining modern technology through an ancient Edo-period lens.",
+        "prompt": "A Japanese Edo-period Ukiyo-e woodblock print. The overall feeling is a surreal collaboration between masters like Hokusai and Hiroshige, reimagining modern technology through an ancient lens.\n\n**The scene:** {argument name=\"modern scene\" default=\"a busy Shibuya scramble crossing\"}\n\n**Edo transformation logic:**\nCharacters wear Edo-era kimono but perform modern actions. All technology is transformed into surreal Edo equivalents:\n* Smartphones are glowing, illustrated paper scrolls being read intently.\n* Metro stations and trains are giant articulated wooden centipede carriages shuffling through crowds.\n* Skyscrapers are reimagined as endless, towering wooden pagodas reaching into dramatic clouds.\n* Robots and mecha appear as giant, armored woodblock golems.\n\nThe composition uses a flattened perspective with large, bold, hand-carved ink outlines. The background features heavily stylized Ukiyo-e wave patterns and dramatic, swirling clouds, with a distant Mt. Fuji visible on the horizon.\n\nThe image must look like a physical print, not a digital painting.\n* Texture: strong visible wood grain texture and rough paper fibers throughout the piece.\n* Printing imperfections: pigment bleeding is evident. Simulate hand-pressed plates with slight color misalignment for authenticity.\n* Color palette: strictly limited to traditional mineral pigments, with dominant use of Prussian blue, vermilion red, and muted yellow ochre.\n* Lighting: soft, flat, shadow-free lighting with no digital gradients.\n\nAspect ratio is 3:4 vertical poster. Include vertical Japanese calligraphy describing the scene and a traditional red artist seal stamp in a corner.",
+        "image": "https://cms-assets.youmind.com/media/1764915832381_renotr_G7FuPlzbYAAsuo2.jpg",
+        "tags": [
+            "Featured",
+            "Artistic",
+            "Ukiyo-e"
+        ]
+    },
+    {
+        "id": "featured-11",
+        "title": "Black and white studio profile portrait",
+        "description": "Hyper-realistic black and white studio portrait.",
+        "prompt": "{\n  \"Use the attached image of the person as reference. Hyper-realistic black and white studio portrait of the young man in side profile, natural hair gently falling around his face. Strong rim light accentuating his jawline and nose, dark minimalist background. Expression thoughtful and serene, cinematic lighting creating dramatic contrast and fine photographic detail.\",\n  \"size\": \"{argument name=\"image size\" default=\"1024x1024\"}\",\n  \"n\": {argument name=\"number of images\" default=\"1\"}\n}",
+        "image": "https://cms-assets.youmind.com/media/1764909188004_owsg5r_G6fQALWbMAAa0C-.jpg",
+        "tags": [
+            "Featured",
+            "Portrait",
+            "B&W"
+        ]
+    },
+    {
+        "id": "featured-12",
+        "title": "2005 Sony CyberShot mall snapshot",
+        "description": "Recreating the aesthetic of early digital cameras.",
+        "prompt": "A low-resolution digital photo taken on a 2005 Sony CyberShot. A group of teenagers hanging out in a mall food court. Harsh on-camera flash, slightly blown-out highlights, digital noise in the shadows. The skin texture looks slightly waxy due to early digital processing. An orange date stamp appears in the bottom right corner reading \"{argument name=\"date stamp in english\" default=\"04/12/2005\"}\". Candid, awkward angles, Myspace photo aesthetic.",
+        "image": "https://cms-assets.youmind.com/media/1764909293283_f5655t_G7QK4bqbsAEzqlB.jpg",
+        "tags": [
+            "Featured",
+            "Retro",
+            "Photography"
+        ]
+    }
+]

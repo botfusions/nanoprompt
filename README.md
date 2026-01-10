@@ -101,6 +101,14 @@ http://localhost:3000
 └── scripts/               # Yardımcı scriptler
 ```
 
+## 📋 Son Güncelleme (10 Ocak 2026)
+
+### 🛡️ Güvenlik Yaması ve İyileştirmeler
+- **Kritik Güvenlik Güncellemesi**: Scripts klasöründeki hardcoded Supabase Service Key temizlendi
+- **Environment Variable**: Script kullanımı için `SUPABASE_SERVICE_ROLE_KEY` environment variable zorunluluğu getirildi
+- **Güvenli Yapı**: Tüm backend scriptleri `dotenv` üzerinden güvenli bağlantı yapacak şekilde güncellendi
+- **Kod Temizliği**: Kullanılmayan geçici dosyalar temizlendi
+
 ## 📋 Son Güncelleme (7 Ocak 2026)
 
 ### 🐦 Twitter Prompts Import Sistemi
@@ -120,12 +128,15 @@ http://localhost:3000
 
 ## 📋 Son Güncelleme (8 Ocak 2026)
 
-### 🤖 Gemini AI Prompt Evaluator
-- **Otomatik Puanlama**: Gemini 2.5 Flash modeli ile prompt kalite analizi (1-5 puan)
-- **Detaylı Sınıflandırma**: Görsel Stil, Kullanım Alanı, Kamera Açısı ve Işıklandırma tespiti
-- **Admin Paneli**: `/admin/evaluator` üzerinden toplu analiz başlatabilme
-- **Top List Export**: 3+ puan alan (Good/Strong/Viral) promptların otomatik filtrelenmesi ve CSV çıktısı
-- **Akıllı Veri Yapısı**: Kaliteli veriler için `banana_top_prompts` ayrılmış tablosu
+### 🤖 Gemini AI Prompt Evaluator (v2.0)
+- **⚡ Performans**: Batch size 20'ye artırıldı (4 kat daha hızlı işlem)
+- **🔄 Sürekli Akış**: Yeni eklenen promptlar otomatik olarak "Puanlanmamış" olarak işaretlenir ve bir sonraki analizde işlenir. Eski kayıtlar tekrar işlenmez.
+- **📊 Mevcut Durum**: 3000+ prompt kütüphanesinin %45'i analiz edildi ve etiketlendi.
+- **💎 Top List Export**: 3+ puan (Good/Strong/Viral) alan promptlar `banana_top_prompts` tablosuna otomatik kopyalanır ve CSV olarak indirilebilir.
+- **🏷️ Akıllı Etiketleme**: Her prompt ana veritabanında (`banana_prompts`) zenginleştirilir:
+    - `use_case`: Fashion, Product, Social Viral vb.
+    - `visual_style`: Minimal, Cyber, Luxury vb.
+- **Kullanım**: Admin paneline gir -> "Start" butonuna bas -> Arkanı yaslan. Sistem sadece yeni promptları bulur ve işler.
 
 ## 📋 Önceki Güncelleme (31 Aralık 2025)
 
