@@ -1,13 +1,34 @@
-// Analyze and import Christmas card prompts from extract-data.json
-require('dotenv').config({ path: '.env.local' });
-const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
+const { createClient } = require('@supabase/supabase-js');
 
-const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+// Load .env.local
+const envPath = path.resolve(process.cwd(), '.env.local');
+const envContent = fs.readFileSync(envPath, 'utf8');
+
+const envConfig = {};
+envContent.split('\n').forEach(line => {
+    const trimmedLine = line.trim();
+    if (trimmedLine && !trimmedLine.startsWith('#')) {
+        const eqIndex = trimmedLine.indexOf('=');
+        if (eqIndex > 0) {
+            const key = trimmedLine.substring(0, eqIndex).trim();
+            const value = trimmedLine.substring(eqIndex + 1).trim();
+            envConfig[key] = value;
+        }
+    }
+});
+
+const supabaseUrl = envConfig.NEXT_PUBLIC_SUPABASE_URL;
+const serviceRoleKey = envConfig.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!serviceRoleKey) {
+    console.error("SUPABASE_SERVICE_ROLE_KEY gerekli!");
+    process.exit(1);
+}
+
+const supabase = createClient(supabaseUrl, serviceRoleKey);
 
 async function analyzeAndImport() {
     console.log('📊 Extract Data Analizi ve İçe Aktarma\n');
