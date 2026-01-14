@@ -1,9 +1,0 @@
-﻿[dotenv@17.2.3] injecting env (10) from .env.local -- tip: ­şöä add secrets lifecycle management: https://dotenvx.com/ops
-Title: Nanobanana pro
-Image count: 4
-
-Images:
-1. https://pbs.twimg.com/media/G8Bvw5ka0AAVL0N?format=jpg&name=360x360
-2. https://pbs.twimg.com/media/G8Bvw81aQAAnaMy
-3. https://pbs.twimg.com/media/G8BvxHebgAAjN6w?format=jpg&name=360x360
-4. https://pbs.twimg.com/media/G8Bvw81aQAAnaMy?format=jpg&name=360x360

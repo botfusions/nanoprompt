@@ -101,7 +101,15 @@ http://localhost:3000
 └── scripts/               # Yardımcı scriptler
 ```
 
-## 📋 Son Güncelleme (11 Ocak 2026)
+## 📋 Son Güncelleme (14 Ocak 2026)
+
+### 📊 Advanced CSV Export Sistemi
+- **Gelişmiş Format**: JSON formatındaki prompt içerikleri okunabilir "Key: Value" metin formatına dönüştürüldü.
+- **Tek Satır Garantisi**: CSV uyumluluğu için tüm satır atlamaları temizlendi.
+- **Marka ID Güncellemesi**: `youmind` içeren tüm ID'ler `botfusions` olarak güncellendi.
+- **Kullanım**: `node scripts/export_final_csv.js` -> `top_prompts_final_YYYY-MM-DD.csv` oluşturur.
+
+## 📋 Önceki Güncelleme (11 Ocak 2026)
 
 ### 🔄 Veritabanı Senkronizasyonu ve Optimizasyonu
 - **display_number Düzeltmesi**: Mevcut 3128 promptun tamamı yaratılma tarihine göre yeniden sıralandı ve ardışık numaralandırıldı.
