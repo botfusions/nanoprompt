@@ -29,7 +29,7 @@ async function checkPrompt() {
     const { data, error } = await supabase
         .from('banana_prompts')
         .select('*')
-        .gte('display_number', 3114)
+        .gte('display_number', 3203)
         .order('display_number', { ascending: true });
 
     if (error) {
@@ -37,7 +37,7 @@ async function checkPrompt() {
         return;
     }
 
-    console.log(`\n📊 Twitter'dan eklenen promptlar (#03114 - #03145):\n`);
+    console.log(`\n📊 Twitter'dan eklenen promptlar (#03203+):\n`);
 
     data.forEach(p => {
         const hasImage = p.images && p.images.length > 0 && p.images[0];
@@ -50,8 +50,8 @@ async function checkPrompt() {
 
     // #03145 detaylı göster
     console.log("\n" + "=".repeat(60));
-    console.log("📋 #03145 Detay:");
-    const p3145 = data.find(p => p.display_number === 3145);
+    console.log("📋 #03341 Detay:");
+    const p3145 = data.find(p => p.display_number === 3341);
     if (p3145) {
         console.log("ID:", p3145.id);
         console.log("Author:", p3145.author);

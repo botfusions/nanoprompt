@@ -107,9 +107,28 @@ async function importTwitterPrompts() {
     let errorCount = 0;
     const importedIds = [];
 
+    const missingInfo = [];
+
     for (let i = 0; i < twitterPrompts.length; i++) {
         const tp = twitterPrompts[i];
         const currentDisplayNumber = nextDisplayNumber + i;
+
+        // Validation Check
+        const hasPrompt = !!(tp.prompt || tp.content);
+        const hasImage = !!(tp.images || tp.image_url || (Array.isArray(tp.images) && tp.images.length > 0));
+
+        if (!hasPrompt || !hasImage) {
+            missingInfo.push({
+                index: i,
+                display_number: currentDisplayNumber,
+                id: tp.id,
+                title: tp.title || `No Title #${currentDisplayNumber}`,
+                missing: [
+                    !hasPrompt ? 'Prompt text' : null,
+                    !hasImage ? 'Image' : null
+                ].filter(Boolean).join(', ')
+            });
+        }
 
         // Veriyi banana_prompts formatına dönüştür
         const newPrompt = {
@@ -137,10 +156,23 @@ async function importTwitterPrompts() {
             console.log(`   ❌ [${i + 1}/${twitterPrompts.length}] #${String(currentDisplayNumber).padStart(5, '0')} - HATA: ${error.message}`);
             errorCount++;
         } else {
-            console.log(`   ✅ [${i + 1}/${twitterPrompts.length}] #${String(currentDisplayNumber).padStart(5, '0')} - ${(newPrompt.title || '').substring(0, 40)}`);
+            console.log(`   ✅ [${i + 1}/${twitterPrompts.length}] #${String(currentDisplayNumber).padStart(5, '0')} - ${(newPrompt.title || '').substring(0, 40)}${missingInfo.find(m => m.index === i) ? ' ⚠️ (Missing info)' : ''}`);
             successCount++;
             importedIds.push(tp.id); // Başarılı import edilen Twitter prompt ID'lerini kaydet
         }
+    }
+
+    // Report Missing Info
+    if (missingInfo.length > 0) {
+        console.log("\n" + "!".repeat(60));
+        console.log("⚠️  KAYIP/EKSİK BİLGİ RAPORU");
+        console.log("!".repeat(60));
+        console.log(`Toplam ${missingInfo.length} kayıtta eksik bilgi tespit edildi:\n`);
+
+        missingInfo.forEach(item => {
+            console.log(`   🔸 #${String(item.display_number).padStart(5, '0')} | ${item.title} | Eksik: ${item.missing}`);
+        });
+        console.log("\nBu kayıtlar yine de import edildi, ancak kontrol edilmelidir.");
     }
 
     console.log("\n" + "-".repeat(60));
