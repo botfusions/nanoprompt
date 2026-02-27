@@ -32,7 +32,7 @@ function isRateLimited(ip: string): boolean {
     return false;
 }
 
-export function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
     // Get client IP for rate limiting

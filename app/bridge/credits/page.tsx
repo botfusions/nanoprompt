@@ -1,3 +1,11 @@
+import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Credits | Nano Stüdyo',
+    description: 'Credits and attribution for Nano Stüdyo',
+};
+
 export default function CreditsPage() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-zinc-950 text-white font-sans">
