@@ -1,6 +1,15 @@
 import { supabase } from "./supabase";
 import type { User, Session } from "@supabase/supabase-js";
 
+/**
+ * Check if the user is an admin based on email
+ */
+export function isAdmin(email?: string): boolean {
+    if (!email) return false;
+    const adminEmails = (process.env.ADMIN_EMAILS || "").split(",").map(e => e.trim());
+    return adminEmails.includes(email);
+}
+
 export interface Profile {
     id: string;
     username: string;

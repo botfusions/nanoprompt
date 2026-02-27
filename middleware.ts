@@ -6,6 +6,8 @@ const PROTECTED_ROUTES = [
     '/dashboard',
     '/profile',
     '/settings',
+    '/admin',
+    '/api/admin',
 ];
 
 // Rate limiting simple implementation (in-memory, resets on restart)

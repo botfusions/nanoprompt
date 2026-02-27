@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { GoogleGenerativeAI, SchemaType } from '@google/generative-ai';
+import { isAdmin } from '@/src/lib/auth';
 
 // Initialize Supabase Admin Client
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -18,6 +19,12 @@ export async function POST(req: NextRequest) {
     }
 
     try {
+        // 0. Authorization Check
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user || !isAdmin(user.email)) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+        }
+
         const { batchSize = 5 } = await req.json();
 
         // 1. Fetch un-scored prompts

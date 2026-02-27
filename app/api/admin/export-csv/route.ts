@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
+import { isAdmin } from '@/src/lib/auth';
 
 // Initialize Supabase Admin Client
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
@@ -8,6 +9,11 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function GET(req: NextRequest) {
     try {
+        // 0. Authorization Check
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user || !isAdmin(user.email)) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
+        }
         // Fetch top tier prompts from the new dedicated table or filter main table
         // Using main table for now to be safe until trigger populates the new table
         const { data: prompts, error } = await supabase
@@ -27,14 +33,23 @@ export async function GET(req: NextRequest) {
         const csvRows = [headers.join(',')];
 
         for (const p of prompts) {
+            // CSV Injection Prevention: Prefix with ' if it starts with risky characters
+            const sanitize = (val: any) => {
+                const text = String(val || '');
+                if (['=', '+', '-', '@'].some(char => text.startsWith(char))) {
+                    return `'${text}`;
+                }
+                return text;
+            };
+
             const row = [
                 p.id,
-                `"${(p.title || '').replace(/"/g, '""')}"`, // Escape quotes
-                `"${(p.prompt || '').replace(/"/g, '""')}"`,
-                p.use_case || '',
-                p.visual_style || '',
+                `"${sanitize(p.title).replace(/"/g, '""')}"`,
+                `"${sanitize(p.prompt).replace(/"/g, '""')}"`,
+                sanitize(p.use_case),
+                sanitize(p.visual_style),
                 p.conversion_score,
-                `"${(p.short_reason || '').replace(/"/g, '""')}"`
+                `"${sanitize(p.short_reason).replace(/"/g, '""')}"`
             ];
             csvRows.push(row.join(','));
         }
