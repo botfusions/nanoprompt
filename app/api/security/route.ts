@@ -1,14 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { checkRateLimit, sendTelegramAlert } from '@/src/lib/security';
+import { checkRateLimit, sendTelegramAlert, checkDownloadLimit, incrementDownloadCount } from '@/src/lib/security';
 
 /**
- * Security Check API - Rate limit verification endpoint
- * Can be called by frontend to check if user is rate limited
+ * Security Check API - Rate limit and Download limit verification endpoint
  */
 export async function GET(request: NextRequest) {
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0] ||
         request.headers.get('x-real-ip') ||
         'unknown';
+
+    const type = request.nextUrl.searchParams.get('type');
+
+    if (type === 'download') {
+        const { allowed, remaining } = checkDownloadLimit(ip);
+        return NextResponse.json({ allowed, remaining });
+    }
 
     const { blocked, remaining } = checkRateLimit(ip);
 
@@ -36,9 +42,15 @@ export async function GET(request: NextRequest) {
 }
 
 /**
- * POST - Report suspicious activity
+ * POST - Report suspicious activity or increment download count
  */
 export async function POST(request: NextRequest) {
+    // SECURITY LAYER 2: Token verification to prevent bot-spamming
+    const secureToken = request.headers.get('X-Nano-Secure-Token');
+    if (secureToken !== 'nano-studio-v2-secure-2026' && process.env.NODE_ENV === 'production') {
+        return NextResponse.json({ error: 'Auth required' }, { status: 401 });
+    }
+
     try {
         const body = await request.json();
         const { type, message, details } = body;
@@ -47,7 +59,12 @@ export async function POST(request: NextRequest) {
             request.headers.get('x-real-ip') ||
             'unknown';
 
-        // Check rate limit first
+        if (type === 'increment_download') {
+            const currentCount = incrementDownloadCount(ip);
+            return NextResponse.json({ ok: true, count: currentCount });
+        }
+
+        // Check rate limit first for other security reports
         const { blocked } = checkRateLimit(ip);
         if (blocked) {
             return NextResponse.json(

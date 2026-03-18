@@ -59,15 +59,44 @@ export function PromptCard({ prompt, isFavorite, onToggleFavorite }: PromptCardP
         : null;
 
 
-    const handleCopy = () => {
+    const handleCopy = async () => {
         if (!user) {
             setShowGhostModal(true);
             return;
         }
 
-        navigator.clipboard.writeText(prompt.prompt);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        try {
+            // 1. Check download limit
+            const checkRes = await fetch('/api/security?type=download');
+            const { allowed, remaining } = await checkRes.json();
+
+            if (!allowed) {
+                alert("Günlük prompt kopyalama limitinize (20) ulaştınız. Lütfen yarın tekrar deneyin.");
+                return;
+            }
+
+            // 2. Perform copy
+            await navigator.clipboard.writeText(prompt.prompt);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+
+            // 3. Increment download count (async in background)
+            fetch('/api/security', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'X-Nano-Secure-Token': 'nano-studio-v2-secure-2026'
+                },
+                body: JSON.stringify({ type: 'increment_download' })
+            }).catch(err => console.error("Error incrementing download count:", err));
+
+        } catch (error) {
+            console.error("Copy operation failed:", error);
+            // Fallback: Copy anyway if security check fails (for UX)
+            navigator.clipboard.writeText(prompt.prompt);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        }
     };
 
     return (

@@ -65,7 +65,10 @@ export default function LoginPage() {
             try {
                 await fetch('/api/security', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'X-Nano-Secure-Token': 'nano-studio-v2-secure-2026'
+                    },
                     body: JSON.stringify({
                         type: 'LOGIN_FAIL',
                         message: `Failed login attempt for ${email}`,

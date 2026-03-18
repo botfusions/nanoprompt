@@ -18,25 +18,54 @@ function generateUUID() {
     return crypto.randomUUID();
 }
 
-// Load .env.local
-const envPath = path.resolve(process.cwd(), '.env.local');
-const envContent = fs.readFileSync(envPath, 'utf8');
-
-const envConfig = {};
-envContent.split('\n').forEach(line => {
-    const trimmedLine = line.trim();
-    if (trimmedLine && !trimmedLine.startsWith('#')) {
-        const eqIndex = trimmedLine.indexOf('=');
-        if (eqIndex > 0) {
-            const key = trimmedLine.substring(0, eqIndex).trim();
-            const value = trimmedLine.substring(eqIndex + 1).trim();
-            envConfig[key] = value;
-        }
+// Prompt temizleme fonksiyonu
+function cleanPromptText(text) {
+    if (!text) return text;
+    let cleaned = text.trim();
+    if (cleaned.includes('---')) {
+        const parts = cleaned.split('---');
+        cleaned = parts[parts.length - 1].trim();
+    } else if (cleaned.includes('===')) {
+        const parts = cleaned.split('===');
+        cleaned = parts[parts.length - 1].trim();
     }
-});
+    const labelsToRemove = [
+        /^(Prompt|Alt Prompt|Final Prompt|Midjourney Prompt|Copy Prompt|Stable Diffusion Prompt):\s*/gi,
+        /^(İşte prompt|Here is the prompt|Your prompt):\s*/gi
+    ];
+    for (const labelRegex of labelsToRemove) {
+        cleaned = cleaned.replace(labelRegex, '');
+    }
+    cleaned = cleaned.replace(/^["'“”«»]|["'“”«»]$/g, '').trim();
+    return cleaned;
+}
 
-const supabaseUrl = envConfig.NEXT_PUBLIC_SUPABASE_URL;
-const serviceRoleKey = envConfig.SUPABASE_SERVICE_ROLE_KEY;
+// Load .env or .env.local
+const envPaths = [
+    path.resolve(process.cwd(), '.env'),
+    path.resolve(process.cwd(), '.env.local')
+];
+
+let envConfig = {};
+for (const p of envPaths) {
+    if (fs.existsSync(p)) {
+        const content = fs.readFileSync(p, 'utf8');
+        content.split('\n').forEach(line => {
+            const trimmedLine = line.trim();
+            if (trimmedLine && !trimmedLine.startsWith('#')) {
+                const eqIndex = trimmedLine.indexOf('=');
+                if (eqIndex > 0) {
+                    const key = trimmedLine.substring(0, eqIndex).trim();
+                    const value = trimmedLine.substring(eqIndex + 1).trim();
+                    envConfig[key] = value;
+                }
+            }
+        });
+    }
+}
+
+const supabaseUrl = envConfig.NEXT_PUBLIC_SUPABASE_URL || envConfig.VITE_SUPABASE_URL;
+const serviceRoleKey = envConfig.SUPABASE_SERVICE_ROLE_KEY || envConfig.NEXT_PUBLIC_SUPABASE_ANON_KEY || envConfig.VITE_SUPABASE_ANON_KEY;
 
 console.log("🔧 Supabase bağlantısı kontrol ediliyor...");
 console.log("   URL:", supabaseUrl ? "OK" : "MISSING");
@@ -134,7 +163,7 @@ async function importTwitterPrompts() {
         const newPrompt = {
             id: generateUUID(),
             title: tp.title || `Twitter Prompt #${currentDisplayNumber}`,
-            prompt: tp.prompt || tp.content || '',
+            prompt: cleanPromptText(tp.prompt || tp.content || ''),
             images: tp.images || (tp.image_url ? [tp.image_url] : []),
             author: tp.author || tp.username || '@TwitterUser',
             source: tp.source || tp.tweet_url || 'Twitter',

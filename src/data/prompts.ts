@@ -13,7 +13,7 @@ export interface Prompt {
   featured?: boolean;
   hasWorkingImage?: boolean;
   displayNumber?: number; // Sabit numara - her zaman aynı kalır
-  source?: 'migration' | 'user'; // Prompt kaynağı
+  source?: 'migration' | 'user' | 'twitter'; // Prompt kaynağı
   user_id?: string; // Kullanıcı promptı ise Firebase UID
   approved?: boolean; // Admin onayı
 }
@@ -75,13 +75,14 @@ export const CHRISTMAS_CARDS_RANGE = {
 export const PROMPTS: Prompt[] = [];
 
 export async function getAllPrompts(): Promise<Prompt[]> {
+  // Fetch from the main table only as twitter prompts are migrated here
   const { data, error } = await supabase
     .from('banana_prompts')
     .select('*')
     .order('created_at', { ascending: false });
 
   if (error) {
-    console.error("Error fetching prompts:", error);
+    console.error("Error fetching banana_prompts:", error);
     return [];
   }
 
@@ -127,6 +128,11 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
       // Automatic Deduplication (Sanitize images)
       if (p.images && Array.isArray(p.images)) {
         p.images = [...new Set(p.images)];
+      }
+
+      // Prompt Content Cleaning (Remove top-level descriptions/sub-prompts at the top)
+      if (p.prompt) {
+        p.prompt = cleanPromptText(p.prompt);
       }
     });
   }
@@ -229,4 +235,38 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
   });
 
   return promptsWithNumber;
+}
+
+/**
+ * Prompt metnindeki gereksiz üst yazıları ve alt prompt karmaşasını temizler.
+ */
+function cleanPromptText(text: string): string {
+  if (!text) return text;
+
+  let cleaned = text.trim();
+
+  // Pattern 1: Eğer metin içinde "---" gibi bir ayraç varsa, genellikle ayraçtan sonrası asıl promptdur.
+  if (cleaned.includes('---')) {
+    const parts = cleaned.split('---');
+    // Son parçayı al (genelde açıklama --- prompt şeklinde olur)
+    cleaned = parts[parts.length - 1].trim();
+  } else if (cleaned.includes('===')) {
+    const parts = cleaned.split('===');
+    cleaned = parts[parts.length - 1].trim();
+  }
+
+  // Pattern 2: "Prompt:", "Alt Prompt:", "Final Prompt:", "Midjourney Prompt:" gibi kısımları temizle
+  const labelsToRemove = [
+    /^(Prompt|Alt Prompt|Final Prompt|Midjourney Prompt|Copy Prompt|Stable Diffusion Prompt):\s*/gi,
+    /^(İşte prompt|Here is the prompt|Your prompt):\s*/gi
+  ];
+
+  for (const labelRegex of labelsToRemove) {
+    cleaned = cleaned.replace(labelRegex, '');
+  }
+
+  // Gereksiz tırnakları ve başlardaki/sonlardaki boşlukları temizle
+  cleaned = cleaned.replace(/^["'“”«»]|["'“”«»]$/g, '').trim();
+
+  return cleaned;
 }

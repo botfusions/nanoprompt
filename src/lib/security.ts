@@ -17,11 +17,15 @@ const LOGIN_ATTEMPT_LIMIT = 5; // 5 başarısız deneme
 // Failed login attempts store
 const failedLoginStore = new Map<string, { count: number; timestamp: number }>();
 
+// Prompt Download limit (Lifetime or session based by IP)
+const ipDownloadStore = new Map<string, number>();
+const DOWNLOAD_LIMIT_MAX = 20;
+
 /**
  * Send Telegram Alert
  */
 export async function sendTelegramAlert(
-    type: 'RATE_LIMIT' | 'LOGIN_FAIL' | 'SUSPICIOUS' | 'INFO',
+    type: 'RATE_LIMIT' | 'LOGIN_FAIL' | 'SUSPICIOUS' | 'INFO' | 'HONEYPOT',
     message: string,
     details?: Record<string, unknown>
 ): Promise<boolean> {
@@ -34,11 +38,12 @@ export async function sendTelegramAlert(
         'RATE_LIMIT': '🚨',
         'LOGIN_FAIL': '⚠️',
         'SUSPICIOUS': '🔴',
-        'INFO': 'ℹ️'
+        'INFO': 'ℹ️',
+        'HONEYPOT': '🕸️'
     };
 
     const formattedMessage = `
-${emoji[type]} *${type} ALERT*
+${emoji[type] || '❓'} *${type} ALERT*
 ━━━━━━━━━━━━━━━━━━
 📝 ${message}
 ⏰ ${new Date().toLocaleString('tr-TR')}
@@ -152,6 +157,34 @@ export function logSuspiciousActivity(
     details: Record<string, unknown>
 ): void {
     sendTelegramAlert('SUSPICIOUS', `Suspicious activity: ${type}`, details);
+}
+
+/**
+ * Check if an IP has exceeded the download limit (Max 20 prompts)
+ */
+export function checkDownloadLimit(ip: string): { allowed: boolean; remaining: number } {
+    const count = ipDownloadStore.get(ip) || 0;
+    const remaining = Math.max(0, DOWNLOAD_LIMIT_MAX - count);
+    
+    return { 
+        allowed: count < DOWNLOAD_LIMIT_MAX, 
+        remaining 
+    };
+}
+
+/**
+ * Increment the download count for an IP
+ */
+export function incrementDownloadCount(ip: string): number {
+    const current = ipDownloadStore.get(ip) || 0;
+    const next = current + 1;
+    ipDownloadStore.set(ip, next);
+
+    if (next === DOWNLOAD_LIMIT_MAX) {
+        sendTelegramAlert('RATE_LIMIT', `IP reached download limit (20 prompts)`, { ip });
+    }
+
+    return next;
 }
 
 /**

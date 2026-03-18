@@ -17,6 +17,13 @@
 
 ## 📝 Changelog
 
+### [2026-03-18] Security & Data Quality Update 🛡️
+
+- **IP-Based Download Limit:** Implementation of a strict limit of 20 prompt copies per IP address to prevent scraping.
+- **Prompt Text Cleaning:** Automatic removal of metadata tags (e.g., "Prompt:", "Final Prompt:", "---") during copy and display.
+- **Twitter Prompts Migration:** Successfully migrated 127 new prompts from `twitter_prompts` to `banana_prompts` with automated cleaning and sequential numbering.
+- **Security Alerts:** Integrated Telegram alerts for download limit breaches and rate-limiting triggers.
+
 ### [2026-02-08] Security Hardening 🛡️
 
 - **Secret Management:** Moved all hardcoded sensitive data (Supabase Keys, Admin Email) to `.env` variables.
@@ -87,6 +94,7 @@ http://localhost:3000
 | ✅ **Rate Limiting**        | API istekleri için limit                            |
 | ✅ **Route Protection**     | Middleware ile auth kontrolü                        |
 | ✅ **API Proxy**            | Webhook URL'leri server-side                        |
+| ✅ **Download Limiting**   | IP tabanlı günlük 20 prompt limiti                  |
 
 ## 📊 Mevcut Durum
 
@@ -116,7 +124,18 @@ http://localhost:3000
 └── scripts/               # Yardımcı scriptler
 ```
 
-## 📋 Son Güncelleme (26 Ocak 2026)
+## 📋 Son Güncelleme (18 Mart 2026)
+
+### 🛡️ İndirme Limiti ve Güvenlik
+- **IP Başı Limit**: Her IP adresi için günlük maksimum 20 prompt kopyalama sınırı getirildi.
+- **Otomatik Temizleme**: Prompt içeriklerindeki gereksiz açıklamalar ve etiketler (Prompt:, --- vb.) kopyalama anında otomatik temizleniyor.
+- **Telegram Uyarıları**: Limit aşımlarında yöneticiye anlık bildirim sistemi kuruldu.
+
+### 🐦 Twitter Prompts Migrasyonu (V2)
+- **Toplu Aktarım**: 127 yeni Twitter promptu `banana_prompts` tablosuna temizlenmiş bir şekilde aktarıldı.
+- **Numaralandırma**: Yeni promptlar #03414 - #03540 aralığına yerleştirildi.
+
+## 📋 Önceki Güncelleme (26 Ocak 2026)
 
 ### 🛡️ Güvenlik ve Altyapı Denetimi
 
