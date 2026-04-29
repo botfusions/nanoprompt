@@ -1,5 +1,6 @@
 import { supabase } from "@/src/lib/supabase";
 import { LOCAL_IMAGE_OVERRIDES, LOCAL_PROMPT_OVERRIDES } from './local_overrides';
+import GPT_IMAGE_2_PROMPTS from './gpt_image_2_prompts.json';
 
 export interface Prompt {
   id: string;
@@ -38,7 +39,8 @@ export const CATEGORIES = [
   "İç Tasarım",
   "3D",
   "Retro",
-  "Yaratıcı"
+  "Yaratıcı",
+  "Awesome GPT"
 ];
 
 // Mapping Turkish to English tags for filtering
@@ -62,7 +64,8 @@ export const CATEGORY_MAP: Record<string, string> = {
   "İç Tasarım": "interior",
   "3D": "3d",
   "Retro": "retro",
-  "Yaratıcı": "creative"
+  "Yaratıcı": "creative",
+  "Awesome GPT": "awesome-gpt"
 };
 
 // Yılbaşı Kartları display_number aralığı (import edilenler)
@@ -80,6 +83,21 @@ export async function getAllPrompts(): Promise<Prompt[]> {
     .from('banana_prompts')
     .select('*')
     .order('created_at', { ascending: false });
+
+  // Load GPT Image 2 Prompts
+  const gpt2Prompts: Prompt[] = GPT_IMAGE_2_PROMPTS.map((p: any) => ({
+    id: `gpt2_${p.id}`,
+    title: p.title,
+    prompt: p.prompt,
+    summary: p.description,
+    categories: ["Awesome GPT"],
+    author: p.author || "YouMind",
+    date: p.publishedAt || "2026-04-29",
+    images: p.images.map((img: string) => `/assets/gpt_image_2/${img}`),
+    source: 'migration',
+    featured: false,
+    approved: true
+  }));
 
   if (error) {
     console.error("Error fetching banana_prompts:", error);
@@ -137,6 +155,9 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
     });
   }
 
+  // Combine with GPT-2 Prompts
+  const allData = [...(data || []), ...gpt2Prompts];
+
   // Silinecek kartların ID'leri (duplicate ve sorunlu kartlar)
   const EXCLUDED_IDS = [
     'fbdbed40-4991-457e-82af-81d250c1e3ed', // 02953 ile aynı resimlere sahip duplicate
@@ -149,7 +170,7 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
   ];
 
   // Sorunlu kartları filtrele
-  const filteredData = (data as Prompt[]).filter(prompt => {
+  const filteredData = (allData as Prompt[]).filter(prompt => {
     // Excluded ID'leri çıkar
     if (EXCLUDED_IDS.includes(prompt.id)) return false;
 
