@@ -20,6 +20,14 @@
 20: - **Bulk Import (43 Prompts):** Successfully imported 43 new prompts from staging to the main database (#03673 - #03715).
 - **Data Quality Audit:** Performed a full database scan to verify integrity after import.
 
+### [2026-04-29] Awesome GPT Integration & Build Fix 🚀
+
+- **Awesome GPT Integration:** Successfully integrated ~126 curated prompts and 153 associated image assets.
+- **Legacy Code Cleanup:** Identified that `App.tsx` was a legacy file causing build failures due to missing type definitions. Renamed it to `App.tsx.bak` to exclude it from the Next.js build process.
+- **Build Infrastructure Alert:** Identified a Turbopack/Next.js bug related to Turkish characters ("Ü") in the project directory path (`NANO PROMPT STÜDYO V2`). 
+- **CRITICAL:** To ensure a successful production build, the project folder must be renamed to use only English characters (e.g., `NANO_PROMPT_STUDYO_V2`).
+- **Data Integrity:** Updated `src/data/prompts.ts` to support multi-source prompt merging and automated asset mapping.
+
 ### [2026-04-26] Naobana & GPT Image 2.0 Expansion 🚀
 
 - **Bulk Import (132 Prompts):** Successfully imported 132 new prompts from staging to the main database (#03541 - #03672).
