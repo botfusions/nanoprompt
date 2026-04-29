@@ -140,6 +140,12 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
   // Silinecek kartların ID'leri (duplicate ve sorunlu kartlar)
   const EXCLUDED_IDS = [
     'fbdbed40-4991-457e-82af-81d250c1e3ed', // 02953 ile aynı resimlere sahip duplicate
+    'a326fe3a-592c-42c3-aa74-0ffffa2955fb', // #3529 (Link)
+    '929c362d-0fb8-4229-8fba-2df47b3cd17c', // #3488 (Link)
+    'e1f98501-ad2c-4f7f-ba00-72d80d286df0', // #3475 (Link)
+    'ef130f14-07fa-4e7a-976d-1c32484501fc', // #3473 (Link)
+    '2983b7db-1138-4540-ba75-3708b7dcdc2c', // #3465 (Link)
+    '0af6af6-65b2-4fff-9a42-2341cb0bc7df'  // #3418 (Link)
   ];
 
   // Sorunlu kartları filtrele

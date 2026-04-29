@@ -58,7 +58,7 @@ export function Header() {
 
                     <p className="text-amber-800 font-handwriting text-sm leading-relaxed" style={{ fontFamily: 'cursive' }}>
                         📌 Promptlar<br />
-                        <span className="font-bold">Gemini Nano Banana Pro</span><br />
+                        <span className="font-bold">Naobana ve GPT image 2.0</span><br />
                         içindir
                     </p>
                 </div>

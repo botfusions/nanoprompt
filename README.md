@@ -6,7 +6,7 @@
 
 **Gemini Nano Banana Pro için en iyi prompt koleksiyonu**
 
-[![Prompts](https://img.shields.io/badge/Prompts-3202-brightgreen?style=flat-square)](/)
+[![Prompts](https://img.shields.io/badge/Prompts-3672-brightgreen?style=flat-square)](/)
 [![Next.js](https://img.shields.io/badge/Next.js-16+-black?style=flat-square)](https://nextjs.org)
 [![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=flat-square)](https://tailwindcss.com)
 [![Supabase](https://img.shields.io/badge/Supabase-Database-3ecf8e?style=flat-square)](https://supabase.com)
@@ -16,6 +16,17 @@
 </div>
 
 ## 📝 Changelog
+19: 
+20: - **Bulk Import (43 Prompts):** Successfully imported 43 new prompts from staging to the main database (#03673 - #03715).
+- **Data Quality Audit:** Performed a full database scan to verify integrity after import.
+
+### [2026-04-26] Naobana & GPT Image 2.0 Expansion 🚀
+
+- **Bulk Import (132 Prompts):** Successfully imported 132 new prompts from staging to the main database (#03541 - #03672).
+23: - **Sticky Note Update:** Updated the homepage header sticky note to focus on "Naobana ve GPT image 2.0".
+24: - **Development Bypass:** Implemented an automatic "Dev Admin" authentication bypass for `localhost` to simplify local content inspection.
+25: - **Data Quality Audit:** Performed a full database scan to identify missing images and incomplete prompt texts in older entries.
+26: 
 
 ### [2026-03-18] Security & Data Quality Update 🛡️
 
@@ -98,8 +109,8 @@ http://localhost:3000
 
 ## 📊 Mevcut Durum
 
-- ✅ **3200+ prompt** (Filtrelenmiş ve gösterime hazır)
-- ✅ **1100+ aktif görselli prompt**
+- ✅ **3715 prompt** (Filtrelenmiş ve gösterime hazır)
+- ✅ **1140+ aktif görselli prompt**
 - ✅ Neo-Brutalist UI replikasyonu
 - ✅ Arama, filtreleme ve favoriler tam fonksiyonel
 - ✅ Google OAuth entegrasyonu
@@ -187,7 +198,7 @@ http://localhost:3000
 
 ### 📊 Prompt Sayısı Güncellemesi
 
-- **Toplam Prompt**: 3202
+- **Toplam Prompt**: 3672
 - **Display Number Aralığı**: #00001 - #03202
 
 ## 📋 Son Güncelleme (8 Ocak 2026)

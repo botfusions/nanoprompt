@@ -98,19 +98,49 @@ export function AuthProvider({ children }: AuthProviderProps) {
         // Get auth instance - may be null if Firebase is not configured
         const authInstance = auth();
 
-        // If no auth (Firebase not configured), just set loading to false
+        // If no auth (Firebase not configured), check for dev bypass
         if (!authInstance) {
+            if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+                setUser({
+                    uid: 'dev-user',
+                    email: 'dev@botfusions.com',
+                    displayName: 'Dev Admin',
+                } as any);
+                setProfile({
+                    id: 'dev-user',
+                    username: 'devadmin',
+                    display_name: 'Dev Admin',
+                    avatar_url: null,
+                    twitter_url: null,
+                    created_at: new Date().toISOString(),
+                });
+            }
             setLoading(false);
             return;
         }
 
         const unsubscribe = onAuthStateChanged(authInstance, async (firebaseUser) => {
-            setUser(firebaseUser);
-
             if (firebaseUser) {
+                setUser(firebaseUser);
                 const userProfile = await getOrCreateProfile(firebaseUser);
                 setProfile(userProfile);
+            } else if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+                // Dev bypass: Auto-login dummy user on localhost if no real user
+                setUser({
+                    uid: 'dev-user',
+                    email: 'dev@botfusions.com',
+                    displayName: 'Dev Admin',
+                } as any);
+                setProfile({
+                    id: 'dev-user',
+                    username: 'devadmin',
+                    display_name: 'Dev Admin',
+                    avatar_url: null,
+                    twitter_url: null,
+                    created_at: new Date().toISOString(),
+                });
             } else {
+                setUser(null);
                 setProfile(null);
             }
 

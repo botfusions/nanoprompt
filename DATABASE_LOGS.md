@@ -2,6 +2,38 @@
 
 All major database operations and imports are recorded here.
 
+## [2026-04-29] Bulk Prompt Import
+
+**Summary:** 
+- Import of 43 new prompts from `twitter_prompts`.
+- Total count updated to 3,715.
+
+**Details:**
+- **Import:** 43 prompts imported from `twitter_prompts` to `banana_prompts` (#03673 - #03715).
+- **Cleanup:** `twitter_prompts` table cleared.
+- **Total Prompt Count:** 3,715.
+
+**Applied by:** Antigravity AI
+**Status:** Completed ✅
+
+---
+
+## [2026-04-26] Bulk Prompt Import
+
+**Summary:** 
+- Import of 132 new prompts from staging.
+- Verification of database integrity.
+
+**Details:**
+- **Import:** 132 prompts imported from `twitter_prompts` to `banana_prompts` (#03541 - #03672).
+- **Cleanup:** `twitter_prompts` table cleared.
+- **Total Prompt Count:** 3,672.
+
+**Applied by:** Antigravity AI
+**Status:** Completed ✅
+
+---
+
 ## [2026-01-11] Prompt Sync & Numbering Fix
 
 **Summary:** 
