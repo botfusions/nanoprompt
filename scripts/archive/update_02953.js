@@ -182,7 +182,7 @@ async function update02953() {
             prompt: prompt02953Content,
             images: images02953,
             author: "@BotFusionsS",
-            source: "BotsNANO",
+            source: "IMAGE PROMPT",
             categories: ["photography", "portrait", "creative"]
         };
 

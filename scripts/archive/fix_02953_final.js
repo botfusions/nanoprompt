@@ -87,7 +87,7 @@ async function fixPrompts() {
                 "https://pbs.twimg.com/media/G853MzvagAECxtt?format=jpg&name=small"
             ],
             categories: ["photography", "portrait", "creative", "sports"],
-            source: "BotsNANO"
+            source: "IMAGE PROMPT"
         };
 
         const { error: updateError } = await supabase
@@ -129,7 +129,7 @@ SET
   summary = 'Athletic Black male runner in dynamic mid-stride pose with neon green graphic overlays',
   author = '@BotFusionsS',
   images = ARRAY['https://pbs.twimg.com/media/G853Mz4bEAANDNB?format=jpg&name=small', 'https://pbs.twimg.com/media/G853MzvagAECxtt?format=jpg&name=small'],
-  source = 'BotsNANO'
+  source = 'IMAGE PROMPT'
 WHERE id = '02953';
 
 -- Yinelenen UUID prompt'u sil

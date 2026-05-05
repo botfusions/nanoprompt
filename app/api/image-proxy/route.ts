@@ -49,7 +49,7 @@ export async function GET(request: NextRequest) {
             const placeholderSvg = `
         <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
           <rect width="100%" height="100%" fill="#232323"/>
-          <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" fill="#FFE66D" text-anchor="middle" dy=".3em">BotsNANO</text>
+          <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" fill="#FFE66D" text-anchor="middle" dy=".3em">IMAGE PROMPT</text>
         </svg>
       `;
             return new NextResponse(placeholderSvg, {
@@ -76,7 +76,7 @@ export async function GET(request: NextRequest) {
         const placeholderSvg = `
       <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
         <rect width="100%" height="100%" fill="#232323"/>
-        <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" fill="#FFE66D" text-anchor="middle" dy=".3em">BotsNANO</text>
+        <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="24" fill="#FFE66D" text-anchor="middle" dy=".3em">IMAGE PROMPT</text>
       </svg>
     `;
         return new NextResponse(placeholderSvg, {

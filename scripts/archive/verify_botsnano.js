@@ -1,4 +1,4 @@
-// Verify BotsNANO records in Supabase
+// Verify IMAGE PROMPT records in Supabase
 require('dotenv').config({ path: '.env.local' });
 const { createClient } = require('@supabase/supabase-js');
 
@@ -7,15 +7,15 @@ const supabase = createClient(
     process.env.SUPABASE_SERVICE_ROLE_KEY
 );
 
-async function verifyBotsNANO() {
-    console.log('🔍 BotsNANO Kayıtları Doğrulaması\n');
+async function verifyIMAGE PROMPT() {
+    console.log('🔍 IMAGE PROMPT Kayıtları Doğrulaması\n');
     console.log('='.repeat(50));
 
-    // Get all BotsNANO source prompts
-    const { data: botsNanoPrompts, error } = await supabase
+    // Get all IMAGE PROMPT source prompts
+    const { data: IMAGE PROMPTPrompts, error } = await supabase
         .from('banana_prompts')
         .select('id, display_number, images, source, title')
-        .eq('source', 'BotsNANO')
+        .eq('source', 'IMAGE PROMPT')
         .order('display_number', { ascending: true });
 
     if (error) {
@@ -23,14 +23,14 @@ async function verifyBotsNANO() {
         return;
     }
 
-    console.log(`\n📦 TOPLAM BotsNANO KAYIT: ${botsNanoPrompts.length}\n`);
+    console.log(`\n📦 TOPLAM IMAGE PROMPT KAYIT: ${IMAGE PROMPTPrompts.length}\n`);
 
     // Check image paths
     let withLocalImages = 0;
     let withTwitterImages = 0;
     let withNoImages = 0;
 
-    botsNanoPrompts.forEach((p, idx) => {
+    IMAGE PROMPTPrompts.forEach((p, idx) => {
         const hasImages = p.images && p.images.length > 0;
         if (!hasImages) {
             withNoImages++;
@@ -49,8 +49,8 @@ async function verifyBotsNANO() {
         }
     });
 
-    if (botsNanoPrompts.length > 30) {
-        console.log(`   ... ve ${botsNanoPrompts.length - 30} kayıt daha`);
+    if (IMAGE PROMPTPrompts.length > 30) {
+        console.log(`   ... ve ${IMAGE PROMPTPrompts.length - 30} kayıt daha`);
     }
 
     console.log('\n📊 RESİM TİPİ DAĞILIMI:');
@@ -62,4 +62,4 @@ async function verifyBotsNANO() {
     console.log('✅ Doğrulama tamamlandı');
 }
 
-verifyBotsNANO();
+verifyIMAGE PROMPT();

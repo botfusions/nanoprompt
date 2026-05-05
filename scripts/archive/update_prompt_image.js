@@ -26,13 +26,13 @@ function updatePromptImage(id, imageUrl) {
     // Add the new image
     prompts[index].images.unshift(imageUrl);
 
-    // Update source to BotsNANO for these new AI-enhanced records
+    // Update source to IMAGE PROMPT for these new AI-enhanced records
     if (prompts[index].source && prompts[index].source.includes('YouMind')) {
-        prompts[index].source = 'BotsNANO';
+        prompts[index].source = 'IMAGE PROMPT';
     }
 
     fs.writeFileSync(jsonPath, JSON.stringify(prompts, null, 2), 'utf8');
-    console.log(`✅ successfully updated prompt ${id} with image ${imageUrl} and updated source to BotsNANO`);
+    console.log(`✅ successfully updated prompt ${id} with image ${imageUrl} and updated source to IMAGE PROMPT`);
 }
 
 // Example usage (commented out):

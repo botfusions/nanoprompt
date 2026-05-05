@@ -50,7 +50,7 @@ export default function RegisterPage() {
 
     const isUsernameAvailable = async (value: string): Promise<boolean> => {
         const { data } = await supabase
-            .from("botsnano_profiles")
+            .from("IMAGE PROMPT_profiles")
             .select("username")
             .eq("username", value)
             .single();
@@ -101,7 +101,7 @@ export default function RegisterPage() {
 
             // Create Supabase profile
             await supabase
-                .from("botsnano_profiles")
+                .from("IMAGE PROMPT_profiles")
                 .insert({
                     id: firebaseUser.uid,
                     username,

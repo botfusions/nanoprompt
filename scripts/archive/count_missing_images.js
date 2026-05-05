@@ -29,9 +29,9 @@ async function countImages() {
     const withoutImages = allPrompts.filter(p => !p.images || p.images.length === 0);
 
     // Count by source
-    const botsNanoSource = allPrompts.filter(p => p.source === 'BotsNANO');
+    const IMAGE PROMPTSource = allPrompts.filter(p => p.source === 'IMAGE PROMPT');
     const youMindSource = allPrompts.filter(p => p.source === 'YouMind');
-    const otherSource = allPrompts.filter(p => p.source !== 'BotsNANO' && p.source !== 'YouMind');
+    const otherSource = allPrompts.filter(p => p.source !== 'IMAGE PROMPT' && p.source !== 'YouMind');
 
     // Count images per prompt
     const with1Image = withImages.filter(p => p.images.length === 1);
@@ -52,7 +52,7 @@ async function countImages() {
     console.log(`   4+ resim: ${with4PlusImages.length}`);
 
     console.log('\n🏷️ KAYNAK DAĞILIMI:');
-    console.log(`   BotsNANO: ${botsNanoSource.length}`);
+    console.log(`   IMAGE PROMPT: ${IMAGE PROMPTSource.length}`);
     console.log(`   YouMind:  ${youMindSource.length}`);
     console.log(`   Diğer:    ${otherSource.length}`);
 

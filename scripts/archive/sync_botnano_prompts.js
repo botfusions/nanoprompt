@@ -33,25 +33,25 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const jsonPath = path.join(__dirname, '..', 'src', 'data', 'all_prompts.json');
 const allPrompts = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
 
-async function syncBotsNANOPrompts() {
-    console.log("=== BotsNANO Promptları Supabase'e Senkronize ===\n");
+async function syncIMAGE PROMPTPrompts() {
+    console.log("=== IMAGE PROMPT Promptları Supabase'e Senkronize ===\n");
 
-    // Local image kullanan BotsNANO source'lu promptları bul
-    const botsNANOPrompts = allPrompts.filter(p =>
-        p.source === 'BotsNANO' &&
+    // Local image kullanan IMAGE PROMPT source'lu promptları bul
+    const IMAGE PROMPTPrompts = allPrompts.filter(p =>
+        p.source === 'IMAGE PROMPT' &&
         p.images?.some(img => img.includes('/images/botnano_extract'))
     );
 
-    console.log(`Toplam ${botsNANOPrompts.length} prompt bulundu.\n`);
+    console.log(`Toplam ${IMAGE PROMPTPrompts.length} prompt bulundu.\n`);
 
     let successCount = 0;
     let errorCount = 0;
 
-    for (const prompt of botsNANOPrompts) {
+    for (const prompt of IMAGE PROMPTPrompts) {
         // Supabase'de bu ID'ye göre güncelle
         const updateData = {
             images: prompt.images,
-            source: 'BotsNANO'
+            source: 'IMAGE PROMPT'
         };
 
         const { error } = await supabase
@@ -65,7 +65,7 @@ async function syncBotsNANOPrompts() {
         } else {
             successCount++;
             if (successCount % 10 === 0) {
-                console.log(`  ${successCount}/${botsNANOPrompts.length} senkronize edildi...`);
+                console.log(`  ${successCount}/${IMAGE PROMPTPrompts.length} senkronize edildi...`);
             }
         }
     }
@@ -75,4 +75,4 @@ async function syncBotsNANOPrompts() {
     console.log(`✗ Hatalı: ${errorCount}`);
 }
 
-syncBotsNANOPrompts();
+syncIMAGE PROMPTPrompts();

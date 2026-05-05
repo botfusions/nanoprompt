@@ -20,22 +20,22 @@ async function findUnlinkedImages() {
 
     console.log(`\n📁 LOCAL RESİMLER: ${botnanoFiles.length} adet`);
 
-    // 2. Get all BotsNANO prompts from Supabase
-    const { data: botsNanoPrompts, error } = await supabase
+    // 2. Get all IMAGE PROMPT prompts from Supabase
+    const { data: IMAGE PROMPTPrompts, error } = await supabase
         .from('banana_prompts')
         .select('id, display_number, images, title')
-        .eq('source', 'BotsNANO');
+        .eq('source', 'IMAGE PROMPT');
 
     if (error) {
         console.error('Supabase Error:', error);
         return;
     }
 
-    console.log(`📊 SUPABASE BotsNANO KAYITLARI: ${botsNanoPrompts.length} adet`);
+    console.log(`📊 SUPABASE IMAGE PROMPT KAYITLARI: ${IMAGE PROMPTPrompts.length} adet`);
 
     // 3. Extract image filenames from Supabase records
     const linkedImages = new Set();
-    botsNanoPrompts.forEach(p => {
+    IMAGE PROMPTPrompts.forEach(p => {
         if (p.images) {
             p.images.forEach(imgUrl => {
                 // Extract filename from URL like /images/botnano_extract_XX.png
@@ -77,7 +77,7 @@ async function findUnlinkedImages() {
     console.log('\n' + '='.repeat(60));
     console.log('\n📊 ÖZET:');
     console.log(`   Local resim dosyası:     ${botnanoFiles.length}`);
-    console.log(`   Supabase BotsNANO kayıt: ${botsNanoPrompts.length}`);
+    console.log(`   Supabase IMAGE PROMPT kayıt: ${IMAGE PROMPTPrompts.length}`);
     console.log(`   Bağlı resimler:          ${linkedImages.size}`);
     console.log(`   Bağlanmamış resimler:    ${unlinkedImages.length}`);
 

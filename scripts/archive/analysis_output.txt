@@ -22,12 +22,12 @@ Toplam prompt sayısı: 3131
 #youmind_v2_2188 | @离谱 | 0 img | YouMind (Extract v2)
 #youmind_v2_2189 | @离谱 | 0 img | YouMind (Extract v2)
 #youmind_v2_2190 | @-Zho- | 0 img | YouMind (Extract v2)
-#02953 | Athletic Runner - Sports Editorial Poster | 2 img | BotsNANO
+#02953 | Athletic Runner - Sports Editorial Poster | 2 img | IMAGE PROMPT
 
 En yüksek numerik ID: 02953
 
 --- #02953 Detay ---
 Title: Athletic Runner - Sports Editorial Poster
 Images: ["https://pbs.twimg.com/media/G853Mz4bEAANDNB?format=jpg&name=small","https://pbs.twimg.com/media/G853MzvagAECxtt?format=jpg&name=small"]
-Source: BotsNANO
+Source: IMAGE PROMPT
 Prompt length: 831

@@ -15,7 +15,7 @@
         "id": "featured-2",
         "title": "Hand-drawn style header image",
         "description": "Create a hand-drawn style header image of a person introducing a product or topic.",
-        "prompt": "Completely recreate the uploaded person. Make it a header image for a note article where that person introduces “Nano Banana Pro”. Aspect ratio: horizontal 16:9. Style and colors: simple, hand-drawn style, italic, with a blue and green gradient. Title text: “In-depth explanation of Google’s new AI ‘Nano Banana Pro’”.",
+        "prompt": "Completely recreate the uploaded person. Make it a header image for a note article where that person introduces “IMAGE PROMPT Pro”. Aspect ratio: horizontal 16:9. Style and colors: simple, hand-drawn style, italic, with a blue and green gradient. Title text: “In-depth explanation of Google’s new AI ‘IMAGE PROMPT Pro’”.",
         "image": "https://cms-assets.youmind.com/media/1763885651870_4szbai_G6VZiROagAAqsIh.jpg",
         "tags": [
             "Featured",

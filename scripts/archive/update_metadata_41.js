@@ -10,7 +10,7 @@ const newImage = '/images/botnano_extract_41.png';
 
 const index = prompts.findIndex(p => p.id === targetId);
 if (index !== -1) {
-    prompts[index].source = 'BotsNANO';
+    prompts[index].source = 'IMAGE PROMPT';
     prompts[index].images = [newImage];
     // Clean "Prompt" prefix if present
     if (prompts[index].prompt && prompts[index].prompt.startsWith('Prompt')) {

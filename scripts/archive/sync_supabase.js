@@ -48,7 +48,7 @@ async function syncToSupabase() {
             ],
             featured: false,
             model: "Nano banana pro",
-            source: "BotsNANO"
+            source: "IMAGE PROMPT"
         };
 
         const { error: upsertError } = await supabase

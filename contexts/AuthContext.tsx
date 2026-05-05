@@ -43,7 +43,7 @@ async function getOrCreateProfile(user: FirebaseUser): Promise<Profile | null> {
     try {
         // Try to get existing profile
         const { data: existingProfile, error: fetchError } = await supabase
-            .from("botsnano_profiles")
+            .from("IMAGE PROMPT_profiles")
             .select("*")
             .eq("id", user.uid)
             .single();
@@ -60,7 +60,7 @@ async function getOrCreateProfile(user: FirebaseUser): Promise<Profile | null> {
         // Create new profile if doesn't exist
         const username = user.email?.split("@")[0] || `user_${user.uid.slice(0, 8)}`;
         const { data: newProfile, error } = await supabase
-            .from("botsnano_profiles")
+            .from("IMAGE PROMPT_profiles")
             .insert({
                 id: user.uid,
                 username,

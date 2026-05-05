@@ -47,7 +47,7 @@ async function syncImages() {
             .from('banana_prompts')
             .update({
                 images: p.images,
-                source: "BotsNANO" // Also update source as requested in user history
+                source: "IMAGE PROMPT" // Also update source as requested in user history
             })
             .eq('id', p.id);
 

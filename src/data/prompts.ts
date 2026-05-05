@@ -124,7 +124,7 @@ export async function getAllPrompts(): Promise<Prompt[]> {
 
       // "Test Kuşlar" başlıklı promptu düzelt
       if (p.title === 'Test Kuşlar') {
-        p.title = 'Nano Banana Pro prompt';
+        p.title = 'IMAGE PROMPT Pro prompt';
         p.prompt = `Do this for a random famous Asian painting <instruction>
 
 Input A is a Famous Painting (e.g., The Mona Lisa, The Scream). Analyze: The brushstroke technique, the 3D depth implied, and the hidden symbols. 
@@ -241,7 +241,7 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
   });
 
   // Sıralama: Önce görselli kartlar, sonra görselsiz kartlar
-  // Görselsizler en sona gider ve author "BotsNANO" olur
+  // Görselsizler en sona gider ve author "IMAGE PROMPT" olur
   promptsWithNumber.sort((a, b) => {
     // Öncelikle: Görselli kartlar her zaman görselsizlerden önce
     if (a.hasWorkingImage && !b.hasWorkingImage) return -1;
@@ -254,10 +254,10 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
     return dateB - dateA; // En yeni en üstte
   });
 
-  // Görselsiz kartlara BotsNANO etiketi ata
+  // Görselsiz kartlara IMAGE PROMPT etiketi ata
   promptsWithNumber.forEach(p => {
     if (!p.hasWorkingImage) {
-      p.author = 'BotsNANO';
+      p.author = 'IMAGE PROMPT';
     }
   });
 

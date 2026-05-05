@@ -96,7 +96,7 @@ export async function getSession(): Promise<Session | null> {
  */
 export async function getProfile(userId: string): Promise<Profile | null> {
     const { data, error } = await supabase
-        .from("botsnano_profiles")
+        .from("IMAGE PROMPT_profiles")
         .select("*")
         .eq("id", userId)
         .single();
@@ -114,7 +114,7 @@ export async function getProfile(userId: string): Promise<Profile | null> {
  */
 export async function updateProfile(userId: string, updates: Partial<Profile>) {
     const { data, error } = await supabase
-        .from("botsnano_profiles")
+        .from("IMAGE PROMPT_profiles")
         .update({ ...updates, updated_at: new Date().toISOString() })
         .eq("id", userId)
         .select()
@@ -129,7 +129,7 @@ export async function updateProfile(userId: string, updates: Partial<Profile>) {
  */
 export async function isUsernameAvailable(username: string): Promise<boolean> {
     const { data } = await supabase
-        .from("botsnano_profiles")
+        .from("IMAGE PROMPT_profiles")
         .select("username")
         .eq("username", username)
         .single();

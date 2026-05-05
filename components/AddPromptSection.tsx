@@ -69,7 +69,7 @@ export function AddPromptSection() {
                 author: authorName,
                 date: formattedDate,
                 display_number: nextDisplayNumber,
-                model: 'Nano banana pro',
+                model: 'IMAGE PROMPT pro',
                 featured: false,
             };
 

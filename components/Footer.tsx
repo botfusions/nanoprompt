@@ -10,8 +10,8 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
     {
-        question: "NANO BANANA PRO NEDİR?",
-        answer: "Nano Banana Pro, Google'ın en yeni çok modlu AI modelidir ve çok modlu anlama (metin, görüntü ve video), fotoğraf gerçekçiliğinden sanatsal stillere kadar yüksek kaliteli üretim, hızlı düzenlemeler ve varyasyonlarla hızlı yineleme, piksel sanatından yağlı boya resimlere kadar çeşitli stiller, kompozisyon ve aydınlatma üzerinde hassas kontrol ve karmaşık çok nesneli, çok karakterli sahne oluşturma özelliklerine sahiptir."
+        question: "IMAGE PROMPT PRO NEDİR?",
+        answer: "IMAGE PROMPT Pro, Google'ın en yeni çok modlu AI modelidir ve çok modlu anlama (metin, görüntü ve video), fotoğraf gerçekçiliğinden sanatsal stillere kadar yüksek kaliteli üretim, hızlı düzenlemeler ve varyasyonlarla hızlı yineleme, piksel sanatından yağlı boya resimlere kadar çeşitli stiller, kompozisyon ve aydınlatma üzerinde hassas kontrol ve karmaşık çok nesneli, çok karakterli sahne oluşturma özelliklerine sahiptir."
     },
     {
         question: "BU KISAYOLLAR NEREDEN GELİYOR?",
@@ -19,7 +19,7 @@ const faqItems: FAQItem[] = [
     },
     {
         question: "BU PROMPT'LARI NASIL KULLANIRIM?",
-        answer: "Beğendiğiniz bir prompt'u kopyalayın, Nano Banana Pro veya desteklenen herhangi bir AI görsel oluşturucuya yapıştırın. İsterseniz kendi fotoğraflarınızı ekleyerek kişiselleştirebilirsiniz."
+        answer: "Beğendiğiniz bir prompt'u kopyalayın, IMAGE PROMPT Pro veya desteklenen herhangi bir AI görsel oluşturucuya yapıştırın. İsterseniz kendi fotoğraflarınızı ekleyerek kişiselleştirebilirsiniz."
     },
     {
         question: "AI KISAYOLU NEDİR?",
@@ -76,12 +76,12 @@ export function Footer() {
                     <h2 className="text-3xl md:text-5xl font-black uppercase mb-6 text-brand-black drop-shadow-[2px_2px_0_#fff]">
                         HAZIR MISINIZ
                         <br />
-                        NANO BANANA İLE OLUŞTURMAYA?
+                        IMAGE PROMPT İLE OLUŞTURMAYA?
                     </h2>
 
                     <div className="bg-white border-2 border-brand-black shadow-neo inline-block px-6 py-4">
                         <p className="font-medium text-brand-black">
-                            Nano Banana Pro&apos;nun güçlü yeteneklerini
+                            IMAGE PROMPT Pro&apos;nun güçlü yeteneklerini
                             <br />
                             deneyimleyin
                         </p>
@@ -103,7 +103,7 @@ export function Footer() {
                         </span>
                     </p>
                     <p className="text-white/60 text-sm">
-                        © 2024 BotsNANO. Tüm hakları saklıdır.
+                        © 2024 IMAGE PROMPT. Tüm hakları saklıdır.
                     </p>
                     <a
                         href="mailto:info@botfusions.com"

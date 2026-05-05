@@ -1,7 +1,7 @@
 import { UserProfile, AdminDashboardUser } from '../src/types';
 import { supabase } from '../src/lib/supabase';
 import { z } from 'zod';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 
 const STORAGE_KEY_SESSION = 'nb_session_email';
 

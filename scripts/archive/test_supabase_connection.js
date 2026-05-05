@@ -30,7 +30,7 @@ async function testConnection() {
     try {
         // Try to fetch a simple query that should always work if connected,
         // or at least return a specific error (not network error)
-        const { data, error } = await supabase.from('botsnano_profiles').select('count').limit(1);
+        const { data, error } = await supabase.from('IMAGE PROMPT_profiles').select('count').limit(1);
 
         if (error) {
             console.error("Supabase Error:", error.message, error.code);

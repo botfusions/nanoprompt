@@ -118,7 +118,7 @@ export const LOCAL_IMAGE_OVERRIDES: Record<string, string[]> = {
     "https://pbs.twimg.com/media/G853Mz4bEAANDNB?format=jpg&name=small",
     "https://pbs.twimg.com/media/G853MzvagAECxtt?format=jpg&name=small"
   ],
-  // Virgül sorunu düzeltmesi - Nano Banana Pro on Gemini
+  // Virgül sorunu düzeltmesi - IMAGE PROMPT Pro on Gemini
   "fbdbed40-4991-457e-82af-81d250c1e3ed": [
     "https://pbs.twimg.com/media/G9GOHdRbkAATPj_?format=jpg&name=360x360",
     "https://pbs.twimg.com/media/G9GOHcuagAEA2Kt?format=jpg&name=360x360"

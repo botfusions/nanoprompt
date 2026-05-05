@@ -59,7 +59,7 @@ async function assignImages() {
             .from('banana_prompts')
             .update({
                 images: [imageUrl],
-                source: 'BotsNANO'
+                source: 'IMAGE PROMPT'
             })
             .eq('id', prompt.id);
 

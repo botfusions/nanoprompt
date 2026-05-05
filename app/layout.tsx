@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Botfusions NaNo",
-  description: "Botfusions NaNo Prompt Koleksiyonu",
+  title: "IMAGE PROMPT",
+  description: "IMAGE PROMPT Stüdyo V2 - En İyi Prompt Koleksiyonu",
 };
 
 export default function RootLayout({

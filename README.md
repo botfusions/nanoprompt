@@ -1,10 +1,10 @@
-# BotsNANO Prompt Galerisi
+# IMAGE PROMPT Prompt Galerisi
 
 <div align="center">
 
-![BotsNANO](https://img.shields.io/badge/BotsNANO-Prompt%20Ar%C5%9Fivi-26C6FF?style=for-the-badge)
+![IMAGE PROMPT](https://img.shields.io/badge/IMAGE_PROMPT-Prompt%20Ar%C5%9Fivi-26C6FF?style=for-the-badge)
 
-**Gemini Nano Banana Pro için en iyi prompt koleksiyonu**
+**IMAGE PROMPT Pro için en iyi prompt koleksiyonu**
 
 [![Prompts](https://img.shields.io/badge/Prompts-3672-brightgreen?style=flat-square)](/)
 [![Next.js](https://img.shields.io/badge/Next.js-16+-black?style=flat-square)](https://nextjs.org)
@@ -16,8 +16,16 @@
 </div>
 
 ## 📝 Changelog
-19: 
-20: - **Bulk Import (43 Prompts):** Successfully imported 43 new prompts from staging to the main database (#03673 - #03715).
+
+### [2026-05-05] Global Rebranding & Project Cleanup 🚀
+
+- **Rebranding:** Completed global transition from "BotsNANO" to "IMAGE PROMPT".
+- **UI Updates:** Updated Header, Sticky Note, and metadata to reflect the new brand identity.
+- **Project Name:** Updated project title to "IMAGE PROMPT STÜDYO V2".
+- **Bug Fix:** Restored corrupted `favicon.ico` and verified production build stability.
+- **Dependency Update:** Updated `baseline-browser-mapping` to the latest version.
+
+- **Bulk Import (43 Prompts):** Successfully imported 43 new prompts from staging to the main database (#03673 - #03715).
 - **Data Quality Audit:** Performed a full database scan to verify integrity after import.
 
 ### [2026-04-29] Security Audit & Project Cleanup 🛡️
@@ -298,7 +306,7 @@ MIT License - Bu proje eğitim amaçlıdır.
 
 <div align="center">
 
-**[⬆ Başa Dön](#botsnano-prompt-galerisi)**
+**[⬆ Başa Dön](#IMAGE PROMPT-prompt-galerisi)**
 
 Made with ❤️ by [BotFusions](https://botfusions.com)
 

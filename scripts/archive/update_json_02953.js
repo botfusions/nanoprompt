@@ -43,7 +43,7 @@ try {
         ],
         "featured": false,
         "model": "Nano banana pro",
-        "source": "BotsNANO"
+        "source": "IMAGE PROMPT"
     };
 
     // Kaydet
