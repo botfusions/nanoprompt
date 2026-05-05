@@ -1,5 +1,5 @@
 import { UserProfile, AdminDashboardUser } from '../src/types';
-import { supabase } from './supabaseClient';
+import { supabase } from '../src/lib/supabase';
 import { z } from 'zod';
 import DOMPurify from 'dompurify';
 
@@ -74,7 +74,7 @@ export const userService = {
         .single();
 
       // Özel Admin Mantığı: Eğer admin giriyorsa yetkileri tazele
-      const adminEmail = import.meta.env.VITE_ADMIN_EMAIL;
+      const adminEmail = process.env.VITE_ADMIN_EMAIL || process.env.NEXT_PUBLIC_ADMIN_EMAIL;
       const isAdminEmail = cleanEmail === adminEmail;
 
       if (profile) {
