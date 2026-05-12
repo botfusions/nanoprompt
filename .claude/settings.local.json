@@ -3,7 +3,16 @@
     "allow": [
       "Bash(npm audit *)",
       "Bash(npm config *)",
-      "Bash(npm view *)"
+      "Bash(npm view *)",
+      "Bash(git *)",
+      "Bash(npm outdated *)",
+      "Bash(npm install *)",
+      "Bash(NODE_OPTIONS=\"--use-system-ca\" npm install)",
+      "Bash(NODE_OPTIONS=\"--use-system-ca\" npm audit)",
+      "Bash(NODE_OPTIONS=\"--use-system-ca\" npm audit fix --force)",
+      "Bash(NODE_OPTIONS=\"--use-system-ca\" npm run build)",
+      "Bash(rm -f App.tsx.bak vite.config.ts.bak)",
+      "Bash(rm -rf scratch/)"
     ]
   }
 }

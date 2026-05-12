@@ -13,6 +13,7 @@ import {
   Share2,
   Bookmark,
   Heart,
+  Bot,
 } from "lucide-react";
 import { Prompt } from "@/src/data/prompts";
 import { cn } from "@/lib/utils";
@@ -152,11 +153,24 @@ export function PromptCard({
                 {cardNumber}
               </span>
             )}
-            <span className="font-black uppercase text-xs tracking-wide text-gray-500">
-              <span className="text-brand-black border-b-2 border-brand-yellow hover:bg-brand-yellow transition-colors cursor-pointer">
-                @{prompt.author}
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="font-black uppercase text-xs tracking-wide text-gray-500">
+                <span className="text-brand-black border-b-2 border-brand-yellow hover:bg-brand-yellow transition-colors cursor-pointer">
+                  @{prompt.author}
+                </span>
               </span>
-            </span>
+              <div className={cn(
+                "flex items-center gap-1 text-[10px] px-1.5 py-0.5 font-bold border rounded-sm tracking-wider uppercase",
+                (prompt.id.toString().startsWith('gpt2_') || prompt.categories?.includes('Awesome GPT'))
+                  ? "bg-purple-100 text-purple-700 border-purple-300"
+                  : "bg-brand-yellow/20 text-brand-black border-brand-yellow/50"
+              )}>
+                <Bot className="w-3 h-3" />
+                <span>
+                  {(prompt.id.toString().startsWith('gpt2_') || prompt.categories?.includes('Awesome GPT')) ? "GPT 2.0" : "NANO BANANA"}
+                </span>
+              </div>
+            </div>
           </div>
           <span className="font-mono text-xs text-gray-400">
             {formatDate(prompt.date)}
@@ -165,7 +179,7 @@ export function PromptCard({
 
         {/* Title */}
         <h3 className="text-xl font-black mb-4 leading-tight uppercase tracking-tight line-clamp-2 min-h-[3rem]">
-          {prompt.title}
+          {prompt.title?.replace(/GEM[Iİ]N[Iİ]\s*(NANO\s*PROMPT|NANO\s*BANANA|NANOBANANA|NANOPROMPT|PROMPT)/gi, "IMAGE PROMPT")}
         </h3>
 
         {/* Image Area with Multi-Image Grid */}

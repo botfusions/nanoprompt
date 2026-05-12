@@ -288,6 +288,12 @@ http://localhost:3000
 - **Image Polish**: Artırılmış kontrast ve doygunluk + Hover efektleri
 - **Auto-Sync Sistem**: Yerel görsellerin otomatik DB eşitlenmesi
 
+### 📥 Veri İçe Aktarma ve Güncellemeler (TİWİT)
+
+- **Twitter (Tiwit) Import**: `twitter_prompts` tablosunda yer alan tüm promptlar (183 adet) sorunsuz bir şekilde ana galeriye (`banana_prompts`) aktarıldı.
+- Aktarım sonrası geçici kaynak tablo temizlendi.
+- Aktarılan promptlara da artık arayüzde doğru model rozeti ("NANO BANANA" vb.) otomatik atanıyor.
+
 ### 🧹 Temizlik
 
 - ~9MB gereksiz dosya silindi
