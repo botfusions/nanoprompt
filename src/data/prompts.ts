@@ -254,10 +254,10 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
     return dateB - dateA; // En yeni en üstte
   });
 
-  // Görselsiz kartlara IMAGE PROMPT etiketi ata
+  // Görselsiz kartlara AİTASVİR etiketi ata
   promptsWithNumber.forEach(p => {
     if (!p.hasWorkingImage) {
-      p.author = 'IMAGE PROMPT';
+      p.author = 'AİTASVİR';
     }
   });
 

@@ -1,10 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
-  Twitter,
   ExternalLink,
   Copy,
   Zap,
@@ -12,7 +10,6 @@ import {
   Eye,
   Share2,
   Bookmark,
-  Heart,
   Bot,
 } from "lucide-react";
 import { Prompt } from "@/src/data/prompts";
@@ -55,6 +52,7 @@ export function PromptCard({
   const [activeTab, setActiveTab] = useState<"prompt" | "original">("prompt");
   const [copied, setCopied] = useState(false);
   const [showGhostModal, setShowGhostModal] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   // Sabit numara - sıralama değişse bile aynı kalır
   // Numara yoksa gösterme
@@ -71,7 +69,7 @@ export function PromptCard({
     try {
       // 1. Check download limit
       const checkRes = await fetch("/api/security?type=download");
-      const { allowed, remaining } = await checkRes.json();
+      const { allowed } = await checkRes.json();
 
       if (!allowed) {
         alert(
@@ -104,6 +102,8 @@ export function PromptCard({
       setTimeout(() => setCopied(false), 2000);
     }
   };
+
+  const isLongPrompt = prompt.prompt && (prompt.prompt.length > 150 || prompt.prompt.includes('\n'));
 
   return (
     <div className="group relative flex flex-col mt-12 w-full">
@@ -263,10 +263,17 @@ export function PromptCard({
 
         {/* Description / Content */}
         <div className="mb-6 flex-grow">
-          <div className="bg-gray-50 border-2 border-brand-black p-3 font-mono text-xs md:text-sm text-gray-600 leading-relaxed h-32 overflow-y-auto custom-scrollbar rounded-none relative">
+          <div
+            className={cn(
+              "bg-gray-50 border-2 border-brand-black p-3 font-mono text-xs md:text-sm text-gray-600 leading-relaxed rounded-none relative transition-all duration-200",
+              activeTab === "prompt" && user && isExpanded ? "h-auto min-h-[8rem]" : "h-32 overflow-hidden"
+            )}
+          >
             {activeTab === "prompt" ? (
               user ? (
-                prompt.prompt
+                <div className={cn(!isExpanded && isLongPrompt && "line-clamp-4")}>
+                  {prompt.prompt}
+                </div>
               ) : (
                 <>
                   {/* Blurred content for non-users */}
@@ -297,6 +304,21 @@ export function PromptCard({
                 <ExternalLink className="w-4 h-4" />
               </div>
             )}
+
+            {/* "Daha Fazla Göster" / "Daha Az Göster" Butonu */}
+            {activeTab === "prompt" && user && isLongPrompt && (
+              <>
+                {!isExpanded && (
+                  <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-gray-50 to-transparent pointer-events-none" />
+                )}
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="absolute bottom-2 right-2 bg-brand-yellow text-brand-black border border-brand-black px-2 py-0.5 text-[10px] font-black uppercase hover:bg-brand-black hover:text-white transition-colors shadow-[1px_1px_0_#000] z-10"
+                >
+                  {isExpanded ? "DAHA AZ" : "DAHA FAZLA"}
+                </button>
+              </>
+            )}
           </div>
         </div>
 
@@ -323,6 +345,14 @@ export function PromptCard({
               </>
             )}
           </button>
+
+          <Link
+            href={`/generate?prompt=${encodeURIComponent(prompt.prompt)}`}
+            className="w-12 flex items-center justify-center bg-brand-purple text-white border-2 border-brand-black hover:bg-brand-yellow hover:text-brand-black transition-all shadow-none hover:shadow-neo active:translate-y-[1px] active:shadow-none rounded-none"
+            title="Bu prompt ile görsel oluştur"
+          >
+            <Zap className="w-5 h-5" />
+          </Link>
 
           <button
             className="w-12 flex items-center justify-center bg-white border-2 border-brand-black hover:bg-gray-100 transition-all shadow-none hover:shadow-neo active:translate-y-[1px] active:shadow-none rounded-none"
