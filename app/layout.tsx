@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin", "latin-ext"],
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://aitasvir.com";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.aitasvir.com";
 
 export const metadata: Metadata = {
   title: {
@@ -94,6 +94,11 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="x-default" href={baseUrl} />
         <meta name="theme-color" content="#26C6FF" />
         <meta name="format-detection" content="telephone=no" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://pbs.twimg.com" />
+        <link rel="dns-prefetch" href="https://replicate.delivery" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

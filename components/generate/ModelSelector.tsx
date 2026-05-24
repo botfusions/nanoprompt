@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { Zap, Crown, Sparkles } from "lucide-react";
-import { MODELS, ModelKey } from "@/src/lib/replicate";
+import { MODELS, ModelKey } from "@/src/lib/models";
 
 interface ModelSelectorProps {
   selected: ModelKey;

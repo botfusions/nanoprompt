@@ -1,8 +1,13 @@
 import Replicate from 'replicate';
+import { MODELS } from './models';
+import type { ModelKey } from './models';
 
 const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN!,
 });
+
+export { MODELS };
+export type { ModelKey };
 
 export interface GenerateParams {
   prompt: string;
@@ -17,35 +22,6 @@ export interface GenerateResult {
   imageUrl: string;
   enhancedPrompt: string;
 }
-
-export const MODELS = {
-  'flux-schnell': {
-    id: 'black-forest-labs/flux-schnell',
-    version: null,
-    name: 'Flux Schnell',
-    description: 'Hızlı ve ekonomik',
-    creditCost: 1,
-    estimatedTime: '5-10s',
-  },
-  'flux-pro': {
-    id: 'black-forest-labs/flux-1.1-pro',
-    version: null,
-    name: 'Flux Pro',
-    description: 'Yüksek kalite, detaylı',
-    creditCost: 3,
-    estimatedTime: '15-30s',
-  },
-  'sdxl': {
-    id: 'stability-ai/sdxl',
-    version: '39ed52f2a78e934b3ba6e2a89f5b1c712de7dfea535525255b1aa35c5565e08b',
-    name: 'SDXL',
-    description: 'Dengeli kalite ve hız',
-    creditCost: 2,
-    estimatedTime: '10-20s',
-  },
-} as const;
-
-export type ModelKey = keyof typeof MODELS;
 
 export async function generateImage(params: GenerateParams): Promise<GenerateResult> {
   const modelConfig = MODELS[params.model as ModelKey];

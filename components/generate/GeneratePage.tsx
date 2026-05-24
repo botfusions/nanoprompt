@@ -10,7 +10,7 @@ import { ImagePreview } from "./ImagePreview";
 import { CreditBalance } from "./CreditBalance";
 import { CreditPackages } from "./CreditPackages";
 import { CREDIT_COSTS, CreditBalance as CreditBalanceType } from "@/src/lib/credits";
-import { MODELS, ModelKey } from "@/src/lib/replicate";
+import { MODELS, ModelKey } from "@/src/lib/models";
 import { Wand2, Loader2, AlertCircle, X } from "lucide-react";
 import clsx from "clsx";
 

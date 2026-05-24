@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import clsx from "clsx";
 
@@ -23,11 +22,10 @@ interface BridgePromptCardProps {
 
 export function BridgePromptCard({ prompt, isSelected, onSelect }: BridgePromptCardProps) {
     return (
-        <motion.div
-            whileHover={{ y: -4 }}
+        <div
             onClick={() => onSelect(prompt)}
             className={clsx(
-                "cursor-pointer group relative flex flex-col overflow-hidden rounded-xl border-2 transition-all duration-200",
+                "cursor-pointer group relative flex flex-col overflow-hidden rounded-xl border-2 transition-all duration-200 hover:-translate-y-1",
                 isSelected
                     ? "border-brand-purple bg-brand-purple/5 shadow-neo-strong ring-2 ring-brand-purple/50"
                     : "border-black bg-white shadow-neo hover:shadow-neo-hover"
@@ -83,6 +81,6 @@ export function BridgePromptCard({ prompt, isSelected, onSelect }: BridgePromptC
                     </span>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }
