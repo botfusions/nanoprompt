@@ -1,7 +1,29 @@
 import { MetadataRoute } from "next";
-import { CATEGORIES, CATEGORY_MAP } from "@/src/data/prompts";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://www.aitasvir.com";
+
+const CATEGORIES: Record<string, string> = {
+  "🎄 Yılbaşı Kartları": "christmas",
+  "Fotoğrafçılık": "photography",
+  "Doğa": "nature",
+  "Portre": "portrait",
+  "Manzara": "landscape",
+  "Minimalist": "minimalist",
+  "Araç": "vehicle",
+  "Karakter": "character",
+  "Moda": "fashion",
+  "Logo": "logo",
+  "Marka": "branding",
+  "İllüstrasyon": "illustration",
+  "Ürün": "product",
+  "Karikatür": "cartoon",
+  "Tipografi": "typography",
+  "İç Tasarım": "interior",
+  "3D": "3d",
+  "Retro": "retro",
+  "Yaratıcı": "creative",
+  "Awesome GPT": "awesome-gpt",
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -33,14 +55,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const categoryPages: MetadataRoute.Sitemap = CATEGORIES
-    .filter((cat) => cat !== "Tümü")
-    .map((cat) => ({
-      url: `${BASE_URL}/?category=${encodeURIComponent(CATEGORY_MAP[cat] || cat)}`,
+  const categoryPages: MetadataRoute.Sitemap = Object.entries(CATEGORIES).map(
+    ([cat, slug]) => ({
+      url: `${BASE_URL}/?category=${encodeURIComponent(slug)}`,
       lastModified: now,
       changeFrequency: "daily" as const,
       priority: 0.7,
-    }));
+    })
+  );
 
   return [...staticPages, ...categoryPages];
 }
