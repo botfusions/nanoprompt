@@ -17,8 +17,8 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.aitasvir.com";
 
 export const metadata: Metadata = {
   title: {
-    default: "AİTASVİR STÜDYO V2 - Yapay Zeka Görsel & Video Promptları",
-    template: "%s | AİTASVİR STÜDYO",
+    default: "AITASVIR STUDYO V2 - Yapay Zeka Görsel & Video Promptları",
+    template: "%s | AITASVIR STUDYO",
   },
   description:
     "En iyi yapay zeka (AI) görsel ve video oluşturma promptları koleksiyonu. Flux, SDXL ve AI video modelleri ile doğrudan promptlardan imaj ve video üretin.",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     "text to video",
     "görsel prompt",
   ],
-  authors: [{ name: "AİTASVİR STÜDYO" }],
-  creator: "AİTASVİR STÜDYO",
-  publisher: "AİTASVİR STÜDYO",
+  authors: [{ name: "AITASVIR STUDYO" }],
+  creator: "AITASVIR STUDYO",
+  publisher: "AITASVIR STUDYO",
   metadataBase: new URL(baseUrl),
   alternates: {
     canonical: "/",
@@ -53,14 +53,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "tr_TR",
     url: baseUrl,
-    siteName: "AİTASVİR STÜDYO",
-    title: "AİTASVİR STÜDYO V2 - Yapay Zeka Görsel & Video Promptları",
+    siteName: "AITASVIR STUDYO",
+    title: "AITASVIR STUDYO V2 - Yapay Zeka Görsel & Video Promptları",
     description:
       "En iyi yapay zeka (AI) görsel ve video oluşturma promptları. Ücretsiz kredilerle doğrudan promptlardan imaj ve video üretmeye başlayın.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AİTASVİR STÜDYO V2",
+    title: "AITASVIR STUDYO V2",
     description: "Yapay zeka görsel ve video promptları ve üretim platformu.",
   },
   robots: {

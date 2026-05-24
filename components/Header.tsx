@@ -13,7 +13,7 @@ export function Header() {
           href="/"
           className="bg-white border-2 border-brand-black px-4 py-2 shadow-neo font-black text-xl tracking-tighter hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all rounded-none flex items-center gap-2"
         >
-          AİTASVİR
+          AITASVIR
           <span className="text-xs bg-brand-yellow text-brand-black px-1.5 py-0.5 border border-brand-black font-bold">
             (BETA)
           </span>
@@ -47,10 +47,10 @@ export function Header() {
 
       <div className="container mx-auto text-center relative z-10">
         <h1 className="text-5xl md:text-8xl font-black mb-4 tracking-tighter text-white drop-shadow-[5px_5px_0_#000] leading-none transform -rotate-1">
-          AİTASVİR
+          AITASVIR
           <br />
           <span className="text-brand-yellow drop-shadow-[3px_3px_0_#000]">
-            STÜDYO
+            STUDYO
           </span>{" "}
           V2
         </h1>

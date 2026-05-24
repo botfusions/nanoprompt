@@ -257,7 +257,7 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
   // Görselsiz kartlara AİTASVİR etiketi ata
   promptsWithNumber.forEach(p => {
     if (!p.hasWorkingImage) {
-      p.author = 'AİTASVİR';
+      p.author = 'AITASVIR';
     }
   });
 

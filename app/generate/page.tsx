@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { GenerateClient } from "./GenerateClient";
 
 export const metadata: Metadata = {
-  title: "AI Görsel & Video Oluşturucu | AİTASVİR STÜDYO - Flux, Video AI ile Profesyonel Tasarımlar",
+  title: "AI Görsel & Video Oluşturucu | AITASVIR STUDYO - Flux, Video AI ile Profesyonel Tasarımlar",
   description:
     "AI ile saniyeler içinde profesyonel görsel ve videolar oluşturun. Flux Schnell, Flux Pro, SDXL ve yapay zeka video modelleri ile yüksek kaliteli üretim. Ücretsiz kredilerle başlayın.",
   keywords: [
@@ -24,17 +24,17 @@ export const metadata: Metadata = {
     "tasvir",
   ],
   openGraph: {
-    title: "AI Görsel & Video Oluşturucu | AİTASVİR STÜDYO",
+    title: "AI Görsel & Video Oluşturucu | AITASVIR STUDYO",
     description:
       "AI ile saniyeler içinde profesyonel görsel ve videolar oluşturun. Flux, SDXL ve video modelleri ile ücretsiz başlayın.",
     type: "website",
     locale: "tr_TR",
-    siteName: "AİTASVİR STÜDYO",
+    siteName: "AITASVIR STUDYO",
     url: "/generate",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Görsel & Video Oluşturucu | AİTASVİR STÜDYO",
+    title: "AI Görsel & Video Oluşturucu | AITASVIR STUDYO",
     description:
       "AI ile saniyeler içinde profesyonel görsel ve videolar oluşturun. Ücretsiz kredilerle başlayın.",
   },
@@ -67,7 +67,7 @@ function JsonLd() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "AİTASVİR AI Görsel & Video Oluşturucu",
+    name: "AITASVIR AI Görsel & Video Oluşturucu",
     description:
       "AI ile saniyeler içinde profesyonel görsel ve videolar oluşturun. Flux, SDXL ve yapay zeka video modelleri desteği.",
     applicationCategory: "MultimediaApplication",
