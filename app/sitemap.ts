@@ -42,6 +42,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/hakkimizda`,
+      lastModified: new Date("2026-05-24"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/iletisim`,
+      lastModified: new Date("2026-05-24"),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${BASE_URL}/gizlilik`,
+      lastModified: new Date("2026-05-24"),
+      changeFrequency: "yearly",
+      priority: 0.4,
+    },
+    {
+      url: `${BASE_URL}/kosullar`,
+      lastModified: new Date("2026-05-24"),
+      changeFrequency: "yearly",
+      priority: 0.4,
+    },
+    {
       url: `${BASE_URL}/login`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -53,11 +77,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.3,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date("2026-05-24"),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog/en-iyi-ai-prompt-yazma-teknikleri`,
+      lastModified: new Date("2026-05-24"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/blog/flux-vs-sdxl-model-karsilastirmasi`,
+      lastModified: new Date("2026-05-24"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/blog/portre-fotografciligi-icin-prompt-rehberi`,
+      lastModified: new Date("2026-05-24"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = Object.entries(CATEGORIES).map(
     ([cat, slug]) => ({
-      url: `${BASE_URL}/?category=${encodeURIComponent(slug)}`,
+      url: `${BASE_URL}/kategori/${slug}`,
       lastModified: now,
       changeFrequency: "daily" as const,
       priority: 0.7,

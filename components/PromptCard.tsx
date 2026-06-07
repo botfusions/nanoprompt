@@ -149,9 +149,9 @@ export function PromptCard({
         <div className="flex items-center justify-between mb-4 border-b-2 border-gray-100 pb-2">
           <div className="flex items-center gap-2">
             {cardNumber && (
-              <span className="font-mono text-xs bg-gray-100 border border-gray-300 px-2 py-0.5 text-gray-600">
+              <Link href={`/prompt/${prompt.id}`} className="font-mono text-xs bg-gray-100 border border-gray-300 px-2 py-0.5 text-gray-600 hover:bg-brand-cyan/10 hover:border-brand-cyan/30 transition-colors">
                 {cardNumber}
-              </span>
+              </Link>
             )}
             <div className="flex items-center gap-2 flex-wrap">
               <span className="font-black uppercase text-xs tracking-wide text-gray-500">

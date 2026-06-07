@@ -1,0 +1,64 @@
+# AITASVIR STUDYO
+
+> AI gorsel ve video olusturma promptlari koleksiyonu. Flux, SDXL ve AI video modelleri ile promptlardan gorsel/video uretin.
+
+## Site Ozeti
+
+AITASVIR STUDYO, yapay zeka ile gorsel ve video olusturmak icin hazir prompt sablonlari sunan bir platformdur. 3700+ prompt iceren koleksiyonumuzda fotografcilik, portre, logo, moda, 3D, illüstrasyon ve daha fazla kategori bulunmaktadir.
+
+Ayrica sitemiz uzerinden Flux Schnell, Flux Pro, SDXL modelleri ile dogrudan AI gorsel olusturabilirsiniz. Ucretsiz baslangic kredileri ile deneyimlemeye baslayabilirsiniz.
+
+## Temel Ozellikler
+
+- 3700+ hazir AI prompt sablonu
+- AI gorsel olusturucu (Flux Schnell, Flux Pro, SDXL)
+- 20+ kategori (Fotografcilik, Portre, Logo, Moda, 3D, Illüstrasyon, vb.)
+- Tek tikla kopyalama
+- Kategori filtreleme ve arama
+- Ucretsiz kredi sistemi
+
+## Onemli Sayfalar
+
+- [Ana Sayfa - Prompt Galerisi](https://www.aitasvir.com/) — Tum prompt kolleksiyonu
+- [AI Gorsel Olusturucu](https://www.aitasvir.com/generate) — Flux, SDXL ile gorsel uretimi
+
+## Kategoriler
+
+| Kategori | Aciklama |
+|----------|----------|
+| Fotografcilik | Profesyonel fotoğraf cekim promptlari |
+| Portre | Portre ve karakter promptlari |
+| Dogra | Dogra ve manzara promptlari |
+| Manzara | Manzara gorselleri icin promptlar |
+| Minimalist | Minimalist tasarim promptlari |
+| Arac | Arac ve tasit gorsel promptlari |
+| Karakter | Karakter tasarim promptlari |
+| Moda | Moda ve giyim promptlari |
+| Logo | Logo tasarim promptlari |
+| Marka | Marka ve kurumsal kimlik promptlari |
+| Illüstrasyon | Illüstrasyon ve cizim promptlari |
+| Urun | Urun gorsel promptlari |
+| Karikatur | Karikatur ve cizgi film promptlari |
+| Tipografi | Tipografi ve yazi tasarim promptlari |
+| Ic Tasarim | Ic mekan tasarim promptlari |
+| 3D | 3D model ve render promptlari |
+| Retro | Retro ve vintage promptlari |
+| Yaratici | Yaratici ve deneysel promptlar |
+| Awesome GPT | GPT Image 2 promptlari |
+
+## Teknik Bilgi
+
+- Stack: Next.js 16, React 19, Supabase, Firebase Auth, Tailwind CSS v4
+- AI Modeller: Flux Schnell (1 kredi), SDXL (2 kredi), Flux Pro (3 kredi)
+- Odeme: PayTR ile TL bazli kredi paketleri
+- Guvenlik: KVKK uyumlu, RLS, CSP, Rate Limiting
+
+## Iletisim
+
+- E-posta: info@botfusions.com
+- Gelstirici: BotFusions
+- Lisans: MIT
+
+## Uyarı
+
+Bu sitedeki promptlar yapay zeka modelleri icin hazirlanmis sablonlardır. AI sonuclari degiskenlik gosterebilir.

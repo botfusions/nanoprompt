@@ -1,0 +1,499 @@
+<!DOCTYPE html><html lang=tr><head><meta charset=UTF-8>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>AİTASVİR STÜDYO — GEO+SEO Analiz Raporu | CORE-EEAT + CITE | Botfusions</title>
+<style>
+:root{--p:#A855F7;--dp:#7C3AED;--b:#3B82F6;--o:#F97316;--y:#FDE047;--bg:#0F0F1A;--c:#1A1A2E;--c2:#16213E;--bd:#2A2A4A;--t:#E2E8F0;--m:#94A3B8;--g:#22C55E;--r:#EF4444;--a:#F59E0B}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--t);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.6}
+.hdr{background:linear-gradient(135deg,#0F0F1A,#1A0A2E 50%,#0A1628);padding:48px 24px 36px;text-align:center;border-bottom:1px solid var(--bd);position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(168,85,247,.15),transparent 70%);pointer-events:none}
+.brand{font-size:13px;color:var(--p);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.hdr h1{font-size:2.2rem;font-weight:800;background:linear-gradient(135deg,#fff,var(--p));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+.hdr .sub{color:var(--m);font-size:1rem;margin-bottom:20px}
+.hdr-meta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.hdr-meta span{background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--p)}
+.ctn{max-width:960px;margin:0 auto;padding:0 24px 48px}
+.sec{margin-bottom:32px}
+.sec-t{font-size:1.1rem;font-weight:700;color:var(--p);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--bd)}
+.card{background:var(--c);border:1px solid var(--bd);border-radius:12px;padding:20px;margin-bottom:12px}
+.card.warn{border-color:rgba(245,158,11,.4);background:rgba(245,158,11,.05)}
+.card.danger{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.05)}
+.card.success{border-color:rgba(34,197,94,.4);background:rgba(34,197,94,.05)}
+.card.info{border-color:rgba(59,130,246,.4);background:rgba(59,130,246,.05)}
+.card h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.card.warn h3{color:var(--a)}.card.danger h3{color:var(--r)}.card.success h3{color:var(--g)}.card.info h3{color:var(--b)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.fg{grid-template-columns:1fr}.score-hero{grid-template-columns:1fr;text-align:center}}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{background:rgba(168,85,247,.1);color:var(--p);padding:10px 12px;text-align:left;font-weight:600;border-bottom:1px solid var(--bd)}
+.tbl td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:top}
+.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:12px;font-weight:700;margin-right:6px}
+.badge.g{background:rgba(34,197,94,.15);color:var(--g)}.badge.r{background:rgba(239,68,68,.15);color:var(--r)}
+.badge.a{background:rgba(245,158,11,.15);color:var(--a)}.badge.b{background:rgba(59,130,246,.15);color:var(--b)}
+.badge.p{background:rgba(168,85,247,.15);color:var(--p)}
+.pri{display:flex;gap:16px;padding:16px;background:var(--c2);border-radius:10px;margin-bottom:10px;border-left:3px solid}
+.pri.p1{border-color:var(--r)}.pri.p2{border-color:var(--a)}.pri.p3{border-color:var(--b)}
+.pri-n{font-size:1.5rem;font-weight:900;opacity:.5;flex-shrink:0;line-height:1}
+.pri.p1 .pri-n{color:var(--r)}.pri.p2 .pri-n{color:var(--a)}.pri.p3 .pri-n{color:var(--b)}
+.pri-c h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.pri-c p{font-size:13px;color:var(--m);line-height:1.5}
+.pri-c .imp{font-size:12px;margin-top:6px}
+.score-hero{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;background:var(--c);border:1px solid var(--bd);border-radius:16px;padding:32px;margin:32px auto}
+.geo-circle{width:140px;height:140px;border-radius:50%;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
+.geo-circle::before{content:'';position:absolute;width:110px;height:110px;border-radius:50%;background:var(--c)}
+.geo-inner{position:relative;z-index:1;text-align:center}
+.geo-inner .num{font-size:2.2rem;font-weight:900;line-height:1}
+.geo-inner .lbl{font-size:11px;color:var(--m)}
+.sb{display:flex;flex-direction:column;gap:10px}
+.sbr{display:grid;grid-template-columns:200px 1fr 48px;gap:10px;align-items:center;font-size:13px}
+.sbr .bl{color:var(--m)}
+.bt{background:var(--bd);border-radius:4px;height:8px;overflow:hidden}
+.bf{height:100%;border-radius:4px}
+.bf.green{background:var(--g)}.bf.amber{background:var(--a)}.bf.red{background:var(--r)}.bf.blue{background:var(--b)}
+.sbr .bv{font-weight:700;text-align:right}
+.veto{background:rgba(239,68,68,.08);border:2px solid rgba(239,68,68,.5);border-radius:12px;padding:20px;margin-bottom:16px}
+.veto h3{color:var(--r);font-size:1.1rem;margin-bottom:8px}
+.ft{text-align:center;padding:32px 24px;border-top:1px solid var(--bd);color:var(--m);font-size:13px}
+.ft strong{color:var(--p)}
+.dim-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.dim-grid{grid-template-columns:1fr}}
+.dim-card{background:var(--c);border:1px solid var(--bd);border-radius:10px;padding:16px}
+.dim-card h4{font-size:.9rem;color:var(--p);margin-bottom:10px;font-weight:700}
+.dim-row{display:flex;justify-content:space-between;font-size:12px;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.dim-row:last-child{border:none}
+.dim-row .id{color:var(--m);width:36px;flex-shrink:0}
+.dim-row .nm{flex:1;color:var(--t)}
+.dim-row .sc{font-weight:700;width:40px;text-align:right}
+.sc-pass{color:var(--g)}.sc-part{color:var(--a)}.sc-fail{color:var(--r)}
+.check-list{list-style:none;font-size:13px;line-height:1.8}
+.check-list li span:first-child{margin-right:8px}
+.status-banner{background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(239,68,68,.1));border:2px solid rgba(245,158,11,.5);border-radius:12px;padding:20px;text-align:center;margin-bottom:32px}
+.status-banner h2{color:var(--a);font-size:1.3rem;margin-bottom:6px}
+.status-banner p{color:var(--m);font-size:14px}
+</style>
+</head><body>
+<div class="hdr">
+<div class="brand">Botfusions · GEO+SEO Audit · CORE-EEAT + CITE</div>
+<h1>aitasvir.com Analiz Raporu</h1>
+<p class="sub">AI Gorsel & Video Prompt Platformu — AİTASVİR STÜDYO V2</p>
+<div class="hdr-meta">
+<span>24 Mayis 2026</span>
+<span>www.aitasvir.com</span>
+<span>AI Prompt Platformu / Teknoloji</span>
+<span>Next.js (React)</span>
+<span>YAYINDA</span>
+</div></div>
+<div class="ctn">
+
+<div class="status-banner">
+<h2>SITE DURUMU: YAYINDA — Erken Asama, Kritik GEO Eksikleri Mevcut</h2>
+<p>Bu rapor, yayinda olan bir <strong>AI gorsel ve video prompt platformunun</strong> kapsamli GEO-SEO denetimidir. Site Next.js altyapisinda, 200+ AI prompt ve 20 kategori icermektedir. Ancak <strong>hicbir alt sayfa, JSON-LD schema, llms.txt veya E-E-A-T sinyali bulunmamaktadir</strong>. GEO gorunurlugu acisindan ciddi eksikler tespit edilmistir.</p>
+</div>
+
+<!-- GEO SKOR -->
+<div class="score-hero">
+<div class="geo-circle" style="background:conic-gradient(var(--r) 0% 31%, var(--bd) 31% 100%)">
+<div class="geo-inner"><div class="num" style="color:var(--r)">31</div><div class="lbl">/100 GEO</div></div></div>
+<div class="sb"><h2 style="color:var(--r);margin-bottom:12px">GEO Hazirlik Skoru: 31/100</h2>
+<p style="color:var(--m);font-size:14px;margin-bottom:16px">Dusuk — Ciddi Yapisal Eksikler, Hizli Iyilestirme Potansiyeli Yuksek</p>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div class="sbr">
+<span class="bl">Teknik Altyapi</span>
+<div class="bt"><div class="bf green" style="width:62%"></div></div>
+<span class="bv" style="color:var(--g)">62</span></div>
+<div class="sbr">
+<span class="bl">AI Crawler Erisimi</span>
+<div class="bt"><div class="bf red" style="width:30%"></div></div>
+<span class="bv" style="color:var(--r)">30</span></div>
+<div class="sbr">
+<span class="bl">Yapisal Veri (Schema)</span>
+<div class="bt"><div class="bf red" style="width:5%"></div></div>
+<span class="bv" style="color:var(--r)">5</span></div>
+<div class="sbr">
+<span class="bl">Icerik & E-E-A-T</span>
+<div class="bt"><div class="bf red" style="width:35%"></div></div>
+<span class="bv" style="color:var(--r)">35</span></div>
+<div class="sbr">
+<span class="bl">Marka Otoritesi</span>
+<div class="bt"><div class="bf red" style="width:20%"></div></div>
+<span class="bv" style="color:var(--r)">20</span></div>
+<div class="sbr">
+<span class="bl">CORE-EEAT Uyumu</span>
+<div class="bt"><div class="bf red" style="width:30%"></div></div>
+<span class="bv" style="color:var(--r)">30</span></div>
+<div class="sbr">
+<span class="bl">CITE Domain Rating</span>
+<div class="bt"><div class="bf red" style="width:20%"></div></div>
+<span class="bv" style="color:var(--r)">20</span></div>
+<div class="sbr">
+<span class="bl">Mobil & Performans</span>
+<div class="bt"><div class="bf green" style="width:65%"></div></div>
+<span class="bv" style="color:var(--g)">65</span></div>
+</div></div></div>
+
+<!-- YONETICI OZETI -->
+<div class="sec"><div class="sec-t">Yonetici Ozeti</div>
+<div class="card info">
+<p style="font-size:14px;line-height:1.8"><strong>aitasvir.com</strong>, "AİTASVİR STÜDYO V2" adiyla hizmet veren, yapay zeka ile gorsel ve video olusturmak icin prompt koleksiyonu sunan bir platformdur. <strong>Next.js (React + Turbopack)</strong> altyapisi uzerinde kurulmus, HTTPS aktif, yalnizca <strong>4 sayfa</strong> (Ana Sayfa, /generate, /login, /register) ve 20 kategori filtrelemesi icermektedir. Site toplamda <strong>200+ AI prompt</strong> barindirmaktadir.<br><br><strong>GucLu YoNLER:</strong> Next.js modern framework (SSR potansiyeli), HTTPS aktif, robots.txt mevcut ve duzgun yapilandirilmis, sitemap.xml 24 URL ile kapsamli, meta etiketler zengin (OG, Twitter Card, geo.tag, robots direktifleri), 20 kategori ile organize edilmis prompt arsivi, Turkce icerik, mobil responsive tasarim.<br><br><strong>Kritik Eksikler:</strong> <span style="color:var(--r)">llms.txt YOK (404)</span> — AI sistemleri site icerigini indeksleyemiyor, <span style="color:var(--r)">JSON-LD schema HIC YOK</span> — yapisal veri tamamen eksik, <span style="color:var(--r)">Hicbir alt sayfa yok</span> (Hakkimizda, Iletisim, Blog, Gizlilik, Kosullar — hepsi 404), SPA mimarisi SEO'yu kisitliyor, E-E-A-T sinyalleri tamamen eksik (yazar bilgisi, uzmanlik gostergesi, sosyal kanit yok), GitHub disinda hicbir sosyal medya baglantisi yok, tum sitemap kayitlari ayni lastmod tarihine sahip (yapay gorunum), /api/ ve /admin/ disinda korunan dizin yok.<br><br><strong>Durum Degerlendirmesi:</strong> Site teknik olarak islevsel ancak <strong>GEO (AI gorunurlugu)</strong> acisindan neredeyse gorunmez durumda. llms.txt, JSON-LD schema ve temel E-E-A-T sayfalarinin eklenmesiyle 55+ skora hizlica ulasilabilir. Platformun AI prompt alaninda olmasi buyuk bir avantaj — dogru yapilandirma ile AI crawler'larin dogal hedefi haline gelebilir.</p></div></div>
+
+<!-- VETO MADDELERI -->
+<div class="sec"><div class="sec-t">VETO Maddeleri (6 Kritik)</div>
+<div class="veto">
+<h3>V01 — llms.txt Yok — AI Sistemlerine Kapali</h3>
+<p style="font-size:13px;color:var(--m)">Site llms.txt dosyasina sahip degil (404). ChatGPT, Perplexity, Claude, Gemini gibi AI sistemleri sitenin icerigini ozetleyemiyor, referans gosteremiyor ve egitim verisi olarak kullanamadigi icin tamamen gormezden geliyor. <strong>AI prompt platformu olan bir site icin bu, varolussal bir GEO sorunudur.</strong> AI crawler'larin ilk baktigi dosya olan llms.txt'in olmamasi, platformun temel hedef kitlesine (AI kullanicilari) ulasmasini engelliyor.</p></div>
+<div class="veto">
+<h3>V02 — JSON-LD Schema Tamamen Yok — Yapisal Veri Sifir</h3>
+<p style="font-size:13px;color:var(--m)">Sitede hicbir JSON-LD yapisal veri, schema.org isaretlemesi veya mikrodata bulunmuyor. Google, prompt iceriklerini anlamlandiramiyor, zengin sonuclar (rich results) gosteremiyor ve featured snippet icin siteyi aday gosteremiyor. SoftwareApplication, CreativeWork veya WebApplication schema tipleriyle prompt koleksiyonu yapisallastirilabilir.</p></div>
+<div class="veto">
+<h3>V03 — Tek Sayfa Uygulamasi (SPA) — Icerik Derinligi Yok</h3>
+<p style="font-size:13px;color:var(--m)">Site tamamen bir Single Page Application. Hakkimizda, Iletisim, Blog, Gizlilik Politikasi, Kullanim Kosullari gibi <strong>temel sayfalarin tamami 404</strong>. Bu durum: (1) Google'in siteyi otorite olarak gormesini engeller, (2) E-E-A-T sinyallerini sifirlar, (3) kullanici guvenini azaltir, (4) yasal uyumluluk riski olusturur (KVKK/GDPR).</p></div>
+<div class="veto">
+<h3>V04 — Sifir E-E-A-T Sinyali — Kimliksiz Platform</h3>
+<p style="font-size:13px;color:var(--m)">Sitede hicbir yazar bilgisi, ekip tanitimi, uzmanlik gostergesi, sertifika, referans veya sosyal kanit bulunmuyor. AI promptlari kimin olusturdugu belli degil. "info@botfusions.com" disinda iletisim bilgisi yok. Google'in E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) degerlendirmesinde site sifir puan alir.</p></div>
+<div class="veto">
+<h3>V05 — Tum Sitemap Kayitlari Ayni Tarih — Yapay Gorevler</h3>
+<p style="font-size:13px;color:var(--m)">Sitemap.xml'deki 24 URL'nin tamami ayni lastmod degerine sahip: <strong>2026-05-24T17:17:08.404Z</strong>. Bu, tum sayfalarin ayni anda olusturuldugu izlenimi veriyor. Google bunu dogal olmayan bir yayin pattern'i olarak degerlendirebilir ve icerik tazeligi (freshness) sinyalini zayiflatabilir.</p></div>
+<div class="veto">
+<h3>V06 — Yasal Sayfalar Eksik — Guven ve Uyumluluk Riski</h3>
+<p style="font-size:13px;color:var(--m)">Gizlilik Politikasi, Kullanim Kosullari, Cerez Politikasi ve KVKK aydinlatma metni gibi <strong>yasal zorunluluk tasiyan sayfalar mevcut degil</strong>. Bu durum hem yasal risk olusturur hem de Google'in guvenilirlik (Trustworthiness) sinyalini olumsuz etkiler. Ozellikle kullanici kaydi (/register, /login) olan bir platform icin bu kritik bir eksikliktir.</p></div>
+</div>
+
+<!-- SITE PROFILI -->
+<div class="sec"><div class="sec-t">Site Profili</div>
+<div class="card">
+<table class="tbl">
+<tr><th style="width:200px">Ozellik</th><th>Deger</th><th style="width:80px">Durum</th></tr>
+<tr><td>Domain</td><td>aitasvir.com</td><td><span class="badge g">AKTIF</span></td></tr>
+<tr><td>Site Adi</td><td>AİTASVİR STÜDYO V2</td><td><span class="badge b">BILGI</span></td></tr>
+<tr><td>Platform / CMS</td><td>Next.js (React + Turbopack)</td><td><span class="badge g">MODERN</span></td></tr>
+<tr><td>SSL / HTTPS</td><td>Gecerli SSL, HTTPS zorunlu</td><td><span class="badge g">BASARILI</span></td></tr>
+<tr><td>Dil</td><td>Turkce (tr-TR) — geo.country=TR</td><td><span class="badge b">BILGI</span></td></tr>
+<tr><td>robots.txt</td><td>Mevcut (Allow: /, Disallow: /api/ & /admin/)</td><td><span class="badge g">BASARILI</span></td></tr>
+<tr><td>sitemap.xml</td><td>Mevcut (24 URL, 20 kategori)</td><td><span class="badge g">BASARILI</span></td></tr>
+<tr><td>llms.txt</td><td>YOK — 404 Not Found</td><td><span class="badge r">KRITIK EKSIK</span></td></tr>
+<tr><td>Meta Description</td><td>Mevcut — "En iyi yapay zeka (AI) gorsel ve video olusturma promptlari..."</td><td><span class="badge g">BASARILI</span></td></tr>
+<tr><td>Meta Keywords</td><td>Mevcut (13 anahtar kelime)</td><td><span class="badge a">NORMAL</span></td></tr>
+<tr><td>OG Tags</td><td>Mevcut (title, description, url, site_name, locale, type)</td><td><span class="badge g">BASARILI</span></td></tr>
+<tr><td>Twitter Card</td><td>Mevcut (summary_large_image + title + description)</td><td><span class="badge g">BASARILI</span></td></tr>
+<tr><td>Geo Meta Tags</td><td>Mevcut (geo.region=TR, geo.country=TR, geo.language=Turkish)</td><td><span class="badge g">BASARILI</span></td></tr>
+<tr><td>Canonical URL</td><td>Tespit edilemedi</td><td><span class="badge a">KONTROL ET</span></td></tr>
+<tr><td>JSON-LD Schema</td><td>YOK — Hicbir yapisal veri bulunmuyor</td><td><span class="badge r">KRITIK EKSIK</span></td></tr>
+<tr><td>Hakkimizda Sayfasi</td><td>YOK — 404</td><td><span class="badge r">EKSIK</span></td></tr>
+<tr><td>Iletisim Sayfasi</td><td>YOK — 404</td><td><span class="badge r">EKSIK</span></td></tr>
+<tr><td>Blog</td><td>YOK — 404</td><td><span class="badge r">EKSIK</span></td></tr>
+<tr><td>Gizlilik / KVKK</td><td>YOK — 404</td><td><span class="badge r">YASAL RISK</span></td></tr>
+<tr><td>Sosyal Medya</td><td>YOK (sadece GitHub linki)</td><td><span class="badge r">EKSIK</span></td></tr>
+<tr><td>Iletisim Email</td><td>info@botfusions.com</td><td><span class="badge a">DOLAYLI</span></td></tr>
+<tr><td>Toplam Sayfa</td><td>4 ana sayfa + 20 kategori filtresi</td><td><span class="badge a">SINIRLI</span></td></tr>
+<tr><td>Prompt Sayisi</td><td>200+ AI prompt</td><td><span class="badge g">ZENGIN</span></td></tr>
+<tr><td>Kategori Sayisi</td><td>20 (christmas, photography, nature, portrait, landscape, minimalist, vehicle, character, fashion, logo, branding, illustration, product, cartoon, typography, interior, 3d, retro, creative, awesome-gpt)</td><td><span class="badge g">IYI</span></td></tr>
+</table>
+</div></div>
+
+<!-- TEKNIK SEO ANALIZI -->
+<div class="sec"><div class="sec-t">Teknik SEO Analizi</div>
+<div class="fg">
+<div class="card success"><h3>HTTPS & SSL</h3><p style="font-size:13px;color:var(--m)">Gecerli SSL sertifikasi, tum trafik HTTPS uzerinden akiyor. Guvenlik acisindan temiz.</p></div>
+<div class="card success"><h3>robots.txt Yapilandirmasi</h3><p style="font-size:13px;color:var(--m)">Mevcut ve dogru yapilandirilmis. Tum crawler'lara izin verilmis, /api/ ve /admin/ hariç tutulmus. Sitemap referansi eklenmis.</p></div>
+<div class="card success"><h3>Meta Etiket Zenginligi</h3><p style="font-size:13px;color:var(--m)">Title, description, keywords, OG, Twitter Card, geo.tag, robots, googlebot direktifleri — hepsi mevcut ve dogru. Ornek gosterilecek duzeyde.</p></div>
+<div class="card success"><h3>Next.js Framework</h3><p style="font-size:13px;color:var(--m)">Modern React framework, SSR/SSG destegi var. Turbopack ile hizli build. Google'in JavaScript renderingine uygun.</p></div>
+<div class="card warn"><h3>SPA Mimarisi</h3><p style="font-size:13px;color:var(--m)">Site Single Page Application olarak calisiyor. JavaScript kapaliyken icerik goruntulenemeyebilir. Google rendering test edilmeli.</p></div>
+<div class="card warn"><h3>Sitemap Lastmod Tutarsizligi</h3><p style="font-size:13px;color:var(--m)">Tum 24 URL ayni lastmod degerine sahip (2026-05-24). Dogal olmayan pattern, Google freshness sinyalini zayiflatabilir.</p></div>
+<div class="card danger"><h3>llms.txt Eksik</h3><p style="font-size:13px;color:var(--m)">AI crawler'larin ilk kontrol ettigi dosya mevcut degil. AI prompt platformu icin en kritik teknik eksiklik.</p></div>
+<div class="card danger"><h3>JSON-LD Schema Yok</h3><p style="font-size:13px;color:var(--m)">Hicbir yapisal veri (structured data) bulunmuyor. Google rich results ve AI ozetleme icin sifir veri.</p></div>
+</div></div>
+
+<!-- SAYFA YAPISI VE URL ANALIZI -->
+<div class="sec"><div class="sec-t">Sayfa Yapisi ve URL Analizi</div>
+<div class="card">
+<table class="tbl">
+<tr><th>Sayfa</th><th>URL</th><th>Oncelik</th><th>Degisim</th><th>Durum</th></tr>
+<tr><td>Ana Sayfa</td><td>/</td><td>1.0</td><td>daily</td><td><span class="badge g">AKTIF</span></td></tr>
+<tr><td>Prompt Olustur</td><td>/generate</td><td>0.9</td><td>weekly</td><td><span class="badge g">AKTIF</span></td></tr>
+<tr><td>Giris Yap</td><td>/login</td><td>0.3</td><td>monthly</td><td><span class="badge a">FONKSIYONEL</span></td></tr>
+<tr><td>Kayit Ol</td><td>/register</td><td>0.3</td><td>monthly</td><td><span class="badge a">FONKSIYONEL</span></td></tr>
+<tr><td>Kategori: Christmas</td><td>/?category=christmas</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Photography</td><td>/?category=photography</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Nature</td><td>/?category=nature</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Portrait</td><td>/?category=portrait</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Landscape</td><td>/?category=landscape</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Minimalist</td><td>/?category=minimalist</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Vehicle</td><td>/?category=vehicle</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Character</td><td>/?category=character</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Fashion</td><td>/?category=fashion</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Logo</td><td>/?category=logo</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Branding</td><td>/?category=branding</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Illustration</td><td>/?category=illustration</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Product</td><td>/?category=product</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Cartoon</td><td>/?category=cartoon</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Typography</td><td>/?category=typography</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Interior</td><td>/?category=interior</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: 3D</td><td>/?category=3d</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Retro</td><td>/?category=retro</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Creative</td><td>/?category=creative</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+<tr><td>Kategori: Awesome GPT</td><td>/?category=awesome-gpt</td><td>0.7</td><td>daily</td><td><span class="badge b">FILTRE</span></td></tr>
+</table>
+</div>
+<div class="card warn" style="margin-top:12px">
+<h3>URL Yapisi Elestirisi</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.8">
+<strong>1. Filtreleme query string ile yapiliyor:</strong> Kategoriler ?category=... seklinde query parametresiyle filtreleniyor. Google query parametreli URL'leri ayri sayfa olarak indekslemekte zorlanir. Bunun yerine /kategori/christmas gibi path-bazli URL yapisi onerilir.<br>
+<strong>2. Sadece 4 gercek sayfa:</strong> Site yalnizca 4 ayri sayfaya sahip. Tum icerik ana sayfada toplanmis durumda.<br>
+<strong>3. Dinamik sayfa yok:</strong> Her prompt icin ayri detay sayfasi (orn: /prompt/nano-banana-pro) olusturulmamis. Bu, Google'in her bir promptu ayri bir icerik parcasi olarak indekslemesini engelliyor.<br>
+<strong>4. Blog/altyapi yok:</strong> Icerik pazarlamasi icin hicbir altyapi mevcut degil.
+</p></div></div>
+
+<!-- AI CRAWLER ERISIM ANALIZI -->
+<div class="sec"><div class="sec-t">AI Crawler Erisim Analizi</div>
+<div class="card">
+<table class="tbl">
+<tr><th>AI Crawler</th><th>User-Agent</th><th>robots.txt Durumu</th><th>llms.txt</th><th>Genel Erisim</th></tr>
+<tr><td>Googlebot</td><td>Googlebot</td><td><span class="badge g">IZINLI</span></td><td><span class="badge r">YOK</span></td><td><span class="badge a">KISMEN</span></td></tr>
+<tr><td>Bingbot</td><td>Bingbot</td><td><span class="badge g">IZINLI</span></td><td><span class="badge r">YOK</span></td><td><span class="badge a">KISMEN</span></td></tr>
+<tr><td>GPTBot (OpenAI)</td><td>GPTBot</td><td><span class="badge g">IZINLI</span></td><td><span class="badge r">YOK</span></td><td><span class="badge r">ENGELLI</span></td></tr>
+<tr><td>Google-Extended</td><td>Google-Extended</td><td><span class="badge g">IZINLI</span></td><td><span class="badge r">YOK</span></td><td><span class="badge r">ENGELLI</span></td></tr>
+<tr><td>PerplexityBot</td><td>PerplexityBot</td><td><span class="badge g">IZINLI</span></td><td><span class="badge r">YOK</span></td><td><span class="badge r">ENGELLI</span></td></tr>
+<tr><td>ClaudeBot (Anthropic)</td><td>ClaudeBot</td><td><span class="badge g">IZINLI</span></td><td><span class="badge r">YOK</span></td><td><span class="badge r">ENGELLI</span></td></tr>
+<tr><td>Applebot-Extended</td><td>Applebot-Extended</td><td><span class="badge g">IZINLI</span></td><td><span class="badge r">YOK</span></td><td><span class="badge r">ENGELLI</span></td></tr>
+<tr><td>Bytespider (ByteDance)</td><td>Bytespider</td><td><span class="badge g">IZINLI</span></td><td><span class="badge r">YOK</span></td><td><span class="badge r">ENGELLI</span></td></tr>
+<tr><td>FacebookBot</td><td>FacebookBot</td><td><span class="badge g">IZINLI</span></td><td><span class="badge r">YOK</span></td><td><span class="badge a">KISMEN</span></td></tr>
+</table>
+</div>
+<div class="card danger" style="margin-top:12px">
+<h3>Kritik Tespit: AI Crawler'lar Siteyi Gormuyor</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.8">
+<strong>robots.txt tum crawler'lara izin veriyor</strong> — bu iyi. Ancak <strong>llms.txt olmadigi icin</strong> ChatGPT, Claude, Perplexity, Gemini gibi AI sistemleri site icerigini yapisal olarak okuyamiyor. Bu AI sistemleri, egitim verisi ve referans olarak kullanacaklari siteleri oncelikle llms.txt uzerinden degerlendirir. AI prompt platformu olan bir sitenin AI crawler'larina kapali olmasi, platformun dogasina aykiri bir durumdur.<br><br>
+<strong>Cozum:</strong> llms.txt dosyasi olusturulmali, Markdown formatinda site ozeti ve onemli sayfalarin listesi eklenmeli. Ayrica robots.txt'ye AI crawler'lar icin ozel direktifler eklenmesi (ozellikle GPTBot ve Google-Extended icin izin teyidi) faydali olur.
+</p></div></div>
+
+<!-- SCHEMA DEGERLENDIRMESI -->
+<div class="sec"><div class="sec-t">Schema Degerlendirmesi</div>
+<div class="card">
+<ul class="check-list">
+<li><span style="color:var(--r);font-size:16px">&#10007;</span> <strong>WebApplication Schema</strong> — Yok. AI prompt platformu olarak temel schema eksik.</li>
+<li><span style="color:var(--r);font-size:16px">&#10007;</span> <strong>SoftwareApplication Schema</strong> — Yok. Yazilim/uygulama turu tanimlanmamis.</li>
+<li><span style="color:var(--r);font-size:16px">&#10007;</span> <strong>CreativeWork Schema</strong> — Yok. Prompt icerikleri yapisallastirilmamis.</li>
+<li><span style="color:var(--r);font-size:16px">&#10007;</span> <strong>Organization Schema</strong> — Yok. Siteyi yayinlayan kurulus tanimlanmamis.</li>
+<li><span style="color:var(--r);font-size:16px">&#10007;</span> <strong>BreadcrumbList Schema</strong> — Yok. Navigasyon yapisi schema'da yok.</li>
+<li><span style="color:var(--r);font-size:16px">&#10007;</span> <strong>FAQ Schema</strong> — Yok. SSS bolumu veya schema'si mevcut degil.</li>
+<li><span style="color:var(--r);font-size:16px">&#10007;</span> <strong>Article / BlogPosting Schema</strong> — Yok. Icerik yapilandirmasi yok.</li>
+<li><span style="color:var(--a);font-size:16px">&#9888;</span> <strong>ItemList Schema</strong> — Potansiyel var. Prompt listesi ItemList olarak isaretlenebilir.</li>
+<li><span style="color:var(--a);font-size:16px">&#9888;</span> <strong>Review Schema</strong> — Potansiyel var. Kullanici prompt degerlendirmeleri icin kullanilabilir.</li>
+<li><span style="color:var(--g);font-size:16px">&#10003;</span> <strong>Meta Tags</strong> — OG, Twitter Card, Geo tags mevcut (schema olmasa da temel metadata var).</li>
+</ul>
+</div>
+<div class="card danger" style="margin-top:12px">
+<h3>Schema Skoru: 5/100 — Kritik Seviyede Yetersiz</h3>
+<p style="font-size:13px;color:var(--m)">Sitede hicbir JSON-LD yapisal veri bulunmuyor. AI prompt platformu olarak en azindan <strong>WebApplication, Organization, ve ItemList</strong> schema'larinin eklenmesi gerekir. Ayrica her prompt icin <strong>CreativeWork</strong> schema'si olusturulmasi, AI sistemlerinin prompt iceriklerini anlamasini ve siniflandirmasini saglar. Bu, GEO stratejisinin temel taslarindan biridir.</p></div></div>
+
+<!-- ICERIK & E-E-A-T -->
+<div class="sec"><div class="sec-t">Icerik & E-E-A-T Degerlendirmesi</div>
+<div class="dim-grid">
+<div class="dim-card">
+<h4>Experience (Deneyim)</h4>
+<div class="dim-row"><span class="id">E01</span><span class="nm">Prompt olusturma deneyimi gostergesi</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">E02</span><span class="nm">Yazar/olusturucu profilleri</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">E03</span><span class="nm">Ornek cikti / demo gorseller</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">E04</span><span class="nm">Kullanici yorum/degerlendirme</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">E05</span><span class="nm">Kullanim istatistikleri</span><span class="sc sc-fail">0</span></div>
+</div>
+<div class="dim-card">
+<h4>Expertise (Uzmanlik)</h4>
+<div class="dim-row"><span class="id">E01</span><span class="nm">AI prompt uzmanligi kaniti</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">E02</span><span class="nm">Teknik dokumantasyon/rehber</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">E03</span><span class="nm">Prompt muhendisligi derinligi</span><span class="sc sc-part">40</span></div>
+<div class="dim-row"><span class="id">E04</span><span class="nm">Kategori uzmanligi cesitliligi</span><span class="sc sc-pass">70</span></div>
+<div class="dim-row"><span class="id">E05</span><span class="nm">Sektor otoritesi sinyali</span><span class="sc sc-fail">0</span></div>
+</div>
+<div class="dim-card">
+<h4>Authoritativeness (Otorite)</h4>
+<div class="dim-row"><span class="id">A01</span><span class="nm">Harici backlink profili</span><span class="sc sc-fail">5</span></div>
+<div class="dim-row"><span class="id">A02</span><span class="nm">Sosyal medya varligi</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">A03</span><span class="nm">Marka bahsedilmeleri</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">A04</span><span class="nm">Topluluk etkilesimi (@mention'lar)</span><span class="sc sc-part">30</span></div>
+<div class="dim-row"><span class="id">A05</span><span class="nm">GitHub varligi</span><span class="sc sc-part">25</span></div>
+</div>
+<div class="dim-card">
+<h4>Trustworthiness (Guven)</h4>
+<div class="dim-row"><span class="id">T01</span><span class="nm">Gizlilik politikasi sayfasi</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">T02</span><span class="nm">Kullanim kosullari sayfasi</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">T03</span><span class="nm">Iletisim bilgileri (adres/tel)</span><span class="sc sc-fail">0</span></div>
+<div class="dim-row"><span class="id">T04</span><span class="nm">SSL/HTTPS guvenligi</span><span class="sc sc-pass">100</span></div>
+<div class="dim-row"><span class="id">T05</span><span class="nm">Hakkimizda/kurumsal kimlik</span><span class="sc sc-fail">0</span></div>
+</div>
+</div>
+<div class="card danger" style="margin-top:16px">
+<h3>E-E-A-T Skoru: 15/100 — Neredeyse Gorunmez</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.8">
+<strong>Genel Degerlendirme:</strong> Site, E-E-A-T'nin dort boyutunda da ciddi eksikler gosteriyor. En guclu oldugu alan 200+ prompt ile kategori cesitliligi (Expertise boyutunda kismi puan). Ancak Experience (deneyim gostergesi), Authoritativeness (otorite) ve Trustworthiness (guven) boyutlari neredeyse tamamen bos.<br><br>
+<strong>Acil Aksiyon:</strong> Hakkimizda sayfasi olusturulmali, ekip/olusturucu bilgileri eklenmeli, prompt ornek ciktilari gorsellerle desteklenmeli, gizlilik ve kullanim kosullari sayfalari eklenmeli, iletisim bilgileri netlestirilmeli.
+</p></div></div>
+
+<!-- CORE-EEAT FRAMEWORK -->
+<div class="sec"><div class="sec-t">CORE-EEAT Framework</div>
+<div class="dim-grid">
+<div class="card info"><h3>C — Crawlability (Taranabilirlik)</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.6"><strong>Skor: 50/100</strong><br><br>
+<span style="color:var(--g)">+</span> robots.txt mevcut ve izin veriyor<br>
+<span style="color:var(--g)">+</span> sitemap.xml mevcut (24 URL)<br>
+<span style="color:var(--g)">+</span> Next.js SSR potansiyeli<br>
+<span style="color:var(--r)">-</span> SPA mimarisi JS-bagimli<br>
+<span style="color:var(--r)">-</span> Sadece 4 gercek sayfa<br>
+<span style="color:var(--r)">-</span> Kategori URL'leri query string tabanli</p></div>
+<div class="card info"><h3>O — Originality (Ozgunluk)</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.6"><strong>Skor: 45/100</strong><br><br>
+<span style="color:var(--g)">+</span> 200+ ozgun AI prompt<br>
+<span style="color:var(--g)">+</span> Turkce icerik (nadir dil avantaji)<br>
+<span style="color:var(--g)">+</span> 20 farkli kategori cesitliligi<br>
+<span style="color:var(--a)">~</span> Prompt kaynaklari belirsiz<br>
+<span style="color:var(--r)">-</span> Icerik derinligi sinirli (sadece prompt metni)</p></div>
+<div class="card info"><h3>R — Reliability (Guvenilirlik)</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.6"><strong>Skor: 15/100</strong><br><br>
+<span style="color:var(--g)">+</span> HTTPS aktif<br>
+<span style="color:var(--r)">-</span> Yasal sayfalar yok<br>
+<span style="color:var(--r)">-</span> Iletisim bilgisi sinirli<br>
+<span style="color:var(--r)">-</span> Kurumsal kimlik yok<br>
+<span style="color:var(--r)">-</span> KVKK/GDPR uyumu belirsiz</p></div>
+<div class="card info"><h3>E — Engagement (Etkilesim)</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.6"><strong>Skor: 20/100</strong><br><br>
+<span style="color:var(--g)">+</span> Kullanici kayit/giris sistemi var<br>
+<span style="color:var(--g)">+</span> Prompt paylasma ozelligi<br>
+<span style="color:var(--a)">~</span> @mention ile topluluk etkilesimi<br>
+<span style="color:var(--r)">-</span> Sosyal medya entegrasyonu yok<br>
+<span style="color:var(--r)">-</span> Yorum/degerlendirme sistemi yok<br>
+<span style="color:var(--r)">-</span> Paylasim butonlari yok</p></div>
+</div>
+
+<!-- CITE FRAMEWORK -->
+<div class="sec"><div class="sec-t">CITE Framework</div>
+<div class="dim-grid">
+<div class="card info"><h3>C — Citability (Alintilanabilirlik)</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.6"><strong>Skor: 10/100</strong><br><br>
+<span style="color:var(--r)">-</span> llms.txt yok — AI alintilama icin en kritik eksik<br>
+<span style="color:var(--r)">-</span> Her prompt icin kalici URL yok<br>
+<span style="color:var(--r)">-</span> JSON-LD CreativeWork yok<br>
+<span style="color:var(--r)">-</span> Icerik lisansi belirtilmemis<br>
+<span style="color:var(--a)">~</span> Sitemap URL'leri alintilanabilir</p></div>
+<div class="card info"><h3>I — Intent Match (Niyet Uyumu)</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.6"><strong>Skor: 55/100</strong><br><br>
+<span style="color:var(--g)">+</span> AI prompt aramalarina dogrudan hitap<br>
+<span style="color:var(--g)">+</span> Meta aciklama arama niyetiyle uyumlu<br>
+<span style="color:var(--a)">~</span> Kategori bazli hedefleme mevcut<br>
+<span style="color:var(--r)">-</span> Uzun kuyruklu anahtar kelime icerigi yok<br>
+<span style="color:var(--r)">-</span> Prompt detay/rehber icerigi yok</p></div>
+<div class="card info"><h3>T — Topical Authority (Konu Otoritesi)</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.6"><strong>Skor: 30/100</strong><br><br>
+<span style="color:var(--g)">+</span> AI prompt odakli net konu<br>
+<span style="color:var(--g)">+</span> 20 kategori ile genis kapsam<br>
+<span style="color:var(--r)">-</span> Blog/icerik pazarlamasi yok<br>
+<span style="color:var(--r)">-</span> Harici backlink/site referansi yok<br>
+<span style="color:var(--r)">-</span> Konu otoritesi kanitlayacak derin icerik yok</p></div>
+<div class="card info"><h3>E — Entity Consistency (Varlik Tutarliligi)</h3>
+<p style="font-size:13px;color:var(--m);line-height:1.6"><strong>Skor: 15/100</strong><br><br>
+<span style="color:var(--g)">+</span> Marka adi tutarli (AİTASVİR STÜDYO)<br>
+<span style="color:var(--r)">-</span> Google Knowledge Graph varligi yok<br>
+<span style="color:var(--r)">-</span> Organization schema yok<br>
+<span style="color:var(--r)">-</span> Sosyal medya profilleri yok<br>
+<span style="color:var(--r)">-</span> Wikidata/Wikipedia entity yok<br>
+<span style="color:var(--a)">~</span> Email domain farkli (botfusions.com)</p></div>
+</div>
+
+<!-- ONCELIKLI AKSIYON PLANI -->
+<div class="sec"><div class="sec-t">Oncelikli Aksiyon Plani</div>
+
+<div class="pri p1">
+<div class="pri-n">P1</div>
+<div class="pri-c">
+<h4>llms.txt Olustur</h4>
+<p>AI prompt platformunun en kritik GEO eksigi. Site kok dizininde llms.txt dosyasi olustur. Icerik: site kisa ozeti, prompt kategorileri listesi, onemli sayfalarin Markdown ozetleri. Bu tek dosya, tum AI crawler'larin siteyi anlamasini saglayacak.</p>
+<p class="imp"><span class="badge r">P1</span> Tahmini GEO Etkisi: <strong>+15 puan</strong> | Zorluk: Kolay | Sure: 1-2 saat</p>
+</div></div>
+
+<div class="pri p1">
+<div class="pri-n">P1</div>
+<div class="pri-c">
+<h4>JSON-LD Schema Ekle (WebApplication + Organization + ItemList)</h4>
+<p>Site geneline WebApplication ve Organization schema'lari ekle. Ana sayfaya ItemList schema'si ile prompt kategorilerini yapisallastir. Her prompt icin CreativeWork schema taslagi hazirla. Google Search Console'da schema dogrulamasi yap.</p>
+<p class="imp"><span class="badge r">P1</span> Tahmini GEO Etkisi: <strong>+12 puan</strong> | Zorluk: Orta | Sure: 3-5 saat</p>
+</div></div>
+
+<div class="pri p1">
+<div class="pri-n">P1</div>
+<div class="pri-c">
+<h4>Temel Sayfalari Olustur (Hakkimizda, Iletisim, Gizlilik, Kosullar)</h4>
+<p>Hakkimizda sayfasi, iletisim bilgileri, KVKK uyumlu gizlilik politikasi ve kullanim kosullari sayfalari olustur. E-E-A-T sinyallerinin temelini bu sayfalar olusturur. Marka guvenilirligi icin sart.</p>
+<p class="imp"><span class="badge r">P1</span> Tahmini GEO Etkisi: <strong>+10 puan</strong> | Zorluk: Orta | Sure: 1-2 gun</p>
+</div></div>
+
+<div class="pri p2">
+<div class="pri-n">P2</div>
+<div class="pri-c">
+<h4>Prompt Detay Sayfalari Olustur (Dinamik Routing)</h4>
+<p>Her prompt icin ayri detay sayfasi olustur: /prompt/[slug] formatinda. Her sayfada prompt metni, kategorisi, etiketleri, ornek cikti gorseli, kullanici yorumlari ve CreativeWork JSON-LD schema'si bulunsun. Bu, Google indekslemesini 4 sayfadan 200+ sayfaya cikarir.</p>
+<p class="imp"><span class="badge a">P2</span> Tahmini GEO Etkisi: <strong>+8 puan</strong> | Zorluk: Orta-Zor | Sure: 3-5 gun</p>
+</div></div>
+
+<div class="pri p2">
+<div class="pri-n">P2</div>
+<div class="pri-c">
+<h4>Sosyal Medya ve Marka Varligi Olustur</h4>
+<p>X (Twitter), LinkedIn, Instagram hesaplari olustur. Site footer'ina sosyal medya linkleri ekle. SameAs ozelligi ile Organization schema'sina sosyal profilleri ekle. AI prompt toplulugunda aktif ol.</p>
+<p class="imp"><span class="badge a">P2</span> Tahmini GEO Etkisi: <strong>+5 puan</strong> | Zorluk: Kolay | Sure: 1-2 gun</p>
+</div></div>
+
+<div class="pri p2">
+<div class="pri-n">P2</div>
+<div class="pri-c">
+<h4>Blog ve Icerik Pazarlamasi Baslat</h4>
+<p>"AI Prompt Rehberi", "En Iyi Flux Promptlari 2026", "SDXL ile Profesyonel Gorsel Olusturma" gibi konularda blog yazilari yayinla. Her yaziya Article JSON-LD schema ekle. Haftalik yayin takvimi olustur.</p>
+<p class="imp"><span class="badge a">P2</span> Tahmini GEO Etkisi: <strong>+5 puan</strong> | Zorluk: Orta | Sure: Devamli</p>
+</div></div>
+
+<div class="pri p3">
+<div class="pri-n">P3</div>
+<div class="pri-c">
+<h4>URL Yapisini Iyilestir (Path-Bazli Kategoriler)</h4>
+<p>?category=christmas yerine /kategori/christmas formatina gec. SEO-dostu, kalici ve anlamli URL yapisi. 301 yonlendirmeleriyle mevcut query string URL'leri koru.</p>
+<p class="imp"><span class="badge b">P3</span> Tahmini GEO Etkisi: <strong>+3 puan</strong> | Zorluk: Orta | Sure: 1-2 gun</p>
+</div></div>
+
+<div class="pri p3">
+<div class="pri-n">P3</div>
+<div class="pri-c">
+<h4>Prompt Ornek Ciktilari ve Karsilastirma Sistemi</h4>
+<p>Her prompt icin AI modellerinden alinmis ornek cikti gorselleri ekle. Farkli modellerde ayni promptun sonuclarini karsilastir. Bu, Experience sinyalini dogrudan guclendirir.</p>
+<p class="imp"><span class="badge b">P3</span> Tahmini GEO Etkisi: <strong>+3 puan</strong> | Zorluk: Orta | Sure: Devamli</p>
+</div></div>
+
+<div class="pri p3">
+<div class="pri-n">P3</div>
+<div class="pri-c">
+<h4>Canonical URL ve Sitemap Iyilestirmesi</h4>
+<p>Tum sayfalara canonical URL ekle. Sitemap.xml'deki lastmod degerlerini sayfa guncelleme tarihlerine gore dogru sekilde ayarla. Kategori sayfalari icin changefreq degerlerini kullanim sikligina gore ayarla.</p>
+<p class="imp"><span class="badge b">P3</span> Tahmini GEO Etkisi: <strong>+2 puan</strong> | Zorluk: Kolay | Sure: 2-3 saat</p>
+</div></div>
+</div>
+
+<!-- SKOR OZETI -->
+<div class="sec"><div class="sec-t">Skor Ozeti</div>
+<div class="fg">
+<div class="card"><h3 style="color:var(--b);margin-bottom:8px">SEO Klasik</h3>
+<div style="font-size:2rem;font-weight:900;color:var(--b)">42<span style="font-size:1rem">/100</span></div>
+<p style="font-size:12px;color:var(--m);margin-top:4px">Meta etiketler iyi, robots.txt mevcut, sitemap mevcut. Ancak SPA mimarisi, alt sayfa eksikligi ve backlink yoklugu klasik SEO'yu sinirliyor.</p></div>
+<div class="card"><h3 style="color:var(--r);margin-bottom:8px">GEO / AI Gorunurluk</h3>
+<div style="font-size:2rem;font-weight:900;color:var(--r)">16<span style="font-size:1rem">/100</span></div>
+<p style="font-size:12px;color:var(--m);margin-top:4px">llms.txt yok, JSON-LD schema yok, AI crawler rehberligi yok. AI prompt platformu icin sasirtici derecede dusuk.</p></div>
+<div class="card"><h3 style="color:var(--a);margin-bottom:8px">E-E-A-T Skoru</h3>
+<div style="font-size:2rem;font-weight:900;color:var(--a)">15<span style="font-size:1rem">/100</span></div>
+<p style="font-size:12px;color:var(--m);margin-top:4px">Kimliksiz platform. Yazar bilgisi, kurumsal kimlik, yasal sayfalar ve sosyal kanit tamamen eksik.</p></div>
+<div class="card"><h3 style="color:var(--g);margin-bottom:8px">Tahmini Iyilestirme Sonrasi</h3>
+<div style="font-size:2rem;font-weight:900;color:var(--g)">55-65<span style="font-size:1rem">/100</span></div>
+<p style="font-size:12px;color:var(--m);margin-top:4px">P1 aksiyonlari (llms.txt, schema, temel sayfalar) ile 55+, P2/P3 ile 65+ GEO skoru hedeflenebilir. AI prompt sektorunde dogru yapilandirma ile 80+ potansiyeli var.</p></div>
+</div></div>
+
+</div>
+<div class="ft">
+<strong>Botfusions</strong> · GEO+SEO Kapsamli Analiz Raporu<br>
+Rapor Tarihi: 24 Mayis 2026 · Site: aitasvir.com · Altyapi: Next.js (React + Turbopack)<br>
+<span style="font-size:11px;color:var(--m);margin-top:8px;display:block">Disclaimer: Bu rapor, belirtilen tarihte site uzerinde yapilan otomatik ve manuel analiz sonucu olusturulmustur. Skorlar, tespit edilen kriterlere dayanmaktadir. Sitenin performansi zaman icinde degisebilir. Bu rapor bir yatirim tavsiyesi degildir.</span>
+</div>
+</body></html>

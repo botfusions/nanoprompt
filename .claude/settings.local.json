@@ -12,7 +12,9 @@
       "Bash(NODE_OPTIONS=\"--use-system-ca\" npm audit fix --force)",
       "Bash(NODE_OPTIONS=\"--use-system-ca\" npm run build)",
       "Bash(rm -f App.tsx.bak vite.config.ts.bak)",
-      "Bash(rm -rf scratch/)"
+      "Bash(rm -rf scratch/)",
+      "Bash(curl *)",
+      "Bash(npx next *)"
     ]
   }
 }

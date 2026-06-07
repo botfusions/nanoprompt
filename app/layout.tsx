@@ -77,6 +77,59 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
+function OrganizationJsonLd() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "BotFusions",
+    url: "https://www.aitasvir.com",
+    logo: "https://www.aitasvir.com/images/logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "info@botfusions.com",
+      contactType: "customer support",
+      availableLanguage: ["Turkish", "English"],
+    },
+    sameAs: [],
+    description:
+      "AITASVIR STUDYO - AI gorsel ve video olusturma promptlari koleksiyonu. 3700+ hazir prompt ile yapay zeka gorsel uretimi.",
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+}
+
+function WebSiteJsonLd() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "AITASVIR STUDYO",
+    url: "https://www.aitasvir.com",
+    description:
+      "En iyi yapay zeka gorsel ve video olusturma promptlari koleksiyonu. Flux, SDXL ve AI video modelleri ile dogrudan promptlardan imaj ve video uretin.",
+    inLanguage: "tr-TR",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://www.aitasvir.com/?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -99,6 +152,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://pbs.twimg.com" />
         <link rel="dns-prefetch" href="https://replicate.delivery" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

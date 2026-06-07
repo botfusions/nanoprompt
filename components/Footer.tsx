@@ -93,8 +93,16 @@ export function Footer() {
             </section>
 
             {/* Copyright */}
-            <section className="bg-brand-black py-4 px-4">
+            <section className="bg-brand-black py-6 px-4">
                 <div className="container mx-auto text-center">
+                    {/* Navigation Links */}
+                    <nav className="flex flex-wrap justify-center gap-4 mb-4">
+                        <a href="/hakkimizda" className="text-white/70 text-sm hover:text-brand-yellow transition-colors">Hakkimizda</a>
+                        <a href="/iletisim" className="text-white/70 text-sm hover:text-brand-yellow transition-colors">Iletisim</a>
+                        <a href="/gizlilik" className="text-white/70 text-sm hover:text-brand-yellow transition-colors">Gizlilik Politikasi</a>
+                        <a href="/kosullar" className="text-white/70 text-sm hover:text-brand-yellow transition-colors">Kullanim Kosullari</a>
+                    </nav>
+
                     {/* AI Disclaimer */}
                     <p className="text-yellow-400/90 text-xs mb-3 flex items-center justify-center gap-2">
                         <span>⚠️</span>
@@ -103,7 +111,7 @@ export function Footer() {
                         </span>
                     </p>
                     <p className="text-white/60 text-sm">
-                        © 2024 IMAGE PROMPT. Tüm hakları saklıdır.
+                        © 2024-2026 AITASVIR STUDYO. Tum haklari saklidir.
                     </p>
                     <a
                         href="mailto:info@botfusions.com"
