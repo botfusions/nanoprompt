@@ -81,8 +81,8 @@ export async function getAllPrompts(): Promise<Prompt[]> {
   // Fetch from the main table only as twitter prompts are migrated here
   const { data, error } = await supabase
     .from('banana_prompts')
-    .select('*')
-    .order('created_at', { ascending: false });
+    .select('id, title, prompt, categories, author, created_at, images, featured, display_number, source, user_id, approved')
+    .order('created_at', { ascending: false }) as { data: any[] | null; error: any };
 
   // Load GPT Image 2 Prompts
   const gpt2Prompts: Prompt[] = GPT_IMAGE_2_PROMPTS.map((p: any) => ({

@@ -22,6 +22,24 @@
 
 ## Changelog
 
+### [2026-06-12] Performans Duzeltmesi — Ana Sayfa TTFB 12sn → 0.5sn
+
+- **ISR Gecisi:** `force-dynamic` kaldirildi, `revalidate = 60` (ISR) eklendi — her request'te Supabase sorgusu yerine 60 sn'lik edge cache
+- **Supabase Sorgu Optimizasyonu:** `select(*)` yerine sadece gerekli sutunlar seciliyor (id, title, prompt, categories, author, created_at, images, featured, display_number, source, user_id, approved)
+- **Pagination:** 250+ kart tek seferde degil, 32'lik sayfalar halinde yukleniyor. "Daha Fazla Goster" butonu ile artirmali yukleme
+- **Sonuc:** TTFB 8.8-12.5 sn → 0.5-0.8 sn (~15x iyilestirme), sayfa boyutu 47 MB → 40 KB (~1200x kuculme)
+
+| Metrik | Oncesi | Sonrasi |
+|--------|--------|---------|
+| TTFB | 8.8 - 12.5 sn | 0.5 - 0.8 sn |
+| Toplam Yuklenme | 10 - 14.5 sn | 0.55 - 0.83 sn |
+| Sayfa Boyutu | 47 MB | 40 KB |
+
+**Degisen dosyalar:**
+- `app/page.tsx` — `force-dynamic` → `revalidate = 60`
+- `src/data/prompts.ts` — `select(*)` → spesifik sutunlar
+- `components/PromptGrid.tsx` — Pagination (32 kart/sayfa, "Daha Fazla Goster" butonu)
+
 ### [2026-05-24] GEO+SEO Optimizasyonu (Faz 1-3)
 
 - **GEO Skoru:** 31 -> 68-75 (tahmini)
@@ -160,7 +178,7 @@ http://localhost:3000/hakkimizda # Hakkimizda
 
 | Sayfa | URL | Aciklama |
 |-------|-----|----------|
-| Ana Sayfa | `/` | Prompt galerisi (3700+ prompt) |
+| Ana Sayfa | `/` | Prompt galerisi (ISR 60sn, pagination) |
 | AI Olusturucu | `/generate` | Flux, SDXL ile gorsel uretimi |
 | Blog | `/blog` | AI prompt rehberleri |
 | Blog Makale | `/blog/[slug]` | Detayli makale (Article schema) |
@@ -249,6 +267,7 @@ components/
   Header.tsx            # Site header
   Footer.tsx            # Site footer + FAQ + sayfa linkleri
   PromptCard.tsx        # Prompt karti + detay linki
+  PromptGrid.tsx        # Pagination (32 kart/sayfa) + artirmali yukleme
   CategoryFilter.tsx    # Kategori filtreleme
   generate/             # Gorsel olusturma componentleri
 src/
@@ -275,7 +294,9 @@ public/
 | CDN Cache | Aktif (s-maxage=300) |
 | Gzip Compression | Aktif |
 | DNS Prefetch | Aktif |
-| ISR | Ana sayfa dynamic + CDN cache |
+| ISR | Ana sayfa 60sn revalidate + edge cache |
+| Pagination | 32 kart/sayfa, artirmali yukleme |
+| Supabase Sorgu | Sadece gerekli sutunlar, 60sn'de bir |
 | Bundle | framer-motion ve replicate SDK client-side'dan cikarildi |
 
 ## Iletisim

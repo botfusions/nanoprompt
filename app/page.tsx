@@ -1,7 +1,7 @@
 import { getAllPrompts } from "@/src/data/prompts";
 import HomeClient from "./HomeClient";
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60; // ISR: 60 saniyede bir revalidate, her request'te DB sorgulama
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://www.aitasvir.com";
 
