@@ -1,24 +1,38 @@
-# Uygulama Planı - Prompt Veri Çıkarma Maratonu
+# Uygulama Planı - Spesifik Prompt Kartları Görselleştirme (8 Kart)
 
-Bu plan, 301 olan mevcut prompt sayısını 1228 hedefine ulaştırmak için aşamalı bir veri çıkarma stratejisini içerir.
+Bu plan, kullanıcının belirttiği 8 adet prompt kartının (`4606, 4591, 4571, 4548, 4533, 4524, 4512, 4515`) eksik görsellerini tamamlamayı ve veritabanını güncellemeyi amaçlar.
 
-## Faz 1: Prompt Sayısını 1228+ Hedefine Çıkarma
+## Kullanıcı İncelemesi Gereken Konular
 
-### Strateji
-1. **GitHub Veri Kaynağı Kullanımı**: `YouMind-OpenLab/awesome-nano-banana-pro-prompts` reposu üzerinden tam veri setini (JSON formatında) çekeceğiz.
-2. **Otomatik Çıkarma (Turbo Mod)**: Güvenli komutlar için kullanıcı onayı beklemeden (`SafeToAutoRun: true`) hızlı ilerlenecek.
-3. **Mükerrer Kontrolü**: Mevcut 301 prompt ile yenileri karşılaştırılarak veri bütünlüğü korunacak.
+> [!IMPORTANT]
+> - **4606** numaralı prompt için yerel görsel eksiktir. Bu görsel `generate_image` aracıyla üretilecek ve `public/images/bb645269-db38-4809-a9c3-fee713a9f535.png` olarak kaydedilecektir.
+> - Diğer 7 kart (`4591, 4571, 4548, 4533, 4524, 4512, 4515`) için yerelde görsel dosyaları bulunmaktadır. Ancak bu dosyalar **git repomuzda untracked** durumdadır. Bu sebeple canlı yayındaki sitede kırık/görselsiz görünmektedirler.
+> - Tüm bu 8 görsel git repomuza eklenecek ve Vercel üzerinde otomatik deploy tetiklenecektir.
+> - Veritabanındaki `images` alanları ve `approved` onay alanları güncellenecektir.
 
-### Teknik Detaylar
-- Script: `scripts/extract_github_data.js` (Yeni oluşturulacak).
-- Veri Kaynağı: GitHub API / Raw Content.
+## Önerilen Değişiklikler
 
-## Verifikasyon Planı
-- `PROMPTS.length` değerinin 650+ olduğu kontrol edilecek.
-- Rastgele seçilen yeni promptların UI üzerinde doğru göründüğü teyit edilecek.
+### 1. Görsel Oluşturma ve Kopyalama
+
+#### [NEW] [bb645269-db38-4809-a9c3-fee713a9f535.png](file:///c:/Users/user/Downloads/Project%20Claude/NANO%20%20PROMPT%20STUDYO%20V2/public/images/bb645269-db38-4809-a9c3-fee713a9f535.png)
+- 4606 numaralı Dünya Kupası 2026 temalı prompt için üretilecek görsel.
+
+### 2. Veritabanı Güncellemeleri
+
+#### [MODIFY] [update_database_images.js](file:///c:/Users/user/Downloads/Project%20Claude/NANO%20%20PROMPT%20STUDYO%20V2/scripts/update_database_images.js)
+- Script, bu 8 kartın ID'lerini içerecek şekilde güncellenecek ve Supabase'de hem `images` yollarını (`/images/<id>.png`) hem de `approved: true` değerlerini set edecektir.
 
 ---
 
-## Faz 2: Hedef 950 (Gelecek Aşama)
-## Faz 3: Hedef 1228 (Final)
+## Verifikasyon Planı
+
+### Otomatik Testler
+- `npx eslint .`
+- `npx tsc --noEmit`
+- `npx prettier --check .`
+
+### Manuel Doğrulama
+- `git status` ile tüm görsellerin repoya eklendiği doğrulanacak.
+- Güncelleme sonrasında yerel sunucuda (`npm run dev`) kartların görsellerinin yüklendiği teyit edilecek.
+
 
