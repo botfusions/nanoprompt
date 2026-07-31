@@ -142,29 +142,18 @@ async function importTwitterPrompts() {
         const tp = twitterPrompts[i];
         const currentDisplayNumber = nextDisplayNumber + i;
 
-        // Validation Check
-        const hasPrompt = !!(tp.prompt || tp.content);
-        const hasImage = !!(tp.images || tp.image_url || (Array.isArray(tp.images) && tp.images.length > 0));
-
-        if (!hasPrompt || !hasImage) {
-            missingInfo.push({
-                index: i,
-                display_number: currentDisplayNumber,
-                id: tp.id,
-                title: tp.title || `No Title #${currentDisplayNumber}`,
-                missing: [
-                    !hasPrompt ? 'Prompt text' : null,
-                    !hasImage ? 'Image' : null
-                ].filter(Boolean).join(', ')
-            });
-        }
+        // Görsel listesini normalize et: boş dizi, boş string ve tekil string hepsi doğru ele alınsın
+        const imageList = [
+            ...(Array.isArray(tp.images) ? tp.images : tp.images ? [tp.images] : []),
+            ...(tp.image_url ? [tp.image_url] : [])
+        ].filter(u => typeof u === 'string' && u.trim());
 
         // Veriyi banana_prompts formatına dönüştür
         const newPrompt = {
             id: generateUUID(),
             title: tp.title || `Twitter Prompt #${currentDisplayNumber}`,
             prompt: cleanPromptText(tp.prompt || tp.content || ''),
-            images: tp.images || (tp.image_url ? [tp.image_url] : []),
+            images: imageList,
             author: tp.author || tp.username || '@TwitterUser',
             source: tp.source || tp.tweet_url || 'Twitter',
             categories: tp.categories || ['twitter', 'imported'],
@@ -173,6 +162,26 @@ async function importTwitterPrompts() {
             display_number: currentDisplayNumber,
             created_at: new Date().toISOString()
         };
+
+        // Validation Check - temizlenmiş veri üzerinden yapılır, çünkü cleanPromptText
+        // metni tamamen boşaltabilir ve boş görsel dizisi ([]) JS'te truthy'dir.
+        const hasPrompt = !!newPrompt.prompt.trim();
+        const hasImage = newPrompt.images.length > 0;
+
+        if (!hasPrompt || !hasImage) {
+            missingInfo.push({
+                index: i,
+                display_number: currentDisplayNumber,
+                id: newPrompt.id,          // banana_prompts'taki yeni kayıt (staging silineceği için bu kalıcı referans)
+                twitter_id: tp.id,
+                title: newPrompt.title,
+                prompt: hasPrompt ? newPrompt.prompt : null,   // görsel üretimi için gerekli
+                missing: [
+                    !hasPrompt ? 'Prompt text' : null,
+                    !hasImage ? 'Image' : null
+                ].filter(Boolean).join(', ')
+            });
+        }
 
         // Insert işlemi
         const { data, error } = await supabase
@@ -202,6 +211,12 @@ async function importTwitterPrompts() {
             console.log(`   🔸 #${String(item.display_number).padStart(5, '0')} | ${item.title} | Eksik: ${item.missing}`);
         });
         console.log("\nBu kayıtlar yine de import edildi, ancak kontrol edilmelidir.");
+
+        // staging tablosu birazdan silinecek - liste diske yazılmazsa kaybolur
+        const reportPath = path.resolve(process.cwd(), 'eksik_bilgi_raporu.json');
+        fs.writeFileSync(reportPath, JSON.stringify(missingInfo, null, 2));
+        console.log(`📝 Liste kaydedildi: ${reportPath}`);
+        console.log("   (görsel üretimi bu dosyadaki id'ler üzerinden yapılacak)");
     }
 
     console.log("\n" + "-".repeat(60));

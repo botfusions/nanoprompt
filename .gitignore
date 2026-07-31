@@ -52,3 +52,8 @@ next-env.d.ts
 *.sw?
 
 *.bak
+
+# analiz ciktilari (yeniden uretilebilir)
+eksik_rapor.json
+eksik_bilgi_raporu.json
+gorselsiz_*.json

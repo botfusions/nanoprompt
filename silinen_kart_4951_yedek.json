@@ -1,0 +1,30 @@
+{
+  "id": "c003e73b-f6ec-441b-806f-e971f309fb83",
+  "title": "Gemini NanoBanana",
+  "prompt": "",
+  "summary": null,
+  "categories": [
+    "twitter",
+    "imported"
+  ],
+  "author": "hemayxn",
+  "date": null,
+  "images": [
+    "https://pbs.twimg.com/media/HMHZbyzbUAAhjLs.jpg?name=orig"
+  ],
+  "featured": false,
+  "prompt_cn": null,
+  "model": "Nano banana pro",
+  "created_at": "2026-07-01T16:20:43.04+03:00",
+  "source": "https://x.com/hemayxn/status/2072176403664285748",
+  "user_id": null,
+  "display_number": 4951,
+  "use_case": null,
+  "visual_style": null,
+  "camera_framing": null,
+  "lighting_type": null,
+  "subject_type": null,
+  "conversion_score": null,
+  "short_reason": null,
+  "approved": false
+}
