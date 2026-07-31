@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAllPrompts } from "@/src/data/prompts";
+import { CopyButton } from "./CopyButton";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_BASE_URL || "https://www.aitasvir.com";
@@ -160,16 +161,7 @@ export default async function PromptDetailPage({ params }: Props) {
 
             {/* Actions */}
             <div className="flex gap-3">
-              <button
-                onClick={() => {
-                  if (typeof navigator !== "undefined") {
-                    navigator.clipboard.writeText(prompt.prompt || "");
-                  }
-                }}
-                className="bg-brand-cyan text-brand-black font-bold px-6 py-3 border-2 border-brand-black shadow-neo hover:-translate-y-0.5 transition-transform text-sm"
-              >
-                Promptu Kopyala
-              </button>
+              <CopyButton text={prompt.prompt || ""} />
               <Link
                 href={`/generate?prompt=${encodeURIComponent(prompt.prompt?.slice(0, 200) || "")}`}
                 className="bg-brand-purple text-white font-bold px-6 py-3 border-2 border-brand-black shadow-neo hover:-translate-y-0.5 transition-transform text-sm"

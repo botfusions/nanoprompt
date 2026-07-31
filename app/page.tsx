@@ -49,13 +49,21 @@ function ItemListJsonLd() {
   );
 }
 
+// Ilk ekranda gorunen kart sayisi. Kalanlar /api/prompts uzerinden lazy geliyor -
+// tum veri setini client component prop'u olarak gecmek RSC payload'ini HTML'e
+// gomuyordu (9.1 MB / istek).
+const INITIAL_PAGE_SIZE = 32;
+
 export default async function Home() {
   const prompts = await getAllPrompts();
 
   return (
     <>
       <ItemListJsonLd />
-      <HomeClient initialPrompts={prompts} />
+      <HomeClient
+        initialPrompts={prompts.slice(0, INITIAL_PAGE_SIZE)}
+        initialTotal={prompts.length}
+      />
     </>
   );
 }
