@@ -53,6 +53,22 @@ const tests = {
         assert.ok(items.length <= 100, `limit sinirlanmadi: ${items.length}`);
     },
 
+    async 'prompt detay sayfasi cache\'lenebilir'() {
+        // Bu rota once "no-store" ile calisiyordu: her bot istegi bir fonksiyon
+        // calistirip tum tabloyu cekiyordu. generateStaticParams/revalidate
+        // kaldirilirsa sessizce o hale doner - bu test onu yakalar.
+        const res = await fetch(`${BASE}/prompt/4010`);
+        assert.strictEqual(res.status, 200);
+        const cc = res.headers.get('cache-control') || '';
+        assert.ok(!/no-store/.test(cc), `prompt sayfasi cache'lenmiyor: ${cc}`);
+        assert.ok(/s-maxage|max-age/.test(cc), `cache suresi yok: ${cc}`);
+    },
+
+    async 'gecersiz prompt id 404 doner'() {
+        const res = await fetch(`${BASE}/prompt/boyle-bir-id-yok`);
+        assert.strictEqual(res.status, 404);
+    },
+
     async 'payload sismesi geri gelmedi'() {
         const html = await (await fetch(`${BASE}/`)).text();
         const kartSayisi = [...html.matchAll(/display_number/g)].length;

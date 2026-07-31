@@ -77,7 +77,27 @@ export const CHRISTMAS_CARDS_RANGE = {
 // Fallback for types if needed, but mainly we use the fetcher now
 export const PROMPTS: Prompt[] = [];
 
-export async function getAllPrompts(): Promise<Prompt[]> {
+// Tum tabloyu (5000+ satir, tam prompt metinleriyle) cekip siralamayi ve kart
+// numaralarini JS'te hesapliyoruz - bu yuzden DB'de sayfalama yapilamiyor.
+// Memo olmadan /prompt/[id] her istekte BU ISI IKI KEZ yapiyordu
+// (generateMetadata + sayfa govdesi), ustelik cache'siz oldugu icin her bot
+// isteginde bastan.
+// ponytail: lambda instance basina bellek cache; yetmezse unstable_cache/Redis
+const TTL_MS = 60_000;
+let memo: { at: number; data: Promise<Prompt[]> } | null = null;
+
+export function getAllPrompts(): Promise<Prompt[]> {
+  if (memo && Date.now() - memo.at < TTL_MS) return memo.data;
+  // Promise'i cache'liyoruz ki es zamanli cagrilar tek sorguya dusssun.
+  // Hata durumunda memo'yu birakmiyoruz, yoksa gecici bir DB hatasi
+  // TTL boyunca sabitlenirdi.
+  const p = fetchAllPrompts();
+  memo = { at: Date.now(), data: p };
+  p.catch(() => { memo = null; });
+  return p;
+}
+
+async function fetchAllPrompts(): Promise<Prompt[]> {
   // Fetch from the main table only as twitter prompts are migrated here
   const { data, error } = await supabase
     .from('banana_prompts')

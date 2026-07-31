@@ -7,6 +7,22 @@ import { CopyButton } from "./CopyButton";
 const BASE_URL =
   process.env.NEXT_PUBLIC_BASE_URL || "https://www.aitasvir.com";
 
+// ISR: bu rota cache'siz ("no-store") calisiyordu, yani her istek bir fonksiyon
+// calistirip tum tabloyu cekiyordu. 5000+ prompt sayfasi var ve botlar bunlari
+// sirayla geziyor - cache olmadan her ziyaret tam maliyet demek.
+//
+// generateStaticParams bos dizi donuyor: hicbir sayfa build'de onceden
+// uretilmiyor (5000+ sayfayi prerender etmek build'i sisirir), ama rota
+// "ISR" moduna geciyor - ilk istek render edip cache'liyor, sonrakiler
+// CDN'den donuyor. revalidate tek basina bunu yapmiyor, dinamik segment
+// generateStaticParams olmadan her zaman on-demand kaliyor.
+export const revalidate = 3600;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  return [];
+}
+
 interface Props {
   params: Promise<{ id: string }>;
 }

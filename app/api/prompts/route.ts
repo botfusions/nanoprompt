@@ -1,24 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getAllPrompts, Prompt } from "@/src/data/prompts";
+import { getAllPrompts } from "@/src/data/prompts";
 import { matchesFilter } from "@/src/data/filter";
 
 export const revalidate = 60;
 
 const MAX_LIMIT = 100;
 
-// getAllPrompts() sirali kart numarasini ve siralamayi TUM veri seti uzerinde
-// hesapliyor, o yuzden DB'de sayfalama yapilamiyor - tamami cekilip burada
-// dilimleniyor. Sicak lambda icinde 60sn memoize ediyoruz ki her istek 5300
-// satiri yeniden cekmesin.
-// ponytail: instance-basina bellek cache; hit orani yetmezse Redis/unstable_cache'e tasi
-let memo: { at: number; data: Prompt[] } | null = null;
-
-async function getPromptsCached(): Promise<Prompt[]> {
-    if (memo && Date.now() - memo.at < 60_000) return memo.data;
-    const data = await getAllPrompts();
-    memo = { at: Date.now(), data };
-    return data;
-}
+// Not: 60sn memo artik getAllPrompts()'un kendi icinde - tum cagiranlar paylasiyor.
 
 export async function GET(request: NextRequest) {
     const sp = request.nextUrl.searchParams;
@@ -30,7 +18,7 @@ export async function GET(request: NextRequest) {
         Math.max(1, parseInt(sp.get("limit") || "32", 10) || 32)
     );
 
-    const all = await getPromptsCached();
+    const all = await getAllPrompts();
     const filtered = all.filter((p) => matchesFilter(p, category, q));
 
     return NextResponse.json(
