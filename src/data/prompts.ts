@@ -1,6 +1,5 @@
 import { supabase } from "@/src/lib/supabase";
 import { LOCAL_IMAGE_OVERRIDES, LOCAL_PROMPT_OVERRIDES } from './local_overrides';
-import GPT_IMAGE_2_PROMPTS from './gpt_image_2_prompts.json';
 
 export interface Prompt {
   id: string;
@@ -39,8 +38,7 @@ export const CATEGORIES = [
   "İç Tasarım",
   "3D",
   "Retro",
-  "Yaratıcı",
-  "Awesome GPT"
+  "Yaratıcı"
 ];
 
 // Mapping Turkish to English tags for filtering
@@ -64,8 +62,7 @@ export const CATEGORY_MAP: Record<string, string> = {
   "İç Tasarım": "interior",
   "3D": "3d",
   "Retro": "retro",
-  "Yaratıcı": "creative",
-  "Awesome GPT": "awesome-gpt"
+  "Yaratıcı": "creative"
 };
 
 // Yılbaşı Kartları display_number aralığı (import edilenler)
@@ -103,21 +100,6 @@ async function fetchAllPrompts(): Promise<Prompt[]> {
     .from('banana_prompts')
     .select('id, title, prompt, categories, author, created_at, images, featured, display_number, source, user_id, approved')
     .order('created_at', { ascending: false }) as { data: any[] | null; error: any };
-
-  // Load GPT Image 2 Prompts
-  const gpt2Prompts: Prompt[] = GPT_IMAGE_2_PROMPTS.map((p: any) => ({
-    id: `gpt2_${p.id}`,
-    title: p.title,
-    prompt: p.prompt,
-    summary: p.description,
-    categories: ["Awesome GPT"],
-    author: p.author || "YouMind",
-    date: p.publishedAt || "2026-04-29",
-    images: p.images.map((img: string) => `/assets/gpt_image_2/${img}`),
-    source: 'migration',
-    featured: false,
-    approved: true
-  }));
 
   if (error) {
     console.error("Error fetching banana_prompts:", error);
@@ -175,8 +157,7 @@ ONE image, 4:5, "artistic process" aesthetic. </instruction>`;
     });
   }
 
-  // Combine with GPT-2 Prompts
-  const allData = [...(data || []), ...gpt2Prompts];
+  const allData = data || [];
 
   // Silinecek kartların ID'leri (duplicate ve sorunlu kartlar)
   const EXCLUDED_IDS = [

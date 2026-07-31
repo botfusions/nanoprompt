@@ -11,10 +11,10 @@ import { Prompt, CATEGORY_MAP, CHRISTMAS_CARDS_RANGE } from "./prompts";
 /**
  * /kategori/[slug] sayfasinin kendi kategori eslesmesi.
  *
- * matchesFilter'dan bilerek ayri: burada bosluklar tireye cevriliyor
- * ("Awesome GPT" -> "awesome-gpt") ve yilbasi display_number ozel durumu yok.
- * Sayfalama API'ye tasinirken kategori sayfasinin davranisi birebir kalsin diye
- * ayni fonksiyona zorlanmadi.
+ * matchesFilter'dan bilerek ayri: burada DB'deki etiketin bosluklari tireye
+ * cevriliyor ve yilbasi display_number ozel durumu yok - yilbasi kategorisi
+ * sayfasi etikete gore, ana sayfadaki filtre numara araligina gore calisiyor.
+ * Sayfalama API'ye tasinirken bu davranis birebir kalsin diye birlestirilmedi.
  */
 export function matchesCategorySlug(p: Prompt, slug: string): boolean {
     return (

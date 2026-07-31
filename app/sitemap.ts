@@ -22,7 +22,6 @@ const CATEGORIES: Record<string, string> = {
   "3D": "3d",
   "Retro": "retro",
   "Yaratıcı": "creative",
-  "Awesome GPT": "awesome-gpt",
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
