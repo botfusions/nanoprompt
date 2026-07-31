@@ -8,6 +8,22 @@ import { Prompt, CATEGORY_MAP, CHRISTMAS_CARDS_RANGE } from "./prompts";
  * render ayni fonksiyonu kullaniyor - boylece sayfalama sunucuya tasinirken
  * filtreleme davranisi birebir ayni kaliyor.
  */
+/**
+ * /kategori/[slug] sayfasinin kendi kategori eslesmesi.
+ *
+ * matchesFilter'dan bilerek ayri: burada bosluklar tireye cevriliyor
+ * ("Awesome GPT" -> "awesome-gpt") ve yilbasi display_number ozel durumu yok.
+ * Sayfalama API'ye tasinirken kategori sayfasinin davranisi birebir kalsin diye
+ * ayni fonksiyona zorlanmadi.
+ */
+export function matchesCategorySlug(p: Prompt, slug: string): boolean {
+    return (
+        p.categories?.some(
+            (c) => c.toLowerCase().replace(/\s+/g, "-") === slug
+        ) || false
+    );
+}
+
 export function matchesFilter(
     p: Prompt,
     activeCategory: string,

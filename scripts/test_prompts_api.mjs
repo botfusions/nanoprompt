@@ -69,6 +69,33 @@ const tests = {
         assert.strictEqual(res.status, 404);
     },
 
+    async 'kategori sayfasi da payload sismiyor'() {
+        // /kategori/[slug] ayni hataya sahipti: tum kategori prop olarak gecince
+        // 329 KB HTML uretiyordu. 20 kategori sayfasi var, botlar hepsini geziyor.
+        const html = await (await fetch(`${BASE}/kategori/photography`)).text();
+        const kartSayisi = [...html.matchAll(/display_number/g)].length;
+        assert.ok(kartSayisi <= 64,
+            `kategori sayfasina ${kartSayisi} kart gomulmus`);
+    },
+
+    async 'kategori API slug ile filtreliyor'() {
+        const { items, total } = await get('slug=photography&limit=32');
+        assert.ok(total > 0, 'photography slug bos dondu');
+        assert.ok(items.every(i =>
+            i.categories?.some(c => c.toLowerCase().replace(/\s+/g, '-') === 'photography')),
+            'slug disi kart sizdi');
+    },
+
+    async 'robots egitim botlarini kapatiyor'() {
+        // Bu satirlar dusrse 5297 sayfalik katalog yine bedavaya taranir.
+        const txt = (await (await fetch(`${BASE}/robots.txt`)).text()).toLowerCase();
+        for (const bot of ['gptbot', 'google-extended', 'applebot-extended']) {
+            const blok = txt.split(/\n\s*\n/).find(b => b.includes(`user-agent: ${bot}`));
+            assert.ok(blok, `${bot} kurali yok`);
+            assert.ok(/^disallow: \/$/m.test(blok), `${bot} hala acik: ${blok}`);
+        }
+    },
+
     async 'payload sismesi geri gelmedi'() {
         const html = await (await fetch(`${BASE}/`)).text();
         const kartSayisi = [...html.matchAll(/display_number/g)].length;

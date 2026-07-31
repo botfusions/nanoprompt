@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getAllPrompts } from "@/src/data/prompts";
-import { matchesFilter } from "@/src/data/filter";
+import { matchesFilter, matchesCategorySlug } from "@/src/data/filter";
 
 export const revalidate = 60;
 
@@ -12,6 +12,8 @@ export async function GET(request: NextRequest) {
     const sp = request.nextUrl.searchParams;
     const category = sp.get("category") || "Tümü";
     const q = sp.get("q") || "";
+    // /kategori/[slug] sayfasi buradan besleniyor - kendi eslesme kurali var.
+    const slug = sp.get("slug");
     const offset = Math.max(0, parseInt(sp.get("offset") || "0", 10) || 0);
     const limit = Math.min(
         MAX_LIMIT,
@@ -19,7 +21,9 @@ export async function GET(request: NextRequest) {
     );
 
     const all = await getAllPrompts();
-    const filtered = all.filter((p) => matchesFilter(p, category, q));
+    const filtered = slug
+        ? all.filter((p) => matchesCategorySlug(p, slug))
+        : all.filter((p) => matchesFilter(p, category, q));
 
     return NextResponse.json(
         {

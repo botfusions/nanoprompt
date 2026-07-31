@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPrompts, CATEGORY_MAP } from "@/src/data/prompts";
+import { matchesCategorySlug } from "@/src/data/filter";
 import CategoryPageClient from "./CategoryPageClient";
+
+// Ana sayfadaki ile ayni sebep: tum kategori listesini client component prop'u
+// olarak gecmek RSC payload'ini HTML'e gomuyordu (buyuk kategorilerde 329 KB).
+// Kalani /api/prompts?slug=... uzerinden lazy geliyor.
+const INITIAL_PAGE_SIZE = 32;
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_BASE_URL || "https://www.aitasvir.com";
@@ -55,12 +61,16 @@ export default async function CategoryPage({ params }: Props) {
   }
 
   const allPrompts = await getAllPrompts();
-  const englishTag = CATEGORY_MAP[categoryName] || "";
   const categoryPrompts = allPrompts.filter((p) =>
-    p.categories?.some(
-      (c) => c.toLowerCase().replace(/\s+/g, "-") === englishTag
-    )
+    matchesCategorySlug(p, slug)
   );
 
-  return <CategoryPageClient categoryName={categoryName} prompts={categoryPrompts} />;
+  return (
+    <CategoryPageClient
+      categoryName={categoryName}
+      slug={slug}
+      initialPrompts={categoryPrompts.slice(0, INITIAL_PAGE_SIZE)}
+      initialTotal={categoryPrompts.length}
+    />
+  );
 }
