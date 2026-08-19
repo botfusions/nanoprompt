@@ -22,6 +22,16 @@
 
 ## Changelog
 
+### [2026-08-19] Vercel ISR Write & Önbellek Optimizasyonu
+
+Vercel ISR (Incremental Static Regeneration) yazım maliyetlerini ve bot taramalarının yol açtığı sunucu yükünü minimize etmek için önbellek mimarisi optimize edildi:
+
+- **Ana Sayfa (`app/page.tsx`):** `revalidate` süresi 60 saniyeden **1 saate (`3600`)** çıkarıldı. Dakikalık ISR yeniden üretim tetiklenmesi önlendi.
+- **Prompt Detay Sayfaları (`app/prompt/[id]/page.tsx`):** `revalidate` süresi 1 saatten **24 saate (`86400`)** çıkarıldı. `React.cache()` ile `getPrompt(id)` tekilleştirilerek `generateMetadata` ve sayfa gövdesinin aynı istekte çift veri arama yapması engellendi.
+- **Kategori Sayfaları (`app/kategori/[slug]/page.tsx`):** Açık bir **24 saat (`revalidate = 86400`)** ISR kuralı eklendi.
+- **API Prompts Rotası (`app/api/prompts/route.ts`):** `revalidate = 3600` ve CDN `Cache-Control` başlığı `s-maxage=3600, stale-while-revalidate=86400` olarak güncellendi.
+- **Sitemap (`app/sitemap.ts`):** Arama motoru botlarının sitemap'i her kontrolde "değişmiş" algılamasına ve gereksiz re-crawl döngülerine girmesine yol açan anlık `new Date()` dinamik tarihi kaldırılarak sabit stabil tarihe (`2026-05-24`) bağlandı.
+
 ### [2026-08-01] Bot Trafigi Maliyet Duzeltmesi + Awesome GPT Kaldirildi
 
 Vercel kapasitesinin neden dolduğu arastirildi. Sorun ziyaretci sayisi degil,
