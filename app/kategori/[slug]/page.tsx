@@ -4,6 +4,8 @@ import { getAllPrompts, CATEGORY_MAP } from "@/src/data/prompts";
 import { matchesCategorySlug } from "@/src/data/filter";
 import CategoryPageClient from "./CategoryPageClient";
 
+export const revalidate = 86400; // ISR: 24 saatte bir revalidate
+
 // Ana sayfadaki ile ayni sebep: tum kategori listesini client component prop'u
 // olarak gecmek RSC payload'ini HTML'e gomuyordu (buyuk kategorilerde 329 KB).
 // Kalani /api/prompts?slug=... uzerinden lazy geliyor.

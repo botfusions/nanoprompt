@@ -25,78 +25,78 @@ const CATEGORIES: Record<string, string> = {
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const lastUpdated = new Date("2026-05-24");
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: now,
+      lastModified: lastUpdated,
       changeFrequency: "daily",
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/generate`,
-      lastModified: now,
+      lastModified: lastUpdated,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/hakkimizda`,
-      lastModified: new Date("2026-05-24"),
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/iletisim`,
-      lastModified: new Date("2026-05-24"),
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${BASE_URL}/gizlilik`,
-      lastModified: new Date("2026-05-24"),
+      lastModified: lastUpdated,
       changeFrequency: "yearly",
       priority: 0.4,
     },
     {
       url: `${BASE_URL}/kosullar`,
-      lastModified: new Date("2026-05-24"),
+      lastModified: lastUpdated,
       changeFrequency: "yearly",
       priority: 0.4,
     },
     {
       url: `${BASE_URL}/login`,
-      lastModified: now,
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.3,
     },
     {
       url: `${BASE_URL}/register`,
-      lastModified: now,
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.3,
     },
     {
       url: `${BASE_URL}/blog`,
-      lastModified: new Date("2026-05-24"),
+      lastModified: lastUpdated,
       changeFrequency: "weekly",
       priority: 0.7,
     },
     {
       url: `${BASE_URL}/blog/en-iyi-ai-prompt-yazma-teknikleri`,
-      lastModified: new Date("2026-05-24"),
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/blog/flux-vs-sdxl-model-karsilastirmasi`,
-      lastModified: new Date("2026-05-24"),
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/blog/portre-fotografciligi-icin-prompt-rehberi`,
-      lastModified: new Date("2026-05-24"),
+      lastModified: lastUpdated,
       changeFrequency: "monthly",
       priority: 0.6,
     },
@@ -105,7 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const categoryPages: MetadataRoute.Sitemap = Object.entries(CATEGORIES).map(
     ([cat, slug]) => ({
       url: `${BASE_URL}/kategori/${slug}`,
-      lastModified: now,
+      lastModified: lastUpdated,
       changeFrequency: "daily" as const,
       priority: 0.7,
     })

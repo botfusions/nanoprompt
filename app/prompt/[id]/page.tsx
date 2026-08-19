@@ -1,27 +1,26 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { cache } from "react";
 import { getAllPrompts } from "@/src/data/prompts";
 import { CopyButton } from "./CopyButton";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_BASE_URL || "https://www.aitasvir.com";
 
-// ISR: bu rota cache'siz ("no-store") calisiyordu, yani her istek bir fonksiyon
-// calistirip tum tabloyu cekiyordu. 5000+ prompt sayfasi var ve botlar bunlari
-// sirayla geziyor - cache olmadan her ziyaret tam maliyet demek.
-//
-// generateStaticParams bos dizi donuyor: hicbir sayfa build'de onceden
-// uretilmiyor (5000+ sayfayi prerender etmek build'i sisirir), ama rota
-// "ISR" moduna geciyor - ilk istek render edip cache'liyor, sonrakiler
-// CDN'den donuyor. revalidate tek basina bunu yapmiyor, dinamik segment
-// generateStaticParams olmadan her zaman on-demand kaliyor.
-export const revalidate = 3600;
+// ISR: Bu sayfa on-demand ISR olarak üretilip 24 saat (86400 sn) cache'lenir.
+// Böylece bot ve ziyaretçi trafiğinde Vercel ISR Write maliyeti minimize edilir.
+export const revalidate = 86400;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
   return [];
 }
+
+const getPrompt = cache(async (id: string) => {
+  const prompts = await getAllPrompts();
+  return prompts.find((p) => p.id === id || String(p.displayNumber) === id);
+});
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -29,8 +28,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const prompts = await getAllPrompts();
-  const prompt = prompts.find((p) => p.id === id || String(p.displayNumber) === id);
+  const prompt = await getPrompt(id);
 
   if (!prompt) {
     return { title: "Prompt Bulunamadi | AITASVIR STUDYO" };
@@ -65,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function CreativeWorkJsonLd({
   prompt,
 }: {
-  prompt: NonNullable<ReturnType<typeof findPrompt>>;
+  prompt: NonNullable<Awaited<ReturnType<typeof getPrompt>>>;
 }) {
   const cardNumber = `#${String(prompt.displayNumber).padStart(5, "0")}`;
   const structuredData = {
@@ -91,16 +89,9 @@ function CreativeWorkJsonLd({
   );
 }
 
-function findPrompt(prompts: Awaited<ReturnType<typeof getAllPrompts>>, id: string) {
-  return prompts.find(
-    (p) => p.id === id || String(p.displayNumber) === id
-  );
-}
-
 export default async function PromptDetailPage({ params }: Props) {
   const { id } = await params;
-  const prompts = await getAllPrompts();
-  const prompt = findPrompt(prompts, id);
+  const prompt = await getPrompt(id);
 
   if (!prompt) {
     notFound();

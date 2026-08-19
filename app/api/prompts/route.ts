@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getAllPrompts } from "@/src/data/prompts";
 import { matchesFilter, matchesCategorySlug } from "@/src/data/filter";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 const MAX_LIMIT = 100;
 
@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
         {
             headers: {
                 "Cache-Control":
-                    "public, s-maxage=60, stale-while-revalidate=300",
+                    "public, s-maxage=3600, stale-while-revalidate=86400",
             },
         }
     );
