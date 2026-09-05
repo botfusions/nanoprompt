@@ -6,7 +6,7 @@
 
 **AI Gorsel Olusturucu + Prompt Koleksiyonu**
 
-[![Prompts](https://img.shields.io/badge/Prompts-5017-brightgreen?style=flat-square)](/)
+[![Prompts](https://img.shields.io/badge/Prompts-5464-brightgreen?style=flat-square)](/)
 [![Next.js](https://img.shields.io/badge/Next.js-16+-black?style=flat-square)](https://nextjs.org)
 [![Tailwind](https://img.shields.io/badge/Tailwind-CSS_v4-38bdf8?style=flat-square)](https://tailwindcss.com)
 [![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ecf8e?style=flat-square)](https://supabase.com)
@@ -21,6 +21,16 @@
 ---
 
 ## Changelog
+
+### [2026-09-05] Toplu Prompt İçe Aktarımı (159 Yeni Kart - #05306 - #05464)
+
+`scripts/import_twitter_prompts.js` betiği çalıştırılarak Supabase üzerindeki ara hazırlık tablosu olan `twitter_prompts` içerisindeki yeni promptlar ana tabloya aktarıldı:
+
+- **Aktarılan Kayıt:** 159 yeni prompt başarıyla `banana_prompts` tablosuna aktarıldı.
+- **Sıra Numaralandırma:** Mevcut son numara olan `5305` kaldığı yerden devam ettirilerek `#05306` — `#05464` aralığı atandı.
+- **Tablo Temizliği:** Aktarımı tamamlanan 159 kayıt `twitter_prompts` tablosundan otomatik olarak silindi.
+- **Eksik Bilgi Denetimi:** Görseli henüz bulunmayan 2 adet kart (#05210 ve #05304) tespit edilerek `eksik_bilgi_raporu.json` dosyasına kaydedildi.
+- **Genel Durum:** Toplam kart indeksi **5.464**'e ulaştı, 0 hata ile işlem tamamlandı.
 
 ### [2026-08-19] Vercel ISR Write & Önbellek Optimizasyonu
 
