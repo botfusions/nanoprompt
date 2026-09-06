@@ -2,7 +2,8 @@
 
 import { X, Sparkles, UserPlus } from "lucide-react";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
 
 interface GhostSignupModalProps {
@@ -11,8 +12,13 @@ interface GhostSignupModalProps {
 }
 
 export function GhostSignupModal({ isOpen, onClose }: GhostSignupModalProps) {
+    const [mounted, setMounted] = useState(false);
     // Derive visibility directly from isOpen prop
     const isVisible = isOpen;
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         // Prevent scrolling when modal is open
@@ -26,11 +32,11 @@ export function GhostSignupModal({ isOpen, onClose }: GhostSignupModalProps) {
         };
     }, [isOpen]);
 
-    if (!isOpen) return null;
+    if (!mounted || !isOpen) return null;
 
-    return (
+    return createPortal(
         <div className={cn(
-            "fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300",
+            "fixed inset-0 z-[99999] flex items-center justify-center p-4 transition-all duration-300",
             isVisible ? "opacity-100 backdrop-blur-sm bg-brand-black/20" : "opacity-0 backdrop-blur-none bg-transparent"
         )}>
             {/* Modal Container */}
@@ -87,6 +93,7 @@ export function GhostSignupModal({ isOpen, onClose }: GhostSignupModalProps) {
                 <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-brand-yellow border-2 border-brand-black z-[-1] rounded-none"></div>
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-brand-black z-[-1] rounded-none"></div>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 }

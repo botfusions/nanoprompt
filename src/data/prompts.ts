@@ -16,6 +16,7 @@ export interface Prompt {
   source?: 'migration' | 'user' | 'twitter'; // Prompt kaynağı
   user_id?: string; // Kullanıcı promptı ise Firebase UID
   approved?: boolean; // Admin onayı
+  model?: string; // Model adı (GPT-2, ChatGPT, Nano Banana vb.)
 }
 
 export const CATEGORIES = [
@@ -98,7 +99,7 @@ async function fetchAllPrompts(): Promise<Prompt[]> {
   // Fetch from the main table only as twitter prompts are migrated here
   const { data, error } = await supabase
     .from('banana_prompts')
-    .select('id, title, prompt, categories, author, created_at, images, featured, display_number, source, user_id, approved')
+    .select('id, title, prompt, categories, author, created_at, images, featured, display_number, source, user_id, approved, model')
     .order('created_at', { ascending: false }) as { data: any[] | null; error: any };
 
   if (error) {

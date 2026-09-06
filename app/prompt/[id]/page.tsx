@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { cache } from "react";
+import { Bot } from "lucide-react";
 import { getAllPrompts } from "@/src/data/prompts";
 import { CopyButton } from "./CopyButton";
+import { cn } from "@/lib/utils";
+import { resolvePromptModel } from "@/lib/modelHelper";
+import { PromptDetailImages } from "./PromptDetailImages";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_BASE_URL || "https://www.aitasvir.com";
@@ -34,7 +38,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Prompt Bulunamadi | AITASVIR STUDYO" };
   }
 
-  const title = prompt.title || `Prompt #${String(prompt.displayNumber).padStart(5, "0")}`;
+  const rawTitle = prompt.title || `Prompt #${String(prompt.displayNumber).padStart(5, "0")}`;
+  // Aynı başlığı taşıyan başka prompt'lar varsa kart numarasıyla ayırt et
+  // (SEO: 32+ sayfa "Gemini NanoBanana" duplicate title'ı buradan geliyordu)
+  const prompts = await getAllPrompts();
+  const dupCount = prompts.filter((p) => p.title === prompt.title).length;
+  const title =
+    dupCount > 1 ? `${rawTitle} #${String(prompt.displayNumber).padStart(5, "0")}` : rawTitle;
   const description =
     prompt.prompt?.slice(0, 160) || "AI gorsel olusturma promptu.";
 
@@ -98,7 +108,7 @@ export default async function PromptDetailPage({ params }: Props) {
   }
 
   const cardNumber = `#${String(prompt.displayNumber).padStart(5, "0")}`;
-  const imageUrl = prompt.images?.[0];
+  const modelInfo = resolvePromptModel(prompt);
 
   return (
     <main className="min-h-screen bg-white">
@@ -114,19 +124,14 @@ export default async function PromptDetailPage({ params }: Props) {
         </nav>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Image */}
-          <div className="aspect-square bg-gray-100 border-2 border-brand-black/10 overflow-hidden">
-            {imageUrl ? (
-              <img
-                src={imageUrl}
-                alt={prompt.title || cardNumber}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center text-brand-black/30">
-                Gorsel mevcut degil
-              </div>
-            )}
+          {/* Images with Lightbox */}
+          <div>
+            <PromptDetailImages
+              images={prompt.images || []}
+              title={prompt.title}
+              cardNumber={cardNumber}
+              promptId={prompt.id}
+            />
           </div>
 
           {/* Details */}
@@ -139,7 +144,17 @@ export default async function PromptDetailPage({ params }: Props) {
             </h1>
 
             {/* Meta */}
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <div
+                className={cn(
+                  "flex items-center gap-1 text-xs px-2 py-1 font-bold border rounded-sm tracking-wider uppercase",
+                  modelInfo.badgeClass,
+                )}
+                title={`Model: ${modelInfo.name}`}
+              >
+                <Bot className="w-3.5 h-3.5" />
+                <span>{modelInfo.name}</span>
+              </div>
               {prompt.categories?.map((cat) => (
                 <Link
                   key={cat}

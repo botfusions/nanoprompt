@@ -9,6 +9,8 @@ export function GenerateClient() {
     <>
       <Header />
       <main className="min-h-screen bg-bg-gray">
+        {/* SEO: görsel olarak gizli H1 — /generate sayfasında H1 eksikti */}
+        <h1 className="sr-only">AI Görsel &amp; Video Oluşturucu — AITASVIR STUDYO</h1>
         <GeneratePageContent />
       </main>
       <Footer />

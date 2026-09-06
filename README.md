@@ -22,6 +22,16 @@
 
 ## Changelog
 
+### [2026-09-06] Dinamik Model Rozetleri (GPT-2, ChatGPT, Nano Banana) & Tam Ekran Lightbox Modal
+
+Web sayfasındaki kart rozetlerinin doğruluğu ve kullanıcı görsel deneyimi geliştirildi:
+
+- **Dinamik Model Rozeti:** Tüm kartlarda daha önce hardcoded olarak yer alan "NANO BANANA" etiketi dinamik hale getirildi. Gelen post verisindeki model bilgisine ve prompt metnine göre **GPT IMAGE 2**, **CHATGPT 2.0**, **GPT-2**, **GPT-4o**, **CHATGPT**, **MIDJOURNEY**, **FLUX**, **DALL-E** veya **NANO BANANA** rozetleri ilgili renk temalarıyla otomatik gösterilmeye başlandı ([`lib/modelHelper.ts`](file:///Users/cenktk/Documents/NANO%20%20PROMPT%20STUDYO%20V2/lib/modelHelper.ts)).
+- **Görsel Büyütme (Image Lightbox Modal):** Kart görsellerine tıklama (`cursor-zoom-in`) ve "GÖRSELİ AÇ" butonu eklendi. Tıklandığında `createPortal` ile doğrudan `document.body` üzerinde açılan (`z-[99999]`), klavye ile gezinilebilir tam ekran görsel modalı entegre edildi ([`components/ImageLightboxModal.tsx`](file:///Users/cenktk/Documents/NANO%20%20PROMPT%20STUDYO%20V2/components/ImageLightboxModal.tsx)).
+- **Detay Sayfası Desteği:** Aynı Lightbox ve model rozeti desteği [`app/prompt/[id]/page.tsx`](file:///Users/cenktk/Documents/NANO%20%20PROMPT%20STUDYO%20V2/app/prompt/%5Bid%5D/page.tsx) sayfasına da uyarlandı.
+- **İçe Aktarma İyileştirmesi:** [`scripts/import_twitter_prompts.js`](file:///Users/cenktk/Documents/NANO%20%20PROMPT%20STUDYO%20V2/scripts/import_twitter_prompts.js) betiğindeki model varsayılanı akıllı tespit ile güncellendi.
+- **Detaylı Rapor:** [`docs/HANDOFF_MODEL_BADGES_AND_IMAGE_LIGHTBOX.md`](file:///Users/cenktk/Documents/NANO%20%20PROMPT%20STUDYO%20V2/docs/HANDOFF_MODEL_BADGES_AND_IMAGE_LIGHTBOX.md) dosyasına eklendi.
+
 ### [2026-09-05] Toplu Prompt İçe Aktarımı (159 Yeni Kart - #05306 - #05464)
 
 `scripts/import_twitter_prompts.js` betiği çalıştırılarak Supabase üzerindeki ara hazırlık tablosu olan `twitter_prompts` içerisindeki yeni promptlar ana tabloya aktarıldı:

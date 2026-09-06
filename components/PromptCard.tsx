@@ -11,11 +11,14 @@ import {
   Share2,
   Bookmark,
   Bot,
+  Maximize2,
 } from "lucide-react";
 import { Prompt } from "@/src/data/prompts";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
 import { GhostSignupModal } from "./GhostSignupModal";
+import { resolvePromptModel } from "@/lib/modelHelper";
+import { ImageLightboxModal } from "./ImageLightboxModal";
 
 interface PromptCardProps {
   prompt: Prompt;
@@ -53,6 +56,16 @@ export function PromptCard({
   const [copied, setCopied] = useState(false);
   const [showGhostModal, setShowGhostModal] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const modelInfo = resolvePromptModel(prompt);
+
+  const handleOpenLightbox = (index: number = 0) => {
+    if (!prompt.images || prompt.images.length === 0) return;
+    setLightboxIndex(index);
+    setIsLightboxOpen(true);
+  };
 
   // Sabit numara - sıralama değişse bile aynı kalır
   // Numara yoksa gösterme
@@ -159,9 +172,15 @@ export function PromptCard({
                   @{prompt.author}
                 </span>
               </span>
-              <div className="flex items-center gap-1 text-[10px] px-1.5 py-0.5 font-bold border rounded-sm tracking-wider uppercase bg-brand-yellow/20 text-brand-black border-brand-yellow/50">
+              <div
+                className={cn(
+                  "flex items-center gap-1 text-[10px] px-1.5 py-0.5 font-bold border rounded-sm tracking-wider uppercase transition-colors",
+                  modelInfo.badgeClass,
+                )}
+                title={`Model: ${modelInfo.name}`}
+              >
                 <Bot className="w-3 h-3" />
-                <span>NANO BANANA</span>
+                <span>{modelInfo.name}</span>
               </div>
             </div>
           </div>
@@ -232,7 +251,12 @@ export function PromptCard({
               return (
                 <div
                   key={idx}
-                  className={cn("relative overflow-hidden", layoutClass)}
+                  onClick={() => handleOpenLightbox(idx)}
+                  className={cn(
+                    "relative overflow-hidden cursor-zoom-in",
+                    layoutClass,
+                  )}
+                  title="Görseli büyütmek için tıklayın"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -252,6 +276,18 @@ export function PromptCard({
               );
             })}
           </div>
+
+          {/* Hover zoom overlay button */}
+          {prompt.images && prompt.images.length > 0 && (
+            <button
+              type="button"
+              onClick={() => handleOpenLightbox(0)}
+              className="absolute bottom-2 right-2 z-10 opacity-0 group-hover/image:opacity-100 transition-opacity bg-brand-black/85 hover:bg-brand-black text-white text-[11px] font-black tracking-wider uppercase px-2.5 py-1 flex items-center gap-1.5 shadow-[2px_2px_0px_#fff] border border-white/40 cursor-pointer"
+            >
+              <Maximize2 className="w-3 h-3 text-brand-yellow" />
+              <span>GÖRSELİ AÇ</span>
+            </button>
+          )}
         </div>
 
         {/* Description / Content */}
@@ -372,6 +408,16 @@ export function PromptCard({
       <GhostSignupModal
         isOpen={showGhostModal}
         onClose={() => setShowGhostModal(false)}
+      />
+
+      <ImageLightboxModal
+        isOpen={isLightboxOpen}
+        onClose={() => setIsLightboxOpen(false)}
+        images={prompt.images || []}
+        initialIndex={lightboxIndex}
+        title={prompt.title}
+        cardNumber={cardNumber}
+        promptId={prompt.id}
       />
     </div>
   );

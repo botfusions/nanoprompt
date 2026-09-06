@@ -148,6 +148,27 @@ async function importTwitterPrompts() {
             ...(tp.image_url ? [tp.image_url] : [])
         ].filter(u => typeof u === 'string' && u.trim());
 
+        // Model tespiti: Gelen postta model belirtilmişse veya metinde GPT, Midjourney vb. geçiyorsa onu kullan
+        let detectedModel = tp.model;
+        const fullText = `${tp.title || ''} ${tp.prompt || tp.content || ''}`;
+        if (!detectedModel || detectedModel === 'Nano banana pro') {
+            if (/\b(gpt\s*image\s*2|gpt-?2|chatgpt\s*2(\.0)?)\b/i.test(fullText)) {
+                detectedModel = /chatgpt\s*2/i.test(fullText) ? 'ChatGPT 2' : 'GPT Image 2';
+            } else if (/\b(gpt-?4o|gpt\s*4o)\b/i.test(fullText)) {
+                detectedModel = 'GPT-4o';
+            } else if (/\b(chatgpt|gpt-?4|gpt\s*4)\b/i.test(fullText)) {
+                detectedModel = 'ChatGPT';
+            } else if (/\b(midjourney)\b/i.test(fullText) || /\b--v\s*[56]\b/i.test(fullText)) {
+                detectedModel = 'Midjourney';
+            } else if (/\b(flux(\.1)?)\b/i.test(fullText)) {
+                detectedModel = 'Flux';
+            } else if (/\b(dall-?e(\s*3)?)\b/i.test(fullText)) {
+                detectedModel = 'DALL-E';
+            } else {
+                detectedModel = tp.model || 'Nano banana pro';
+            }
+        }
+
         // Veriyi banana_prompts formatına dönüştür
         const newPrompt = {
             id: generateUUID(),
@@ -158,7 +179,7 @@ async function importTwitterPrompts() {
             source: tp.source || tp.tweet_url || 'Twitter',
             categories: tp.categories || ['twitter', 'imported'],
             featured: tp.featured || false,
-            model: tp.model || 'Nano banana pro',
+            model: detectedModel,
             display_number: currentDisplayNumber,
             created_at: new Date().toISOString()
         };
