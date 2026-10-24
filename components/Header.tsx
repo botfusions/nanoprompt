@@ -20,6 +20,12 @@ export function Header() {
         </Link>
         <div className="flex items-center gap-3">
           <Link
+            href="/kategori/video"
+            className="bg-brand-yellow text-brand-black border-2 border-brand-black px-4 py-2 shadow-neo font-black text-sm uppercase tracking-wider hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all rounded-none hidden sm:flex items-center gap-2"
+          >
+            Video Promptlar
+          </Link>
+          <Link
             href="/generate"
             className="bg-brand-purple text-white border-2 border-brand-black px-4 py-2 shadow-neo font-black text-sm uppercase tracking-wider hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all rounded-none flex items-center gap-2"
           >

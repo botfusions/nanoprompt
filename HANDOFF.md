@@ -1,36 +1,37 @@
-# NANO PROMPT STUDYO V2 — Oturum Handoff (2026-09-06)
+# NANO PROMPT STUDYO V2 — Oturum Handoff (2026-10-25)
 
-## 1. Dinamik Model Rozetleri & Tam Ekran Lightbox Modal (En Son)
-1. **Dinamik Model Çözümleme (`lib/modelHelper.ts`):**
-   - Tüm kartlarda sabit yazan `NANO BANANA` rozeti yerine, gelen post içeriği ve prompt metnine göre model tespiti:
-     - `GPT IMAGE 2` / `CHATGPT 2.0` / `GPT-2` (Zümrüt yeşili rozet)
-     - `GPT-4o` / `CHATGPT` (Teal rozet)
-     - `MIDJOURNEY` (Mor rozet)
-     - `FLUX` (Mavi rozet)
-     - `DALL-E 3` / `STABLE DIFFUSION`
-     - `NANO BANANA` (Sarı rozet)
-   - `components/PromptCard.tsx` ve `app/prompt/[id]/page.tsx` sayfalarına entegre edildi.
-   - `src/data/prompts.ts` içindeki Supabase sorgusuna `model` alanı eklendi ve `Prompt` interface'ine dahil edildi.
-   - `scripts/import_twitter_prompts.js` güncellenerek yeni aktarımlarda model tespiti otomatikleştirildi.
-2. **Tam Ekran Görsel Lightbox Modalı (`components/ImageLightboxModal.tsx`):**
-   - Kart görsellerine tıklama desteği (`cursor-zoom-in`) ve hover'da "GÖRSELİ AÇ" butonu eklendi.
-   - `createPortal(..., document.body)` ve `z-[99999]` kullanılarak stacking context sınırları aşıldı; görselin navbar veya hero yazılarının altında kalması sorunu tamamen çözüldü.
-   - Çoklu görsel desteği (klavye sol/sağ yön tuşları, ESC ile kapatma, alt thumbnail strip).
-   - Detay sayfası için `app/prompt/[id]/PromptDetailImages.tsx` istemci bileşeni eklendi.
+## 0. Video prompts section (2026-10-25, latest)
+- Imported 1,132 video prompts (Seedance 2.0/2.5, Grok Imagine, Gemini, Claude Opus 5.5) into `banana_prompts` as display numbers **#5513 – #6644**, category `['video']`, `author = Botfusions`, `source = botfusions`, `approved = true`, `created_at` = original publish date. Table total: 5504 → **6636**.
+- Source archive: `~/Documents/open/youmind-video-prompts/md/` (1,164 files). 32 prompts with CJK characters were skipped because `getAllPrompts()` hides them. Report: `video_import_report.json`.
+- Rule from the user: the origin name must never appear on the site. 452 covers that sat on the origin CDN were copied to the Supabase bucket `image/video-prompts/<id>.jpg`; twimg covers kept as-is. New rows contain no origin string in any field (verified by query).
+- Script: `scripts/import_video_prompts.js <md-dir> [--dry-run] [--limit N]`, idempotent (skips rows with the same title + prompt start).
+- Code: `Video` added to `CATEGORIES`/`CATEGORY_MAP` (`src/data/prompts.ts`) and to the sitemap map; `isVideoPrompt()` in `src/data/filter.ts` keeps video rows out of the homepage "Tümü" feed; card tab reads "VIDEO PROMPT" for them; header got a "Video Promptlar" button to `/kategori/video`; category metadata has a video description.
+- Verified locally (`next dev`, port 3077): `/kategori/video` 200 with 1,132 items, homepage first 100 contain no video rows, header link present.
+- Not done: no commit, no deploy. `/kategori/video` is ISR 86400 and the category list is static, so production needs a deploy to expose the page. The 140 old image rows that carried `source = 'YouMind'` from an earlier migration were updated to `botfusions` on the user's request; their display numbers are in `exports/source_youmind_backup_2026-10-25.json`. No row in the table contains the origin name any more.
 
-## 2. SEO Düzeltmeleri (FreeCrawl Taraması Kaynaklı)
-1. **`app/generate/page.tsx` — 64 duplicate sayfa çözümü**
-   - `generateMetadata({ searchParams })`: `?prompt=` parametreli URL'ler artık `robots: { index: false, follow: true }` + canonical `/generate`.
-   - Title 76→44 kar ("AI Görsel & Video Oluşturucu | AITASVIR STUDYO"), meta description 160 altına indirildi.
-2. **`app/prompt/[id]/page.tsx` — 32 duplicate title çözümü**
-   - `generateMetadata` içinde `getAllPrompts()` (60sn memo'lu) ile aynı title'lı prompt sayısı hesaplanıyor; >1 ise title'a kart numarası ekleniyor: `Gemini NanoBanana #04636 | AITASVIR STUDYO`.
-3. **`app/generate/GenerateClient.tsx` — H1 eksikliği**
-   - `<main>` içine `sr-only` H1 eklendi (görünmez, SEO).
+## 1. Twitter Prompts İçe Aktarımı (En Son)
+1. **`scripts/import_twitter_prompts.js` çalıştırıldı:**
+   - `twitter_prompts` tablosundaki 48 kaydın tamamı `banana_prompts`'a aktarıldı (48 başarılı, 0 hata).
+   - Yeni kart numaraları: **#05465 – #05512**. `banana_prompts` toplam: 5456 → **5504**.
+   - Aktarılan kayıtlar `twitter_prompts`'tan silindi, tablo artık boş (REST ile doğrulandı).
+   - Model tespiti script içinde otomatik yapıldı (GPT Image 2 / Midjourney / Flux vb.).
+2. **Eksik bilgi:** 1 kayıtta görsel yok — **#05486** (`id: 753a3b77-06cb-4681-bd0b-ac78059413f1`, "Girl character map" prompt'u). Detay `eksik_bilgi_raporu.json`'da; görsel üretimi bu id üzerinden yapılacak.
 
-## Doğrulama
-- `npm run build` → exit 0, derleme 0 hata ile tamamlandı.
-- Localde `http://localhost:3000` üzerinde test edildi ve doğrulandı.
+## 2. Canlı Site Doğrulaması
+- Deploy gerekmedi: kart verisi Supabase'ten canlı geliyor, kod değişmedi.
+- `aitasvir.com/api/prompts` yeni kartları veriyor (#5505–#5512 en yeniler arasında).
+- `/prompt/5465`, `/prompt/5486`, `/prompt/5512` → hepsi 200.
+- Ana sayfa ISR (`revalidate = 3600`): HTML en geç 1 saatte kendini yeniler; lazy-load listesi yenileri şimdiden gösteriyor.
+
+## 3. Bilinen Sorun: Vercel Erişimi
+- Vercel CLI: `vercel whoami` → "Not authorized".
+- Vercel MCP token'ı: 403, `cenks-projects-305eb3e7` scope'una erişimi yok.
+- Deployment geçmişi doğrulanamadı; canlı kontrol curl ile yapıldı.
+- Deploy gerektiğinde önce `vercel login` yapılmalı. (CLI 59.4.0, güncel sürüm 62.2.0.)
+
+## Önceki Oturum (2026-09-06, tamamlandı)
+- Dinamik model rozetleri (`lib/modelHelper.ts`) + tam ekran lightbox (`components/ImageLightboxModal.tsx`) → commit `c36600e`, origin'e push'lu.
 
 ## Durum
-- Commit edilecek, **push YAPILMAYACAK**.
-
+- Veritabanı değişiklikleri kalıcı (Supabase). Kod değişikliği yok, commit gerekmiyor.
+- Bekleyen iş: #05486 için görsel üretimi.

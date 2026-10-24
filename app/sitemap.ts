@@ -22,6 +22,7 @@ const CATEGORIES: Record<string, string> = {
   "3D": "3d",
   "Retro": "retro",
   "Yaratıcı": "creative",
+  "Video": "video",
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {

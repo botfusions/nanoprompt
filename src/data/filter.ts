@@ -24,6 +24,10 @@ export function matchesCategorySlug(p: Prompt, slug: string): boolean {
     );
 }
 
+export function isVideoPrompt(p: Prompt): boolean {
+    return p.categories?.some((c) => c.toLowerCase() === "video") || false;
+}
+
 export function matchesFilter(
     p: Prompt,
     activeCategory: string,
@@ -46,7 +50,8 @@ export function matchesFilter(
     // Yilbasi kartlari display_number araligina gore filtrelenir, kategoriye gore degil
     let matchesCategory = false;
     if (activeCategory === "Tümü") {
-        matchesCategory = true;
+        // Video promptlari ana akista degil, /kategori/video sayfasinda listelenir
+        matchesCategory = !isVideoPrompt(p);
     } else if (englishTag === "christmas") {
         matchesCategory =
             displayNum >= CHRISTMAS_CARDS_RANGE.start &&

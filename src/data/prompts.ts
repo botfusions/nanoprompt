@@ -39,7 +39,8 @@ export const CATEGORIES = [
   "İç Tasarım",
   "3D",
   "Retro",
-  "Yaratıcı"
+  "Yaratıcı",
+  "Video"
 ];
 
 // Mapping Turkish to English tags for filtering
@@ -63,7 +64,8 @@ export const CATEGORY_MAP: Record<string, string> = {
   "İç Tasarım": "interior",
   "3D": "3d",
   "Retro": "retro",
-  "Yaratıcı": "creative"
+  "Yaratıcı": "creative",
+  "Video": "video"
 };
 
 // Yılbaşı Kartları display_number aralığı (import edilenler)

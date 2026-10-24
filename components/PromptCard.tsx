@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
 import { GhostSignupModal } from "./GhostSignupModal";
 import { resolvePromptModel } from "@/lib/modelHelper";
+import { isVideoPrompt } from "@/src/data/filter";
 import { ImageLightboxModal } from "./ImageLightboxModal";
 
 interface PromptCardProps {
@@ -131,7 +132,7 @@ export function PromptCard({
               : "bg-gray-200 hover:bg-gray-100 translate-y-[8px] z-10 border-b-4 text-gray-500",
           )}
         >
-          IMAGE PROMPT
+          {isVideoPrompt(prompt) ? "VIDEO PROMPT" : "IMAGE PROMPT"}
         </button>
         <button
           onClick={() => setActiveTab("original")}

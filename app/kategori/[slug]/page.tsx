@@ -32,7 +32,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${categoryName} Promptlari | AITASVIR STUDYO`,
-    description: `${categoryName} kategorisindeki AI gorsel olusturma promptlari. En iyi ${categoryName.toLowerCase()} promptlari ile profesyonel gorseller olusturun.`,
+    description: slug === "video"
+      ? "Seedance, Grok Imagine ve Gemini icin hazir AI video promptlari. Kopyala, yapistir, video uret."
+      : `${categoryName} kategorisindeki AI gorsel olusturma promptlari. En iyi ${categoryName.toLowerCase()} promptlari ile profesyonel gorseller olusturun.`,
     openGraph: {
       title: `${categoryName} Promptlari | AITASVIR STUDYO`,
       description: `${categoryName} kategorisindeki AI promptlari.`,
