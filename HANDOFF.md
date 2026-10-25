@@ -7,7 +7,9 @@
 - Script: `scripts/import_video_prompts.js <md-dir> [--dry-run] [--limit N]`, idempotent (skips rows with the same title + prompt start).
 - Code: `Video` added to `CATEGORIES`/`CATEGORY_MAP` (`src/data/prompts.ts`) and to the sitemap map; `isVideoPrompt()` in `src/data/filter.ts` keeps video rows out of the homepage "Tümü" feed; card tab reads "VIDEO PROMPT" for them; header got a "Video Promptlar" button to `/kategori/video`; category metadata has a video description.
 - Verified locally (`next dev`, port 3077): `/kategori/video` 200 with 1,132 items, homepage first 100 contain no video rows, header link present.
-- Not done: no commit, no deploy. `/kategori/video` is ISR 86400 and the category list is static, so production needs a deploy to expose the page. The 140 old image rows that carried `source = 'YouMind'` from an earlier migration were updated to `botfusions` on the user's request; their display numbers are in `exports/source_youmind_backup_2026-10-25.json`. No row in the table contains the origin name any more.
+- Committed as `10d77eb` and pushed to `botfusions/nanoprompt` main. Vercel auto-deployed; live check: `https://www.aitasvir.com/kategori/video` returns 200 with 1,132 items, no origin string in the HTML, header button visible on the homepage.
+- Still untracked from the previous session, not part of the commit: `public/images/prompt_*.png` (6 files), `scripts/check_queue_status.js`, `scripts/sync_image_to_card.js`, `scripts/image_generation_queue.json`, `.claude/settings.json`.
+- Open items: Grok Imagine, Gemini and Claude Opus 5.5 badges fall through to the gray default in `lib/modelHelper.ts` (Seedance has its own cyan rule); the homepage ISR is 3600 s, so cached visitors see the new header button within an hour. The 140 old image rows that carried `source = 'YouMind'` from an earlier migration were updated to `botfusions` on the user's request; their display numbers are in `exports/source_youmind_backup_2026-10-25.json`. No row in the table contains the origin name any more.
 
 ## 1. Twitter Prompts İçe Aktarımı (En Son)
 1. **`scripts/import_twitter_prompts.js` çalıştırıldı:**
